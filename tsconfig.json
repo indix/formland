@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "outDir": "./dist",
+    "target": "es5"
+  },
+  "files": [
+    "./src/index.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
