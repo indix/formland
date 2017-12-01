@@ -5,11 +5,13 @@
     "module": "es6",
     "moduleResolution": "node",
     "noImplicitAny": true,
+    "declaration": true,
     "outDir": "./dist",
     "target": "es5"
   },
   "files": [
-    "./src/index.tsx"
+    "./src/index.tsx",
+    "./src/types.ts"
   ],
   "exclude": [
     "node_modules"
