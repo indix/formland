@@ -27,23 +27,34 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       {
         id: 'input',
         type: 'text',
-        resultPath: 'input.name',
+        resultPath: 'input.text',
         displayName: 'Name',
-        componentProps: {
-          autoFocus: true,
-        },
-        modifyStoreOnChange: (config, val, oldStore: any) => {
-          if (val.includes('pranesh')) {
-            oldStore.input.address = 'Tamil nadu'
-          }
-          return oldStore
-        }
       },
       {
         id: 'input-2',
-        type: 'text',
-        resultPath: 'input.address',
+        type: 'toggle',
+        resultPath: 'input.toggle',
         displayName: 'Name'
+      },
+      {
+        id: 'input-3',
+        type: 'dropdown',
+        resultPath: 'input.radio',
+        displayName: 'Name',
+        options: [
+          {
+            value: 'one',
+            label: 'One',
+          },
+          {
+            value: 'two',
+            label: 'Two',
+          },
+          {
+            value: 'three',
+            label: 'Three',
+          },
+        ]
       }
     ]
     return (

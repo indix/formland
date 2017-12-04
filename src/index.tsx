@@ -3,8 +3,10 @@ import * as React from 'react'
 import { getNewState } from './utils'
 
 import Template from './template'
-import FormElementHOC from './form-element-hoc'
-import Input from './input-textbox'
+import TextBox from './input-textbox'
+import Toggle from './input-toggle'
+import Radio from './input-radio'
+import Dropdown from './input-dropdown'
 
 const dotObject = require('dot-prop-immutable')
 
@@ -38,7 +40,13 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   private getFormElement(type: string) {
     switch (type) {
       case 'text':
-        return Input
+        return TextBox
+      case 'toggle':
+        return Toggle
+      case 'radio':
+        return Radio
+      case 'dropdown':
+        return Dropdown
       default:
         return <span/>
     }
@@ -62,7 +70,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         }
       }
 
-      const Element: any = FormElementHOC(this.getFormElement(config.type))
+      const Element: any = this.getFormElement(config.type)
 
       return <Template config={config} store={store} key={config.id}>
         <Element { ...props} />
@@ -92,4 +100,4 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
 export {
   getNewState,
 }
-export default ReactForms;
+export default ReactForms

@@ -7,10 +7,11 @@ export interface IOptions {
 
 export interface IReactFormConfig {
   id: string;
-  type: 'dropdown' | 'text';
+  type: 'dropdown' | 'text' | 'toggle' | 'radio';
   resultPath: string;
 
   displayName?: string;
+  className?: string;
   isHidden?: <T>(store: T) => boolean;
   optional?: boolean;
   placeholder?: string;
@@ -26,3 +27,8 @@ export interface ISupportedGlobalCallbacks<T> {
   onBlur?: Function;
 }
 
+export interface IFormElementProps {
+  value: any;
+  config: IReactFormConfig;
+  additionalProps: any,
+}

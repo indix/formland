@@ -3,6 +3,7 @@ import typescript from 'rollup-plugin-typescript2'
 const external = [
   'react',
   'classnames',
+  'shortid',
 ]
 
 export default [
