@@ -40,6 +40,10 @@ export default [
           compilerOptions: {
             target: 'es5',
             declaration: true,
+            lib: [
+              'es6',
+              'dom',
+            ],
           },
         },
       }),

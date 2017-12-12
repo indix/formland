@@ -6,6 +6,9 @@ module.exports = {
   entry: {
     main: './examples/src/index.tsx',
   },
+  resolve: {
+    extensions: ['.jsx', '.tsx', '.ts', '.scss', '.css', '.js'],
+  },
   output: {
     path: path.resolve(__dirname, 'examples/dist'),
     filename: '[name].js',
@@ -20,8 +23,15 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
       },
     ],
   },
