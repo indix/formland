@@ -13,28 +13,19 @@ export interface InputTextboxProps {
 
 export interface InputTextboxState {};
 
-class InputTextbox extends React.Component < InputTextboxProps,
-  InputTextboxState> {
-  ref: any;
-  public getInstance() {
-    return this.ref
-  }
-  public render(): JSX.Element {
-    const {
-      value = '',
-      config,
-      additionalProps = {},
-    } = this.props
-    return <input
-      ref={(el: JSX.Element) => this.ref = el}
-      type="text"
-      value={value}
-      placeholder={config.placeholder}
-      name={config.id}
-      id={config.id}
-      { ...additionalProps }
-    />
-  }
+const InputTextbox: React.SFC<InputTextboxProps> = ({
+  value = '',
+  config,
+  additionalProps = {},
+}) => {
+  return <input
+    type="text"
+    value={value}
+    placeholder={config.placeholder}
+    name={config.id}
+    id={config.id}
+    { ...additionalProps }
+  />
 }
 
 export default InputTextbox
