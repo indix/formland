@@ -17,6 +17,7 @@ export interface IReactFormConfig {
   placeholder?: string;
   options?: IOptions[];
   separator?: string;
+  topComponent?: <T>(store: T) => JSX.Element;
   simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;

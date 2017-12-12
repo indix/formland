@@ -13,11 +13,18 @@ export interface ReactFormTemplateState {};
 
 class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFormTemplateState> {
 
+  private getTopComponent(config: IReactFormConfig, store: any) {
+    return <div className="react-form-top-component">
+      {config.topComponent(store)}
+    </div>
+  }
+
   private getBottomComponent(config: IReactFormConfig, store: any) {
     return <div className="react-form-bottom-component">
       {config.bottomComponent(store)}
     </div>
   }
+
   public render(): JSX.Element {
     const {
       config,
@@ -25,6 +32,10 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
       children,
     } = this.props
     return <div className="react-form-template">
+      {
+        typeof config.topComponent === 'function'
+        && this.getTopComponent(config, store)
+      }
       <div className="react-form-label">
         {config.displayName}
       </div>
@@ -32,7 +43,7 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
         {children}
       </div>
       {
-        config.bottomComponent
+        typeof config.bottomComponent === 'function'
         && this.getBottomComponent(config, store)
       }
     </div>
