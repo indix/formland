@@ -6,17 +6,25 @@ import {
 class InputDropdown extends React.Component<IFormElementProps, {}> {
   public render(): JSX.Element {
     const {
-      value = '',
+      value: v,
       config,
       additionalProps = {},
     } = this.props
+
+    const value = (
+      v
+        && ((config.componentProps && config.componentProps.multiple) && config.simpleValues)
+        ? v.split(config.separator || ',')
+        : v
+    )
+      || ((config.componentProps && config.componentProps.multiple) ? [] : '')
 
     const options = (config.options || []).map((option, i) => {
       return <option
         key={`${config.id}_${i}`}
         value={option.value}
         disabled={option.disabled || false}>
-        {option.value}
+        {option.label}
       </option>
     })
 
