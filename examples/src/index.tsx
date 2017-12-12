@@ -1,12 +1,34 @@
+require('react-select/dist/react-select.css')
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 import Formgenerator, { getNewState } from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
+import Select from './react-select'
+
+
 
 interface ReactFormsProps { };
 
-interface ReactFormsState { };
+interface ReactFormsState {
+  input: any;
+};
+
+const customComponentResolver = (type: string) => {
+  switch (type) {
+    case 'react-select':
+      return Select
+  }
+}
+
+const customValueResolver = (config: any, args: any[]) => {
+  switch (config.type) {
+    case 'react-select':
+      return args[0].value
+    default:
+      return null
+  }
+}
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   constructor(props: ReactFormsProps) {
@@ -14,14 +36,15 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     this.onChange = this.onChange.bind(this)
     this.state = {
       input: {
-        name: 'Pranesh'
-      }
+        name: 'Pranesh',
+      },
     }
   }
 
   private onChange(a: ReactFormsState) {
     this.setState(a)
   }
+
   public render(): JSX.Element {
     const config: IReactFormConfig[] = [
       {
@@ -34,13 +57,16 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         id: 'input-2',
         type: 'toggle',
         resultPath: 'input.toggle',
-        displayName: 'Name'
+        displayName: 'Name',
       },
       {
         id: 'input-3',
-        type: 'dropdown',
+        type: 'react-select',
         resultPath: 'input.radio',
         displayName: 'Name',
+        componentProps: {
+          clearable: false,
+        },
         options: [
           {
             value: 'one',
@@ -54,12 +80,13 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
             value: 'three',
             label: 'Three',
           },
-        ]
-      }
+        ],
+      },
     ]
     return (
       <Formgenerator
-        onChange={getNewState(this.onChange, this.state)}
+        customComponentsResolver={[customComponentResolver]}
+        onChange={getNewState(this.onChange, this.state, customValueResolver)}
         config={config}
         store={this.state} />
     );
