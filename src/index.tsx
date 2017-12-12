@@ -7,6 +7,7 @@ import TextBox from './input-textbox'
 import Toggle from './input-toggle'
 import Radio from './input-radio'
 import Dropdown from './input-dropdown'
+import Checkbox from './input-checkbox'
 
 const dotObject = require('dot-prop-immutable')
 
@@ -16,9 +17,10 @@ import {
   ISupportedGlobalCallbacks,
 } from './types'
 
-export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}>{
+export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   config: IReactFormConfig[]
   store?: any;
+  customComponentsResolver?: {(type: string): any}[];
 };
 
 export interface ReactFormsState {};
@@ -47,8 +49,23 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         return Radio
       case 'dropdown':
         return Dropdown
+      case 'checkbox':
+        return Checkbox
       default:
-        return <span/>
+        const { customComponentsResolver } = this.props
+        if (customComponentsResolver) {
+          let Component = null
+          let i = 0
+          while (i < customComponentsResolver.length) {
+            Component = customComponentsResolver[i](type)
+            if (Component) {
+              break
+            }
+            i++
+          }
+          return Component
+        }
+        return null
     }
   }
 
@@ -58,7 +75,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         return false
       }
       if (!config.resultPath) {
-        return new Error(`Provide a resultPath in formConfig[${i}]`)
+        return new Error(`Provide a resultPath in config[${i}]`)
       }
       const value = dotObject.get(store, config.resultPath, undefined)
       const props = {
@@ -67,13 +84,17 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         additionalProps: {
           ...this.bindCallbacks(config, callbacks),
           ...(config.componentProps || {}),
-        }
+        },
       }
 
       const Element: any = this.getFormElement(config.type)
 
       return <Template config={config} store={store} key={config.id}>
-        <Element { ...props} />
+        {
+          Element
+            ? <Element { ...props} />
+            : null
+        }
       </Template>
     })
   }
