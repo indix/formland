@@ -2,47 +2,58 @@
   "name": "@praneshravi/react-forms",
   "version": "0.0.0-alpha",
   "description": "Config based react form generator",
+  "license": "MIT",
+  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
   "main": "dist/index.js",
   "repository": "https://github.com/praneshr/react-form.git",
-  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
-  "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
   "scripts": {
     "build": "rollup -c",
+    "build:examples": "webpack --color --progress",
+    "build:scss": "yarn run task:scss & yarn run task:autoprefix",
     "build:watch": "rollup -c -w",
     "scss:watch": "nodemon --watch scss/ -e scss --exec yarn run build:scss",
-    "build:scss": "yarn run task:scss & yarn run task:autoprefix",
-    "task:scss": "node-sass-chokidar scss/index.scss -o css",
+    "start:examples": "webpack-dev-server --open",
     "task:autoprefix": "postcss css/*.css --use autoprefixer -d css",
-    "build:examples": "webpack --color --progress",
-    "start:examples": "webpack-dev-server --open"
+    "task:scss": "node-sass-chokidar scss/index.scss -o css"
   },
   "dependencies": {
+    "array-from": "^2.1.1",
     "dot-prop-immutable": "^1.4.0",
+    "es6-set": "^0.1.5",
     "shortid": "^2.2.8"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.43",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
+    "@types/react-select": "^1.0.60",
     "@types/rollup": "^0.51.1",
     "@types/shortid": "^0.0.29",
     "autoprefixer": "^7.1.6",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.12.1",
     "html-webpack-plugin": "^2.30.1",
     "node-sass-chokidar": "^0.0.3",
     "nodemon": "^1.12.1",
     "postcss-cli": "^4.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-select": "^1.1.0",
     "rollup": "^0.52.0",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-postcss": "^0.5.5",
     "rollup-plugin-typescript2": "^0.8.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
     "ts-loader": "^3.2.0",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.6.2",
     "webpack": "^3.9.1",
     "webpack-dev-server": "^2.9.5"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
