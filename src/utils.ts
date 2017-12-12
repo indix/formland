@@ -9,7 +9,7 @@ const arrayFrom = require('array-from')
 const getNewState = (
   callback: (val: any) => void,
   store: any,
-  customValueResolver?: (config: IReactFormConfig, args: any[]) => any,
+  customValueResolver?: {(config: IReactFormConfig, args: any[]): any}[],
 ) => {
   const getValue = (config: IReactFormConfig, args: any[]) => {
     switch (config.type) {
@@ -47,7 +47,18 @@ const getNewState = (
       case 'toggle':
         return args[0].currentTarget.value === 'true'
       default:
-        if (customValueResolver) return customValueResolver(config, args)
+        if (customValueResolver) {
+          let value = null
+          let i = 0
+          while (i < customValueResolver.length) {
+            value = customValueResolver[i](config, args)
+            if (value || typeof value === 'boolean') {
+              break
+            }
+            i++
+          }
+          return value
+        }
         return null
     }
   }

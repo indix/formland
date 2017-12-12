@@ -86,7 +86,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return (
       <Formgenerator
         customComponentsResolver={[customComponentResolver]}
-        onChange={getNewState(this.onChange, this.state, customValueResolver)}
+        onChange={getNewState(this.onChange, this.state, [customValueResolver])}
         config={config}
         store={this.state} />
     );
