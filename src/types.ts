@@ -7,7 +7,7 @@ export interface IOptions {
 
 export interface IReactFormConfig {
   id: string;
-  type: 'dropdown' | 'text' | 'toggle' | 'radio';
+  type: 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | string;
   resultPath: string;
 
   displayName?: string;
@@ -16,6 +16,8 @@ export interface IReactFormConfig {
   optional?: boolean;
   placeholder?: string;
   options?: IOptions[];
+  separator?: string;
+  simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;
   modifyStoreOnChange?: <T>(config: IReactFormConfig, value: any, previousStore: T) => T
