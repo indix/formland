@@ -1,0 +1,37 @@
+.input-dropdown {
+  .dropdown-wrapper {
+    position: relative;
+    &.multi {
+      &:after {
+        content: none;
+      }
+      select {
+        padding: $input-textbox-padding;
+        option {
+          padding: $input-textbox-padding;
+          cursor: pointer;
+          &:checked {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+    &:after {
+      content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAp0lEQVRIS+2SUQrDIAyG/6AH2E3WI1i8dmDuBt1NegDFIrgRhC22UNYHffIh/l/yGcLJh07OxwCohoeiiyvy3i9ElGOMcwhhle06527W2geAlZnnb6P8/OQKuANYJESETwCezOwOAUqQMSYQ0QdSgmrnU875lVJy7XQSpq5pC6mPu8JLrQooRQ0EPZ2/p+gCSEi5a1p2KVIXXSnonuAoaABUc0PR/xVtJW9OGV1k1e8AAAAASUVORK5CYII=);
+      position: absolute;
+      right: 5px;
+      top: -2px;
+      color: $input-border-color;
+      pointer-events: none;
+    }
+    select {
+      appearance: none;
+      @include common;
+      @include transition;
+      padding-right: 30px;
+      &:focus {
+        border-color: $input-border-color-dark;
+      }
+    }
+  }
+}

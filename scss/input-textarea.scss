@@ -1,0 +1,11 @@
+.input-textarea {
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    @include common;
+    @include transition;
+    &:focus {
+      border-color: $input-border-color-dark;
+    }
+  }
+}

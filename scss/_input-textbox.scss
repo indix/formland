@@ -1,0 +1,10 @@
+.input-text {
+  input[type=text] {
+    width: 100%;
+    @include common;
+    @include transition;
+    &:focus {
+      border-color: $input-border-color-dark;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.input-radio {
+  .radio-button {
+    display: inline-block;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    * {
+      cursor: pointer;
+    }
+    label {
+      margin: 0;
+    }
+    input[type=radio] {
+      margin-right: 5px;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: $input-border-width solid $primary-color;
+      outline: none;
+      &:checked {
+        & + label {
+          position: relative;
+          &:after {
+            content: " ";
+            position: absolute;
+            left: -20px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

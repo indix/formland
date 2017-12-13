@@ -1,0 +1,29 @@
+
+// Common
+$primary-color: #4C5AF7;
+$input-border-color: #e0e0e0;
+$input-border-color-dark: lighten($primary-color, 25%);
+$input-border-width: 2px;
+$input-border-radius: 4px;
+$input-background-color: #fff;
+$input-font-size: 14px;
+
+// Input Text
+$input-textbox-padding: 10px;
+
+// Template
+$template-margin-bottom: 30px;
+$template-margin-right: 30px;
+$template-label-margin-bottom: 10px;
+
+@mixin common {
+  padding: $input-textbox-padding;
+  border: $input-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-background-color;
+  outline: none;
+}
+
+@mixin transition {
+  transition: border 0.2s ease;
+}

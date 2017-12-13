@@ -1,4 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
+@import 'variables';
+
+.react-forms {
+  font-size: $input-font-size;
+  @import 'template';
+  @import 'input-textbox';
+  @import 'input-textarea';
+  @import 'input-dropdown';
+  @import 'input-radio';
+  @import 'input-checkbox';
 }

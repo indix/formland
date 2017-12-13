@@ -1,0 +1,13 @@
+.react-forms-template {
+  margin-bottom: $template-margin-bottom;
+  &.dir-horizontal {
+    display: inline-block;
+    margin-right: $template-margin-right;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .react-forms-label {
+    margin-bottom: $template-label-margin-bottom;
+  }
+}
