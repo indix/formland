@@ -18,11 +18,13 @@
   },
   "dependencies": {
     "array-from": "^2.1.1",
+    "classnames": "^2.2.5",
     "dot-prop-immutable": "^1.4.0",
     "es6-set": "^0.1.5",
     "shortid": "^2.2.8"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/core-js": "^0.9.43",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",

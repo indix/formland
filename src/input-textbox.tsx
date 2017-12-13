@@ -1,31 +1,26 @@
 import * as React from 'react'
+const cn = require('classnames')
 
 import {
-  IReactFormConfig,
-  ISupportedGlobalCallbacks,
+  IFormElementProps,
 } from './types'
 
-export interface InputTextboxProps {
-  value: any;
-  config: IReactFormConfig;
-  additionalProps: any,
-}
 
-export interface InputTextboxState {};
-
-const InputTextbox: React.SFC<InputTextboxProps> = ({
+const InputTextbox: React.SFC<IFormElementProps> = ({
   value = '',
   config,
   additionalProps = {},
 }) => {
-  return <input
-    type="text"
-    value={value}
-    placeholder={config.placeholder}
-    name={config.id}
-    id={config.id}
-    { ...additionalProps }
-  />
+  return <div className={cn('form-Element', 'input-text', config.className)}>
+    <input
+      type="text"
+      value={value}
+      placeholder={config.placeholder}
+      name={config.id}
+      id={config.id}
+      { ...additionalProps }
+    />
+  </div>
 }
 
 export default InputTextbox

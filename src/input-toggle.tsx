@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as id from 'shortid'
+const cn = require('classnames')
 
 import {
   IFormElementProps,
@@ -11,7 +12,7 @@ const InputToggle: React.SFC<IFormElementProps> = ({
   additionalProps = {},
 }) => {
   const _id = id.generate()
-  return <div className="form-element input-toggle">
+  return <div className={cn('form-element', 'input-toggle', config.className)}>
     <input
       checked={value}
       value={(!value).toString()}
@@ -23,4 +24,4 @@ const InputToggle: React.SFC<IFormElementProps> = ({
   </div>
 }
 
-export default InputToggle;
+export default InputToggle

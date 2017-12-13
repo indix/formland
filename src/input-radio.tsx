@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as id from 'shortid'
+const cn = require('classnames')
 
 import {
   IFormElementProps,
@@ -13,7 +14,7 @@ const InputRadio: React.SFC<IFormElementProps> = ({
 }) => {
   const radioInputs = (config.options || []).map((option) => {
     const unique = id.generate()
-    return <span key={`${config.id}_${option.value}`}>
+    return <span className="radio-button" key={`${config.id}_${option.value}`}>
       <input
         checked={value === option.value}
         className={config.className}
@@ -28,9 +29,9 @@ const InputRadio: React.SFC<IFormElementProps> = ({
       </label>
     </span>
   })
-  return <div className="form-element input-radio">
+  return <div className={cn('form-element', 'input-radio', config.className)}>
     { radioInputs }
   </div>
 }
 
-export default InputRadio;
+export default InputRadio

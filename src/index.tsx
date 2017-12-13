@@ -8,6 +8,8 @@ import Toggle from './input-toggle'
 import Radio from './input-radio'
 import Dropdown from './input-dropdown'
 import Checkbox from './input-checkbox'
+import Range from './input-range'
+import TextArea from './input-textarea'
 
 const dotObject = require('dot-prop-immutable')
 
@@ -51,6 +53,10 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         return Dropdown
       case 'checkbox':
         return Checkbox
+      case 'range':
+        return Range
+      case 'textarea':
+        return TextArea
       default:
         const { customComponentsResolver } = this.props
         if (customComponentsResolver) {
@@ -112,7 +118,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       { onChange, onBlur, onFocus },
       store,
     )
-    return <div className="react-form">
+    return <div className="react-forms">
       {formElements}
     </div>
   }

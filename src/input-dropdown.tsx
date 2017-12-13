@@ -1,4 +1,5 @@
 import * as React from 'react'
+const cn = require('classnames')
 import {
   IFormElementProps,
 } from './types'
@@ -25,15 +26,17 @@ const InputDropdown: React.SFC<IFormElementProps> = ({
     </option>
   })
 
-  return <div className="form-element input-dropdown">
-    <select
-      value={value}
-      name={config.id}
-      id={config.id}
-      {...additionalProps}
-    >
-      {options}
-    </select>
+  return <div className={cn('form-element', 'input-dropdown', config.className)}>
+    <span className={cn('dropdown-wrapper', { multi: (config.componentProps && config.componentProps.multiple)})}>
+      <select
+        value={value}
+        name={config.id}
+        id={config.id}
+        {...additionalProps}
+      >
+        {options}
+      </select>
+    </span>
   </div>
 }
 
