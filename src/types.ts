@@ -21,7 +21,7 @@ export interface IReactFormConfig {
   simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;
-  modifyStoreOnChange?: <T>(config: IReactFormConfig, value: any, previousStore: T) => T
+  modifyStoreBeforeChange?: <T>(config: IReactFormConfig, value: any, previousStore: T) => T
 }
 
 export interface ISupportedGlobalCallbacks<T> {

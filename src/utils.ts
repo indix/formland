@@ -15,6 +15,8 @@ const getNewState = (
     switch (config.type) {
       case 'radio':
       case 'text':
+      case 'textarea':
+      case 'range':
         return args[0].currentTarget.value
       case 'dropdown':
         if (config.componentProps && config.componentProps.multiple) {
@@ -48,7 +50,7 @@ const getNewState = (
         return args[0].currentTarget.value === 'true'
       default:
         if (customValueResolver) {
-          let value = null
+          let value = ''
           let i = 0
           while (i < customValueResolver.length) {
             value = customValueResolver[i](config, args)
@@ -59,14 +61,14 @@ const getNewState = (
           }
           return value
         }
-        return null
+        return ''
     }
   }
   return (config: IReactFormConfig, ...rest: any[]) => {
     const value = getValue(config, rest)
     const intermediateStore = dot.set(store, config.resultPath, value)
-    const newStore = config.modifyStoreOnChange
-      ? (config.modifyStoreOnChange(config, value, intermediateStore) || intermediateStore)
+    const newStore = config.modifyStoreBeforeChange
+      ? (config.modifyStoreBeforeChange(config, value, intermediateStore) || intermediateStore)
       : intermediateStore
     return callback(newStore)
   }
