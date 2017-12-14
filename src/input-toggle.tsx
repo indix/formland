@@ -13,14 +13,17 @@ const InputToggle: React.SFC<IFormElementProps> = ({
 }) => {
   const _id = id.generate()
   return <div className={cn('form-element', 'input-toggle', config.className)}>
-    <input
-      checked={value}
-      value={(!value).toString()}
-      id={`${config.id}_${_id}`}
-      type="checkbox"
-      {...additionalProps}
-    />
-    <label htmlFor={`${config.id}_${_id}`}></label>
+    <span className="input-toggle-wrapper">
+      <input
+        checked={value}
+        value={(!value).toString()}
+        id={`${config.id}_${_id}`}
+        type="checkbox"
+        {...additionalProps}
+      />
+      <label htmlFor={`${config.id}_${_id}`}></label>
+    </span>
+    <span className="info-text">{config.infoText}</span>
   </div>
 }
 

@@ -11,7 +11,8 @@ const InputTextArea: React.SFC<IFormElementProps> = ({
   value = '',
 }) => {
   return <div className={cn('form-element', 'input-textarea', config.className)}>
-      <textarea
+    <textarea
+        placeholder={config.placeholder}
         className={config.className}
         name={config.id}
         id={config.id}

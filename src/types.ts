@@ -7,7 +7,7 @@ export interface IOptions {
 
 export interface IReactFormConfig {
   id: string;
-  type: 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | string;
+  type: 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | 'range' | 'textarea' | string;
   resultPath: string;
 
   displayName?: string;
@@ -21,6 +21,9 @@ export interface IReactFormConfig {
   simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;
+  infoText?: string;
+  showValue?: boolean;
+  showRange?: boolean;
   instantValidation?: boolean;
   required?: boolean | string;
   validation?: (value: any) => string | false | null | undefined;
