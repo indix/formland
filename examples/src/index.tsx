@@ -8,8 +8,6 @@ import Formgenerator, { getNewState } from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
 import Select from './react-select'
 
-
-
 interface ReactFormsProps { };
 
 interface ReactFormsState {
@@ -31,12 +29,14 @@ const customValueResolver = (config: any, args: any[]) => {
 }
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
+  formgenerator: Formgenerator
   constructor(props: ReactFormsProps) {
     super(props)
     this.onChange = this.onChange.bind(this)
+    this.validate = this.validate.bind(this)
     this.state = {
       input: {
-        name: 'Pranesh',
+        text: 'Pranesh',
       },
     }
   }
@@ -45,28 +45,31 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     this.setState(a)
   }
 
+  private validate() {
+    const errors = this.formgenerator.validate()
+  }
+
   public render(): JSX.Element {
     const config: IReactFormConfig[] = [
       {
-        id: 'input',
+        id: 'text',
         type: 'text',
-        resultPath: 'name.firstName',
-        displayName: 'First Name',
-        placeholder: 'Enter your first name',
-        optional: true,
+        resultPath: 'input.text',
+        displayName: 'Input Textbox',
+        placeholder: 'Enter something',
       },
       {
-        id: 'input-2',
+        id: 'textarea',
         type: 'textarea',
-        resultPath: 'input.toggle',
-        displayName: 'Name',
+        resultPath: 'input.textarea',
+        displayName: 'Input Textarea',
         placeholder: 'hello',
       },
       {
-        id: 'input-3',
+        id: 'checkbox',
         type: 'checkbox',
-        resultPath: 'input.radio1',
-        displayName: 'Name',
+        resultPath: 'input.checkbox',
+        displayName: 'Input Checkbox',
         options: [
           {
             value: 'one',
@@ -83,10 +86,10 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         ],
       },
       {
-        id: 'input-4',
+        id: 'radio',
         type: 'radio',
-        resultPath: 'input.radio2',
-        displayName: 'Name',
+        resultPath: 'input.radio',
+        displayName: 'Input Radio',
         options: [
           {
             value: 'one',
@@ -103,10 +106,10 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         ],
       },
       {
-        id: 'input-33',
+        id: 'dropdown',
         type: 'dropdown',
-        resultPath: 'input.radio3',
-        displayName: 'Name',
+        resultPath: 'input.dropdown',
+        displayName: 'Input Dropdown',
         options: [
           {
             value: 'one',
@@ -121,15 +124,37 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
             label: 'Three',
           },
         ],
+      },
+      {
+        id: 'toggle',
+        type: 'toggle',
+        resultPath: 'input.toggle',
+        displayName: 'Input Toggle',
+      },
+      {
+        id: 'range',
+        type: 'range',
+        resultPath: 'input.range',
+        displayName: 'Input Range',
+        componentProps: {
+          step: 10,
+          min: 0,
+          max: 50,
+        },
       },
     ]
     return (
-      <Formgenerator
-        customComponentsResolver={[customComponentResolver]}
-        onChange={getNewState(this.onChange, this.state, [customValueResolver])}
-        config={config}
-        store={this.state} />
-    );
+      <div className="mx-400">
+        <h1>React Forms</h1>
+        <Formgenerator
+          ref={(el) => this.formgenerator = el}
+          customComponentsResolver={[customComponentResolver]}
+          onChange={getNewState(this.onChange, this.state, [customValueResolver])}
+          config={config}
+          store={this.state} />
+        <button onClick={this.validate}>Validate</button>
+      </div>
+    )
   }
 }
 

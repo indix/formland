@@ -1,3 +1,9 @@
 body {
   padding: 50px;
+  .mx-400 {
+    max-width: 400px;
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
 }
