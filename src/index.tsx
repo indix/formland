@@ -17,6 +17,7 @@ import {
   IReactFormConfig,
   IOptions,
   ISupportedGlobalCallbacks,
+  IFormErrors,
 } from './types'
 
 export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
@@ -25,9 +26,26 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   customComponentsResolver?: {(type: string): any}[];
 };
 
-export interface ReactFormsState {};
+export interface ReactFormsState {
+  validate?: boolean;
+};
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
+  errors: IFormErrors[]
+  constructor(props: ReactFormsProps) {
+    super(props)
+    this.state = {
+      validate: false,
+    }
+    this.errors = []
+  }
+
+  public validate() {
+    this.setState({
+      validate: true,
+    })
+    return this.errors
+  }
 
   private bindCallbacks (config: IReactFormConfig, callbacks: any): any {
     const bindedCallbacks: any = {}
@@ -75,6 +93,18 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     }
   }
 
+  private validateField(value: any, config: IReactFormConfig) {
+    if (typeof config.validation === 'function') {
+      return config.validation(value) || null
+    }
+    if (typeof config.required !== 'undefined' && typeof value === 'undefined') {
+      return typeof config.required === 'string'
+        ? config.required
+        : 'Required Value'
+    }
+    return null
+  }
+
   private getFormElements(configs: IReactFormConfig[], callbacks: any, store: any) {
     return configs.map((config, i) => {
       if (config.isHidden && config.isHidden(store)) {
@@ -84,6 +114,11 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         return new Error(`Provide a resultPath in config[${i}]`)
       }
       const value = dotObject.get(store, config.resultPath, undefined)
+      const error = this.validateField(value, config)
+      this.errors[i] = {
+        id: config.id,
+        error,
+      }
       const props = {
         config,
         value,
@@ -95,7 +130,11 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
 
       const Element: any = this.getFormElement(config.type)
 
-      return <Template config={config} store={store} key={config.id}>
+      return <Template
+        error={(this.state.validate || config.instantValidation) && error}
+        config={config}
+        store={store}
+        key={config.id}>
         {
           Element
             ? <Element { ...props} />

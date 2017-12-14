@@ -21,6 +21,9 @@ export interface IReactFormConfig {
   simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;
+  instantValidation?: boolean;
+  required?: boolean | string;
+  validation?: (value: any) => string | false | null | undefined;
   modifyStoreBeforeChange?: <T>(config: IReactFormConfig, value: any, previousStore: T) => T
 }
 
@@ -34,4 +37,9 @@ export interface IFormElementProps {
   value: any;
   config: IReactFormConfig;
   additionalProps: any,
+}
+
+export interface IFormErrors {
+  id: string;
+  error: string | null;
 }

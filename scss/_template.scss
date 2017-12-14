@@ -10,4 +10,35 @@
   .react-forms-label {
     margin-bottom: $template-label-margin-bottom;
   }
+  .react-forms-field {
+    position: relative;
+    .error {
+      position: absolute;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      color: $template-error-font-color;
+      background-color: $template-error-background;
+      bottom: -30px;
+      opacity: 0;
+      pointer-events: none;
+      // @include transition(opacity);
+      &.is-error {
+        opacity: 1;
+        pointer-events: all;
+      }
+      &:before {
+        position: absolute;
+        bottom: 100%;
+        left: 10px;
+        z-index: 15;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        content: " ";
+        border: solid transparent;
+        border-bottom-color: $template-error-background;
+      }
+    }
+  }
 }

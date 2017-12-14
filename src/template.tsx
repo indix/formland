@@ -1,12 +1,15 @@
 import * as React from 'react'
 
+const cn = require('classnames')
+
 import {
   IReactFormConfig,
 } from './types'
 
 export interface ReactFormTemplateProps {
   store: any;
-  config: IReactFormConfig,
+  config: IReactFormConfig;
+  error: any;
 };
 
 export interface ReactFormTemplateState {};
@@ -29,8 +32,10 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
     const {
       config,
       store,
+      error,
       children,
     } = this.props
+
     return <div className="react-forms-template">
       {
         typeof config.topComponent === 'function'
@@ -43,7 +48,12 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
         }
       </div>
       <div className="react-forms-field">
-        {children}
+        <div className="form-element-wrapper">
+          {children}
+        </div>
+        <div className={cn('error', { 'is-error': error })}>
+          {error || ' '}
+        </div>
       </div>
       {
         typeof config.bottomComponent === 'function'
