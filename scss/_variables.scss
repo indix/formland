@@ -11,10 +11,28 @@ $input-font-size: 14px;
 // Input Text
 $input-textbox-padding: 10px;
 
+// Input Toggle
+$input-toggle-border-radius: 4px;
+$input-toggle-handle-background: #fff;
+$input-toggle-track-background: $input-border-color;
+$input-toggle-handle-width: 20px;
+$input-toggle-handle-height: 24px;
+$input-toggle-track-width: 50px;
+$input-toggle-track-height: 30px;
+$input-toggle-handle-margin-left: 24px;
+
+// Input Range
+$input-range-thumb-height: 20px;
+$input-range-thumb-width: 20px;
+$input-range-thumb-radius: 10px;
+$input-range-track-height: 5px;
+
 // Template
 $template-margin-bottom: 30px;
 $template-margin-right: 30px;
 $template-label-margin-bottom: 10px;
+$template-error-background: #FF3A3A;
+$template-error-font-color: #fff;
 
 @mixin common {
   padding: $input-textbox-padding;
@@ -24,6 +42,6 @@ $template-label-margin-bottom: 10px;
   outline: none;
 }
 
-@mixin transition {
-  transition: border 0.2s ease;
+@mixin transition($props: all) {
+  transition: $props 0.2s ease;
 }

@@ -1,0 +1,56 @@
+.__dummy {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.input-toggle {
+  display: inline-flex;
+  align-items: center;
+  .info-text {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: -5px;
+  }
+  input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+    & + label {
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      width: $input-toggle-track-width;
+      height: $input-toggle-track-height;
+      background-color: $input-toggle-track-background;
+      border-radius: $input-toggle-border-radius;
+      overflow: hidden;
+      margin-bottom: 0;
+      @include transition(background);
+      &:before {
+        @extend .__dummy;
+        right: 1px;
+        background-color: $input-toggle-handle-background;
+        border-radius: $input-toggle-border-radius;
+      }
+      &:after {
+        @extend .__dummy;
+        width: $input-toggle-handle-width;
+        height: $input-toggle-handle-height;
+        background-color: $input-toggle-handle-background;
+        border-radius: $input-toggle-border-radius;
+        @include transition(margin);
+      }
+
+    }
+    &:checked {
+      & + label {
+        background-color: $primary-color;
+        &:after {
+          margin-left: $input-toggle-handle-margin-left;
+        }
+      }
+    }
+  }
+}

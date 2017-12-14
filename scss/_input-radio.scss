@@ -16,16 +16,20 @@
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      border: $input-border-width solid $primary-color;
+      border: $input-border-width solid $input-border-color;
       outline: none;
+      &:focus {
+        border-color: $input-border-color-dark;
+      }
       &:checked {
+        border-color: $primary-color;
         & + label {
           position: relative;
           &:after {
             content: " ";
             position: absolute;
             left: -20px;
-            top: 6px;
+            top: 5px;
             width: 10px;
             height: 10px;
             border-radius: 50%;
