@@ -21,6 +21,8 @@ export interface IReactFormConfig {
   simpleValues?: boolean;
   bottomComponent?: <T>(store: T) => JSX.Element;
   componentProps?: any;
+  helpText?: string;
+  helpTextOptions?: any;
   infoText?: string;
   showValue?: boolean;
   showRange?: boolean;

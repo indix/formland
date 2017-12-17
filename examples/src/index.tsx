@@ -64,10 +64,13 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         resultPath: 'input.textarea',
         displayName: 'Input Textarea',
         placeholder: 'hello',
+        optional: true,
       },
       {
         id: 'checkbox',
         type: 'checkbox',
+        helpText: 'help text',
+        required: true,
         resultPath: 'input.checkbox',
         displayName: 'Input Checkbox',
         options: [
@@ -137,7 +140,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         resultPath: 'input.range',
         displayName: 'Input Range',
         componentProps: {
-          step: 10,
+          step: 1,
           min: 0,
           max: 50,
         },

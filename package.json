@@ -21,6 +21,7 @@
     "classnames": "^2.2.5",
     "dot-prop-immutable": "^1.4.0",
     "es6-set": "^0.1.5",
+    "react-tippy": "^1.2.2",
     "shortid": "^2.2.8"
   },
   "devDependencies": {

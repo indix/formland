@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 const cn = require('classnames')
+const { Tooltip } = require('react-tippy')
 
 import {
   IReactFormConfig,
@@ -36,6 +37,19 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
       children,
     } = this.props
 
+    const helpText = config.helpText
+      && <Tooltip
+        title={config.helpText}
+        position="top"
+        arrow
+        arrowSize="small"
+        trigger="mouseenter"
+        {...config.helpTextOptions || {}}>
+        <span>
+          ?
+        </span>
+      </Tooltip>
+
     return <div className="react-forms-template">
       {
         typeof config.topComponent === 'function'
@@ -43,6 +57,7 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
       }
       <div className="react-forms-label">
         <span>{config.displayName}</span>
+        <span>{helpText}</span>
         {
           config.optional && <span>(optional)</span>
         }
