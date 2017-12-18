@@ -29,26 +29,6 @@ export default [
   {
     input: './src/index.tsx',
     output: {
-      file: './dist/index-umd.js',
-      format: 'umd',
-      name: 'library',
-    },
-    external,
-    plugins: [
-      typescript({
-        typescript: require('typescript'),
-        tsconfigOverride: {
-          compilerOptions: {
-            target: 'es2015',
-            declaration: true,
-          },
-        },
-      }),
-    ],
-  },
-  {
-    input: './src/index.tsx',
-    output: {
       file: './dist/index.js',
       format: 'cjs',
     },
