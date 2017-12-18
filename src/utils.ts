@@ -11,16 +11,17 @@ const getNewState = (
   store: any,
   customValueResolver?: {(config: IReactFormConfig, args: any[]): any}[],
 ) => {
-  const getValue = (config: IReactFormConfig, args: any[]) => {
+  const getValue = (...agmnts: any[]) => {
+    const [config, event] = agmnts
     switch (config.type) {
       case 'radio':
       case 'text':
       case 'textarea':
       case 'range':
-        return args[0].currentTarget.value
+        return event.currentTarget.value
       case 'dropdown':
         if (config.componentProps && config.componentProps.multiple) {
-          const options = args[0].currentTarget.options
+          const options = event.currentTarget.options
           const value = []
           for (let i = 0, l = options.length; i < l; i++) {
             if (options[i].selected) {
@@ -29,9 +30,9 @@ const getNewState = (
           }
           return config.simpleValues ? value.join(config.separator || ',') : value
         }
-        return args[0].currentTarget.value
+        return event.currentTarget.value
       case 'checkbox':
-        const value = args[0].currentTarget.value
+        const value = event.currentTarget.value
         const existingValue = dot.get(store, config.resultPath) || []
         const existingValueArray = (config.simpleValues && existingValue.split)
           ? existingValue.split(config.separator || ',')
@@ -47,13 +48,13 @@ const getNewState = (
           ? valueArray.join(config.separator || ',')
           : valueArray
       case 'toggle':
-        return args[0].currentTarget.value === 'true'
+        return event.currentTarget.value === 'true'
       default:
         if (customValueResolver) {
           let value = ''
           let i = 0
           while (i < customValueResolver.length) {
-            value = customValueResolver[i](config, args)
+            value = customValueResolver[i].apply(null, agmnts)
             if (value || typeof value === 'boolean') {
               break
             }
@@ -65,7 +66,7 @@ const getNewState = (
     }
   }
   return (config: IReactFormConfig, ...rest: any[]) => {
-    const value = getValue(config, rest)
+    const value = getValue.apply(null, [config].concat(rest))
     const intermediateStore = dot.set(store, config.resultPath, value)
     const newStore = config.modifyStoreBeforeChange
       ? (config.modifyStoreBeforeChange(config, value, intermediateStore) || intermediateStore)

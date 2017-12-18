@@ -23,7 +23,9 @@ import {
 export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   config: IReactFormConfig[]
   store?: any;
-  customComponentsResolver?: {(type: string): any}[];
+  customComponentsResolvers?: {(type: string): any}[];
+  customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
+  useNativeEvent?: boolean;
 };
 
 export interface ReactFormsState {
@@ -32,6 +34,12 @@ export interface ReactFormsState {
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   errors: IFormErrors[]
+
+  static defaultProps = {
+    useNativeEvent: false,
+    store: {},
+  }
+
   constructor(props: ReactFormsProps) {
     super(props)
     this.state = {
@@ -47,12 +55,21 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return this.errors
   }
 
+  private eventProxyHandlers(config: IReactFormConfig, callback: any, args: any[]) {
+    getNewState(callback, this.props.store, this.props.customValueResolvers)
+      .apply(null, [config].concat(...args))
+  }
+
   private bindCallbacks (config: IReactFormConfig, callbacks: any): any {
     const bindedCallbacks: any = {}
     Object.keys(callbacks || {}).forEach((event) => {
       if (callbacks[event]) {
         bindedCallbacks[event] = (...args: any[]): void => {
-          callbacks[event].apply(null, [config].concat(args))
+          if (this.props.useNativeEvent) {
+            callbacks[event].apply(null, [config].concat(...args))
+          } else {
+            this.eventProxyHandlers(config, callbacks[event], args)
+          }
         }
       }
     })
@@ -76,12 +93,12 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       case 'textarea':
         return TextArea
       default:
-        const { customComponentsResolver } = this.props
-        if (customComponentsResolver) {
+        const { customComponentsResolvers } = this.props
+        if (customComponentsResolvers) {
           let Component = null
           let i = 0
-          while (i < customComponentsResolver.length) {
-            Component = customComponentsResolver[i](type)
+          while (i < customComponentsResolvers.length) {
+            Component = customComponentsResolvers[i](type)
             if (Component) {
               break
             }

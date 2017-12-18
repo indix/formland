@@ -21,10 +21,10 @@ const customComponentResolver = (type: string) => {
   }
 }
 
-const customValueResolver = (config: any, args: any[]) => {
+const customValueResolver = (config: any, value: any) => {
   switch (config.type) {
     case 'react-select':
-      return args[0].value
+      return value ? value.value : ''
   }
 }
 
@@ -151,8 +151,9 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         <h1>React Forms</h1>
         <Formgenerator
           ref={(el) => this.formgenerator = el}
-          customComponentsResolver={[customComponentResolver]}
-          onChange={getNewState(this.onChange, this.state, [customValueResolver])}
+          customValueResolvers={[customValueResolver]}
+          customComponentsResolvers={[customComponentResolver]}
+          onChange={this.onChange}
           config={config}
           store={this.state} />
         <button onClick={this.validate}>Validate</button>
