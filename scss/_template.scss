@@ -9,6 +9,18 @@
   }
   .react-forms-label {
     margin-bottom: $template-label-margin-bottom;
+    .optional {
+      display: inline-block;
+      margin-left: 5px;
+      opacity: 0.5;
+      font-size: 12px;
+    }
+  }
+  .help-text-trigger {
+    display: inline-block;
+    margin-left: 5px;
+    opacity: 0.5;
+    cursor: help;
   }
   .react-forms-field {
     position: relative;

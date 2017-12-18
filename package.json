@@ -17,11 +17,12 @@
     "task:scss": "node-sass-chokidar scss/index.scss -o css"
   },
   "dependencies": {
+    "@atlaskit/tooltip": "^8.0.10",
     "array-from": "^2.1.1",
+    "babel-runtime": "^6.26.0",
     "classnames": "^2.2.5",
     "dot-prop-immutable": "^1.4.0",
     "es6-set": "^0.1.5",
-    "react-tippy": "^1.2.2",
     "shortid": "^2.2.8"
   },
   "devDependencies": {

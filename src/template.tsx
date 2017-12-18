@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 const cn = require('classnames')
-const { Tooltip } = require('react-tippy')
+const Tooltip = require('@atlaskit/tooltip').default
 
 import {
   IReactFormConfig,
@@ -39,13 +39,12 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
 
     const helpText = config.helpText
       && <Tooltip
-        title={config.helpText}
+        content={config.helpText}
         position="top"
-        arrow
-        arrowSize="small"
-        trigger="mouseenter"
+        className="hello"
+        tag="span"
         {...config.helpTextOptions || {}}>
-        <span>
+        <span className="help-text-trigger">
           ?
         </span>
       </Tooltip>
@@ -59,7 +58,7 @@ class ReactFormTemplate extends React.Component<ReactFormTemplateProps, ReactFor
         <span>{config.displayName}</span>
         <span>{helpText}</span>
         {
-          config.optional && <span>(optional)</span>
+          config.optional && <span className="optional">(optional)</span>
         }
       </div>
       <div className="react-forms-field">
