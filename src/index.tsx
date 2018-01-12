@@ -23,7 +23,7 @@ import {
 export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   config: IReactFormConfig[]
   store?: any;
-  customComponentsResolvers?: {(type: string): any}[];
+  customComponentResolvers?: {(type: string): any}[];
   customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
   useNativeEvent?: boolean;
 };
@@ -93,12 +93,12 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       case 'textarea':
         return TextArea
       default:
-        const { customComponentsResolvers } = this.props
-        if (customComponentsResolvers) {
+        const { customComponentResolvers } = this.props
+        if (customComponentResolvers) {
           let Component = null
           let i = 0
-          while (i < customComponentsResolvers.length) {
-            Component = customComponentsResolvers[i](type)
+          while (i < customComponentResolvers.length) {
+            Component = customComponentResolvers[i](type)
             if (Component) {
               break
             }
@@ -180,7 +180,4 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 }
 
-export {
-  getNewState,
-}
 export default ReactForms

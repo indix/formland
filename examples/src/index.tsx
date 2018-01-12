@@ -4,7 +4,7 @@ require('./index.scss')
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import Formgenerator, { getNewState } from '../../dist/'
+import Formgenerator from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
 import Select from './react-select'
 
@@ -152,7 +152,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         <Formgenerator
           ref={(el) => this.formgenerator = el}
           customValueResolvers={[customValueResolver]}
-          customComponentsResolvers={[customComponentResolver]}
+          customComponentResolvers={[customComponentResolver]}
           onChange={this.onChange}
           config={config}
           store={this.state} />

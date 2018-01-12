@@ -26,7 +26,7 @@ A simple, super-cool, super-flexiable, extensible config based form element gene
 ```javascript
 import '@praneshravi/react-forms/css/index.css'
 import React, { Component } from 'react'
-import Form, { getNewState } from '@praneshravi/react-forms'
+import Form from '@praneshravi/react-forms'
 
 class Example extends Component {
   constructor() {
@@ -53,7 +53,7 @@ class Example extends Component {
     return <Form
       config={config}
       store={this.state}
-      onChange={getNewState(this.onChange, this.state)} />
+      onChange={this.onChange} />
   }
 }
 ```
@@ -66,7 +66,9 @@ class Example extends Component {
 |onChange| function| undefined| Callback for `onChange` event|
 |onBlur|function|undefined|Callback for `onBlur` event|
 |onFocus|function|undefined|Callback fro `onFocus` event|
-|customComponentsResolver|array| undefined| Array of resolvers to resolve custom form elements|
+|customComponentResolvers|array| undefined| Array of resolvers to resolve custom form elements|
+|customValueResolvers|array| undefined| Array of resolvers to resolve the value of the custom form elements|
+|useNativeEvent|boolean| false| Whether to return the new state or native JS event object on events|
 
 ### Configuration File Options
 |Property   |Type   |Default   |Description   |
@@ -93,38 +95,13 @@ class Example extends Component {
 |validation|function|undefined|Mathod to perform validation. `(value) => errorMessage|null`|
 |modifyStoreBeforeChange|function|undefined| Method to modify store directly before any value is stored. `(config, value, store) => store`.|
 
-### Resolve values form events
-As all the components used in react-forms are controlled components, you need to use a `onChange` handler to get the value from the event and set it in the store. When it comes to multiple components, it will become a bit messy to get and set value.
-
-To make this easy, react-forms provides a utility called `getNewState` to resolve and set values. `getNewState(callback, store [, customResolvers])`
-
-|Parameter|type|default|description|
-|---------|----|-------|-----------|
-|callback|function|undefined|The function to be called with the new value on `onChange` event.|
-|store| object \| array|{}| The data store(can be the state, redux or mobx).|
-|customResolvers| array | undefined| Array of custom value resolvers to resolve values for custom components. This is an optional param.|
-
-```javascript
-<Form
-  config={config}
-  store={this.state}
-  onChange={getNewState(
-  	this.onChange,
-  	this.state,
-  	[reactSelectValueResolver],
-  )} />
-
-```
-
 ### Modify store value directly from config
-You can access the store and change any store value directly from the config using `modifyStoreBeforeChange` method. This method will be called during `onChange` event of the form with the config, value and the store as params. You can modify the state and return it. It will be used for the next render.
-
-To make this work, you need to use `getNewState` utility provided by react-forms. It takes three arguments, the event callback function, the store and an array of optional custom value resolvers.
+You can access the store and change any store value directly from the config using `modifyStoreBeforeChange` method. This method will be called during `onChange` event of the form element with value and the store as params. You can modify the state and return it. It will be used for the next render.
 
 ```javascript
 import '@praneshravi/react-forms/css/index.css'
 import React, { Component } from 'react'
-import Form, { getNewState } from '@praneshravi/react-forms'
+import Form from '@praneshravi/react-forms'
 
 class Example extends Component {
   constructor() {
@@ -164,18 +141,22 @@ class Example extends Component {
     return <Form
       config={config}
       store={this.state}
-      onChange={getNewState(this.onChange, this.state)} />
+      onChange={this.onChange} />
   }
 }
 ```
 
-If you're not using `getNewState`, you won't be able use `modifyStoreBeforeChange`.
-
 
 ### Custom Form Elements
-Custom form elements can be added to any instance of react-forms via `customComponentsResolver` prop and `customValueResolver` param of `getNewState`. `customComponentsResolver` takes an array of function and expected to return a React component instance based on the `type` which is passed as param.
+Custom form elements can be added to any instance of react-forms via `customComponentResolvers` and `customValueResolvers` props.
 
-To resolve the `value` of the custom component, add additional params `customValueResolver` to `getNewState`. This will be a function which will receive `onChange` event params and it is expected to return a value. For example:
+#### customComponentResolvers(type: string) => ({ config: IReactFormConfig, value: any, additionalProps: any }) => JSX.Element
+Returns a valid React HOC of a custom type. The HOC takes three params, `config`, `value`, `additionalProps`.
+
+#### customValueResolvers(config: IReactFormConfig, value: any) => any
+Returns a resolved value based on the config type.
+
+See the following example to understand how it works.
 
 ```javascript
 import '@praneshravi/react-forms/css/index.css'
@@ -196,12 +177,10 @@ const customComponentsResolver = (type) => {
   }
 }
 
-const customValueResolver = (config, args) => {
-  switch(config.type) {
-    case 'custom-dropdown':
-      return args[0].value
-    default
-      return null
+const customValueResolver = (config: any, value: any) => {
+  switch (config.type) {
+    case 'react-select':
+      return value ? value.value : ''
   }
 }
 
@@ -242,10 +221,13 @@ class Example extends Component {
     ]
 
     return <Form
-      customComponentsResolver={[customComponentsResolver]}
+      customComponentResolvers={[customComponentsResolver]}
+      customValueResolvers={[customValueResolver]}
       config={config}
       store={this.state}
-      onChange={getNewState(this.onChange, this.state, customValueResolver)} />
+      onChange={this.onChange} />
   }
 }
 ```
+## License
+MIT
