@@ -7,10 +7,12 @@ export interface IOptions {
 
 export interface IReactFormConfig {
   id: string;
-  type: 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | 'range' | 'textarea' | string;
-  resultPath: string;
+  type: 'group' | 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | 'range' | 'textarea' | string;
+  resultPath?: string;
 
   displayName?: string;
+  elements?: IReactFormConfig[];
+  description?: string;
   className?: string;
   isHidden?: <T>(store: T) => boolean;
   optional?: boolean;

@@ -1,0 +1,16 @@
+.react-forms-group {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $input-border-color;
+  &:last-child {
+    border-bottom: none;
+  }
+  .group-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .group-description {
+    margin-bottom: 30px;
+  }
+}

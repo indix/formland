@@ -3,6 +3,7 @@ import * as React from 'react'
 import { getNewState } from './utils'
 
 import Template from './template'
+import Group from './group'
 import TextBox from './input-textbox'
 import Toggle from './input-toggle'
 import Radio from './input-radio'
@@ -122,8 +123,17 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return null
   }
 
+  private getFormGroup(config: IReactFormConfig, callbacks: any, store: any): JSX.Element {
+    return <Group config={config} key={config.id}>
+      {this.getFormElements(config.elements, callbacks, store)}
+    </Group>
+  }
+
   private getFormElements(configs: IReactFormConfig[], callbacks: any, store: any) {
     return configs.map((config, i) => {
+      if (config.type === 'group') {
+        return this.getFormGroup(config, callbacks, store)
+      }
       if (config.isHidden && config.isHidden(store)) {
         return false
       }

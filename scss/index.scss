@@ -3,6 +3,7 @@
 .react-forms {
   font-size: $input-font-size;
   @import 'template';
+  @import 'group';
   @import 'input-textbox';
   @import 'input-textarea';
   @import 'input-dropdown';
