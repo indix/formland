@@ -25,9 +25,6 @@ export interface IReactFormConfig {
   componentProps?: any;
   helpText?: string;
   helpTextOptions?: any;
-  infoText?: string;
-  showValue?: boolean;
-  showRange?: boolean;
   instantValidation?: boolean;
   required?: boolean | string;
   validation?: (value: any) => string | false | null | undefined;
