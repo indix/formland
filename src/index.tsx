@@ -27,6 +27,7 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   customComponentResolvers?: {(type: string): any}[];
   customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
   useNativeEvent?: boolean;
+  onSubmit?: () => void;
 };
 
 export interface ReactFormsState {
@@ -47,6 +48,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       validate: false,
     }
     this.errors = []
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   public validate() {
@@ -109,6 +111,11 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         }
         return null
     }
+  }
+
+  private onSubmit(e: any) {
+    e.preventDefault()
+    this.props.onSubmit && this.props.onSubmit()
   }
 
   private validateField(value: any, config: IReactFormConfig) {
@@ -184,9 +191,14 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       { onChange, onBlur, onFocus },
       store,
     )
-    return <div className="react-forms">
-      {formElements}
-    </div>
+    return <form className="react-forms" onSubmit={this.onSubmit}>
+      <div className="form-elements">
+        {formElements}
+      </div>
+      <div className="form-buttons">
+        {this.props.children}
+      </div>
+    </form>
   }
 }
 
