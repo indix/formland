@@ -6,7 +6,7 @@ import * as ReactDOM from 'react-dom'
 
 import Formgenerator from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
-import Select from './react-select'
+import Select from 'react-select'
 
 interface ReactFormsProps { };
 
@@ -17,7 +17,12 @@ interface ReactFormsState {
 const customComponentResolver = (type: string) => {
   switch (type) {
     case 'react-select':
-      return Select
+      return (props: any) =>
+        <Select
+          options={props.config.options}
+          value={props.value}
+          {...props.componentProps}
+        />
   }
 }
 
@@ -162,18 +167,19 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
         ],
       },
     ]
-    console.log(this.state);
     return (
       <div className="mx-400">
         <h1>React Forms</h1>
         <Formgenerator
+          onSubmit={this.validate}
           ref={(el) => this.formgenerator = el}
           customValueResolvers={[customValueResolver]}
           customComponentResolvers={[customComponentResolver]}
           onChange={this.onChange}
           config={config}
-          store={this.state} />
-        <button onClick={this.validate}>Validate</button>
+          store={this.state}>
+          <button type="submit">Validate</button>
+        </Formgenerator>
       </div>
     )
   }
