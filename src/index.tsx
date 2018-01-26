@@ -68,7 +68,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     Object.keys(callbacks || {}).forEach((event) => {
       if (callbacks[event]) {
         bindedCallbacks[event] = (...args: any[]): void => {
-          if (this.props.useNativeEvent) {
+          if (this.props.useNativeEvent || event !== 'onChange') {
             callbacks[event].apply(null, [config].concat(...args))
           } else {
             this.eventProxyHandlers(config, callbacks[event], args)
