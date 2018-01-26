@@ -9,9 +9,10 @@ import {
 const InputToggle: React.SFC<IFormElementProps> = ({
   value = false,
   config,
-  additionalProps = {},
+  callbacks = {},
 }) => {
   const _id = id.generate()
+  const componentProps = config.componentProps || {}
   return <div className={cn('form-element', 'input-toggle', config.className)}>
     <span className="input-toggle-wrapper">
       <input
@@ -19,11 +20,12 @@ const InputToggle: React.SFC<IFormElementProps> = ({
         value={(!value).toString()}
         id={`${config.id}_${_id}`}
         type="checkbox"
-        {...additionalProps}
+        {...callbacks}
+        {...componentProps}
       />
       <label htmlFor={`${config.id}_${_id}`}></label>
     </span>
-    <span className="info-text">{config.infoText}</span>
+    <span className="info-text">{componentProps.infoText}</span>
   </div>
 }
 

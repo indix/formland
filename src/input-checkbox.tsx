@@ -9,7 +9,7 @@ import {
 const InputCheckbox: React.SFC<IFormElementProps> = ({
   value = '',
   config,
-  additionalProps = {},
+  callbacks = {},
 }) => {
   const { separator = ',' } = config
   const valueArray: any[] = config.simpleValues ? value.split(separator) : value
@@ -22,8 +22,9 @@ const InputCheckbox: React.SFC<IFormElementProps> = ({
             checked={valueArray.indexOf(option.value) > -1}
             value={option.value.toString()}
             id={`${config.id}_${unique}`}
-            type="checkbox"
-            {...additionalProps}
+          type="checkbox"
+            {...callbacks}
+            {...config.componentProps}
           />
           <label htmlFor={`${config.id}_${unique}`}>{option.label}</label>
       </span>

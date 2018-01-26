@@ -10,7 +10,7 @@ import {
 const InputRadio: React.SFC<IFormElementProps> = ({
   value = '',
   config,
-  additionalProps = {},
+  callbacks = {},
 }) => {
   const radioInputs = (config.options || []).map((option) => {
     const unique = id.generate()
@@ -22,7 +22,8 @@ const InputRadio: React.SFC<IFormElementProps> = ({
         id={`${config.id}_${option.value}_${unique}`}
         value={option.value}
         disabled={option.disabled || false}
-        {...additionalProps} />
+        {...callbacks}
+        {...config.componentProps} />
       <label
         htmlFor={`${config.id}_${option.value}_${unique}`}>
         {option.label}

@@ -156,10 +156,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       const props = {
         config,
         value,
-        additionalProps: {
-          ...this.bindCallbacks(config, callbacks),
-          ...(config.componentProps || {}),
-        },
+        callbacks: this.bindCallbacks(config, callbacks),
       }
 
       const Element: any = this.getFormElement(config.type)

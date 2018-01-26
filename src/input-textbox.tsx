@@ -9,7 +9,7 @@ import {
 const InputTextbox: React.SFC<IFormElementProps> = ({
   value = '',
   config,
-  additionalProps = {},
+  callbacks = {},
 }) => {
   return <div className={cn('form-Element', 'input-text', config.className)}>
     <input
@@ -18,7 +18,8 @@ const InputTextbox: React.SFC<IFormElementProps> = ({
       placeholder={config.placeholder}
       name={config.id}
       id={config.id}
-      { ...additionalProps }
+      { ...callbacks }
+      { ...config.componentProps }
     />
   </div>
 }

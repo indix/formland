@@ -7,7 +7,7 @@ import {
 const InputDropdown: React.SFC<IFormElementProps> = ({
   value: v,
   config,
-  additionalProps = {},
+  callbacks = {},
 }) => {
   const value = (
     v
@@ -32,7 +32,8 @@ const InputDropdown: React.SFC<IFormElementProps> = ({
         value={value}
         name={config.id}
         id={config.id}
-        {...additionalProps}
+        {...callbacks}
+        {...config.componentProps}
       >
         {options}
       </select>

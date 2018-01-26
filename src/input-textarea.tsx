@@ -6,7 +6,7 @@ import {
 } from './types'
 
 const InputTextArea: React.SFC<IFormElementProps> = ({
-  additionalProps,
+  callbacks = {},
   config,
   value = '',
 }) => {
@@ -17,7 +17,8 @@ const InputTextArea: React.SFC<IFormElementProps> = ({
         name={config.id}
         id={config.id}
         value={value}
-        { ...additionalProps }
+        { ...callbacks }
+        { ...config.componentProps }
     />
   </div>
 }

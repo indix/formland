@@ -5,24 +5,30 @@ import {
   IFormElementProps,
 } from './types'
 
-const InputRange: React.SFC<IFormElementProps> = ({ value, config, additionalProps }) => {
+const InputRange: React.SFC<IFormElementProps> = ({
+  value,
+  config,
+  callbacks = {},
+}) => {
+  const componentProps = config.componentProps || {}
   return <div className={cn('form-element', 'input-range', config.className)}>
     {
-      config.showValue !== false
-      && <div className="value">{value || additionalProps.min}</div>
+      componentProps.showValue !== false
+      && <div className="value">{value || componentProps.min}</div>
     }
     <input
       type="range"
-      value={value || additionalProps.min}
+      value={value || componentProps.min}
       name={config.id}
       id={config.id}
-      { ...additionalProps }
+      { ...callbacks }
+      { ...componentProps }
     />
     {
-      config.showRange !== false
+      componentProps.showRange !== false
       && <div className="range">
-        <span className="min">{additionalProps.min}</span>
-        <span className="max">{additionalProps.max}</span>
+        <span className="min">{componentProps.min}</span>
+        <span className="max">{componentProps.max}</span>
       </div>
     }
   </div>

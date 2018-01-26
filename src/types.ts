@@ -43,7 +43,8 @@ export interface ISupportedGlobalCallbacks<T> {
 export interface IFormElementProps {
   value: any;
   config: IReactFormConfig;
-  additionalProps: any,
+  componentProps: any;
+  callbacks: any;
 }
 
 export interface IFormErrors {
