@@ -61,6 +61,8 @@ var getNewState = function (callback, store, customValueResolver) {
             case 'time':
             case 'url':
             case 'week':
+            case 'textarea':
+            case 'radio':
                 return event.currentTarget.value;
             case 'number':
                 return parseInt(event.currentTarget.value, 10);
