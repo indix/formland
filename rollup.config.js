@@ -4,6 +4,7 @@ const external = [
   'react',
   'classnames',
   'shortid',
+  'rc-tooltip',
 ]
 
 export default [

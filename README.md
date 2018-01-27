@@ -84,6 +84,8 @@ class Example extends Component {
 |isHidden|function|undefined|Method to hide form field element in runtime. `(store) => boolean`|
 |optional|boolean|undefined|Says if the form field is optional.|
 |placeholder|string|undefined| Placeholder text for the form elements|
+|helpText|string|undefined| Help text for a form element|
+|helpTextOptions|object|undefined| See rc-tooltip [props](https://github.com/react-component/tooltip#props)
 |options|array|[]|Array of options. `({ value: any, label: any })[]`|
 |separator|string|','|Separator to join/separate multiple values. Used by checkbox, multi-dropdown, etc.|
 |topComponent|function|undefined|Method to render any additional elements to the top of the form field element. `(store) => JSX.Element`|

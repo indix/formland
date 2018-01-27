@@ -21,17 +21,18 @@
     "publish:examples:local": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist"
   },
   "dependencies": {
-    "@atlaskit/tooltip": "^8.0.10",
     "array-from": "^2.1.1",
     "babel-runtime": "^6.26.0",
     "classnames": "^2.2.5",
     "dot-prop-immutable": "^1.4.0",
     "es6-set": "^0.1.5",
+    "rc-tooltip": "^3.7.0",
     "shortid": "^2.2.8"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
     "@types/core-js": "^0.9.43",
+    "@types/rc-tooltip": "^3.4.10",
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
     "@types/react-select": "^1.0.60",

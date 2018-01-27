@@ -1,6 +1,9 @@
 'use strict';
 
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
 var React = require('react');
+var Tooltip = _interopDefault(require('rc-tooltip'));
 var id = require('shortid');
 
 /*! *****************************************************************************
@@ -121,8 +124,8 @@ var getNewState = function (callback, store, customValueResolver) {
     };
 };
 
+require('rc-tooltip/assets/bootstrap.css');
 var cn = require('classnames');
-var Tooltip = require('@atlaskit/tooltip').default;
 
 
 var ReactFormTemplate = /** @class */ (function (_super) {
@@ -139,8 +142,9 @@ var ReactFormTemplate = /** @class */ (function (_super) {
     ReactFormTemplate.prototype.render = function () {
         var _a = this.props, config = _a.config, store = _a.store, error = _a.error, children = _a.children;
         var helpText = config.helpText
-            && React.createElement(Tooltip, __assign({ content: config.helpText, position: "top", className: "hello", tag: "span" }, config.helpTextOptions || {}),
-                React.createElement("span", { className: "help-text-trigger" }, "?"));
+            && React.createElement(Tooltip, __assign({ placement: "top", overlay: React.createElement("span", null, config.helpText) }, config.helpTextOptions),
+                React.createElement("span", { className: "help-text-trigger" },
+                    React.createElement("img", { src: "data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PGcgY2xhc3M9Im5jLWljb24td3JhcHBlciIgZmlsbD0iIzQ0NDQ0NCI+PGNpcmNsZSBmaWxsPSJub25lIiBzdHJva2U9IiM0NDQ0NDQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iMTIiIGN5PSIxMiIgcj0iMTEiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiPjwvY2lyY2xlPiA8cGF0aCBkYXRhLWNvbG9yPSJjb2xvci0yIiBmaWxsPSJub25lIiBzdHJva2U9IiM0NDQ0NDQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMTIsMTV2LTIgYzEuNjA5LDAsMy0xLjM5MSwzLTNzLTEuMzkxLTMtMy0zYy0xLjE5NCwwLTIuMzQyLDAuODkzLTIuNzkyLDEuOTIxIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48L3BhdGg+IDxjaXJjbGUgZGF0YS1jb2xvcj0iY29sb3ItMiIgZGF0YS1zdHJva2U9Im5vbmUiIGZpbGw9IiM0NDQ0NDQiIGN4PSIxMiIgY3k9IjE4IiByPSIxIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj48L2NpcmNsZT48L2c+PC9zdmc+", alt: "help" })));
         return React.createElement("div", { className: "react-forms-template" },
             typeof config.topComponent === 'function'
                 && this.getTopComponent(config, store),
