@@ -8,21 +8,22 @@ import ReactForms from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
 import Select from 'react-select'
 
-interface ReactFormsProps { };
+interface ReactFormsProps {}
 
 interface ReactFormsState {
-  input: any;
-};
+  input: any
+}
 
 const customComponentResolver = (type: string) => {
   switch (type) {
     case 'react-select':
-      return (props: any) =>
+      return (props: any) => (
         <Select
           options={props.config.options}
           value={props.value}
           {...props.componentProps}
         />
+      )
   }
 }
 
@@ -33,7 +34,10 @@ const customValueResolver = (config: any, value: any) => {
   }
 }
 
-class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsState> {
+class ReactFormsExamples extends React.Component<
+  ReactFormsProps,
+  ReactFormsState
+> {
   forms: ReactForms
   constructor(props: ReactFormsProps) {
     super(props)
@@ -60,7 +64,8 @@ class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsStat
         id: 'group-1',
         type: 'group',
         displayName: 'Group 1',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia impedit minus laudantium, excepturi unde tenetur commodi voluptatem iste, beatae saepe ipsa consequatur maiores eaque provident dolor qui numquam nam laborum.',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia impedit minus laudantium, excepturi unde tenetur commodi voluptatem iste, beatae saepe ipsa consequatur maiores eaque provident dolor qui numquam nam laborum.',
         elements: [
           {
             id: 'text',
@@ -105,7 +110,8 @@ class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsStat
         id: 'group-2',
         type: 'group',
         displayName: 'Group 2',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil officia possimus rerum, dolor ea temporibus quidem necessitatibus omnis praesentium cumque magnam, autem atque dignissimos consequatur. Distinctio, consequatur nemo? Quibusdam, maiores!',
+        description:
+          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil officia possimus rerum, dolor ea temporibus quidem necessitatibus omnis praesentium cumque magnam, autem atque dignissimos consequatur. Distinctio, consequatur nemo? Quibusdam, maiores!',
         elements: [
           {
             id: 'radio',
@@ -173,13 +179,13 @@ class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsStat
         <ReactForms
           secondaryButton={false}
           onSubmit={this.validate}
-          ref={(el) => this.forms = el}
+          ref={el => (this.forms = el)}
           customValueResolvers={[customValueResolver]}
           customComponentResolvers={[customComponentResolver]}
           onChange={this.onChange}
           config={config}
-          store={this.state}>
-        </ReactForms>
+          store={this.state}
+        />
       </div>
     )
   }

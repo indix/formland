@@ -23,19 +23,19 @@ import {
 
 export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   config: IReactFormConfig[]
-  store?: any;
-  customComponentResolvers?: {(type: string): any}[];
-  customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
-  useNativeEvent?: boolean;
-  onSubmit?: (e?: any) => void;
-  primaryButton?: string | false | undefined;
-  secondaryButton?: string | false | undefined;
+  store?: any
+  customComponentResolvers?: { (type: string): any }[]
+  customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[]
+  useNativeEvent?: boolean
+  onSubmit?: (e?: any) => void
+  primaryButton?: string | false | undefined
+  secondaryButton?: string | false | undefined
   onSecondaryButtonClick?: (e?: any) => void
-};
+}
 
 export interface ReactFormsState {
-  validate?: boolean;
-};
+  validate?: boolean
+}
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   errors: IFormErrors[]
@@ -45,8 +45,8 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     store: {},
     primaryButton: 'Submit',
     secondaryButton: 'Cancel',
-    onSecondaryButtonClick: () => { },
-    onSubmit: () => { },
+    onSecondaryButtonClick: () => {},
+    onSubmit: () => {},
   }
 
   constructor(props: ReactFormsProps) {
@@ -65,14 +65,21 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return this.errors
   }
 
-  private eventProxyHandlers(config: IReactFormConfig, callback: any, args: any[]) {
-    getNewState(callback, this.props.store, this.props.customValueResolvers)
-      .apply(null, [config].concat(...args))
+  private eventProxyHandlers(
+    config: IReactFormConfig,
+    callback: any,
+    args: any[],
+  ) {
+    getNewState(
+      callback,
+      this.props.store,
+      this.props.customValueResolvers,
+    ).apply(null, [config].concat(...args))
   }
 
-  private bindCallbacks (config: IReactFormConfig, callbacks: any): any {
+  private bindCallbacks(config: IReactFormConfig, callbacks: any): any {
     const bindedCallbacks: any = {}
-    Object.keys(callbacks || {}).forEach((event) => {
+    Object.keys(callbacks || {}).forEach(event => {
       if (callbacks[event]) {
         bindedCallbacks[event] = (...args: any[]): void => {
           if (this.props.useNativeEvent || event !== 'onChange') {
@@ -138,7 +145,10 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     if (typeof config.validation === 'function') {
       return config.validation(value) || null
     }
-    if (typeof config.required !== 'undefined' && typeof value === 'undefined') {
+    if (
+      typeof config.required !== 'undefined' &&
+      typeof value === 'undefined'
+    ) {
       return typeof config.required === 'string'
         ? config.required
         : 'Required Value'
@@ -146,13 +156,23 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return null
   }
 
-  private getFormGroup(config: IReactFormConfig, callbacks: any, store: any): JSX.Element {
-    return <Group config={config} key={config.id}>
-      {this.getFormElements(config.elements, callbacks, store)}
-    </Group>
+  private getFormGroup(
+    config: IReactFormConfig,
+    callbacks: any,
+    store: any,
+  ): JSX.Element {
+    return (
+      <Group config={config} key={config.id}>
+        {this.getFormElements(config.elements, callbacks, store)}
+      </Group>
+    )
   }
 
-  private getFormElements(configs: IReactFormConfig[], callbacks: any, store: any) {
+  private getFormElements(
+    configs: IReactFormConfig[],
+    callbacks: any,
+    store: any,
+  ) {
     return configs.map((config, i) => {
       if (config.type === 'group') {
         return this.getFormGroup(config, callbacks, store)
@@ -177,17 +197,16 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
 
       const Element: any = this.getFormElement(config.type)
 
-      return <Template
-        error={(this.state.validate || config.instantValidation) && error}
-        config={config}
-        store={store}
-        key={config.id}>
-        {
-          Element
-            ? <Element { ...props} />
-            : null
-        }
-      </Template>
+      return (
+        <Template
+          error={(this.state.validate || config.instantValidation) && error}
+          config={config}
+          store={store}
+          key={config.id}
+        >
+          {Element ? <Element {...props} /> : null}
+        </Template>
+      )
     })
   }
 
@@ -207,36 +226,31 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       { onChange, onBlur, onFocus },
       store,
     )
-    return <form className="react-forms" onSubmit={this.onSubmit}>
-      <div className="form-elements">
-        {formElements}
-      </div>
-      <div className="form-buttons-container">
-        {
-          this.props.children
-          || <div className="form-buttons">
-            {
-              secondaryButton
-              && <button
-                className="cancel"
-                onClick={onSecondaryButtonClick}
-                type="button"
-              >
-                {secondaryButton}
-              </button>
-            }
-            {
-              primaryButton
-              && <button
-                className="submit"
-                type="submit">
-                {primaryButton}
-              </button>
-            }
-          </div>
-        }
-      </div>
-    </form>
+    return (
+      <form className="react-forms" onSubmit={this.onSubmit}>
+        <div className="form-elements">{formElements}</div>
+        <div className="form-buttons-container">
+          {this.props.children || (
+            <div className="form-buttons">
+              {secondaryButton && (
+                <button
+                  className="cancel"
+                  onClick={onSecondaryButtonClick}
+                  type="button"
+                >
+                  {secondaryButton}
+                </button>
+              )}
+              {primaryButton && (
+                <button className="submit" type="submit">
+                  {primaryButton}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </form>
+    )
   }
 }
 

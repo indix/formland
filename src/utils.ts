@@ -1,6 +1,4 @@
-import {
-  IReactFormConfig,
-} from './types'
+import { IReactFormConfig } from './types'
 
 const dot = require('dot-prop-immutable')
 const set = require('es6-set')
@@ -9,7 +7,7 @@ const arrayFrom = require('array-from')
 const getNewState = (
   callback: (val: any) => void,
   store: any,
-  customValueResolver?: {(config: IReactFormConfig, args: any[]): any}[],
+  customValueResolver?: { (config: IReactFormConfig, args: any[]): any }[],
 ) => {
   const getValue = (...agmnts: any[]) => {
     const [config, event] = agmnts
@@ -38,15 +36,18 @@ const getNewState = (
               value.push(options[i].value)
             }
           }
-          return config.simpleValues ? value.join(config.separator || ',') : value
+          return config.simpleValues
+            ? value.join(config.separator || ',')
+            : value
         }
         return event.currentTarget.value
       case 'checkbox':
         const value = event.currentTarget.value
         const existingValue = dot.get(store, config.resultPath) || []
-        const existingValueArray = (config.simpleValues && existingValue.split)
-          ? existingValue.split(config.separator || ',')
-          : existingValue
+        const existingValueArray =
+          config.simpleValues && existingValue.split
+            ? existingValue.split(config.separator || ',')
+            : existingValue
         const valuesSet = new set(existingValueArray)
         if (valuesSet.has(value)) {
           valuesSet.delete(value)
@@ -79,12 +80,11 @@ const getNewState = (
     const value = getValue.apply(null, [config].concat(rest))
     const intermediateStore = dot.set(store, config.resultPath, value)
     const newStore = config.modifyStoreBeforeChange
-      ? (config.modifyStoreBeforeChange(config, value, intermediateStore) || intermediateStore)
+      ? config.modifyStoreBeforeChange(config, value, intermediateStore) ||
+        intermediateStore
       : intermediateStore
     return callback(newStore)
   }
 }
 
-export {
-  getNewState,
-}
+export { getNewState }

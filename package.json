@@ -8,17 +8,20 @@
   "repository": "https://github.com/praneshr/react-form.git",
   "scripts": {
     "build": "yarn build:js && yarn build:scss",
-    "test": "echo",
     "build:examples": "webpack --color --progress",
     "build:js": "rollup -c",
     "build:scss": "yarn run task:scss & yarn run task:autoprefix",
     "build:watch": "rollup -c -w",
+    "precommit": "pretty-quick --staged",
+    "publish:examples":
+      "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist -r $GITHUB_REPO_URL",
+    "publish:examples:local":
+      "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist",
     "scss:watch": "nodemon --watch scss/ -e scss --exec yarn run build:scss",
     "start:examples": "webpack-dev-server --open",
     "task:autoprefix": "postcss css/*.css --use autoprefixer -d css",
     "task:scss": "node-sass-chokidar scss/index.scss -o css",
-    "publish:examples": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist -r $GITHUB_REPO_URL",
-    "publish:examples:local": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist"
+    "test": "echo"
   },
   "dependencies": {
     "array-from": "^2.1.1",
@@ -45,9 +48,13 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "node-sass": "^4.7.2",
     "node-sass-chokidar": "^0.0.3",
     "nodemon": "^1.12.1",
     "postcss-cli": "^4.1.1",
+    "prettier": "^1.10.2",
+    "pretty-quick": "^1.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-select": "^1.1.0",

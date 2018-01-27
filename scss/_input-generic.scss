@@ -1,13 +1,13 @@
 .input-text {
-  input[type=date],
-  input[type=email],
-  input[type=month],
-  input[type=number],
-  input[type=text],
-  input[type=tel],
-  input[type=time],
-  input[type=url],
-  input[type=week] {
+  input[type="date"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
     width: 100%;
     @include common;
     @include transition;
@@ -15,7 +15,7 @@
       border-color: $input-border-color-dark;
     }
   }
-  input[type=color] {
+  input[type="color"] {
     -webkit-appearance: none;
     border: none;
     width: 100%;

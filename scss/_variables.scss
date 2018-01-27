@@ -1,6 +1,5 @@
-
 // Common
-$primary-color: #4C5AF7;
+$primary-color: #4c5af7;
 $input-border-color: #e0e0e0;
 $white: #ffffff;
 $input-border-color-dark: lighten($primary-color, 25%);
@@ -32,7 +31,7 @@ $input-range-track-height: 5px;
 $template-margin-bottom: 30px;
 $template-margin-right: 30px;
 $template-label-margin-bottom: 10px;
-$template-error-background: #FF3A3A;
+$template-error-background: #ff3a3a;
 $template-error-font-color: $white;
 
 @mixin common {

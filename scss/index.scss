@@ -1,16 +1,16 @@
-@import 'variables';
+@import "variables";
 
 .react-forms {
   font-size: $input-font-size;
-  @import 'template';
-  @import 'group';
-  @import 'input-generic';
-  @import 'input-textarea';
-  @import 'input-dropdown';
-  @import 'input-radio';
-  @import 'input-checkbox';
-  @import 'input-toggle';
-  @import 'input-range';
+  @import "template";
+  @import "group";
+  @import "input-generic";
+  @import "input-textarea";
+  @import "input-dropdown";
+  @import "input-radio";
+  @import "input-checkbox";
+  @import "input-toggle";
+  @import "input-range";
 
   .form-buttons-container {
     margin-top: 20px;

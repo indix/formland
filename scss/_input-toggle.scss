@@ -13,7 +13,7 @@
     margin-left: 15px;
     margin-top: -5px;
   }
-  input[type=checkbox] {
+  input[type="checkbox"] {
     position: absolute;
     visibility: hidden;
     & + label {
@@ -42,7 +42,6 @@
         border-radius: $input-toggle-border-radius;
         @include transition(margin);
       }
-
     }
     &:checked {
       & + label {

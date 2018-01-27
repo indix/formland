@@ -11,19 +11,19 @@
     justify-content: space-between;
     opacity: 0.5;
   }
-  input[type=range] {
+  input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
   }
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     outline: none;
   }
 
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     height: $input-range-thumb-height;
     width: $input-range-thumb-width;
@@ -34,10 +34,10 @@
     transform: scale3d(1, 1, 1);
     @include transition(transform);
   }
-  input[type=range]:focus::-webkit-slider-thumb {
+  input[type="range"]:focus::-webkit-slider-thumb {
     transform: scale3d(1.2, 1.2, 1.2);
   }
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     appearance: none;
     height: $input-range-thumb-height;
     width: $input-range-thumb-width;
@@ -46,7 +46,7 @@
     cursor: pointer;
   }
 
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: $input-range-track-height;
     cursor: pointer;
@@ -55,11 +55,11 @@
     @include transition(background);
   }
 
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  input[type="range"]:focus::-webkit-slider-runnable-track {
     background: $input-border-color-dark;
   }
 
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     width: 100%;
     height: $input-range-track-height;
     cursor: pointer;
