@@ -7,9 +7,10 @@
   "main": "dist/index.js",
   "repository": "https://github.com/praneshr/react-form.git",
   "scripts": {
-    "build": "rollup -c",
+    "build": "yarn build:js && yarn build:scss",
     "test": "echo",
     "build:examples": "webpack --color --progress",
+    "build:js": "rollup -c",
     "build:scss": "yarn run task:scss & yarn run task:autoprefix",
     "build:watch": "rollup -c -w",
     "scss:watch": "nodemon --watch scss/ -e scss --exec yarn run build:scss",
