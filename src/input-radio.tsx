@@ -16,14 +16,15 @@ const InputRadio: React.SFC<IFormElementProps> = ({
     const unique = id.generate()
     return <span className="radio-button" key={`${config.id}_${option.value}`}>
       <input
+        {...callbacks}
+        {...config.componentProps}
         checked={value === option.value}
         className={config.className}
         type="radio"
         id={`${config.id}_${option.value}_${unique}`}
         value={option.value}
         disabled={option.disabled || false}
-        {...callbacks}
-        {...config.componentProps} />
+      />
       <label
         htmlFor={`${config.id}_${option.value}_${unique}`}>
         {option.label}

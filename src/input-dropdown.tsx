@@ -29,11 +29,11 @@ const InputDropdown: React.SFC<IFormElementProps> = ({
   return <div className={cn('form-element', 'input-dropdown', config.className)}>
     <span className={cn('dropdown-wrapper', { multi: (config.componentProps && config.componentProps.multiple)})}>
       <select
+        {...callbacks}
+        {...config.componentProps}
         value={value}
         name={config.id}
         id={config.id}
-        {...callbacks}
-        {...config.componentProps}
       >
         {options}
       </select>

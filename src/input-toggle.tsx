@@ -16,12 +16,12 @@ const InputToggle: React.SFC<IFormElementProps> = ({
   return <div className={cn('form-element', 'input-toggle', config.className)}>
     <span className="input-toggle-wrapper">
       <input
+        {...callbacks}
+        {...componentProps}
         checked={value}
         value={(!value).toString()}
         id={`${config.id}_${_id}`}
         type="checkbox"
-        {...callbacks}
-        {...componentProps}
       />
       <label htmlFor={`${config.id}_${_id}`}></label>
     </span>

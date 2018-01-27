@@ -17,12 +17,12 @@ const InputRange: React.SFC<IFormElementProps> = ({
       && <div className="value">{value || componentProps.min}</div>
     }
     <input
+      { ...callbacks }
+      { ...componentProps }
       type="range"
       value={value || componentProps.min}
       name={config.id}
       id={config.id}
-      { ...callbacks }
-      { ...componentProps }
     />
     {
       componentProps.showRange !== false

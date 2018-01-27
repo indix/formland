@@ -19,13 +19,13 @@ const InputCheckbox: React.SFC<IFormElementProps> = ({
     return (
       <span className="checkbox-wrapper" key={`${config.id}_${unique}`}>
         <input
-            checked={valueArray.indexOf(option.value) > -1}
-            value={option.value.toString()}
-            id={`${config.id}_${unique}`}
+          {...callbacks}
+          {...config.componentProps}
+          checked={valueArray.indexOf(option.value) > -1}
+          value={option.value.toString()}
+          id={`${config.id}_${unique}`}
           type="checkbox"
-            {...callbacks}
-            {...config.componentProps}
-          />
+        />
           <label htmlFor={`${config.id}_${unique}`}>{option.label}</label>
       </span>
     )

@@ -181,7 +181,7 @@ var cn$1 = require('classnames');
 var InputGeneric = function (_a) {
     var _b = _a.value, value = _b === void 0 ? '' : _b, config = _a.config, _c = _a.callbacks, callbacks = _c === void 0 ? {} : _c;
     return React.createElement("div", { className: cn$1('form-Element', 'input-text', config.className) },
-        React.createElement("input", __assign({ type: config.type, value: value, placeholder: config.placeholder, name: config.id, id: config.id }, callbacks, config.componentProps)));
+        React.createElement("input", __assign({}, callbacks, config.componentProps, { type: config.type, value: value, placeholder: config.placeholder, name: config.id, id: config.id })));
 };
 
 var cn$2 = require('classnames');
@@ -191,7 +191,7 @@ var InputToggle = function (_a) {
     var componentProps = config.componentProps || {};
     return React.createElement("div", { className: cn$2('form-element', 'input-toggle', config.className) },
         React.createElement("span", { className: "input-toggle-wrapper" },
-            React.createElement("input", __assign({ checked: value, value: (!value).toString(), id: config.id + "_" + _id, type: "checkbox" }, callbacks, componentProps)),
+            React.createElement("input", __assign({}, callbacks, componentProps, { checked: value, value: (!value).toString(), id: config.id + "_" + _id, type: "checkbox" })),
             React.createElement("label", { htmlFor: config.id + "_" + _id })),
         React.createElement("span", { className: "info-text" }, componentProps.infoText));
 };
@@ -202,7 +202,7 @@ var InputRadio = function (_a) {
     var radioInputs = (config.options || []).map(function (option) {
         var unique = id.generate();
         return React.createElement("span", { className: "radio-button", key: config.id + "_" + option.value },
-            React.createElement("input", __assign({ checked: value === option.value, className: config.className, type: "radio", id: config.id + "_" + option.value + "_" + unique, value: option.value, disabled: option.disabled || false }, callbacks, config.componentProps)),
+            React.createElement("input", __assign({}, callbacks, config.componentProps, { checked: value === option.value, className: config.className, type: "radio", id: config.id + "_" + option.value + "_" + unique, value: option.value, disabled: option.disabled || false })),
             React.createElement("label", { htmlFor: config.id + "_" + option.value + "_" + unique }, option.label));
     });
     return React.createElement("div", { className: cn$3('form-element', 'input-radio', config.className) }, radioInputs);
@@ -221,7 +221,7 @@ var InputDropdown = function (_a) {
     });
     return React.createElement("div", { className: cn$4('form-element', 'input-dropdown', config.className) },
         React.createElement("span", { className: cn$4('dropdown-wrapper', { multi: (config.componentProps && config.componentProps.multiple) }) },
-            React.createElement("select", __assign({ value: value, name: config.id, id: config.id }, callbacks, config.componentProps), options)));
+            React.createElement("select", __assign({}, callbacks, config.componentProps, { value: value, name: config.id, id: config.id }), options)));
 };
 
 var cn$5 = require('classnames');
@@ -232,7 +232,7 @@ var InputCheckbox = function (_a) {
     var checkboxInputs = (config.options || []).map(function (option) {
         var unique = id.generate();
         return (React.createElement("span", { className: "checkbox-wrapper", key: config.id + "_" + unique },
-            React.createElement("input", __assign({ checked: valueArray.indexOf(option.value) > -1, value: option.value.toString(), id: config.id + "_" + unique, type: "checkbox" }, callbacks, config.componentProps)),
+            React.createElement("input", __assign({}, callbacks, config.componentProps, { checked: valueArray.indexOf(option.value) > -1, value: option.value.toString(), id: config.id + "_" + unique, type: "checkbox" })),
             React.createElement("label", { htmlFor: config.id + "_" + unique }, option.label)));
     });
     return React.createElement("div", { className: cn$5(['form-element', 'input-checkbox', config.className]) }, checkboxInputs);
@@ -245,7 +245,7 @@ var InputRange = function (_a) {
     return React.createElement("div", { className: cn$6('form-element', 'input-range', config.className) },
         componentProps.showValue !== false
             && React.createElement("div", { className: "value" }, value || componentProps.min),
-        React.createElement("input", __assign({ type: "range", value: value || componentProps.min, name: config.id, id: config.id }, callbacks, componentProps)),
+        React.createElement("input", __assign({}, callbacks, componentProps, { type: "range", value: value || componentProps.min, name: config.id, id: config.id })),
         componentProps.showRange !== false
             && React.createElement("div", { className: "range" },
                 React.createElement("span", { className: "min" }, componentProps.min),
@@ -256,7 +256,7 @@ var cn$7 = require('classnames');
 var InputTextArea = function (_a) {
     var _b = _a.callbacks, callbacks = _b === void 0 ? {} : _b, config = _a.config, _c = _a.value, value = _c === void 0 ? '' : _c;
     return React.createElement("div", { className: cn$7('form-element', 'input-textarea', config.className) },
-        React.createElement("textarea", __assign({ placeholder: config.placeholder, className: config.className, name: config.id, id: config.id, value: value }, callbacks, config.componentProps)));
+        React.createElement("textarea", __assign({}, callbacks, config.componentProps, { placeholder: config.placeholder, className: config.className, name: config.id, id: config.id, value: value })));
 };
 
 var dotObject = require('dot-prop-immutable');

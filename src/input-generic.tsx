@@ -13,13 +13,13 @@ const InputGeneric: React.SFC<IFormElementProps> = ({
 }) => {
   return <div className={cn('form-Element', 'input-text', config.className)}>
     <input
+      { ...callbacks }
+      { ...config.componentProps }
       type={config.type}
       value={value}
       placeholder={config.placeholder}
       name={config.id}
       id={config.id}
-      { ...callbacks }
-      { ...config.componentProps }
     />
   </div>
 }
