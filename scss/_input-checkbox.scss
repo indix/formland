@@ -27,7 +27,7 @@
         & + label {
           position: relative;
           &:after {
-            content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAApklEQVRIS+2u0q2eibaf53vgj3claov318hzir2s2uqniepc1d/4jpbmgrbew0mp59maoegmcdprga8wsrpyz5cujefv4cepvw2qhy9al2m6bvaa7rbdrwb2bwwy8qpqwipac3dqbqknpwn4z3ybdbk49w7xcz10xnwhs7upxpdwhr+eYK0ig/h0ceVrRvgOEojv2W3Fsw8pBIS/WbCgAUKDTVGoaAbVdEgZ6zcjOAAAAABJRU5ErkJggg==);
+            content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAApklEQVRIS+2U0Q2EIBAF53VgJ3claOV318HZiR2s2UQNIepC1D/4JPBmGRbEw0MP59MAoeGmCDPrgA8wSRpyZ5cUJeFv4Cepvw2QhY9AL2m6BVAa7rBdRWb2BwwY8qpqwiPAC3DQBqkNPwN4Z3yBDbK49W7xCz10XnwHS7UpxPdWhR+eYK0ig/h0ceVrRvgOEojv2W3Fsw8pBIS/WbCgAUKDTVGoaAbVdEgZ6zcjOAAAAABJRU5ErkJggg==");
             position: absolute;
             left: -20px;
             transform: scale3d(0.8, 0.8, 0.8);
