@@ -28,8 +28,8 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
   useNativeEvent?: boolean;
   onSubmit?: (e?: any) => void;
-  primaryButton?: string;
-  secondaryButton?: string;
+  primaryButton?: string | false | undefined;
+  secondaryButton?: string | false | undefined;
   onSecondaryButtonClick?: (e?: any) => void
 };
 
@@ -227,7 +227,11 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
             }
             {
               primaryButton
-              && <button className="submit" type="submit">{primaryButton}</button>
+              && <button
+                className="submit"
+                type="submit">
+                {primaryButton}
+              </button>
             }
           </div>
         }

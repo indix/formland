@@ -12,8 +12,8 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
     }[];
     useNativeEvent?: boolean;
     onSubmit?: (e?: any) => void;
-    primaryButton?: string;
-    secondaryButton?: string;
+    primaryButton?: string | false | undefined;
+    secondaryButton?: string | false | undefined;
     onSecondaryButtonClick?: (e?: any) => void;
 }
 export interface ReactFormsState {
