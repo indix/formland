@@ -7,7 +7,7 @@ export interface IOptions {
 export interface IReactFormConfig {
     id: string;
     type: 'group' | 'dropdown' | 'text' | 'toggle' | 'radio' | 'checkbox' | 'range' | 'textarea' | string;
-    resultPath: string;
+    resultPath?: string;
     displayName?: string;
     elements?: IReactFormConfig[];
     description?: string;
@@ -23,9 +23,6 @@ export interface IReactFormConfig {
     componentProps?: any;
     helpText?: string;
     helpTextOptions?: any;
-    infoText?: string;
-    showValue?: boolean;
-    showRange?: boolean;
     instantValidation?: boolean;
     required?: boolean | string;
     validation?: (value: any) => string | false | null | undefined;
@@ -39,7 +36,8 @@ export interface ISupportedGlobalCallbacks<T> {
 export interface IFormElementProps {
     value: any;
     config: IReactFormConfig;
-    additionalProps: any;
+    componentProps: any;
+    callbacks: any;
 }
 export interface IFormErrors {
     id: string;

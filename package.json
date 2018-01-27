@@ -15,7 +15,9 @@
     "scss:watch": "nodemon --watch scss/ -e scss --exec yarn run build:scss",
     "start:examples": "webpack-dev-server --open",
     "task:autoprefix": "postcss css/*.css --use autoprefixer -d css",
-    "task:scss": "node-sass-chokidar scss/index.scss -o css"
+    "task:scss": "node-sass-chokidar scss/index.scss -o css",
+    "publish:examples": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist -r $GITHUB_REPO_URL",
+    "publish:examples:local": "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist"
   },
   "dependencies": {
     "@atlaskit/tooltip": "^8.0.10",
@@ -35,8 +37,11 @@
     "@types/rollup": "^0.51.1",
     "@types/shortid": "^0.0.29",
     "autoprefixer": "^7.1.6",
+    "babel-minify-webpack-plugin": "^0.2.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.12.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
     "node-sass-chokidar": "^0.0.3",
     "nodemon": "^1.12.1",

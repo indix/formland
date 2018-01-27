@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MinifyPlugin = require("babel-minify-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -12,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'examples/dist'),
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: '',
   },
   devServer : {
     contentBase: path.resolve(__dirname, 'examples/dist'),
@@ -27,19 +29,14 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        test: /\.s?css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader?minimize=true',
+            'sass-loader',
+          ],
+        }),
       },
     ],
   },
@@ -47,6 +44,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './examples/src/index.ejs',
     }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      filename: 'common.js',
+      minChunk: 2,
+    }),
+    new ExtractTextPlugin('macin.css'),
+  ].concat(
+    process.env.NODE_ENV === 'production'
+      ? [
+        new MinifyPlugin(),
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('production')
+        })
+      ]
+      : [
+        new webpack.HotModuleReplacementPlugin(),
+      ]
+  ),
 }

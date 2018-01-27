@@ -4,7 +4,7 @@ require('./index.scss')
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import Formgenerator from '../../dist/'
+import ReactForms from '../../dist/'
 import { IReactFormConfig } from '../../dist/types'
 import Select from 'react-select'
 
@@ -33,8 +33,8 @@ const customValueResolver = (config: any, value: any) => {
   }
 }
 
-class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
-  formgenerator: Formgenerator
+class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsState> {
+  forms: ReactForms
   constructor(props: ReactFormsProps) {
     super(props)
     this.onChange = this.onChange.bind(this)
@@ -51,7 +51,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 
   private validate() {
-    const errors = this.formgenerator.validate()
+    const errors = this.forms.validate()
   }
 
   public render(): JSX.Element {
@@ -170,19 +170,19 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     return (
       <div className="mx-400">
         <h1>React Forms</h1>
-        <Formgenerator
+        <ReactForms
           onSubmit={this.validate}
-          ref={(el) => this.formgenerator = el}
+          ref={(el) => this.forms = el}
           customValueResolvers={[customValueResolver]}
           customComponentResolvers={[customComponentResolver]}
           onChange={this.onChange}
           config={config}
           store={this.state}>
           <button type="submit">Validate</button>
-        </Formgenerator>
+        </ReactForms>
       </div>
     )
   }
 }
 
-ReactDOM.render(<ReactForms />, document.getElementById('app'))
+ReactDOM.render(<ReactFormsExamples />, document.getElementById('app'))
