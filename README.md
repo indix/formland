@@ -1,5 +1,7 @@
 # React Forms
 
+[![Build Status](https://travis-ci.org/praneshr/react-forms.svg?branch=master)](https://travis-ci.org/praneshr/react-forms) [![npm version](https://badge.fury.io/js/%40praneshravi%2Freact-forms.svg)](https://badge.fury.io/js/%40praneshravi%2Freact-forms)
+
 A simple, super-flexiable, extensible config based form generator for React.
 
 ## Features
