@@ -352,7 +352,7 @@ var ReactForms = /** @class */ (function (_super) {
     };
     ReactForms.prototype.onSubmit = function (e) {
         e.preventDefault();
-        this.props.onSubmit && this.props.onSubmit();
+        this.props.onSubmit(e);
     };
     ReactForms.prototype.validateField = function (value, config) {
         if (typeof config.validation === 'function') {
@@ -398,15 +398,24 @@ var ReactForms = /** @class */ (function (_super) {
         });
     };
     ReactForms.prototype.render = function () {
-        var _a = this.props, config = _a.config, onBlur = _a.onBlur, onChange = _a.onChange, onFocus = _a.onFocus, store = _a.store;
+        var _a = this.props, config = _a.config, onBlur = _a.onBlur, onChange = _a.onChange, onFocus = _a.onFocus, store = _a.store, primaryButton = _a.primaryButton, secondaryButton = _a.secondaryButton, onSecondaryButtonClick = _a.onSecondaryButtonClick;
         var formElements = this.getFormElements(config, { onChange: onChange, onBlur: onBlur, onFocus: onFocus }, store);
         return React.createElement("form", { className: "react-forms", onSubmit: this.onSubmit },
             React.createElement("div", { className: "form-elements" }, formElements),
-            React.createElement("div", { className: "form-buttons" }, this.props.children));
+            React.createElement("div", { className: "form-buttons-container" }, this.props.children
+                || React.createElement("div", { className: "form-buttons" },
+                    secondaryButton
+                        && React.createElement("button", { className: "cancel", onClick: onSecondaryButtonClick, type: "button" }, secondaryButton),
+                    primaryButton
+                        && React.createElement("button", { className: "submit", type: "submit" }, primaryButton))));
     };
     ReactForms.defaultProps = {
         useNativeEvent: false,
         store: {},
+        primaryButton: 'Submit',
+        secondaryButton: 'Cancel',
+        onSecondaryButtonClick: function () { },
+        onSubmit: function () { },
     };
     return ReactForms;
 }(React.Component));

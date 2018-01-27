@@ -171,6 +171,7 @@ class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsStat
       <div className="mx-400">
         <h1>React Forms</h1>
         <ReactForms
+          secondaryButton={false}
           onSubmit={this.validate}
           ref={(el) => this.forms = el}
           customValueResolvers={[customValueResolver]}
@@ -178,7 +179,6 @@ class ReactFormsExamples extends React.Component<ReactFormsProps, ReactFormsStat
           onChange={this.onChange}
           config={config}
           store={this.state}>
-          <button type="submit">Validate</button>
         </ReactForms>
       </div>
     )

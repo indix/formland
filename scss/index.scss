@@ -11,4 +11,28 @@
   @import 'input-checkbox';
   @import 'input-toggle';
   @import 'input-range';
+
+  .form-buttons-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      padding: 10px 15px;
+      min-width: 100px;
+      border-radius: 4px;
+      border: none;
+      background-color: $primary-color;
+      color: $white;
+      font-weight: 600;
+      margin-left: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &.cancel {
+        background-color: $white;
+        color: $primary-color;
+      }
+    }
+  }
 }

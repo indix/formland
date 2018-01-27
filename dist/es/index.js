@@ -280,7 +280,7 @@ class ReactForms extends Component {
     }
     onSubmit(e) {
         e.preventDefault();
-        this.props.onSubmit && this.props.onSubmit();
+        this.props.onSubmit(e);
     }
     validateField(value, config) {
         if (typeof config.validation === 'function') {
@@ -325,16 +325,25 @@ class ReactForms extends Component {
         });
     }
     render() {
-        const { config, onBlur, onChange, onFocus, store, } = this.props;
+        const { config, onBlur, onChange, onFocus, store, primaryButton, secondaryButton, onSecondaryButtonClick, } = this.props;
         const formElements = this.getFormElements(config, { onChange, onBlur, onFocus }, store);
         return createElement("form", { className: "react-forms", onSubmit: this.onSubmit },
             createElement("div", { className: "form-elements" }, formElements),
-            createElement("div", { className: "form-buttons" }, this.props.children));
+            createElement("div", { className: "form-buttons-container" }, this.props.children
+                || createElement("div", { className: "form-buttons" },
+                    secondaryButton
+                        && createElement("button", { className: "cancel", onClick: onSecondaryButtonClick, type: "button" }, secondaryButton),
+                    primaryButton
+                        && createElement("button", { className: "submit", type: "submit" }, primaryButton))));
     }
 }
 ReactForms.defaultProps = {
     useNativeEvent: false,
     store: {},
+    primaryButton: 'Submit',
+    secondaryButton: 'Cancel',
+    onSecondaryButtonClick: () => { },
+    onSubmit: () => { },
 };
 
 export default ReactForms;

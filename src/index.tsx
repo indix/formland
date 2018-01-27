@@ -27,7 +27,10 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   customComponentResolvers?: {(type: string): any}[];
   customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[];
   useNativeEvent?: boolean;
-  onSubmit?: () => void;
+  onSubmit?: (e?: any) => void;
+  primaryButton?: string;
+  secondaryButton?: string;
+  onSecondaryButtonClick?: (e?: any) => void
 };
 
 export interface ReactFormsState {
@@ -40,6 +43,10 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   static defaultProps = {
     useNativeEvent: false,
     store: {},
+    primaryButton: 'Submit',
+    secondaryButton: 'Cancel',
+    onSecondaryButtonClick: () => { },
+    onSubmit: () => { },
   }
 
   constructor(props: ReactFormsProps) {
@@ -124,7 +131,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
 
   private onSubmit(e: any) {
     e.preventDefault()
-    this.props.onSubmit && this.props.onSubmit()
+    this.props.onSubmit(e)
   }
 
   private validateField(value: any, config: IReactFormConfig) {
@@ -191,6 +198,9 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       onChange,
       onFocus,
       store,
+      primaryButton,
+      secondaryButton,
+      onSecondaryButtonClick,
     } = this.props
     const formElements = this.getFormElements(
       config,
@@ -201,8 +211,26 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       <div className="form-elements">
         {formElements}
       </div>
-      <div className="form-buttons">
-        {this.props.children}
+      <div className="form-buttons-container">
+        {
+          this.props.children
+          || <div className="form-buttons">
+            {
+              secondaryButton
+              && <button
+                className="cancel"
+                onClick={onSecondaryButtonClick}
+                type="button"
+              >
+                {secondaryButton}
+              </button>
+            }
+            {
+              primaryButton
+              && <button className="submit" type="submit">{primaryButton}</button>
+            }
+          </div>
+        }
       </div>
     </form>
   }

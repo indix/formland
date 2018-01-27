@@ -2,10 +2,11 @@
 // Common
 $primary-color: #4C5AF7;
 $input-border-color: #e0e0e0;
+$white: #ffffff;
 $input-border-color-dark: lighten($primary-color, 25%);
 $input-border-width: 2px;
 $input-border-radius: 4px;
-$input-background-color: #fff;
+$input-background-color: $white;
 $input-font-size: 14px;
 
 // Input Text
@@ -13,7 +14,7 @@ $input-textbox-padding: 10px;
 
 // Input Toggle
 $input-toggle-border-radius: 4px;
-$input-toggle-handle-background: #fff;
+$input-toggle-handle-background: $white;
 $input-toggle-track-background: $input-border-color;
 $input-toggle-handle-width: 20px;
 $input-toggle-handle-height: 24px;
@@ -32,7 +33,7 @@ $template-margin-bottom: 30px;
 $template-margin-right: 30px;
 $template-label-margin-bottom: 10px;
 $template-error-background: #FF3A3A;
-$template-error-font-color: #fff;
+$template-error-font-color: $white;
 
 @mixin common {
   padding: $input-textbox-padding;

@@ -71,6 +71,9 @@ class Example extends Component {
 |customComponentResolvers|array| undefined| Array of resolvers to resolve custom form elements|
 |customValueResolvers|array| undefined| Array of resolvers to resolve the value of the custom form elements|
 |useNativeEvent|boolean| false| Whether to return the new state or native JS event object on events|
+|primaryButton| string \| false \| undefined | 'Submit'| Title for the primary button. `false` to remove button|
+|secondaryButton| string \| false \| undefined | 'Cancel'| Title for the secondary button. `false` to remove button|
+|onSecondaryButtonClick| function | `()=> {}` | onClick event handler for secondary button|
 
 ### Configuration File Options
 
@@ -288,6 +291,20 @@ class Example extends Component {
       onChange={this.onChange} />
   }
 }
+```
+
+### Custom Buttons
+
+It is possible to add custom buttons. Just wrap you buttons with `<Form>`.
+
+```javascript
+<Form
+  ref={el => (this.form = el)}
+  config={config}
+  store={this.state}
+  onChange={this.onChange}>
+  <button type="submit">Custom Button</button>
+</Form>
 ```
 
 ### Custom Form Elements

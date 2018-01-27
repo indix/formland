@@ -11,7 +11,10 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
         (config: IReactFormConfig, args: any[]): any;
     }[];
     useNativeEvent?: boolean;
-    onSubmit?: () => void;
+    onSubmit?: (e?: any) => void;
+    primaryButton?: string;
+    secondaryButton?: string;
+    onSecondaryButtonClick?: (e?: any) => void;
 }
 export interface ReactFormsState {
     validate?: boolean;
@@ -21,6 +24,10 @@ declare class ReactForms extends React.Component<ReactFormsProps, ReactFormsStat
     static defaultProps: {
         useNativeEvent: boolean;
         store: {};
+        primaryButton: string;
+        secondaryButton: string;
+        onSecondaryButtonClick: () => void;
+        onSubmit: () => void;
     };
     constructor(props: ReactFormsProps);
     validate(): IFormErrors[];
