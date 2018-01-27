@@ -4,7 +4,7 @@ import { getNewState } from './utils'
 
 import Template from './template'
 import Group from './group'
-import TextBox from './input-textbox'
+import InputGeneric from './input-generic'
 import Toggle from './input-toggle'
 import Radio from './input-radio'
 import Dropdown from './input-dropdown'
@@ -81,8 +81,17 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
 
   private getFormElement(type: string) {
     switch (type) {
+      case 'color':
+      case 'date':
+      case 'email':
+      case 'month':
+      case 'number':
       case 'text':
-        return TextBox
+      case 'tel':
+      case 'time':
+      case 'url':
+      case 'week':
+        return InputGeneric
       case 'toggle':
         return Toggle
       case 'radio':

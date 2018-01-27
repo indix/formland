@@ -75,7 +75,7 @@ class Example extends Component {
 |Property   |Type   |Default   |Description   |
 |---|---|---|---|
 |id|string|undefined|ID for each form field. This should be unique.|
-|type|string|undefined|Type of the form field to be generated. The native package supports `text | toggle | radio | checkbox | range | textarea | dropdown` types. New types can be added via `Custom Form Elements`.|
+|type|string|undefined|Type of the form field to be generated. The native package supports `text | color | date | email | month | number | tel | time | url | week | toggle | radio | checkbox | range | textarea | dropdown` types. New types can be added via `Custom Form Elements`.|
 |resultPath|string|undefined|A [dot-prop-immutable](https://github.com/debitoor/dot-prop-immutable) compatible path to store the form field value.|
 |displayName|string|undefined|Display text for the form field.|
 |className|string|undefined|ClassName for the root form field element.|
@@ -290,11 +290,11 @@ class Example extends Component {
 
 Custom form elements can be added to any instance of react-forms via `customComponentResolvers` and `customValueResolvers` props.
 
-#### `customComponentResolvers(type: string) => ({ config: IReactFormConfig, value: any, callbacks: any }) => JSX.Element`
+- `customComponentResolvers(type: string) => ({ config: IReactFormConfig, value: any, callbacks: any }) => JSX.Element`
 
 Returns a valid React stateless function based on the custom type.
 
-#### `customValueResolvers(config: IReactFormConfig, value: any) => any`
+- `customValueResolvers(config: IReactFormConfig, value: any) => any`
 
 Returns a resolved value based on the custom type.
 

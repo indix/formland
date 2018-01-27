@@ -41,7 +41,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     this.validate = this.validate.bind(this)
     this.state = {
       input: {
-        text: 'Pranesh',
+        text: '',
       },
     }
   }

@@ -14,11 +14,18 @@ const getNewState = (
   const getValue = (...agmnts: any[]) => {
     const [config, event] = agmnts
     switch (config.type) {
-      case 'radio':
+      case 'color':
+      case 'date':
+      case 'email':
+      case 'month':
       case 'text':
-      case 'textarea':
-      case 'range':
+      case 'tel':
+      case 'time':
+      case 'url':
+      case 'week':
         return event.currentTarget.value
+      case 'number':
+        return parseInt(event.currentTarget.value, 10)
       case 'dropdown':
         if (config.componentProps && config.componentProps.multiple) {
           const options = event.currentTarget.options

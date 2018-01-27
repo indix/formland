@@ -6,14 +6,14 @@ import {
 } from './types'
 
 
-const InputTextbox: React.SFC<IFormElementProps> = ({
+const InputGeneric: React.SFC<IFormElementProps> = ({
   value = '',
   config,
   callbacks = {},
 }) => {
   return <div className={cn('form-Element', 'input-text', config.className)}>
     <input
-      type="text"
+      type={config.type}
       value={value}
       placeholder={config.placeholder}
       name={config.id}
@@ -24,4 +24,4 @@ const InputTextbox: React.SFC<IFormElementProps> = ({
   </div>
 }
 
-export default InputTextbox
+export default InputGeneric
