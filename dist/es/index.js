@@ -14,6 +14,7 @@ const getNewState = (callback, store, customValueResolver) => {
             case 'email':
             case 'month':
             case 'text':
+            case 'range':
             case 'tel':
             case 'time':
             case 'url':
