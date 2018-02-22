@@ -1,6 +1,5 @@
 import { Component, createElement } from 'react'
 import Tooltip from 'rc-tooltip'
-import { generate } from 'shortid'
 
 const dot = require('dot-prop-immutable')
 const set = require('es6-set')
@@ -194,7 +193,9 @@ const InputGeneric = ({ value = '', config, callbacks = {} }) => {
 
 const cn$2 = require('classnames')
 const InputToggle = ({ value = false, config, callbacks = {} }) => {
-  const _id = generate()
+  const _id = Math.random()
+    .toString(36)
+    .slice(-5)
   const componentProps = config.componentProps || {}
   return createElement(
     'div',
@@ -220,7 +221,9 @@ const InputToggle = ({ value = false, config, callbacks = {} }) => {
 const cn$3 = require('classnames')
 const InputRadio = ({ value = '', config, callbacks = {} }) => {
   const radioInputs = (config.options || []).map(option => {
-    const unique = generate()
+    const unique = Math.random()
+      .toString(36)
+      .slice(-5)
     return createElement(
       'span',
       { className: 'radio-button', key: `${config.id}_${option.value}` },
@@ -298,7 +301,9 @@ const InputCheckbox = ({ value = '', config, callbacks = {} }) => {
   const { separator = ',' } = config
   const valueArray = config.simpleValues ? value.split(separator) : value
   const checkboxInputs = (config.options || []).map(option => {
-    const unique = generate()
+    const unique = Math.random()
+      .toString(36)
+      .slice(-5)
     return createElement(
       'span',
       { className: 'checkbox-wrapper', key: `${config.id}_${unique}` },

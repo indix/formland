@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as id from 'shortid'
 const cn = require('classnames')
 
 import { IFormElementProps } from './types'
@@ -13,7 +12,9 @@ const InputCheckbox: React.SFC<IFormElementProps> = ({
   const valueArray: any[] = config.simpleValues ? value.split(separator) : value
 
   const checkboxInputs = (config.options || []).map(option => {
-    const unique = id.generate()
+    const unique = Math.random()
+      .toString(36)
+      .slice(-5)
     return (
       <span className="checkbox-wrapper" key={`${config.id}_${unique}`}>
         <input

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as id from 'shortid'
 const cn = require('classnames')
 
 import { IFormElementProps } from './types'
@@ -9,7 +8,9 @@ const InputToggle: React.SFC<IFormElementProps> = ({
   config,
   callbacks = {},
 }) => {
-  const _id = id.generate()
+  const _id = Math.random()
+    .toString(36)
+    .slice(-5)
   const componentProps = config.componentProps || {}
   return (
     <div className={cn('form-element', 'input-toggle', config.className)}>

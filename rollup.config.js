@@ -1,12 +1,12 @@
 import typescript from 'rollup-plugin-typescript2'
 
-const external = ['react', 'classnames', 'shortid', 'rc-tooltip']
+const external = ['react', 'classnames', 'rc-tooltip', 'dot-prop-immutable']
 
 export default [
   {
     input: './src/index.tsx',
     output: {
-      file: './dist/es/index.js',
+      file: './es/index.js',
       format: 'es',
     },
     external,
@@ -16,7 +16,6 @@ export default [
         tsconfigOverride: {
           compilerOptions: {
             target: 'es2015',
-            declaration: true,
           },
         },
       }),
@@ -25,8 +24,8 @@ export default [
   {
     input: './src/index.tsx',
     output: {
-      file: './dist/index.js',
-      format: 'umd',
+      file: './lib/index.js',
+      format: 'cjs',
       name: 'index.js',
     },
     external,

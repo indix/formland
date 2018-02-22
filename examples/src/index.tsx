@@ -4,8 +4,8 @@ require('./index.scss')
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import ReactForms from '../../dist/'
-import { IReactFormConfig } from '../../dist/types'
+import ReactForms from '../../lib/'
+import { IReactFormConfig } from '../../lib/types'
 import Select from 'react-select'
 
 interface ReactFormsProps {}

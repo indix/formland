@@ -4,7 +4,8 @@
   "description": "Config based react form generator",
   "license": "MIT",
   "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
-  "main": "dist/index.js",
+  "main": "lib/index",
+  "module": "es/index",
   "repository": "https://github.com/praneshr/react-form.git",
   "scripts": {
     "build": "yarn build:js && yarn build:scss",
@@ -29,8 +30,7 @@
     "classnames": "^2.2.5",
     "dot-prop-immutable": "^1.4.0",
     "es6-set": "^0.1.5",
-    "rc-tooltip": "^3.7.0",
-    "shortid": "^2.2.8"
+    "rc-tooltip": "^3.7.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
@@ -59,7 +59,6 @@
     "react-dom": "^16.2.0",
     "react-select": "^1.1.0",
     "rollup": "^0.52.0",
-    "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-postcss": "^0.5.5",
     "rollup-plugin-typescript2": "^0.8.4",
     "sass-loader": "^6.0.6",

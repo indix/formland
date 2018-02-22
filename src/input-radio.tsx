@@ -1,5 +1,4 @@
 import * as React from 'react'
-import * as id from 'shortid'
 const cn = require('classnames')
 
 import { IFormElementProps } from './types'
@@ -10,7 +9,9 @@ const InputRadio: React.SFC<IFormElementProps> = ({
   callbacks = {},
 }) => {
   const radioInputs = (config.options || []).map(option => {
-    const unique = id.generate()
+    const unique = Math.random()
+      .toString(36)
+      .slice(-5)
     return (
       <span className="radio-button" key={`${config.id}_${option.value}`}>
         <input
