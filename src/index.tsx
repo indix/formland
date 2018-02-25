@@ -38,7 +38,9 @@ export interface ReactFormsState {
 }
 
 class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
-  errors: IFormErrors[]
+  errors: {
+    [key: string]: IFormErrors[]
+  }
 
   static defaultProps = {
     useNativeEvent: false,
@@ -54,7 +56,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     this.state = {
       validate: false,
     }
-    this.errors = []
+    this.errors = {}
     this.onSubmit = this.onSubmit.bind(this)
   }
 
@@ -163,7 +165,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   ): JSX.Element {
     return (
       <Group config={config} key={config.id}>
-        {this.getFormElements(config.elements, callbacks, store)}
+        {this.getFormElements(config.elements, callbacks, store, config.id)}
       </Group>
     )
   }
@@ -172,6 +174,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     configs: IReactFormConfig[],
     callbacks: any,
     store: any,
+    groupId: string = 'default',
   ) {
     return configs.map((config, i) => {
       if (config.type === 'group') {
@@ -185,7 +188,8 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       }
       const value = dotObject.get(store, config.resultPath, undefined)
       const error = this.validateField(value, config)
-      this.errors[i] = {
+      this.errors[groupId] = this.errors[groupId] || []
+      this.errors[groupId][i] = {
         id: config.id,
         error,
       }
