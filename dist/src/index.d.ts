@@ -20,7 +20,9 @@ export interface ReactFormsState {
     validate?: boolean;
 }
 declare class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
-    errors: IFormErrors[];
+    errors: {
+        [key: string]: IFormErrors[];
+    };
     static defaultProps: {
         useNativeEvent: boolean;
         store: {};
@@ -30,14 +32,16 @@ declare class ReactForms extends React.Component<ReactFormsProps, ReactFormsStat
         onSubmit: () => void;
     };
     constructor(props: ReactFormsProps);
-    validate(): IFormErrors[];
+    validate(): {
+        [key: string]: IFormErrors[];
+    };
     private eventProxyHandlers(config, callback, args);
     private bindCallbacks(config, callbacks);
     private getFormElement(type);
     private onSubmit(e);
     private validateField(value, config);
     private getFormGroup(config, callbacks, store);
-    private getFormElements(configs, callbacks, store);
+    private getFormElements(configs, callbacks, store, groupId?);
     render(): JSX.Element;
 }
 export default ReactForms;
