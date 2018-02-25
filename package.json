@@ -1,6 +1,6 @@
 {
   "name": "@praneshravi/react-forms",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1",
   "description": "Config based react form generator",
   "license": "MIT",
   "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
