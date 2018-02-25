@@ -43,6 +43,7 @@
     "@types/shortid": "^0.0.29",
     "autoprefixer": "^7.1.6",
     "babel-minify-webpack-plugin": "^0.2.0",
+    "codemirror": "^5.35.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.12.1",
     "extract-text-webpack-plugin": "^3.0.2",

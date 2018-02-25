@@ -1,36 +1,54 @@
 /// <reference types="react" />
-import * as React from 'react';
-import { IReactFormConfig, ISupportedGlobalCallbacks, IFormErrors } from './types';
+import * as React from 'react'
+import {
+  IReactFormConfig,
+  ISupportedGlobalCallbacks,
+  IFormErrors,
+} from './types'
 export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
-    config: IReactFormConfig[];
-    store?: any;
-    customComponentResolvers?: {
-        (type: string): any;
-    }[];
-    customValueResolvers?: {
-        (config: IReactFormConfig, args: any[]): any;
-    }[];
-    useNativeEvent?: boolean;
-    onSubmit?: () => void;
+  config: IReactFormConfig[]
+  store?: any
+  customComponentResolvers?: {
+    (type: string): any
+  }[]
+  customValueResolvers?: {
+    (config: IReactFormConfig, args: any[]): any
+  }[]
+  useNativeEvent?: boolean
+  onSubmit?: (e?: any) => void
+  primaryButton?: string | false | undefined
+  secondaryButton?: string | false | undefined
+  onSecondaryButtonClick?: (e?: any) => void
 }
 export interface ReactFormsState {
-    validate?: boolean;
+  validate?: boolean
 }
-declare class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
-    errors: IFormErrors[];
-    static defaultProps: {
-        useNativeEvent: boolean;
-        store: {};
-    };
-    constructor(props: ReactFormsProps);
-    validate(): IFormErrors[];
-    private eventProxyHandlers(config, callback, args);
-    private bindCallbacks(config, callbacks);
-    private getFormElement(type);
-    private onSubmit(e);
-    private validateField(value, config);
-    private getFormGroup(config, callbacks, store);
-    private getFormElements(configs, callbacks, store);
-    render(): JSX.Element;
+declare class ReactForms extends React.Component<
+  ReactFormsProps,
+  ReactFormsState
+> {
+  errors: {
+    [key: string]: IFormErrors[]
+  }
+  static defaultProps: {
+    useNativeEvent: boolean
+    store: {}
+    primaryButton: string
+    secondaryButton: string
+    onSecondaryButtonClick: () => void
+    onSubmit: () => void
+  }
+  constructor(props: ReactFormsProps)
+  validate(): {
+    [key: string]: IFormErrors[]
+  }
+  private eventProxyHandlers(config, callback, args)
+  private bindCallbacks(config, callbacks)
+  private getFormElement(type)
+  private onSubmit(e)
+  private validateField(value, config)
+  private getFormGroup(config, callbacks, store)
+  private getFormElements(configs, callbacks, store, groupId?)
+  render(): JSX.Element
 }
-export default ReactForms;
+export default ReactForms
