@@ -56,6 +56,7 @@
     "prettier": "^1.10.2",
     "pretty-quick": "^1.2.3",
     "react": "^16.2.0",
+    "react-codemirror2": "^4.0.0",
     "react-dom": "^16.2.0",
     "react-select": "^1.1.0",
     "rollup": "^0.52.0",

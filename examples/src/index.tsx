@@ -1,17 +1,24 @@
 require('react-select/dist/react-select.css')
+require('codemirror/lib/codemirror.css')
+require('codemirror/theme/zenburn.css')
+require('codemirror')
 require('../../css/index.css')
 require('./index.scss')
+
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-
-import ReactForms from '../../lib/'
-import { IReactFormConfig } from '../../lib/types'
 import Select from 'react-select'
+import { UnControlled as CodeMirror } from 'react-codemirror2'
+
+import { IReactFormConfig } from '../../lib/types'
+import ReactForms from '../../lib/'
+import config from './form-config'
 
 interface ReactFormsProps {}
 
 interface ReactFormsState {
-  input: any
+  input?: any
+  errors?: any
 }
 
 const customComponentResolver = (type: string) => {
@@ -19,9 +26,10 @@ const customComponentResolver = (type: string) => {
     case 'react-select':
       return (props: any) => (
         <Select
+          {...props.callbacks}
+          {...props.config.componentProps}
           options={props.config.options}
           value={props.value}
-          {...props.componentProps}
         />
       )
   }
@@ -44,9 +52,8 @@ class ReactFormsExamples extends React.Component<
     this.onChange = this.onChange.bind(this)
     this.validate = this.validate.bind(this)
     this.state = {
-      input: {
-        text: '',
-      },
+      input: {},
+      errors: {},
     }
   }
 
@@ -55,137 +62,79 @@ class ReactFormsExamples extends React.Component<
   }
 
   private validate() {
-    const errors = this.forms.validate()
+    this.setState({
+      errors: this.forms.validate(),
+    })
   }
 
   public render(): JSX.Element {
-    const config: IReactFormConfig[] = [
-      {
-        id: 'group-1',
-        type: 'group',
-        displayName: 'Group 1',
-        description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia impedit minus laudantium, excepturi unde tenetur commodi voluptatem iste, beatae saepe ipsa consequatur maiores eaque provident dolor qui numquam nam laborum.',
-        elements: [
-          {
-            id: 'text',
-            type: 'text',
-            resultPath: 'input.text',
-            displayName: 'Input Textbox',
-            placeholder: 'Enter something',
-          },
-          {
-            id: 'textarea',
-            type: 'textarea',
-            resultPath: 'input.textarea',
-            displayName: 'Input Textarea',
-            placeholder: 'hello',
-            optional: true,
-          },
-          {
-            id: 'checkbox',
-            type: 'checkbox',
-            helpText: 'help text',
-            required: true,
-            resultPath: 'input.checkbox',
-            displayName: 'Input Checkbox',
-            options: [
-              {
-                value: 'one',
-                label: 'One',
-              },
-              {
-                value: 'two',
-                label: 'Two',
-              },
-              {
-                value: 'three',
-                label: 'Three',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'group-2',
-        type: 'group',
-        displayName: 'Group 2',
-        description:
-          'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil officia possimus rerum, dolor ea temporibus quidem necessitatibus omnis praesentium cumque magnam, autem atque dignissimos consequatur. Distinctio, consequatur nemo? Quibusdam, maiores!',
-        elements: [
-          {
-            id: 'radio',
-            type: 'radio',
-            resultPath: 'input.radio',
-            displayName: 'Input Radio',
-            options: [
-              {
-                value: 'one',
-                label: 'One',
-              },
-              {
-                value: 'two',
-                label: 'Two',
-              },
-              {
-                value: 'three',
-                label: 'Three',
-              },
-            ],
-          },
-          {
-            id: 'dropdown',
-            type: 'dropdown',
-            resultPath: 'input.dropdown',
-            displayName: 'Input Dropdown',
-            options: [
-              {
-                value: 'one',
-                label: 'One',
-              },
-              {
-                value: 'two',
-                label: 'Two',
-              },
-              {
-                value: 'three',
-                label: 'Three',
-              },
-            ],
-          },
-          {
-            id: 'toggle',
-            type: 'toggle',
-            resultPath: 'input.toggle',
-            displayName: 'Input Toggle',
-          },
-          {
-            id: 'range',
-            type: 'range',
-            resultPath: 'input.range',
-            displayName: 'Input Range',
-            componentProps: {
-              step: 1,
-              min: 0,
-              max: 50,
-            },
-          },
-        ],
-      },
-    ]
     return (
-      <div className="mx-400">
-        <h1>React Forms</h1>
-        <ReactForms
-          secondaryButton={false}
-          onSubmit={this.validate}
-          ref={el => (this.forms = el)}
-          customValueResolvers={[customValueResolver]}
-          customComponentResolvers={[customComponentResolver]}
-          onChange={this.onChange}
-          config={config}
-          store={this.state}
-        />
+      <div className="react-forms-example">
+        <div className="banner">
+          <h1>React Forms</h1>
+          <p>
+            A simple, super-flexible, extensible config based form generator for
+            React.
+          </p>
+          <div className="button-container">
+            <a href="https://github.com/praneshr/react-forms">
+              <button>Github</button>
+            </a>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-md-6">
+            <div className="mx-400">
+              <h4>Basic Form</h4>
+              <a href="https://github.com/praneshr/react-forms/blob/master/examples/src/index.tsx">
+                (View source)
+              </a>
+              <ReactForms
+                secondaryButton={false}
+                onSubmit={this.validate}
+                ref={el => (this.forms = el)}
+                customValueResolvers={[customValueResolver]}
+                customComponentResolvers={[customComponentResolver]}
+                onChange={this.onChange}
+                config={config}
+                store={this.state}
+              />
+            </div>
+          </div>
+          <div className="col-xs-12 col-md-6">
+            <div className="section config">
+              <h4>Config</h4>
+              <CodeMirror
+                value={JSON.stringify(config, null, 4)}
+                options={{
+                  theme: 'zenburn',
+                }}
+              />
+            </div>
+            <div className="section store">
+              <h4>Store</h4>
+              <CodeMirror
+                onChange={() => {}}
+                value={JSON.stringify(this.state.input, null, 4)}
+                options={{
+                  theme: 'zenburn',
+                  readOnly: true,
+                }}
+              />
+            </div>
+            <div className="section store">
+              <h4>Errors</h4>
+              <CodeMirror
+                onChange={() => {}}
+                value={JSON.stringify(this.state.errors, null, 4)}
+                options={{
+                  theme: 'zenburn',
+                  readOnly: true,
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

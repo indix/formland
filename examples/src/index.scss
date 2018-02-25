@@ -1,9 +1,54 @@
 body {
-  padding: 50px;
+  padding: 15px;
+  a {
+    color: #4c5af7;
+    text-decoration: none;
+  }
+  .banner {
+    padding: 50px 15px;
+    margin: -15px;
+    margin-bottom: 50px;
+    background-color: #4c5af7;
+    color: #fff;
+    p {
+      opacity: 0.5;
+    }
+    .button-container {
+      margin-top: 30px;
+      button {
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: #ffffff;
+        border-radius: 4px;
+        border: none;
+        color: #4c5af7;
+        text-transform: uppercase;
+        min-width: 100px;
+        font-weight: 600;
+      }
+    }
+  }
   .mx-400 {
     max-width: 400px;
-    h1 {
-      margin-bottom: 40px;
+    margin-bottom: 30px;
+    h4,
+    a {
+      margin-bottom: 30px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+  .config {
+    .CodeMirror {
+      height: 600px;
+    }
+  }
+  .store {
+    .CodeMirror {
+      height: 200px;
     }
   }
 }
