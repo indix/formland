@@ -388,6 +388,16 @@ class Example extends Component {
 }
 ```
 
+## Development
+
+```bash
+yarn install
+yarn build
+yarn start:examples
+```
+
+Refer `package.json` for more commands
+
 ## License
 
 MIT
