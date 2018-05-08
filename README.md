@@ -1,4 +1,4 @@
-# React Forms
+![Logo](https://image.ibb.co/h9qk67/logo.png)
 
 [![Build Status](https://travis-ci.org/praneshr/react-forms.svg?branch=master)](https://travis-ci.org/praneshr/react-forms) [![npm version](https://badge.fury.io/js/%40praneshravi%2Freact-forms.svg)](https://badge.fury.io/js/%40praneshravi%2Freact-forms)
 
