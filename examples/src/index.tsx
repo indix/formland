@@ -10,8 +10,7 @@ import * as ReactDOM from 'react-dom'
 import Select from 'react-select'
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 
-import { IReactFormConfig } from '../../lib/types'
-import ReactForms from '../../lib/'
+import ReactForms, { IReactFormConfig } from '../../lib'
 import config from './form-config'
 
 interface ReactFormsProps {}
