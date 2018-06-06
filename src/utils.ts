@@ -1,8 +1,6 @@
 import { IReactFormConfig } from './types'
 
 const dot = require('dot-prop-immutable')
-const set = require('es6-set')
-const arrayFrom = require('array-from')
 
 const getNewState = (
   callback: (val: any) => void,
@@ -48,13 +46,13 @@ const getNewState = (
           config.simpleValues && existingValue.split
             ? existingValue.split(config.separator || ',')
             : existingValue
-        const valuesSet = new set(existingValueArray)
+        const valuesSet = new Set(existingValueArray)
         if (valuesSet.has(value)) {
           valuesSet.delete(value)
         } else {
           valuesSet.add(value)
         }
-        const valueArray = arrayFrom(valuesSet)
+        const valueArray = [...valuesSet]
         return config.simpleValues
           ? valueArray.join(config.separator || ',')
           : valueArray
