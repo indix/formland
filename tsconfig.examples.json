@@ -6,10 +6,8 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "target": "es5",
-    "declaration": true,
     "downlevelIteration": true,
     "lib": ["es2017", "dom"]
   },
-  "include": ["./src/*"],
   "exclude": ["node_modules"]
 }
