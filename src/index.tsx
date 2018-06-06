@@ -21,7 +21,7 @@ import {
   IFormErrors,
 } from './types'
 
-export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
+interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   config: IReactFormConfig[]
   store?: any
   customComponentResolvers?: { (type: string): any }[]
@@ -32,8 +32,8 @@ export interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
   secondaryButton?: string | false | undefined
   onSecondaryButtonClick?: (e?: any) => void
 }
-
-export interface ReactFormsState {
+export interface IReactFormConfig extends IReactFormConfig {}
+interface ReactFormsState {
   validate?: boolean
 }
 
