@@ -1,6 +1,6 @@
 # Formland
 
-A simple, super-flexiable, extensible config based form generator for React.
+A simple, super-flexible, extensible config based form generator for React.
 
 ## Features
 
