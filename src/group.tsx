@@ -1,26 +1,26 @@
 import * as React from 'react'
-import { IReactFormConfig } from './types'
+import { IFormlandConfig } from './types'
 
-export interface ReactFormGroupProps {
-  config: IReactFormConfig
+export interface FormlandGroupProps {
+  config: IFormlandConfig
 }
 
-export interface ReactFormGroupState {}
+export interface FormlandGroupState {}
 
-class ReactFormGroup extends React.Component<
-  ReactFormGroupProps,
-  ReactFormGroupState
+class FormlandGroup extends React.Component<
+  FormlandGroupProps,
+  FormlandGroupState
 > {
   public render(): JSX.Element {
     const { config } = this.props
     return (
-      <div className="react-forms-group">
+      <div className="formland-group">
         <div className="group-title">{config.displayName}</div>
         <p className="group-description">{config.description}</p>
-        <div className="react-forms-group-elements">{this.props.children}</div>
+        <div className="formland-group-elements">{this.props.children}</div>
       </div>
     )
   }
 }
 
-export default ReactFormGroup
+export default FormlandGroup

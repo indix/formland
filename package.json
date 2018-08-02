@@ -1,18 +1,34 @@
 {
-  "name": "@praneshravi/react-forms",
+  "name": "formland",
   "version": "0.1.5",
-  "description": "Config based react form generator",
+  "description":
+    "A simple, super-flexible, extensible config based form generator for React.",
+  "keywords": [
+    "component",
+    "components",
+    "config",
+    "extensible",
+    "form",
+    "forms",
+    "frontend",
+    "react",
+    "react-component",
+    "ui"
+  ],
+  "homepage": "https://oss.indix.com/formland/",
+  "bugs": {
+    "url": "https://github.com/indix/formland/issues"
+  },
   "license": "MIT",
-  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
+  "contributors": ["Pranesh Ravi"],
   "main": "lib/index",
-  "module": "es/index",
-  "repository": "https://github.com/praneshr/react-form.git",
+  "repository": "https://github.com/indix/formland.git",
   "scripts": {
     "build": "yarn build:js && yarn build:scss",
     "build:examples": "webpack --color --progress",
-    "build:scss": "yarn run task:scss & yarn run task:autoprefix",
-    "build:js:watch": "tsc --outDir lib/ -w",
     "build:js": "tsc --outDir lib/",
+    "build:js:watch": "tsc --outDir lib/ -w",
+    "build:scss": "yarn run task:scss & yarn run task:autoprefix",
     "precommit": "pretty-quick --staged",
     "publish:examples":
       "NODE_ENV=production yarn build:examples && gh-pages -d examples/dist -r $GITHUB_REPO_URL",
@@ -22,7 +38,7 @@
     "start:examples": "webpack-dev-server --open",
     "task:autoprefix": "postcss css/*.css --use autoprefixer -d css",
     "task:scss": "node-sass-chokidar scss/index.scss -o css",
-    "test": "echo"
+    "test": "echo 'Work in Progress'"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",

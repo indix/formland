@@ -4,31 +4,29 @@ import Tooltip from 'rc-tooltip'
 
 const cn = require('classnames')
 
-import { IReactFormConfig } from './types'
+import { IFormlandConfig } from './types'
 
-export interface ReactFormTemplateProps {
+export interface FormlandTemplateProps {
   store: any
-  config: IReactFormConfig
+  config: IFormlandConfig
   error: any
 }
 
-export interface ReactFormTemplateState {}
+export interface FormlandTemplateState {}
 
-class ReactFormTemplate extends React.Component<
-  ReactFormTemplateProps,
-  ReactFormTemplateState
+class FormlandTemplate extends React.Component<
+  FormlandTemplateProps,
+  FormlandTemplateState
 > {
-  private getTopComponent(config: IReactFormConfig, store: any) {
+  private getTopComponent(config: IFormlandConfig, store: any) {
     return (
-      <div className="react-forms-top-component">
-        {config.topComponent(store)}
-      </div>
+      <div className="formland-top-component">{config.topComponent(store)}</div>
     )
   }
 
-  private getBottomComponent(config: IReactFormConfig, store: any) {
+  private getBottomComponent(config: IFormlandConfig, store: any) {
     return (
-      <div className="react-forms-bottom-component">
+      <div className="formland-bottom-component">
         {config.bottomComponent(store)}
       </div>
     )
@@ -53,15 +51,15 @@ class ReactFormTemplate extends React.Component<
     )
 
     return (
-      <div className="react-forms-template">
+      <div className="formland-template">
         {typeof config.topComponent === 'function' &&
           this.getTopComponent(config, store)}
-        <div className="react-forms-label">
+        <div className="formland-label">
           <span>{config.displayName}</span>
           <span>{helpText}</span>
           {config.optional && <span className="optional">(optional)</span>}
         </div>
-        <div className="react-forms-field">
+        <div className="formland-field">
           <div className="form-element-wrapper">{children}</div>
           <div className={cn('error', { 'is-error': error })}>
             {error || ' '}
@@ -74,4 +72,4 @@ class ReactFormTemplate extends React.Component<
   }
 }
 
-export default ReactFormTemplate
+export default FormlandTemplate

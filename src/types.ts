@@ -5,7 +5,7 @@ export interface IOptions {
   disabled?: boolean
 }
 
-export interface IReactFormConfig {
+export interface IFormlandConfig {
   id: string
   type:
     | 'group'
@@ -20,7 +20,7 @@ export interface IReactFormConfig {
   resultPath?: string
 
   displayName?: string
-  elements?: IReactFormConfig[]
+  elements?: IFormlandConfig[]
   description?: string
   className?: string
   isHidden?: <T>(store: T) => boolean
@@ -38,7 +38,7 @@ export interface IReactFormConfig {
   required?: boolean | string
   validation?: (value: any) => string | false | null | undefined
   modifyStoreBeforeChange?: <T>(
-    config: IReactFormConfig,
+    config: IFormlandConfig,
     value: any,
     previousStore: T,
   ) => T
@@ -52,7 +52,7 @@ export interface ISupportedGlobalCallbacks<T> {
 
 export interface IFormElementProps {
   value: any
-  config: IReactFormConfig
+  config: IFormlandConfig
   componentProps: any
   callbacks: any
 }

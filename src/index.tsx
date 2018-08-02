@@ -15,29 +15,29 @@ import TextArea from './input-textarea'
 const dotObject = require('dot-prop-immutable')
 
 import {
-  IReactFormConfig,
+  IFormlandConfig,
   IOptions,
   ISupportedGlobalCallbacks,
   IFormErrors,
 } from './types'
 
-interface ReactFormsProps extends ISupportedGlobalCallbacks<{}> {
-  config: IReactFormConfig[]
+interface FormlandsProps extends ISupportedGlobalCallbacks<{}> {
+  config: IFormlandConfig[]
   store?: any
   customComponentResolvers?: { (type: string): any }[]
-  customValueResolvers?: { (config: IReactFormConfig, args: any[]): any }[]
+  customValueResolvers?: { (config: IFormlandConfig, args: any[]): any }[]
   useNativeEvent?: boolean
   onSubmit?: (e?: any) => void
   primaryButton?: string | false | undefined
   secondaryButton?: string | false | undefined
   onSecondaryButtonClick?: (e?: any) => void
 }
-export interface IReactFormConfig extends IReactFormConfig {}
-interface ReactFormsState {
+export interface IFormlandConfig extends IFormlandConfig {}
+interface FormlandsState {
   validate?: boolean
 }
 
-class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
+class Formlands extends React.Component<FormlandsProps, FormlandsState> {
   errors: {
     [key: string]: IFormErrors[]
   }
@@ -51,7 +51,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     onSubmit: () => {},
   }
 
-  constructor(props: ReactFormsProps) {
+  constructor(props: FormlandsProps) {
     super(props)
     this.state = {
       validate: false,
@@ -68,7 +68,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 
   private eventProxyHandlers(
-    config: IReactFormConfig,
+    config: IFormlandConfig,
     callback: any,
     args: any[],
   ) {
@@ -79,7 +79,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     ).apply(null, [config].concat(...args))
   }
 
-  private bindCallbacks(config: IReactFormConfig, callbacks: any): any {
+  private bindCallbacks(config: IFormlandConfig, callbacks: any): any {
     const bindedCallbacks: any = {}
     Object.keys(callbacks || {}).forEach(event => {
       if (callbacks[event]) {
@@ -143,7 +143,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
     this.props.onSubmit(e)
   }
 
-  private validateField(value: any, config: IReactFormConfig) {
+  private validateField(value: any, config: IFormlandConfig) {
     if (typeof config.validation === 'function') {
       return config.validation(value) || null
     }
@@ -159,7 +159,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 
   private getFormGroup(
-    config: IReactFormConfig,
+    config: IFormlandConfig,
     callbacks: any,
     store: any,
   ): JSX.Element {
@@ -171,7 +171,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 
   private getFormElements(
-    configs: IReactFormConfig[],
+    configs: IFormlandConfig[],
     callbacks: any,
     store: any,
     groupId: string = 'default',
@@ -231,7 +231,7 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
       store,
     )
     return (
-      <form className="react-forms" onSubmit={this.onSubmit}>
+      <form className="formland" onSubmit={this.onSubmit}>
         <div className="form-elements">{formElements}</div>
         <div className="form-buttons-container">
           {this.props.children || (
@@ -258,4 +258,4 @@ class ReactForms extends React.Component<ReactFormsProps, ReactFormsState> {
   }
 }
 
-export default ReactForms
+export default Formlands

@@ -1,4 +1,4 @@
-.react-forms-template {
+.formland-template {
   margin-bottom: $template-margin-bottom;
   &.dir-horizontal {
     display: inline-block;
@@ -7,7 +7,7 @@
   &:last-child {
     margin-bottom: 0;
   }
-  .react-forms-label {
+  .formland-label {
     margin-bottom: $template-label-margin-bottom;
     .optional {
       display: inline-block;
@@ -25,7 +25,7 @@
       width: 15px;
     }
   }
-  .react-forms-field {
+  .formland-field {
     position: relative;
     .error {
       position: absolute;
@@ -37,7 +37,6 @@
       bottom: -30px;
       opacity: 0;
       pointer-events: none;
-      // @include transition(opacity);
       &.is-error {
         opacity: 1;
         pointer-events: all;

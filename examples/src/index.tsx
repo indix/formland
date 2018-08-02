@@ -10,12 +10,12 @@ import * as ReactDOM from 'react-dom'
 import Select from 'react-select'
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 
-import ReactForms, { IReactFormConfig } from '../../lib'
+import Formland from '../../lib'
 import config from './form-config'
 
-interface ReactFormsProps {}
+interface FormlandProps {}
 
-interface ReactFormsState {
+interface FormlandState {
   input?: any
   errors?: any
 }
@@ -41,12 +41,9 @@ const customValueResolver = (config: any, value: any) => {
   }
 }
 
-class ReactFormsExamples extends React.Component<
-  ReactFormsProps,
-  ReactFormsState
-> {
-  forms: ReactForms
-  constructor(props: ReactFormsProps) {
+class FormlandExamples extends React.Component<FormlandProps, FormlandState> {
+  forms: Formland
+  constructor(props: FormlandProps) {
     super(props)
     this.onChange = this.onChange.bind(this)
     this.validate = this.validate.bind(this)
@@ -56,7 +53,7 @@ class ReactFormsExamples extends React.Component<
     }
   }
 
-  private onChange(a: ReactFormsState) {
+  private onChange(a: FormlandState) {
     this.setState(a)
   }
 
@@ -70,7 +67,7 @@ class ReactFormsExamples extends React.Component<
     return (
       <div className="react-forms-example">
         <div className="banner">
-          <h1>React Forms</h1>
+          <h1>Formland</h1>
           <p>
             A simple, super-flexible, extensible config based form generator for
             React.
@@ -88,7 +85,7 @@ class ReactFormsExamples extends React.Component<
               <a href="https://github.com/praneshr/react-forms/blob/master/examples/src/index.tsx">
                 (View source)
               </a>
-              <ReactForms
+              <Formland
                 secondaryButton={false}
                 onSubmit={this.validate}
                 ref={el => (this.forms = el)}
@@ -139,4 +136,4 @@ class ReactFormsExamples extends React.Component<
   }
 }
 
-ReactDOM.render(<ReactFormsExamples />, document.getElementById('app'))
+ReactDOM.render(<FormlandExamples />, document.getElementById('app'))

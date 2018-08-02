@@ -1,6 +1,4 @@
-![Logo](https://image.ibb.co/h9qk67/logo.png)
-
-[![Build Status](https://travis-ci.org/praneshr/react-forms.svg?branch=master)](https://travis-ci.org/praneshr/react-forms) [![npm version](https://badge.fury.io/js/%40praneshravi%2Freact-forms.svg)](https://badge.fury.io/js/%40praneshravi%2Freact-forms)
+# Formland
 
 A simple, super-flexiable, extensible config based form generator for React.
 
@@ -14,19 +12,19 @@ A simple, super-flexiable, extensible config based form generator for React.
 ## Install
 
 ```bash
-  npm i @praneshravi/react-forms
+  npm i formland
 
   # or
 
-  yarn add @praneshravi/react-forms
+  yarn add formland
 ```
 
 ## Usage
 
 ```javascript
-import '@praneshravi/react-forms/css/index.css'
+import 'formland/css/index.css'
 import React, { Component } from 'react'
-import Form from '@praneshravi/react-forms'
+import Form from 'formland'
 
 class Example extends Component {
   constructor() {
@@ -55,7 +53,7 @@ class Example extends Component {
 }
 ```
 
-### React Forms Props
+### Props
 
 | Property                 | Type                         | Default   | Description                                                         |
 | ------------------------ | ---------------------------- | --------- | ------------------------------------------------------------------- |
@@ -116,9 +114,9 @@ class Example extends Component {
 It is possible to group form elements. Take a look at the following example.
 
 ```javascript
-import '@praneshravi/react-forms/css/index.css'
+import 'formland/css/index.css'
 import React, { Component } from 'react'
-import Form from '@praneshravi/react-forms'
+import Form from 'formland'
 
 class Example extends Component {
   constructor() {
@@ -193,9 +191,9 @@ Validations are done per form element. Add a `validation()` method in the form e
 * Use `validate()` method of the form instance. This returns an array of errors, if any. Useful for conditional based approach.
 
 ```javascript
-import '@praneshravi/react-forms/css/index.css'
+import 'formland/css/index.css'
 import React, { Component } from 'react'
-import Form from '@praneshravi/react-forms'
+import Form from 'formland'
 
 class Example extends Component {
   constructor() {
@@ -242,9 +240,9 @@ class Example extends Component {
 You can access the store and change any store value directly from the config using `modifyStoreBeforeChange` method. This method will be called before `onChange` event. You can return a modified state and it will be passed to the `onChange` handler. The primary use case for this will be, to change a form value based on another form value.
 
 ```javascript
-import '@praneshravi/react-forms/css/index.css'
+import 'formland/css/index.css'
 import React, { Component } from 'react'
-import Form from '@praneshravi/react-forms'
+import Form from 'formland'
 
 class Example extends Component {
   constructor() {
@@ -303,7 +301,7 @@ It is possible to add custom buttons. Just wrap your buttons with `<Form>`.
 
 ### Custom Form Elements
 
-Custom form elements can be added to any instance of react-forms via `customComponentResolvers` and `customValueResolvers` props.
+Custom form elements can be added to any instance of formland via `customComponentResolvers` and `customValueResolvers` props.
 
 * `customComponentResolvers(type: string) => ({ config: IReactFormConfig, value: any, callbacks: any }) => JSX.Element`
 
@@ -316,10 +314,10 @@ Returns a resolved value based on the custom type.
 See the following example to understand how it works.
 
 ```javascript
-import '@praneshravi/react-forms/css/index.css'
+import 'formland/css/index.css'
 import React, { Component } from 'react'
 import Select from 'react-select'
-import Form, { getNewState } from '@praneshravi/react-forms'
+import Form, { getNewState } from 'formland'
 
 const customComponentsResolver = (type) => {
   switch(type) {

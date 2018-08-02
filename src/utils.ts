@@ -1,11 +1,11 @@
-import { IReactFormConfig } from './types'
+import { IFormlandConfig } from './types'
 
 const dot = require('dot-prop-immutable')
 
 const getNewState = (
   callback: (val: any) => void,
   store: any,
-  customValueResolver?: { (config: IReactFormConfig, args: any[]): any }[],
+  customValueResolver?: { (config: IFormlandConfig, args: any[]): any }[],
 ) => {
   const getValue = (...agmnts: any[]) => {
     const [config, event] = agmnts
@@ -74,7 +74,7 @@ const getNewState = (
         return ''
     }
   }
-  return (config: IReactFormConfig, ...rest: any[]) => {
+  return (config: IFormlandConfig, ...rest: any[]) => {
     const value = getValue.apply(null, [config].concat(rest))
     const intermediateStore = dot.set(store, config.resultPath, value)
     const newStore = config.modifyStoreBeforeChange
