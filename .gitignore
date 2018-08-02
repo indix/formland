@@ -4,5 +4,3 @@ node_modules
 css
 .rpt2_cache
 *.log
-dist
-!examples/dist

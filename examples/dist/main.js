@@ -99,13 +99,13 @@ webpackJsonp(
         r = o(i),
         a = n(127),
         l = o(a),
-        s = n(27),
-        d = o(s)
+        d = n(27),
+        s = o(d)
       t.default = function(e, t) {
         if ('function' != typeof t && null !== t)
           throw new TypeError(
             'Super expression must either be null or a function, not ' +
-              ('undefined' == typeof t ? 'undefined' : (0, d.default)(t)),
+              ('undefined' == typeof t ? 'undefined' : (0, s.default)(t)),
           )
         ;(e.prototype = (0, l.default)(t && t.prototype, {
           constructor: {
@@ -179,13 +179,13 @@ webpackJsonp(
         r = n(46),
         a = n(14),
         l = 'prototype',
-        s = function(e, t, n) {
-          var d = e & s.F,
-            p = e & s.G,
-            u = e & s.S,
-            c = e & s.P,
-            f = e & s.B,
-            h = e & s.W,
+        d = function(e, t, n) {
+          var s = e & d.F,
+            p = e & d.G,
+            u = e & d.S,
+            c = e & d.P,
+            f = e & d.B,
+            h = e & d.W,
             m = p ? i : i[t] || (i[t] = {}),
             g = m[l],
             y = p ? o : u ? o[t] : (o[t] || {})[l],
@@ -193,7 +193,7 @@ webpackJsonp(
             v,
             C
           for (b in (p && (n = t), n))
-            (v = !d && y && void 0 !== y[b]),
+            (v = !s && y && void 0 !== y[b]),
               (v && b in m) ||
                 ((C = v ? y[b] : n[b]),
                 (m[b] =
@@ -224,17 +224,17 @@ webpackJsonp(
                           : C),
                 c &&
                   (((m.virtual || (m.virtual = {}))[b] = C),
-                  e & s.R && g && !g[b] && a(g, b, C)))
+                  e & d.R && g && !g[b] && a(g, b, C)))
         }
-      ;(s.F = 1),
-        (s.G = 2),
-        (s.S = 4),
-        (s.P = 8),
-        (s.B = 16),
-        (s.W = 32),
-        (s.U = 64),
-        (s.R = 128),
-        (e.exports = s)
+      ;(d.F = 1),
+        (d.G = 2),
+        (d.S = 4),
+        (d.P = 8),
+        (d.B = 16),
+        (d.W = 32),
+        (d.U = 64),
+        (d.R = 128),
+        (e.exports = d)
     },
     function(e, t, n) {
       var o = n(9),
@@ -313,14 +313,14 @@ webpackJsonp(
       function l(e) {
         return a(e)
       }
-      function s(e) {
+      function d(e) {
         return a(e, !0)
       }
-      function d(e) {
+      function s(e) {
         var t = i(e),
           n = e.ownerDocument,
           o = n.defaultView || n.parentWindow
-        return (t.left += l(o)), (t.top += s(o)), t
+        return (t.left += l(o)), (t.top += d(o)), t
       }
       function p(e) {
         return null !== e && e !== void 0 && e == e.window
@@ -344,18 +344,18 @@ webpackJsonp(
         var i = -999,
           a = -999,
           l = c('left', n),
-          s = c('top', n),
+          d = c('top', n),
           p = f(l),
-          u = f(s)
-        'left' !== l && (i = 999), 'top' !== s && (a = 999)
+          u = f(d)
+        'left' !== l && (i = 999), 'top' !== d && (a = 999)
         var h = '',
-          m = d(e)
+          m = s(e)
         ;('left' in t || 'top' in t) &&
           ((h = Object(k.c)(e) || ''), Object(k.e)(e, 'none')),
           'left' in t && ((e.style[p] = ''), (e.style[l] = i + 'px')),
-          'top' in t && ((e.style[u] = ''), (e.style[s] = a + 'px')),
+          'top' in t && ((e.style[u] = ''), (e.style[d] = a + 'px')),
           o(e)
-        var g = d(e),
+        var g = s(e),
           y = {}
         for (var b in t)
           if (t.hasOwnProperty(b)) {
@@ -375,7 +375,7 @@ webpackJsonp(
         r(e, w)
       }
       function m(e, t) {
-        var n = d(e),
+        var n = s(e),
           o = Object(k.b)(e),
           i = { x: o.x, y: o.y }
         'left' in t && (i.x = o.x + t.left - n.left),
@@ -429,21 +429,21 @@ webpackJsonp(
               : e.getBoundingClientRect().height,
           a = D(e),
           l = b(e, a),
-          s = 0
+          d = 0
         ;(null === r || r === void 0 || 0 >= r) &&
           ((r = void 0),
-          (s = D(e, t)),
-          (null === s || s === void 0 || 0 > +s) && (s = e.style[t] || 0),
-          (s = parseFloat(s) || 0)),
+          (d = D(e, t)),
+          (null === d || d === void 0 || 0 > +d) && (d = e.style[t] || 0),
+          (d = parseFloat(d) || 0)),
           o === void 0 && (o = l ? R : A)
-        var d = r !== void 0 || l,
-          u = r || s
-        if (o === A) return d ? u - C(e, ['border', 'padding'], i, a) : s
-        return d
+        var s = r !== void 0 || l,
+          u = r || d
+        if (o === A) return s ? u - C(e, ['border', 'padding'], i, a) : d
+        return s
           ? o === R
             ? u
             : u + (o === I ? -C(e, ['border'], i, a) : C(e, ['margin'], i, a))
-          : s + C(e, _.slice(o), i, a)
+          : d + C(e, _.slice(o), i, a)
       }
       function w() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++)
@@ -561,7 +561,7 @@ webpackJsonp(
         },
         getDocument: u,
         offset: function(e, t, n) {
-          return 'undefined' == typeof t ? d(e) : void g(e, t, n || {})
+          return 'undefined' == typeof t ? s(e) : void g(e, t, n || {})
         },
         isWindow: p,
         each: y,
@@ -580,7 +580,7 @@ webpackJsonp(
           return l(e)
         },
         getWindowScrollTop: function(e) {
-          return s(e)
+          return d(e)
         },
         merge: function() {
           for (
@@ -676,13 +676,13 @@ object-assign
       })()
         ? Object.assign
         : function(e) {
-            for (var a = t(e), l = 1, s, d; l < arguments.length; l++) {
-              for (var p in ((s = Object(arguments[l])), s))
-                o.call(s, p) && (a[p] = s[p])
+            for (var a = t(e), l = 1, d, s; l < arguments.length; l++) {
+              for (var p in ((d = Object(arguments[l])), d))
+                o.call(d, p) && (a[p] = d[p])
               if (n) {
-                d = n(s)
-                for (var u = 0; u < d.length; u++)
-                  r.call(s, d[u]) && (a[d[u]] = s[d[u]])
+                s = n(d)
+                for (var u = 0; u < s.length; u++)
+                  r.call(d, s[u]) && (a[s[u]] = d[s[u]])
               }
             }
             return a
@@ -751,7 +751,7 @@ object-assign
         r = o(i),
         a = n(113),
         l = o(a),
-        s =
+        d =
           'function' == typeof l.default && 'symbol' == typeof r.default
             ? function(e) {
                 return typeof e
@@ -765,9 +765,9 @@ object-assign
                   : typeof e
               }
       t.default =
-        'function' == typeof l.default && 'symbol' === s(r.default)
+        'function' == typeof l.default && 'symbol' === d(r.default)
           ? function(e) {
-              return 'undefined' == typeof e ? 'undefined' : s(e)
+              return 'undefined' == typeof e ? 'undefined' : d(e)
             }
           : function(e) {
               return e &&
@@ -775,7 +775,7 @@ object-assign
                 e.constructor === l.default &&
                 e !== l.default.prototype
                 ? 'symbol'
-                : 'undefined' == typeof e ? 'undefined' : s(e)
+                : 'undefined' == typeof e ? 'undefined' : d(e)
             }
     },
     function(e) {
@@ -850,8 +850,8 @@ object-assign
         r = n(34),
         a = n(32)('IE_PROTO'),
         l = function() {},
-        s = 'prototype',
-        d = function() {
+        d = 'prototype',
+        s = function() {
           var e = n(48)('iframe'),
             t = r.length,
             o = '<',
@@ -867,12 +867,12 @@ object-assign
                 o + 'script' + i + 'document.F=Object' + o + '/script' + i,
               ),
               a.close(),
-              d = a.F;
+              s = a.F;
             t--;
 
           )
-            delete d[s][r[t]]
-          return d()
+            delete s[d][r[t]]
+          return s()
         }
       e.exports =
         Object.create ||
@@ -880,8 +880,8 @@ object-assign
           var n
           return (
             null === e
-              ? (n = d())
-              : ((l[s] = o(e)), (n = new l()), (l[s] = null), (n[a] = e)),
+              ? (n = s())
+              : ((l[d] = o(e)), (n = new l()), (l[d] = null), (n[a] = e)),
             void 0 === t ? n : i(n, t)
           )
         }
@@ -950,10 +950,10 @@ object-assign
             t.removeChild(t.firstChild)
           return t
         }
-        function s(t, n) {
+        function d(t, n) {
           return l(t).appendChild(n)
         }
-        function p(t, n, o, r) {
+        function s(t, n, o, r) {
           var a = document.createElement(t)
           if (
             (o && (a.className = o),
@@ -964,11 +964,11 @@ object-assign
           else if (n) for (var e = 0; e < n.length; ++e) a.appendChild(n[e])
           return a
         }
-        function u(t, n, o, i) {
-          var r = p(t, n, o, i)
+        function p(t, n, o, i) {
+          var r = s(t, n, o, i)
           return r.setAttribute('role', 'presentation'), r
         }
-        function d(e, t) {
+        function u(e, t) {
           if ((3 == t.nodeType && (t = t.parentNode), e.contains))
             return e.contains(t)
           do if ((11 == t.nodeType && (t = t.host), t == e)) return !0
@@ -1085,21 +1085,21 @@ object-assign
         function D(e, t, n) {
           var o = this
           ;(this.input = n),
-            (o.scrollbarFiller = p('div', null, 'CodeMirror-scrollbar-filler')),
+            (o.scrollbarFiller = s('div', null, 'CodeMirror-scrollbar-filler')),
             o.scrollbarFiller.setAttribute('cm-not-content', 'true'),
-            (o.gutterFiller = p('div', null, 'CodeMirror-gutter-filler')),
+            (o.gutterFiller = s('div', null, 'CodeMirror-gutter-filler')),
             o.gutterFiller.setAttribute('cm-not-content', 'true'),
-            (o.lineDiv = u('div', null, 'CodeMirror-code')),
-            (o.selectionDiv = p(
+            (o.lineDiv = p('div', null, 'CodeMirror-code')),
+            (o.selectionDiv = s(
               'div',
               null,
               null,
               'position: relative; z-index: 1',
             )),
-            (o.cursorDiv = p('div', null, 'CodeMirror-cursors')),
-            (o.measure = p('div', null, 'CodeMirror-measure')),
-            (o.lineMeasure = p('div', null, 'CodeMirror-measure')),
-            (o.lineSpace = u(
+            (o.cursorDiv = s('div', null, 'CodeMirror-cursors')),
+            (o.measure = s('div', null, 'CodeMirror-measure')),
+            (o.lineMeasure = s('div', null, 'CodeMirror-measure')),
+            (o.lineSpace = p(
               'div',
               [
                 o.measure,
@@ -1111,25 +1111,25 @@ object-assign
               null,
               'position: relative; outline: none',
             ))
-          var i = u('div', [o.lineSpace], 'CodeMirror-lines')
-          ;(o.mover = p('div', [i], null, 'position: relative')),
-            (o.sizer = p('div', [o.mover], 'CodeMirror-sizer')),
+          var i = p('div', [o.lineSpace], 'CodeMirror-lines')
+          ;(o.mover = s('div', [i], null, 'position: relative')),
+            (o.sizer = s('div', [o.mover], 'CodeMirror-sizer')),
             (o.sizerWidth = null),
-            (o.heightForcer = p(
+            (o.heightForcer = s(
               'div',
               null,
               null,
               'position: absolute; height: ' + Ya + 'px; width: 1px;',
             )),
-            (o.gutters = p('div', null, 'CodeMirror-gutters')),
+            (o.gutters = s('div', null, 'CodeMirror-gutters')),
             (o.lineGutter = null),
-            (o.scroller = p(
+            (o.scroller = s(
               'div',
               [o.sizer, o.heightForcer, o.gutters],
               'CodeMirror-scroll',
             )),
             o.scroller.setAttribute('tabIndex', '-1'),
-            (o.wrapper = p(
+            (o.wrapper = s(
               'div',
               [o.scrollbarFiller, o.gutterFiller, o.scroller],
               'CodeMirror',
@@ -1235,9 +1235,9 @@ object-assign
           } while (!e.lines)
           for (var l = 0; l < e.lines.length; ++l) {
             var i = e.lines[l],
-              s = i.height
-            if (t < s) break
-            t -= s
+              d = i.height
+            if (t < d) break
+            t -= d
           }
           return o + l
         }
@@ -1325,9 +1325,9 @@ object-assign
                   'bookmark' == a.type &&
                   (!n || !i.marker.insertLeft))
               ) {
-                var s =
+                var d =
                   null == i.to || (a.inclusiveRight ? i.to >= t : i.to > t)
-                ;(o || (o = [])).push(new J(a, i.from, s ? null : i.to))
+                ;(o || (o = [])).push(new J(a, i.from, d ? null : i.to))
               }
             }
           return o
@@ -1345,12 +1345,12 @@ object-assign
                   'bookmark' == a.type &&
                   (!n || i.marker.insertLeft))
               ) {
-                var s =
+                var d =
                   null == i.from || (a.inclusiveLeft ? i.from <= t : i.from < t)
                 ;(o || (o = [])).push(
                   new J(
                     a,
-                    s ? null : i.from - t,
+                    d ? null : i.from - t,
                     null == i.to ? null : i.to - t,
                   ),
                 )
@@ -1366,33 +1366,33 @@ object-assign
           var r = t.from.ch,
             a = t.to.ch,
             l = 0 == U(t.from, t.to),
-            s = oe(n, r, l),
-            d = re(o, a, l),
+            d = oe(n, r, l),
+            s = re(o, a, l),
             p = 1 == t.text.length,
             u = x(t.text).length + (p ? r : 0)
-          if (s)
-            for (var c = 0, i; c < s.length; ++c)
-              if (((i = s[c]), null == i.to)) {
-                var f = ee(d, i.marker)
+          if (d)
+            for (var c = 0, i; c < d.length; ++c)
+              if (((i = d[c]), null == i.to)) {
+                var f = ee(s, i.marker)
                 f ? p && (i.to = null == f.to ? null : f.to + u) : (i.to = r)
               }
-          if (d)
-            for (var h = 0, m; h < d.length; ++h)
-              if (((m = d[h]), null != m.to && (m.to += u), null == m.from)) {
-                var g = ee(s, m.marker)
-                g || ((m.from = u), p && (s || (s = [])).push(m))
-              } else (m.from += u), p && (s || (s = [])).push(m)
-          s && (s = le(s)), d && d != s && (d = le(d))
-          var y = [s]
+          if (s)
+            for (var h = 0, m; h < s.length; ++h)
+              if (((m = s[h]), null != m.to && (m.to += u), null == m.from)) {
+                var g = ee(d, m.marker)
+                g || ((m.from = u), p && (d || (d = [])).push(m))
+              } else (m.from += u), p && (d || (d = [])).push(m)
+          d && (d = le(d)), s && s != d && (s = le(s))
+          var y = [d]
           if (!p) {
             var b = t.text.length - 2,
               v
-            if (0 < b && s)
-              for (var C = 0; C < s.length; ++C)
-                null == s[C].to &&
-                  (v || (v = [])).push(new J(s[C].marker, null, null))
+            if (0 < b && d)
+              for (var C = 0; C < d.length; ++C)
+                null == d[C].to &&
+                  (v || (v = [])).push(new J(d[C].marker, null, null))
             for (var w = 0; w < b; ++w) y.push(v)
-            y.push(d)
+            y.push(s)
           }
           return y
         }
@@ -1405,7 +1405,7 @@ object-assign
                 e.splice(t--, 1)
           return e.length ? e : null
         }
-        function se(e, t, n) {
+        function de(e, t, n) {
           var o = null
           if (
             (e.iter(t.line, n.line + 1, function(e) {
@@ -1420,21 +1420,21 @@ object-assign
           )
             return null
           for (var r = [{ from: t, to: n }], a = 0; a < o.length; ++a)
-            for (var i = o[a], l = i.find(0), s = 0, d; s < r.length; ++s)
-              if (((d = r[s]), !(0 > U(d.to, l.from) || 0 < U(d.from, l.to)))) {
-                var p = [s, 1],
-                  u = U(d.from, l.from),
-                  c = U(d.to, l.to)
+            for (var i = o[a], l = i.find(0), d = 0, s; d < r.length; ++d)
+              if (((s = r[d]), !(0 > U(s.to, l.from) || 0 < U(s.from, l.to)))) {
+                var p = [d, 1],
+                  u = U(s.from, l.from),
+                  c = U(s.to, l.to)
                 ;(!(0 > u) && (i.inclusiveLeft || u)) ||
-                  p.push({ from: d.from, to: l.from }),
+                  p.push({ from: s.from, to: l.from }),
                   (!(0 < c) && (i.inclusiveRight || c)) ||
-                    p.push({ from: l.to, to: d.to }),
+                    p.push({ from: l.to, to: s.to }),
                   r.splice.apply(r, p),
-                  (s += p.length - 3)
+                  (d += p.length - 3)
               }
           return r
         }
-        function de(e) {
+        function se(e) {
           var t = e.markedSpans
           if (t) {
             for (var n = 0; n < t.length; ++n) t[n].marker.detachLine(e)
@@ -1485,21 +1485,21 @@ object-assign
           var a = _(e, t),
             l = nl && a.markedSpans
           if (l)
-            for (var s = 0, i; s < l.length; ++s)
-              if (((i = l[s]), !!i.marker.collapsed)) {
-                var d = i.marker.find(0),
-                  p = U(d.from, n) || ue(i.marker) - ue(r),
-                  u = U(d.to, o) || ce(i.marker) - ce(r)
+            for (var d = 0, i; d < l.length; ++d)
+              if (((i = l[d]), !!i.marker.collapsed)) {
+                var s = i.marker.find(0),
+                  p = U(s.from, n) || ue(i.marker) - ue(r),
+                  u = U(s.to, o) || ce(i.marker) - ce(r)
                 if (
                   !((0 <= p && 0 >= u) || (0 >= p && 0 <= u)) &&
                   ((0 >= p &&
                     (i.marker.inclusiveRight && r.inclusiveLeft
-                      ? 0 <= U(d.to, n)
-                      : 0 < U(d.to, n))) ||
+                      ? 0 <= U(s.to, n)
+                      : 0 < U(s.to, n))) ||
                     (0 <= p &&
                       (i.marker.inclusiveRight && r.inclusiveLeft
-                        ? 0 >= U(d.from, o)
-                        : 0 > U(d.from, o))))
+                        ? 0 >= U(s.from, o)
+                        : 0 > U(s.from, o))))
                 )
                   return !0
               }
@@ -1605,10 +1605,10 @@ object-assign
         }
         function Pe(e, t, n, r) {
           if (!e) return r(t, n, 'ltr', 0)
-          for (var l = !1, s = 0, i; s < e.length; ++s)
-            (i = e[s]),
+          for (var l = !1, d = 0, i; d < e.length; ++d)
+            (i = e[d]),
               ((i.from < n && i.to > t) || (t == n && i.to == t)) &&
-                (r(a(i.from, t), o(i.to, n), 1 == i.level ? 'rtl' : 'ltr', s),
+                (r(a(i.from, t), o(i.to, n), 1 == i.level ? 'rtl' : 'ltr', d),
                 (l = !0))
           l || r(t, n, 'ltr')
         }
@@ -1719,15 +1719,15 @@ object-assign
         }
         function je(e) {
           if (null == ml) {
-            var t = p('span', '\u200B')
-            s(e, p('span', [t, document.createTextNode('x')])),
+            var t = s('span', '\u200B')
+            d(e, s('span', [t, document.createTextNode('x')])),
               0 != e.firstChild.offsetHeight &&
                 (ml =
                   1 >= t.offsetWidth && 2 < t.offsetHeight && !(Sa && 8 > Ea))
           }
           var n = ml
-            ? p('span', '\u200B')
-            : p(
+            ? s('span', '\u200B')
+            : s(
                 'span',
                 '\xA0',
                 null,
@@ -1737,14 +1737,14 @@ object-assign
         }
         function Ke(e) {
           if (null != gl) return gl
-          var t = s(e, document.createTextNode('A\u062EA')),
+          var t = d(e, document.createTextNode('A\u062EA')),
             n = ja(t, 0, 1).getBoundingClientRect(),
             o = ja(t, 1, 2).getBoundingClientRect()
           return l(e), n && n.left != n.right && (gl = 3 > o.right - n.right)
         }
         function Ge(e) {
           if (null != pl) return pl
-          var n = s(e, p('span', 'x')),
+          var n = d(e, s('span', 'x')),
             o = n.getBoundingClientRect(),
             i = ja(n, 0, 1).getBoundingClientRect()
           return (pl = 1 < t(o.left - i.left))
@@ -1830,16 +1830,16 @@ object-assign
           )
           for (
             var l = n.state,
-              s = function(s) {
+              d = function(d) {
                 n.baseTokens = r
-                var d = e.state.overlays[s],
+                var s = e.state.overlays[d],
                   p = 1,
                   i = 0
                 ;(n.state = !0),
                   dt(
                     e,
                     t.text,
-                    d.mode,
+                    s.mode,
                     n,
                     function(e, t) {
                       for (var n = p, a; i < e; )
@@ -1848,7 +1848,7 @@ object-assign
                           (p += 2),
                           (i = o(e, a))
                       if (t)
-                        if (d.opaque)
+                        if (s.opaque)
                           r.splice(n, p - n, e, 'overlay ' + t), (p = n + 2)
                         else
                           for (; n < p; n += 2) {
@@ -1862,11 +1862,11 @@ object-assign
                   (n.baseTokens = null),
                   (n.baseTokenPos = 1)
               },
-              d = 0;
-            d < e.state.overlays.length;
-            ++d
+              s = 0;
+            s < e.state.overlays.length;
+            ++s
           )
-            s(d)
+            d(s)
           return { styles: r, classes: a.bgClass || a.textClass ? a : null }
         }
         function tt(e, t, n) {
@@ -1938,14 +1938,14 @@ object-assign
             a
           t = q(i, t)
           var l = _(i, t.line),
-            s = nt(e, t.line, n),
-            d = new hl(l.text, e.options.tabSize, s),
+            d = nt(e, t.line, n),
+            s = new hl(l.text, e.options.tabSize, d),
             p
-          for (o && (p = []); (o || d.pos < t.ch) && !d.eol(); )
-            (d.start = d.pos),
-              (a = rt(r, d, s.state)),
-              o && p.push(new vl(d, a, Qe(i.mode, s.state)))
-          return o ? p : new vl(d, a, s.state)
+          for (o && (p = []); (o || s.pos < t.ch) && !s.eol(); )
+            (s.start = s.pos),
+              (a = rt(r, s, d.state)),
+              o && p.push(new vl(s, a, Qe(i.mode, d.state)))
+          return o ? p : new vl(s, a, d.state)
         }
         function lt(e, t) {
           if (e)
@@ -1962,9 +1962,9 @@ object-assign
           return e
         }
         function dt(e, t, n, i, r, a, l) {
-          var s = n.flattenSpans
-          null == s && (s = e.options.flattenSpans)
-          var d = 0,
+          var d = n.flattenSpans
+          null == d && (d = e.options.flattenSpans)
+          var s = 0,
             p = null,
             u = new hl(t, e.options.tabSize, i),
             c = e.options.addModeClass && [null],
@@ -1972,7 +1972,7 @@ object-assign
           for ('' == t && lt(it(n, i.state), a); !u.eol(); ) {
             if (
               (u.pos > e.options.maxHighlightLength
-                ? ((s = !1),
+                ? ((d = !1),
                   l && ot(e, t, i, u.pos),
                   (u.pos = t.length),
                   (f = null))
@@ -1982,15 +1982,15 @@ object-assign
               var h = c[0].name
               h && (f = 'm-' + (f ? h + ' ' + f : h))
             }
-            if (!s || p != f) {
-              for (; d < u.start; ) (d = o(u.start, d + 5e3)), r(d, p)
+            if (!d || p != f) {
+              for (; s < u.start; ) (s = o(u.start, s + 5e3)), r(s, p)
               p = f
             }
             u.start = u.pos
           }
-          for (; d < u.pos; ) {
-            var m = o(u.pos, d + 5e3)
-            r(m, p), (d = m)
+          for (; s < u.pos; ) {
+            var m = o(u.pos, s + 5e3)
+            r(m, p), (s = m)
           }
         }
         function st(e, t, n) {
@@ -2004,14 +2004,14 @@ object-assign
             --r
           ) {
             if (r <= o.first) return o.first
-            var s = _(o, r - 1),
-              d = s.stateAfter
+            var d = _(o, r - 1),
+              s = d.stateAfter
             if (
-              d &&
-              (!n || r + (d instanceof yl ? d.lookAhead : 0) <= o.modeFrontier)
+              s &&
+              (!n || r + (s instanceof yl ? s.lookAhead : 0) <= o.modeFrontier)
             )
               return r
-            var p = y(s.text, null, e.options.tabSize)
+            var p = y(d.text, null, e.options.tabSize)
             ;(null == l || a > p) && ((l = r - 1), (a = p))
           }
           return l
@@ -2037,13 +2037,13 @@ object-assign
             e.stateAfter && (e.stateAfter = null),
             e.styles && (e.styles = null),
             null != e.order && (e.order = null),
-            de(e),
+            se(e),
             pe(e, n)
           var i = o ? o(e) : 1
           i != e.height && R(e, i)
         }
         function ct(e) {
-          ;(e.parent = null), de(e)
+          ;(e.parent = null), se(e)
         }
         function ft(e, t) {
           if (!e || /^\s*$/.test(e)) return null
@@ -2051,9 +2051,9 @@ object-assign
           return n[e] || (n[e] = e.replace(/\S+/g, 'cm-$&'))
         }
         function ht(e, t) {
-          var n = u('span', null, null, Oa ? 'padding-right: .1px' : null),
+          var n = p('span', null, null, Oa ? 'padding-right: .1px' : null),
             o = {
-              pre: u('pre', [n], 'CodeMirror-line'),
+              pre: p('pre', [n], 'CodeMirror-line'),
               content: n,
               col: 0,
               pos: 0,
@@ -2089,9 +2089,9 @@ object-assign
                   (t.measure.caches || (t.measure.caches = [])).push({}))
           }
           if (Oa) {
-            var s = o.content.lastChild
-            ;(/\bcm-tab\b/.test(s.className) ||
-              (s.querySelector && s.querySelector('.cm-tab'))) &&
+            var d = o.content.lastChild
+            ;(/\bcm-tab\b/.test(d.className) ||
+              (d.querySelector && d.querySelector('.cm-tab'))) &&
               (o.content.className = 'cm-tab-wrap-hack')
           }
           return (
@@ -2102,7 +2102,7 @@ object-assign
           )
         }
         function mt(e) {
-          var t = p('span', '\u2022', 'cm-invalidchar')
+          var t = s('span', '\u2022', 'cm-invalidchar')
           return (
             (t.title = '\\u' + e.charCodeAt(0).toString(16)),
             t.setAttribute('aria-label', t.title),
@@ -2112,25 +2112,25 @@ object-assign
         function gt(e, t, n, o, i, r, a) {
           if (t) {
             var l = e.splitSpaces ? yt(t, e.trailingSpace) : t,
-              s = e.cm.state.specialChars,
-              d = !1,
+              d = e.cm.state.specialChars,
+              p = !1,
               u
-            if (!s.test(t))
+            if (!d.test(t))
               (e.col += t.length),
                 (u = document.createTextNode(l)),
                 e.map.push(e.pos, e.pos + t.length, u),
-                Sa && 9 > Ea && (d = !0),
+                Sa && 9 > Ea && (p = !0),
                 (e.pos += t.length)
             else {
               u = document.createDocumentFragment()
               for (var c = 0; ; ) {
-                s.lastIndex = c
-                var f = s.exec(t),
+                d.lastIndex = c
+                var f = d.exec(t),
                   h = f ? f.index - c : t.length - c
                 if (h) {
                   var g = document.createTextNode(l.slice(c, c + h))
                   Sa && 9 > Ea
-                    ? u.appendChild(p('span', [g]))
+                    ? u.appendChild(s('span', [g]))
                     : u.appendChild(g),
                     e.map.push(e.pos, e.pos + h, g),
                     (e.col += h),
@@ -2142,14 +2142,14 @@ object-assign
                 if ('\t' == f[0]) {
                   var b = e.cm.options.tabSize,
                     v = b - e.col % b
-                  ;(y = u.appendChild(p('span', C(v), 'cm-tab'))),
+                  ;(y = u.appendChild(s('span', C(v), 'cm-tab'))),
                     y.setAttribute('role', 'presentation'),
                     y.setAttribute('cm-text', '\t'),
                     (e.col += v)
                 } else
                   '\r' == f[0] || '\n' == f[0]
                     ? ((y = u.appendChild(
-                        p(
+                        s(
                           'span',
                           '\r' == f[0] ? '\u240D' : '\u2424',
                           'cm-invalidchar',
@@ -2160,7 +2160,7 @@ object-assign
                     : ((y = e.cm.options.specialCharPlaceholder(f[0])),
                       y.setAttribute('cm-text', f[0]),
                       Sa && 9 > Ea
-                        ? u.appendChild(p('span', [y]))
+                        ? u.appendChild(s('span', [y]))
                         : u.appendChild(y),
                       (e.col += 1))
                 e.map.push(e.pos, e.pos + 1, y), e.pos++
@@ -2168,11 +2168,11 @@ object-assign
             }
             if (
               ((e.trailingSpace = 32 == l.charCodeAt(t.length - 1)),
-              n || o || i || d || a)
+              n || o || i || p || a)
             ) {
               var x = n || ''
               o && (x += o), i && (x += i)
-              var w = p('span', [u], x, a)
+              var w = s('span', [u], x, a)
               return r && (w.title = r), e.content.appendChild(w)
             }
             e.content.appendChild(u)
@@ -2191,7 +2191,7 @@ object-assign
           return o
         }
         function bt(e, t) {
-          return function(n, o, r, a, l, s, d) {
+          return function(n, o, r, a, l, d, s) {
             r = r ? r + ' cm-force-border' : 'cm-force-border'
             for (var p = n.pos, u = p + o.length; ; ) {
               for (
@@ -2199,8 +2199,8 @@ object-assign
                 f < t.length && ((c = t[f]), !(c.to > p && c.from <= p));
                 f++
               );
-              if (c.to >= u) return e(n, o, r, a, l, s, d)
-              e(n, o.slice(0, c.to - p), r, a, null, s, d),
+              if (c.to >= u) return e(n, o, r, a, l, d, s)
+              e(n, o.slice(0, c.to - p), r, a, null, d, s),
                 (a = null),
                 (o = o.slice(c.to - p)),
                 (p = c.to)
@@ -2225,12 +2225,12 @@ object-assign
             a = e.text,
             l = 0
           if (!r) {
-            for (var s = 1; s < n.length; s += 2)
-              t.addToken(t, a.slice(l, (l = n[s])), ft(n[s + 1], t.cm.options))
+            for (var d = 1; d < n.length; d += 2)
+              t.addToken(t, a.slice(l, (l = n[d])), ft(n[d + 1], t.cm.options))
             return
           }
           for (
-            var d = a.length, p = 0, u = 1, i = '', c = 0, f, h, g, y, b, v, C;
+            var s = a.length, p = 0, u = 1, i = '', c = 0, f, h, g, y, b, v, C;
             ;
 
           ) {
@@ -2268,7 +2268,7 @@ object-assign
                 if (
                   (vt(
                     t,
-                    (null == C.to ? d + 1 : C.to) - p,
+                    (null == C.to ? s + 1 : C.to) - p,
                     C.marker,
                     null == C.from,
                   ),
@@ -2278,8 +2278,8 @@ object-assign
                 C.to == p && (C = !1)
               }
             }
-            if (p >= d) break
-            for (var O = o(d, c); ; ) {
+            if (p >= s) break
+            for (var O = o(s, c); ; ) {
               if (i) {
                 var P = p + i.length
                 if (!C) {
@@ -2387,7 +2387,7 @@ object-assign
         function Nt(e) {
           return (
             e.node == e.text &&
-              ((e.node = p('div', null, null, 'position: relative')),
+              ((e.node = s('div', null, null, 'position: relative')),
               e.text.parentNode &&
                 e.text.parentNode.replaceChild(e.node, e.text),
               e.node.appendChild(e.text),
@@ -2406,7 +2406,7 @@ object-assign
                 (t.background = null))
           else if (n) {
             var o = Nt(t)
-            ;(t.background = o.insertBefore(p('div', null, n), o.firstChild)),
+            ;(t.background = o.insertBefore(s('div', null, n), o.firstChild)),
               e.display.input.setUneditable(t.background)
           }
         }
@@ -2447,7 +2447,7 @@ object-assign
             t.line.gutterClass)
           ) {
             var i = Nt(t)
-            ;(t.gutterBackground = p(
+            ;(t.gutterBackground = s(
               'div',
               null,
               'CodeMirror-gutter-background ' + t.line.gutterClass,
@@ -2463,7 +2463,7 @@ object-assign
           var r = t.line.gutterMarkers
           if (e.options.lineNumbers || r) {
             var a = Nt(t),
-              l = (t.gutter = p(
+              l = (t.gutter = s(
                 'div',
                 null,
                 'CodeMirror-gutter-wrapper',
@@ -2478,7 +2478,7 @@ object-assign
               !e.options.lineNumbers ||
                 (r && r['CodeMirror-linenumbers']) ||
                 (t.lineNumber = l.appendChild(
-                  p(
+                  s(
                     'div',
                     W(e.options, n),
                     'CodeMirror-linenumber CodeMirror-gutter-elt',
@@ -2491,19 +2491,19 @@ object-assign
                 )),
               r)
             )
-              for (var s = 0; s < e.options.gutters.length; ++s) {
-                var d = e.options.gutters[s],
-                  u = r.hasOwnProperty(d) && r[d]
+              for (var d = 0; d < e.options.gutters.length; ++d) {
+                var p = e.options.gutters[d],
+                  u = r.hasOwnProperty(p) && r[p]
                 u &&
                   l.appendChild(
-                    p(
+                    s(
                       'div',
                       [u],
                       'CodeMirror-gutter-elt',
                       'left: ' +
-                        o.gutterLeft[d] +
+                        o.gutterLeft[p] +
                         'px; width: ' +
-                        o.gutterWidth[d] +
+                        o.gutterWidth[p] +
                         'px',
                     ),
                   )
@@ -2536,15 +2536,15 @@ object-assign
         function Ht(e, t, n, o, r) {
           if (t.widgets)
             for (var a = Nt(n), l = 0, i = t.widgets; l < i.length; ++l) {
-              var s = i[l],
-                d = p('div', [s.node], 'CodeMirror-linewidget')
-              s.handleMouseEvents || d.setAttribute('cm-ignore-events', 'true'),
-                Vt(s, d, n, o),
-                e.display.input.setUneditable(d),
-                r && s.above
-                  ? a.insertBefore(d, n.gutter || n.text)
-                  : a.appendChild(d),
-                Et(s, 'redraw')
+              var d = i[l],
+                p = s('div', [d.node], 'CodeMirror-linewidget')
+              d.handleMouseEvents || p.setAttribute('cm-ignore-events', 'true'),
+                Vt(d, p, n, o),
+                e.display.input.setUneditable(p),
+                r && d.above
+                  ? a.insertBefore(p, n.gutter || n.text)
+                  : a.appendChild(p),
+                Et(d, 'redraw')
             }
         }
         function Vt(e, t, n, o) {
@@ -2566,13 +2566,13 @@ object-assign
           if (null != e.height) return e.height
           var t = e.doc.cm
           if (!t) return 0
-          if (!d(document.body, e.node)) {
+          if (!u(document.body, e.node)) {
             var n = 'position: relative;'
             e.coverGutter &&
               (n += 'margin-left: -' + t.display.gutters.offsetWidth + 'px;'),
               e.noHScroll &&
                 (n += 'width: ' + t.display.wrapper.clientWidth + 'px;'),
-              s(t.display.measure, p('div', [e.node], null, n))
+              d(t.display.measure, s('div', [e.node], null, n))
           }
           return (e.height = e.node.parentNode.offsetHeight)
         }
@@ -2594,7 +2594,7 @@ object-assign
         }
         function jt(t) {
           if (t.cachedPaddingH) return t.cachedPaddingH
-          var n = s(t.measure, p('pre', 'x')),
+          var n = d(t.measure, s('pre', 'x')),
             e = window.getComputedStyle
               ? window.getComputedStyle(n)
               : n.currentStyle,
@@ -2621,12 +2621,12 @@ object-assign
             if (r) {
               n.measure.width = a
               for (
-                var s = n.text.firstChild.getClientRects(), d = 0;
-                d < s.length - 1;
-                d++
+                var d = n.text.firstChild.getClientRects(), s = 0;
+                s < d.length - 1;
+                s++
               ) {
-                var i = s[d],
-                  p = s[d + 1]
+                var i = d[s],
+                  p = d[s + 1]
                 2 < t(i.bottom - p.bottom) &&
                   l.push((i.bottom + p.top) / 2 - o.top)
               }
@@ -2653,7 +2653,7 @@ object-assign
             o = (e.display.externalMeasured = new xt(e.doc, t, n))
           o.lineN = n
           var i = (o.built = ht(e, o))
-          return (o.text = i.pre), s(e.display.lineMeasure, i.pre), o
+          return (o.text = i.pre), d(e.display.lineMeasure, i.pre), o
         }
         function Qt(e, t, n, o) {
           return en(e, Jt(e, t), n, o)
@@ -2704,26 +2704,26 @@ object-assign
           )
         }
         function tn(e, t, n) {
-          for (var o = 0, i, r, a, l, s, d; o < e.length; o += 3)
+          for (var o = 0, i, r, a, l, d, s; o < e.length; o += 3)
             if (
-              ((s = e[o]),
-              (d = e[o + 1]),
-              t < s
+              ((d = e[o]),
+              (s = e[o + 1]),
+              t < d
                 ? ((r = 0), (a = 1), (l = 'left'))
-                : t < d
-                  ? ((r = t - s), (a = r + 1))
-                  : (o == e.length - 3 || (t == d && e[o + 3] > t)) &&
-                    ((a = d - s), (r = a - 1), t >= d && (l = 'right')),
+                : t < s
+                  ? ((r = t - d), (a = r + 1))
+                  : (o == e.length - 3 || (t == s && e[o + 3] > t)) &&
+                    ((a = s - d), (r = a - 1), t >= s && (l = 'right')),
               null != r)
             ) {
               if (
                 ((i = e[o + 2]),
-                s == d && n == (i.insertLeft ? 'left' : 'right') && (l = n),
+                d == s && n == (i.insertLeft ? 'left' : 'right') && (l = n),
                 'left' == n && 0 == r)
               )
                 for (; o && e[o - 2] == e[o - 3] && e[o - 1].insertLeft; )
                   (i = e[(o -= 3) + 2]), (l = 'left')
-              if ('right' == n && r == d - s)
+              if ('right' == n && r == s - d)
                 for (
                   ;
                   o < e.length - 3 &&
@@ -2739,8 +2739,8 @@ object-assign
             start: r,
             end: a,
             collapse: l,
-            coverStart: s,
-            coverEnd: d,
+            coverStart: d,
+            coverEnd: s,
           }
         }
         function nn(e, t) {
@@ -2759,32 +2759,32 @@ object-assign
           var r = tn(t.map, n, o),
             a = r.node,
             l = r.start,
-            s = r.end,
-            d = r.collapse,
+            d = r.end,
+            s = r.collapse,
             p
           if (3 == a.nodeType) {
             for (var u = 0; 4 > u; u++) {
               for (; l && N(t.line.text.charAt(r.coverStart + l)); ) --l
               for (
                 ;
-                r.coverStart + s < r.coverEnd &&
-                N(t.line.text.charAt(r.coverStart + s));
+                r.coverStart + d < r.coverEnd &&
+                N(t.line.text.charAt(r.coverStart + d));
 
               )
-                ++s
+                ++d
               if (
                 ((p =
-                  Sa && 9 > Ea && 0 == l && s == r.coverEnd - r.coverStart
+                  Sa && 9 > Ea && 0 == l && d == r.coverEnd - r.coverStart
                     ? a.parentNode.getBoundingClientRect()
-                    : nn(ja(a, l, s).getClientRects(), o)),
+                    : nn(ja(a, l, d).getClientRects(), o)),
                 p.left || p.right || 0 == l)
               )
                 break
-              ;(s = l), --l, (d = 'right')
+              ;(d = l), --l, (s = 'right')
             }
             Sa && 11 > Ea && (p = an(e.display.measure, p))
           } else {
-            0 < l && (d = o = 'right')
+            0 < l && (s = o = 'right')
             var c
             p =
               e.options.lineWrapping && 1 < (c = a.getClientRects()).length
@@ -2813,8 +2813,8 @@ object-assign
           var i = y ? g[y - 1] : 0,
             b = g[y],
             v = {
-              left: ('right' == d ? p.right : p.left) - t.rect.left,
-              right: ('left' == d ? p.left : p.right) - t.rect.left,
+              left: ('right' == s ? p.right : p.left) - t.rect.left,
+              right: ('left' == s ? p.left : p.right) - t.rect.left,
               top: i,
               bottom: b,
             }
@@ -2849,12 +2849,12 @@ object-assign
           )
             for (var t = 0; t < e.rest.length; t++) e.measure.caches[t] = {}
         }
-        function sn(e) {
+        function dn(e) {
           ;(e.display.externalMeasure = null), l(e.display.lineMeasure)
           for (var t = 0; t < e.display.view.length; t++) ln(e.display.view[t])
         }
-        function dn(e) {
-          sn(e),
+        function sn(e) {
+          dn(e),
             (e.display.cachedCharWidth = e.display.cachedTextHeight = e.display.cachedPaddingH = null),
             e.options.lineWrapping || (e.display.maxLineChanged = !0),
             (e.display.lineNumChars = null)
@@ -2898,8 +2898,8 @@ object-assign
           ) {
             var l = e.display.lineSpace.getBoundingClientRect()
             a += l.top + ('window' == o ? 0 : un())
-            var s = l.left + ('window' == o ? 0 : pn())
-            ;(n.left += s), (n.right += s)
+            var d = l.left + ('window' == o ? 0 : pn())
+            ;(n.left += d), (n.right += d)
           }
           return (n.top += a), (n.bottom += a), n
         }
@@ -2924,25 +2924,25 @@ object-assign
             return a ? (l.left = l.right) : (l.right = l.left), fn(e, o, l, n)
           }
           function l(e, t, n) {
-            var o = s[t],
+            var o = d[t],
               i = 1 == o.level
             return a(n ? e - 1 : e, i != n)
           }
           ;(o = o || _(e.doc, t.line)), i || (i = Jt(e, o))
-          var s = Le(o, e.doc.direction),
-            d = t.ch,
+          var d = Le(o, e.doc.direction),
+            s = t.ch,
             p = t.sticky
           if (
-            (d >= o.text.length
-              ? ((d = o.text.length), (p = 'before'))
-              : 0 >= d && ((d = 0), (p = 'after')),
-            !s)
+            (s >= o.text.length
+              ? ((s = o.text.length), (p = 'before'))
+              : 0 >= s && ((s = 0), (p = 'after')),
+            !d)
           )
-            return a('before' == p ? d - 1 : d, 'before' == p)
-          var u = Ne(s, d, p),
+            return a('before' == p ? s - 1 : s, 'before' == p)
+          var u = Ne(d, s, p),
             c = ol,
-            f = l(d, u, 'before' == p)
-          return null != c && (f.other = l(d, c, 'before' != p)), f
+            f = l(s, u, 'before' == p)
+          return null != c && (f.other = l(s, c, 'before' != p)), f
         }
         function yn(e, t) {
           var n = 0
@@ -2967,10 +2967,10 @@ object-assign
           0 > t && (t = 0)
           for (var a = _(o, i); ; ) {
             var l = Tn(e, a, i, t, n),
-              s = ge(a),
-              d = s && s.find(0, !0)
-            if (s && (l.ch > d.from.ch || (l.ch == d.from.ch && 0 < l.xRel)))
-              i = F((a = d.to.line))
+              d = ge(a),
+              s = d && d.find(0, !0)
+            if (d && (l.ch > s.from.ch || (l.ch == s.from.ch && 0 < l.xRel)))
+              i = F((a = s.to.line))
             else return l
           }
         }
@@ -3010,14 +3010,14 @@ object-assign
           var r = Jt(e, t),
             a = cn(t),
             l = 0,
-            s = t.text.length,
-            d = !0,
+            d = t.text.length,
+            s = !0,
             p = Le(t, e.doc.direction)
           if (p) {
             var u = (e.options.lineWrapping ? Sn : kn)(e, t, n, r, p, o, i)
-            ;(d = 1 != u.level),
-              (l = d ? u.from : u.to - 1),
-              (s = d ? u.to : u.from - 1)
+            ;(s = 1 != u.level),
+              (l = s ? u.from : u.to - 1),
+              (d = s ? u.to : u.from - 1)
           }
           var c = null,
             f = null,
@@ -3030,25 +3030,25 @@ object-assign
                 )
               },
               l,
-              s,
+              d,
             ),
             m = !1,
             g,
             y
           if (f) {
             var b = o - f.left < f.right - o,
-              v = b == d
+              v = b == s
             ;(h = c + (v ? 0 : 1)),
               (y = v ? 'after' : 'before'),
               (g = b ? f.left : f.right)
           } else {
-            d || (h != s && h != l) || h++,
+            s || (h != d && h != l) || h++,
               (y =
                 0 == h
                   ? 'after'
                   : h == t.text.length
                     ? 'before'
-                    : en(e, r, h - (d ? 1 : 0)).bottom + a <= i == d
+                    : en(e, r, h - (s ? 1 : 0)).bottom + a <= i == s
                       ? 'after'
                       : 'before')
             var C = gn(e, z(n, h, y), 'line', t, r)
@@ -3058,13 +3058,13 @@ object-assign
         }
         function kn(e, t, n, o, r, a, l) {
           var i = M(
-              function(s) {
-                var i = r[s],
-                  d = 1 != i.level
+              function(d) {
+                var i = r[d],
+                  s = 1 != i.level
                 return wn(
                   gn(
                     e,
-                    z(n, d ? i.to : i.from, d ? 'before' : 'after'),
+                    z(n, s ? i.to : i.from, s ? 'before' : 'after'),
                     'line',
                     t,
                     o,
@@ -3077,22 +3077,22 @@ object-assign
               0,
               r.length - 1,
             ),
-            s = r[i]
+            d = r[i]
           if (0 < i) {
-            var d = 1 != s.level,
+            var s = 1 != d.level,
               p = gn(
                 e,
-                z(n, d ? s.from : s.to, d ? 'after' : 'before'),
+                z(n, s ? d.from : d.to, s ? 'after' : 'before'),
                 'line',
                 t,
                 o,
               )
-            wn(p, a, l, !0) && p.top > l && (s = r[i - 1])
+            wn(p, a, l, !0) && p.top > l && (d = r[i - 1])
           }
-          return s
+          return d
         }
-        function Sn(e, t, n, r, l, s, d) {
-          var u = Cn(e, t, r, d),
+        function Sn(e, t, n, r, l, d, s) {
+          var u = Cn(e, t, r, s),
             c = u.begin,
             f = u.end
           ;/\s/.test(t.text.charAt(f - 1)) && f--
@@ -3100,7 +3100,7 @@ object-assign
             if (((i = l[g]), !(i.from >= f || i.to <= c))) {
               var p = 1 != i.level,
                 y = en(e, r, p ? o(f, i.to) - 1 : a(c, i.from)).right,
-                b = y < s ? s - y + 1e9 : y - s
+                b = y < d ? d - y + 1e9 : y - d
               ;(!h || m > b) && ((h = i), (m = b))
             }
           return (
@@ -3113,21 +3113,21 @@ object-assign
         function En(e) {
           if (null != e.cachedTextHeight) return e.cachedTextHeight
           if (null == Ol) {
-            Ol = p('pre')
+            Ol = s('pre')
             for (var t = 0; 49 > t; ++t)
               Ol.appendChild(document.createTextNode('x')),
-                Ol.appendChild(p('br'))
+                Ol.appendChild(s('br'))
             Ol.appendChild(document.createTextNode('x'))
           }
-          s(e.measure, Ol)
+          d(e.measure, Ol)
           var n = Ol.offsetHeight / 50
           return 3 < n && (e.cachedTextHeight = n), l(e.measure), n || 1
         }
         function On(e) {
           if (null != e.cachedCharWidth) return e.cachedCharWidth
-          var t = p('span', 'xxxxxxxxxx'),
-            n = p('pre', [t])
-          s(e.measure, n)
+          var t = s('span', 'xxxxxxxxxx'),
+            n = s('pre', [t])
+          d(e.measure, n)
           var o = t.getBoundingClientRect(),
             i = (o.right - o.left) / 10
           return 2 < i && (e.cachedCharWidth = i), i || 10
@@ -3167,8 +3167,8 @@ object-assign
             if (Te(e.doc, a)) return 0
             var l = 0
             if (a.widgets)
-              for (var s = 0; s < a.widgets.length; s++)
-                a.widgets[s].height && (l += a.widgets[s].height)
+              for (var d = 0; d < a.widgets.length; d++)
+                a.widgets[d].height && (l += a.widgets[d].height)
             return n ? l + (r(a.text.length / o) || 1) * t : l + t
           }
         }
@@ -3185,22 +3185,22 @@ object-assign
           if (!e && 'true' == Ue(n).getAttribute('cm-not-content')) return null
           var r = i.lineSpace.getBoundingClientRect(),
             l,
-            s
+            d
           try {
-            ;(l = n.clientX - r.left), (s = n.clientY - r.top)
+            ;(l = n.clientX - r.left), (d = n.clientY - r.top)
           } catch (t) {
             return null
           }
-          var d = vn(t, l, s),
+          var s = vn(t, l, d),
             p
-          if (o && 1 == d.xRel && (p = _(t.doc, d.line).text).length == d.ch) {
+          if (o && 1 == s.xRel && (p = _(t.doc, s.line).text).length == s.ch) {
             var u = y(p, p.length, t.options.tabSize) - p.length
-            d = z(
-              d.line,
+            s = z(
+              s.line,
               a(0, ba((l - jt(t.display).left) / On(t.display)) - u),
             )
           }
-          return d
+          return s
         }
         function _n(e, t) {
           if (t >= e.display.viewTo) return null
@@ -3230,9 +3230,9 @@ object-assign
                   i.to().line < e.display.viewFrom
                 )
               ) {
-                var s = i.empty()
-                ;(s || e.options.showCursorWhenSelecting) && Rn(e, i.head, r),
-                  s || Hn(e, i, a)
+                var d = i.empty()
+                ;(d || e.options.showCursorWhenSelecting) && Rn(e, i.head, r),
+                  d || Hn(e, i, a)
               }
             }
           return o
@@ -3246,7 +3246,7 @@ object-assign
               null,
               !e.options.singleCursorHeightPerLine,
             ),
-            i = n.appendChild(p('div', '\xA0', 'CodeMirror-cursor'))
+            i = n.appendChild(s('div', '\xA0', 'CodeMirror-cursor'))
           if (
             ((i.style.left = o.left + 'px'),
             (i.style.top = o.top + 'px'),
@@ -3255,7 +3255,7 @@ object-assign
             o.other)
           ) {
             var r = n.appendChild(
-              p('div', '\xA0', 'CodeMirror-cursor CodeMirror-secondarycursor'),
+              s('div', '\xA0', 'CodeMirror-cursor CodeMirror-secondarycursor'),
             )
             ;(r.style.display = ''),
               (r.style.left = o.other.left + 'px'),
@@ -3271,8 +3271,8 @@ object-assign
             0 > t && (t = 0),
               (t = ba(t)),
               (o = ba(o)),
-              s.appendChild(
-                p(
+              d.appendChild(
+                s(
                   'div',
                   null,
                   'CodeMirror-selected',
@@ -3290,31 +3290,31 @@ object-assign
           }
           function i(t, n, r) {
             function a(n, o) {
-              return mn(e, z(t, n), 'div', s, o)
+              return mn(e, z(t, n), 'div', d, o)
             }
             function i(t, n, o) {
-              var i = xn(e, s, null, t),
+              var i = xn(e, d, null, t),
                 r = ('ltr' == n) == ('after' == o) ? 'left' : 'right',
                 l =
                   'after' == o
                     ? i.begin
-                    : i.end - (/\s/.test(s.text.charAt(i.end - 1)) ? 2 : 1)
+                    : i.end - (/\s/.test(d.text.charAt(i.end - 1)) ? 2 : 1)
               return a(l, r)[r]
             }
-            var s = _(l, t),
-              d = s.text.length,
-              p = Le(s, l.direction),
+            var d = _(l, t),
+              s = d.text.length,
+              p = Le(d, l.direction),
               h,
               m
             return (
-              Pe(p, n || 0, null == r ? d : r, function(e, t, l, s) {
+              Pe(p, n || 0, null == r ? s : r, function(e, t, l, d) {
                 var g = 'ltr' == l,
                   y = a(e, g ? 'left' : 'right'),
                   b = a(t - 1, g ? 'right' : 'left'),
                   v = null == n && 0 == e,
-                  C = null == r && t == d,
-                  x = 0 == s,
-                  w = !p || s == p.length - 1
+                  C = null == r && t == s,
+                  x = 0 == d,
+                  w = !p || d == p.length - 1
                 if (3 >= b.top - y.top) {
                   var T = (f ? v : C) && x,
                     k = (f ? C : v) && w,
@@ -3346,10 +3346,10 @@ object-assign
           }
           var r = e.display,
             l = e.doc,
-            s = document.createDocumentFragment(),
-            d = jt(e.display),
-            u = d.left,
-            c = a(r.sizerWidth, Gt(e) - r.sizer.offsetLeft) - d.right,
+            d = document.createDocumentFragment(),
+            p = jt(e.display),
+            u = p.left,
+            c = a(r.sizerWidth, Gt(e) - r.sizer.offsetLeft) - p.right,
             f = 'ltr' == l.direction,
             h = t.from(),
             m = t.to()
@@ -3367,7 +3367,7 @@ object-assign
                 : o(v.right, v.top, C.left - v.right, v.bottom)),
               v.bottom < C.top && o(u, v.bottom, null, C.top)
           }
-          n.appendChild(s)
+          n.appendChild(d)
         }
         function Vn(e) {
           if (e.state.focused) {
@@ -3439,12 +3439,12 @@ object-assign
                 var l = i.node.getBoundingClientRect()
                 r = l.bottom - l.top
               }
-              var s = i.line.height - r
+              var d = i.line.height - r
               if (
                 (2 > r && (r = En(t)),
-                (0.005 < s || -0.005 > s) && (R(i.line, r), Kn(i.line), i.rest))
+                (0.005 < d || -0.005 > d) && (R(i.line, r), Kn(i.line), i.rest))
               )
-                for (var d = 0; d < i.rest.length; d++) Kn(i.rest[d])
+                for (var s = 0; s < i.rest.length; s++) Kn(i.rest[s])
             }
           }
         }
@@ -3460,17 +3460,17 @@ object-assign
           var r = i && null != i.top ? a(0, i.top) : e.scroller.scrollTop
           r = n(r - Ut(e))
           var l = i && null != i.bottom ? i.bottom : r + e.wrapper.clientHeight,
-            s = H(t, r),
-            d = H(t, l)
+            d = H(t, r),
+            s = H(t, l)
           if (i && i.ensure) {
             var p = i.ensure.from.line,
               u = i.ensure.to.line
-            p < s
-              ? ((s = p), (d = H(t, Se(_(t, p)) + e.wrapper.clientHeight)))
-              : o(u, t.lastLine()) >= d &&
-                ((s = H(t, Se(_(t, u)) - e.wrapper.clientHeight)), (d = u))
+            p < d
+              ? ((d = p), (s = H(t, Se(_(t, p)) + e.wrapper.clientHeight)))
+              : o(u, t.lastLine()) >= s &&
+                ((d = H(t, Se(_(t, u)) - e.wrapper.clientHeight)), (s = u))
           }
-          return { from: s, to: a(d, s + 1) }
+          return { from: d, to: a(s, d + 1) }
         }
         function Yn(e) {
           var t = e.display,
@@ -3493,7 +3493,7 @@ object-assign
                   n[l].gutterBackground &&
                     (n[l].gutterBackground.style.left = a))
                 var i = n[l].alignable
-                if (i) for (var s = 0; s < i.length; s++) i[s].style.left = a
+                if (i) for (var d = 0; d < i.length; d++) i[d].style.left = a
               }
             e.options.fixedGutter && (t.gutters.style.left = o + r + 'px')
           }
@@ -3505,9 +3505,9 @@ object-assign
             o = e.display
           if (n.length != o.lineNumChars) {
             var i = o.measure.appendChild(
-                p(
+                s(
                   'div',
-                  [p('div', n)],
+                  [s('div', n)],
                   'CodeMirror-linenumber CodeMirror-gutter-elt',
                 ),
               ),
@@ -3538,7 +3538,7 @@ object-assign
                       document.documentElement.clientHeight) && (i = !1),
               null != i && !_a)
             ) {
-              var r = p(
+              var r = s(
                 'div',
                 '\u200B',
                 null,
@@ -3567,8 +3567,8 @@ object-assign
               ? z(n.line, 'before' == n.sticky ? n.ch - 1 : n.ch, 'after')
               : n),
             (i = 'before' == n.sticky ? z(n.line, n.ch + 1, 'before') : n))
-          for (var s = 0; 5 > s; s++) {
-            var d = !1,
+          for (var d = 0; 5 > d; d++) {
+            var s = !1,
               p = gn(e, n),
               u = i && i != n ? gn(e, i) : p
             l = {
@@ -3582,10 +3582,10 @@ object-assign
               h = e.doc.scrollLeft
             if (
               (null != c.scrollTop &&
-                (ro(e, c.scrollTop), 1 < t(e.doc.scrollTop - f) && (d = !0)),
+                (ro(e, c.scrollTop), 1 < t(e.doc.scrollTop - f) && (s = !0)),
               null != c.scrollLeft &&
-                (lo(e, c.scrollLeft), 1 < t(e.doc.scrollLeft - h) && (d = !0)),
-              !d)
+                (lo(e, c.scrollLeft), 1 < t(e.doc.scrollLeft - h) && (s = !0)),
+              !s)
             )
               break
           }
@@ -3605,15 +3605,15 @@ object-assign
                 ? e.curOp.scrollTop
                 : n.scroller.scrollTop,
             l = Yt(e),
-            s = {}
+            d = {}
           t.bottom - t.top > l && (t.bottom = t.top + l)
-          var d = e.doc.height + Bt(n),
+          var s = e.doc.height + Bt(n),
             p = t.top < i,
-            u = t.bottom > d - i
-          if (t.top < r) s.scrollTop = p ? 0 : t.top
+            u = t.bottom > s - i
+          if (t.top < r) d.scrollTop = p ? 0 : t.top
           else if (t.bottom > r + l) {
-            var c = o(t.top, (u ? d : t.bottom) - l)
-            c != r && (s.scrollTop = c)
+            var c = o(t.top, (u ? s : t.bottom) - l)
+            c != r && (d.scrollTop = c)
           }
           var f =
               e.curOp && null != e.curOp.scrollLeft
@@ -3624,12 +3624,12 @@ object-assign
           return (
             m && (t.right = t.left + h),
             10 > t.left
-              ? (s.scrollLeft = 0)
+              ? (d.scrollLeft = 0)
               : t.left < f
-                ? (s.scrollLeft = a(0, t.left - (m ? 0 : 10)))
+                ? (d.scrollLeft = a(0, t.left - (m ? 0 : 10)))
                 : t.right > h + f - 3 &&
-                  (s.scrollLeft = t.right + (m ? 0 : 10) - h),
-            s
+                  (d.scrollLeft = t.right + (m ? 0 : 10) - h),
+            d
           )
         }
         function Jn(e, t) {
@@ -3902,8 +3902,8 @@ object-assign
           var a = e.maybeHiddenMarkers,
             l = e.maybeUnhiddenMarkers
           if (a)
-            for (var s = 0; s < a.length; ++s)
-              a[s].lines.length || _e(a[s], 'hide')
+            for (var d = 0; d < a.length; ++d)
+              a[d].lines.length || _e(a[d], 'hide')
           if (l)
             for (var i = 0; i < l.length; ++i)
               l[i].lines.length && _e(l[i], 'unhide')
@@ -3988,20 +3988,20 @@ object-assign
               : Oo(e)
           } else {
             var l = Po(e, t, t, -1),
-              s = Po(e, n, n + o, 1)
-            l && s
+              d = Po(e, n, n + o, 1)
+            l && d
               ? ((i.view = i.view
                   .slice(0, l.index)
-                  .concat(wt(e, l.lineN, s.lineN))
-                  .concat(i.view.slice(s.index))),
+                  .concat(wt(e, l.lineN, d.lineN))
+                  .concat(i.view.slice(d.index))),
                 (i.viewTo += o))
               : Oo(e)
           }
-          var d = i.externalMeasured
-          d &&
-            (n < d.lineN
-              ? (d.lineN += o)
-              : t < d.lineN + d.size && (i.externalMeasured = null))
+          var s = i.externalMeasured
+          s &&
+            (n < s.lineN
+              ? (s.lineN += o)
+              : t < s.lineN + s.size && (i.externalMeasured = null))
         }
         function Eo(e, t, n) {
           e.curOp.viewChanged = !0
@@ -4029,16 +4029,16 @@ object-assign
         function Po(e, t, o, r) {
           var a = _n(e, t),
             l = e.display.view,
-            s
+            d
           if (!nl || o == e.doc.first + e.doc.size)
             return { index: a, lineN: o }
-          for (var d = e.display.viewFrom, n = 0; n < a; n++) d += l[n].size
-          if (d != t) {
+          for (var s = e.display.viewFrom, n = 0; n < a; n++) s += l[n].size
+          if (s != t) {
             if (0 < r) {
               if (a == l.length - 1) return null
-              ;(s = d + l[a].size - t), a++
-            } else s = d - t
-            ;(t += s), (o += s)
+              ;(d = s + l[a].size - t), a++
+            } else d = s - t
+            ;(t += d), (o += d)
           }
           for (; xe(e.doc, o) != o; ) {
             if (a == (0 > r ? 0 : l.length - 1)) return null
@@ -4081,14 +4081,14 @@ object-assign
               function(o) {
                 if (r.line >= e.display.viewFrom) {
                   var a = o.styles,
-                    s =
+                    d =
                       o.text.length > e.options.maxHighlightLength
                         ? Qe(t.mode, r.state)
                         : null,
-                    d = et(e, o, r, !0)
-                  s && (r.state = s), (o.styles = d.styles)
+                    s = et(e, o, r, !0)
+                  d && (r.state = d), (o.styles = s.styles)
                   var p = o.styleClasses,
-                    u = d.classes
+                    u = s.classes
                   u ? (o.styleClasses = u) : p && (o.styleClasses = null)
                   for (
                     var c =
@@ -4137,13 +4137,13 @@ object-assign
         function Ao(e) {
           if (e.hasFocus()) return null
           var t = c()
-          if (!t || !d(e.display.lineDiv, t)) return null
+          if (!t || !u(e.display.lineDiv, t)) return null
           var n = { activeElt: t }
           if (window.getSelection) {
             var o = window.getSelection()
             o.anchorNode &&
               o.extend &&
-              d(e.display.lineDiv, o.anchorNode) &&
+              u(e.display.lineDiv, o.anchorNode) &&
               ((n.anchorNode = o.anchorNode),
               (n.anchorOffset = o.anchorOffset),
               (n.focusNode = o.focusNode),
@@ -4158,8 +4158,8 @@ object-assign
             e.activeElt != c() &&
             (e.activeElt.focus(),
             e.anchorNode &&
-              d(document.body, e.anchorNode) &&
-              d(document.body, e.focusNode))
+              u(document.body, e.anchorNode) &&
+              u(document.body, e.focusNode))
           ) {
             var t = window.getSelection(),
               n = document.createRange()
@@ -4185,17 +4185,17 @@ object-assign
             return !1
           qn(e) && (Oo(e), (t.dims = Pn(e)))
           var r = i.first + i.size,
-            s = a(t.visible.from - e.options.viewportMargin, i.first),
-            d = o(r, t.visible.to + e.options.viewportMargin)
-          n.viewFrom < s && 20 > s - n.viewFrom && (s = a(i.first, n.viewFrom)),
-            n.viewTo > d && 20 > n.viewTo - d && (d = o(r, n.viewTo)),
-            nl && ((s = xe(e.doc, s)), (d = we(e.doc, d)))
+            d = a(t.visible.from - e.options.viewportMargin, i.first),
+            s = o(r, t.visible.to + e.options.viewportMargin)
+          n.viewFrom < d && 20 > d - n.viewFrom && (d = a(i.first, n.viewFrom)),
+            n.viewTo > s && 20 > n.viewTo - s && (s = o(r, n.viewTo)),
+            nl && ((d = xe(e.doc, d)), (s = we(e.doc, s)))
           var p =
-            s != n.viewFrom ||
-            d != n.viewTo ||
+            d != n.viewFrom ||
+            s != n.viewTo ||
             n.lastWrapHeight != t.wrapperHeight ||
             n.lastWrapWidth != t.wrapperWidth
-          No(e, s, d),
+          No(e, d, s),
             (n.viewOffset = Se(_(e.doc, n.viewFrom))),
             (e.display.mover.style.top = n.viewOffset + 'px')
           var u = Lo(e)
@@ -4276,8 +4276,8 @@ object-assign
           for (
             var r = e.display,
               a = e.options.lineNumbers,
-              s = r.lineDiv,
-              d = s.firstChild,
+              d = r.lineDiv,
+              s = d.firstChild,
               p = r.view,
               u = r.viewFrom,
               c = 0,
@@ -4286,11 +4286,11 @@ object-assign
             c++
           ) {
             if (((i = p[c]), i.hidden));
-            else if (!i.node || i.node.parentNode != s) {
+            else if (!i.node || i.node.parentNode != d) {
               var f = Rt(e, i, u, n)
-              s.insertBefore(f, d)
+              d.insertBefore(f, s)
             } else {
-              for (; d != i.node; ) d = o(d)
+              for (; s != i.node; ) s = o(s)
               var h = a && null != t && t <= u && i.lineNumber
               i.changes &&
                 (-1 < b(i.changes, 'gutter') && (h = !1), Pt(e, i, u, n)),
@@ -4299,11 +4299,11 @@ object-assign
                   i.lineNumber.appendChild(
                     document.createTextNode(W(e.options, u)),
                   )),
-                (d = i.node.nextSibling)
+                (s = i.node.nextSibling)
             }
             u += i.size
           }
-          for (; d; ) d = o(d)
+          for (; s; ) s = o(s)
         }
         function Wo(e) {
           var t = e.display.gutters.offsetWidth
@@ -4321,7 +4321,7 @@ object-assign
           l(t)
           for (var o = 0; o < n.length; ++o) {
             var i = n[o],
-              r = t.appendChild(p('div', null, 'CodeMirror-gutter ' + i))
+              r = t.appendChild(s('div', null, 'CodeMirror-gutter ' + i))
             'CodeMirror-linenumbers' == i &&
               ((e.display.lineGutter = r),
               (r.style.width = (e.display.lineNumWidth || 1) + 'px'))
@@ -4358,15 +4358,15 @@ object-assign
           var e = jo(n),
             r = e.x,
             l = e.y,
-            s = t.display,
-            d = s.scroller,
-            p = d.scrollWidth > d.clientWidth,
-            u = d.scrollHeight > d.clientHeight
+            d = t.display,
+            s = d.scroller,
+            p = s.scrollWidth > s.clientWidth,
+            u = s.scrollHeight > s.clientHeight
           if ((r && p) || (l && u)) {
             if (l && Fa && Oa)
               outer: for (
-                var c = n.target, f = s.view;
-                c != d;
+                var c = n.target, f = d.view;
+                c != s;
                 c = c.parentNode
               )
                 for (var h = 0; h < f.length; h++)
@@ -4376,38 +4376,38 @@ object-assign
                   }
             if (r && !xa && !La && null != _l)
               return (
-                l && u && ro(t, a(0, d.scrollTop + l * _l)),
-                lo(t, a(0, d.scrollLeft + r * _l)),
+                l && u && ro(t, a(0, s.scrollTop + l * _l)),
+                lo(t, a(0, s.scrollLeft + r * _l)),
                 (!l || (l && u)) && He(n),
-                void (s.wheelStartX = null)
+                void (d.wheelStartX = null)
               )
             if (l && null != _l) {
               var i = l * _l,
                 m = t.doc.scrollTop,
-                g = m + s.wrapper.clientHeight
+                g = m + d.wrapper.clientHeight
               0 > i
                 ? (m = a(0, m + i - 50))
                 : (g = o(t.doc.height, g + i + 50)),
                 Ho(t, { top: m, bottom: g })
             }
             20 > Dl &&
-              (null == s.wheelStartX
-                ? ((s.wheelStartX = d.scrollLeft),
-                  (s.wheelStartY = d.scrollTop),
-                  (s.wheelDX = r),
-                  (s.wheelDY = l),
+              (null == d.wheelStartX
+                ? ((d.wheelStartX = s.scrollLeft),
+                  (d.wheelStartY = s.scrollTop),
+                  (d.wheelDX = r),
+                  (d.wheelDY = l),
                   setTimeout(function() {
-                    if (null != s.wheelStartX) {
-                      var e = d.scrollLeft - s.wheelStartX,
-                        t = d.scrollTop - s.wheelStartY,
+                    if (null != d.wheelStartX) {
+                      var e = s.scrollLeft - d.wheelStartX,
+                        t = s.scrollTop - d.wheelStartY,
                         n =
-                          (t && s.wheelDY && t / s.wheelDY) ||
-                          (e && s.wheelDX && e / s.wheelDX)
-                      ;(s.wheelStartX = s.wheelStartY = null),
+                          (t && d.wheelDY && t / d.wheelDY) ||
+                          (e && d.wheelDX && e / d.wheelDX)
+                      ;(d.wheelStartX = d.wheelStartY = null),
                         n && ((_l = (_l * Dl + n) / (Dl + 1)), ++Dl)
                     }
                   }, 200))
-                : ((s.wheelDX += r), (s.wheelDY += l)))
+                : ((d.wheelDX += r), (d.wheelDY += l)))
           }
         }
         function Yo(e, t) {
@@ -4422,8 +4422,8 @@ object-assign
             if (0 <= U(r.to(), i.from())) {
               var a = G(r.from(), i.from()),
                 l = K(r.to(), i.to()),
-                s = r.empty() ? i.from() == i.head : r.from() == r.head
-              o <= t && --t, e.splice(--o, 2, new Il(s ? l : a, s ? a : l))
+                d = r.empty() ? i.from() == i.head : r.from() == r.head
+              o <= t && --t, e.splice(--o, 2, new Il(d ? l : a, d ? a : l))
             }
           }
           return new Al(e, t)
@@ -4460,13 +4460,13 @@ object-assign
         function Jo(e, t, n) {
           for (var o = [], r = z(e.first, 0), a = r, l = 0; l < t.length; l++) {
             var i = t[l],
-              s = Zo(i.from, r, a),
-              d = Zo($o(i), r, a)
-            if (((r = i.to), (a = d), 'around' == n)) {
+              d = Zo(i.from, r, a),
+              s = Zo($o(i), r, a)
+            if (((r = i.to), (a = s), 'around' == n)) {
               var p = e.sel.ranges[l],
                 u = 0 > U(p.head, p.anchor)
-              o[l] = new Il(u ? d : s, u ? s : d)
-            } else o[l] = new Il(s, s)
+              o[l] = new Il(u ? s : d, u ? d : s)
+            } else o[l] = new Il(d, d)
           }
           return new Al(o, e.sel.primIndex)
         }
@@ -4498,40 +4498,40 @@ object-assign
             ut(e, o, i, n), Et(e, 'change', e, t)
           }
           function a(e, t) {
-            for (var o = [], a = e; a < t; ++a) o.push(new Cl(d[a], r(a), n))
+            for (var o = [], a = e; a < t; ++a) o.push(new Cl(s[a], r(a), n))
             return o
           }
           var l = t.from,
-            s = t.to,
-            d = t.text,
+            d = t.to,
+            s = t.text,
             p = _(e, l.line),
-            u = _(e, s.line),
-            c = x(d),
-            f = r(d.length - 1),
-            h = s.line - l.line
+            u = _(e, d.line),
+            c = x(s),
+            f = r(s.length - 1),
+            h = d.line - l.line
           if (t.full)
-            e.insert(0, a(0, d.length)), e.remove(d.length, e.size - d.length)
+            e.insert(0, a(0, s.length)), e.remove(s.length, e.size - s.length)
           else if (ni(e, t)) {
-            var m = a(0, d.length - 1)
+            var m = a(0, s.length - 1)
             i(u, u.text, f),
               h && e.remove(l.line, h),
               m.length && e.insert(l.line, m)
           } else if (p == u) {
-            if (1 == d.length)
-              i(p, p.text.slice(0, l.ch) + c + p.text.slice(s.ch), f)
+            if (1 == s.length)
+              i(p, p.text.slice(0, l.ch) + c + p.text.slice(d.ch), f)
             else {
-              var g = a(1, d.length - 1)
-              g.push(new Cl(c + p.text.slice(s.ch), f, n)),
-                i(p, p.text.slice(0, l.ch) + d[0], r(0)),
+              var g = a(1, s.length - 1)
+              g.push(new Cl(c + p.text.slice(d.ch), f, n)),
+                i(p, p.text.slice(0, l.ch) + s[0], r(0)),
                 e.insert(l.line + 1, g)
             }
-          } else if (1 == d.length)
-            i(p, p.text.slice(0, l.ch) + d[0] + u.text.slice(s.ch), r(0)),
+          } else if (1 == s.length)
+            i(p, p.text.slice(0, l.ch) + s[0] + u.text.slice(d.ch), r(0)),
               e.remove(l.line + 1, h)
           else {
-            i(p, p.text.slice(0, l.ch) + d[0], r(0)),
-              i(u, c + u.text.slice(s.ch), f)
-            var y = a(1, d.length - 1)
+            i(p, p.text.slice(0, l.ch) + s[0], r(0)),
+              i(u, c + u.text.slice(d.ch), f)
+            var y = a(1, s.length - 1)
             1 < h && e.remove(l.line + 1, h - 1), e.insert(l.line + 1, y)
           }
           Et(e, 'change', e, t)
@@ -4541,8 +4541,8 @@ object-assign
             if (e.linked)
               for (var l = 0, i; l < e.linked.length; ++l)
                 if (((i = e.linked[l]), i.doc != r)) {
-                  var s = a && i.sharedHist
-                  ;(!n || s) && (t(i.doc, s), o(i.doc, e, s))
+                  var d = a && i.sharedHist
+                  ;(!n || d) && (t(i.doc, d), o(i.doc, e, d))
                 }
           }
           o(e, null, !0)
@@ -4568,7 +4568,7 @@ object-assign
             ai(e), So(e)
           })
         }
-        function si(e) {
+        function di(e) {
           ;(this.done = []),
             (this.undone = []),
             (this.undoDepth = Infinity),
@@ -4577,7 +4577,7 @@ object-assign
             (this.lastOrigin = this.lastSelOrigin = null),
             (this.generation = this.maxGeneration = e || 1)
         }
-        function di(e, t) {
+        function si(e, t) {
           var n = { from: j(t.from), to: $o(t), text: A(e, t.from, t.to) }
           return (
             gi(e, n, t.from.line, t.to.line + 1),
@@ -4626,12 +4626,12 @@ object-assign
             (l = x(a.changes)),
               0 == U(t.from, t.to) && 0 == U(t.from, l.to)
                 ? (l.to = $o(t))
-                : a.changes.push(di(e, t))
+                : a.changes.push(si(e, t))
           else {
-            var s = x(i.done)
+            var d = x(i.done)
             for (
-              (s && s.ranges) || mi(e.sel, i.done),
-                a = { changes: [di(e, t)], generation: i.generation },
+              (d && d.ranges) || mi(e.sel, i.done),
+                a = { changes: [si(e, t)], generation: i.generation },
                 i.done.push(a);
               i.done.length > i.undoDepth;
 
@@ -4677,11 +4677,11 @@ object-assign
         }
         function gi(e, t, i, r) {
           var l = t['spans_' + e.id],
-            s = 0
+            d = 0
           e.iter(a(e.first, i), o(e.first + e.size, r), function(n) {
             n.markedSpans &&
-              ((l || (l = t['spans_' + e.id] = {}))[s] = n.markedSpans),
-              ++s
+              ((l || (l = t['spans_' + e.id] = {}))[d] = n.markedSpans),
+              ++d
           })
         }
         function yi(e) {
@@ -4707,11 +4707,11 @@ object-assign
             var i = n[r],
               a = o[r]
             if (i && a)
-              spans: for (var l = 0, s; l < a.length; ++l) {
-                s = a[l]
-                for (var d = 0; d < i.length; ++d)
-                  if (i[d].marker == s.marker) continue spans
-                i.push(s)
+              spans: for (var l = 0, d; l < a.length; ++l) {
+                d = a[l]
+                for (var s = 0; s < i.length; ++s)
+                  if (i[s].marker == d.marker) continue spans
+                i.push(d)
               }
             else a && (n[r] = a)
           }
@@ -4726,14 +4726,14 @@ object-assign
             var a = i.changes,
               l = []
             o.push({ changes: l })
-            for (var s = 0; s < a.length; ++s) {
-              var d = a[s],
+            for (var d = 0; d < a.length; ++d) {
+              var s = a[d],
                 p = void 0
-              if ((l.push({ from: d.from, to: d.to, text: d.text }), t))
-                for (var u in d)
+              if ((l.push({ from: s.from, to: s.to, text: s.text }), t))
+                for (var u in s)
                   (p = u.match(/^spans_(\d+)$/)) &&
                     -1 < b(t, +p[1]) &&
-                    ((x(l)[u] = d[u]), delete d[u])
+                    ((x(l)[u] = s[u]), delete s[u])
             }
           }
           return o
@@ -4821,10 +4821,10 @@ object-assign
           for (var r = 0, i; r < t.ranges.length; r++) {
             var a = t.ranges[r],
               l = t.ranges.length == e.sel.ranges.length && e.sel.ranges[r],
-              s = Ai(e, a.anchor, l && l.anchor, n, o),
-              d = Ai(e, a.head, l && l.head, n, o)
-            ;(i || s != a.anchor || d != a.head) &&
-              (!i && (i = t.ranges.slice(0, r)), (i[r] = new Il(s, d)))
+              d = Ai(e, a.anchor, l && l.anchor, n, o),
+              s = Ai(e, a.head, l && l.head, n, o)
+            ;(i || d != a.anchor || s != a.head) &&
+              (!i && (i = t.ranges.slice(0, r)), (i[r] = new Il(d, s)))
           }
           return i ? Yo(i, t.primIndex) : t
         }
@@ -4833,36 +4833,36 @@ object-assign
           if (a.markedSpans)
             for (var l = 0; l < a.markedSpans.length; ++l) {
               var i = a.markedSpans[l],
-                s = i.marker
+                d = i.marker
               if (
                 (null == i.from ||
-                  (s.inclusiveLeft ? i.from <= t.ch : i.from < t.ch)) &&
+                  (d.inclusiveLeft ? i.from <= t.ch : i.from < t.ch)) &&
                 (null == i.to ||
-                  (s.inclusiveRight ? i.to >= t.ch : i.to > t.ch))
+                  (d.inclusiveRight ? i.to >= t.ch : i.to > t.ch))
               ) {
-                if (r && (_e(s, 'beforeCursorEnter'), s.explicitlyCleared))
+                if (r && (_e(d, 'beforeCursorEnter'), d.explicitlyCleared))
                   if (!a.markedSpans) break
                   else {
                     --l
                     continue
                   }
-                if (!s.atomic) continue
+                if (!d.atomic) continue
                 if (n) {
-                  var d = s.find(0 > o ? 1 : -1),
+                  var s = d.find(0 > o ? 1 : -1),
                     p = void 0
                   if (
-                    ((0 > o ? s.inclusiveRight : s.inclusiveLeft) &&
-                      (d = Ii(e, d, -o, d && d.line == t.line ? a : null)),
-                    d &&
-                      d.line == t.line &&
-                      (p = U(d, n)) &&
+                    ((0 > o ? d.inclusiveRight : d.inclusiveLeft) &&
+                      (s = Ii(e, s, -o, s && s.line == t.line ? a : null)),
+                    s &&
+                      s.line == t.line &&
+                      (p = U(s, n)) &&
                       (0 > o ? 0 > p : 0 < p))
                   )
-                    return _i(e, d, t, o, r)
+                    return _i(e, s, t, o, r)
                 }
-                var u = s.find(0 > o ? -1 : 1)
+                var u = d.find(0 > o ? -1 : 1)
                 return (
-                  (0 > o ? s.inclusiveLeft : s.inclusiveRight) &&
+                  (0 > o ? d.inclusiveLeft : d.inclusiveRight) &&
                     (u = Ii(e, u, o, u.line == t.line ? a : null)),
                   u ? _i(e, u, t, o, r) : null
                 )
@@ -4926,7 +4926,7 @@ object-assign
               ((t = Fi(e, t, !0)), !t)
             )
           ) {
-            var o = tl && !n && se(e, t.from, t.to)
+            var o = tl && !n && de(e, t.from, t.to)
             if (o)
               for (var r = o.length - 1; 0 <= r; --r)
                 Vi(e, {
@@ -4958,17 +4958,17 @@ object-assign
               var r = e.history,
                 a = e.sel,
                 l = 'undo' == t ? r.done : r.undone,
-                s = 'undo' == t ? r.undone : r.done,
-                d = 0,
+                d = 'undo' == t ? r.undone : r.done,
+                s = 0,
                 p;
-              d < l.length &&
-              ((p = l[d]), n ? !p.ranges || p.equals(e.sel) : !!p.ranges);
-              d++
+              s < l.length &&
+              ((p = l[s]), n ? !p.ranges || p.equals(e.sel) : !!p.ranges);
+              s++
             );
-            if (d != l.length) {
+            if (s != l.length) {
               for (r.lastOrigin = r.lastSelOrigin = null; ; )
                 if (((p = l.pop()), p.ranges)) {
-                  if ((mi(p, s), n && !p.equals(e.sel)))
+                  if ((mi(p, d), n && !p.equals(e.sel)))
                     return void Pi(e, p, { clearRedo: !1 })
                   a = p
                 } else {
@@ -4976,8 +4976,8 @@ object-assign
                   break
                 }
               var u = []
-              mi(a, s),
-                s.push({ changes: u, generation: r.generation }),
+              mi(a, d),
+                d.push({ changes: u, generation: r.generation }),
                 (r.generation = p.generation || ++r.maxGeneration)
               for (
                 var c =
@@ -4986,7 +4986,7 @@ object-assign
                     var o = p.changes[n]
                     if (((o.origin = t), c && !Fi(e, o, !1)))
                       return (l.length = 0), {}
-                    u.push(di(e, o))
+                    u.push(si(e, o))
                     var r = n ? Qo(e, o) : x(l)
                     Ui(e, o, r, vi(e, o)),
                       !n &&
@@ -5064,16 +5064,16 @@ object-assign
             r = t.from,
             a = t.to,
             l = !1,
-            s = r.line
+            d = r.line
           e.options.lineWrapping ||
-            ((s = F(be(_(o, r.line)))),
-            o.iter(s, a.line + 1, function(e) {
+            ((d = F(be(_(o, r.line)))),
+            o.iter(d, a.line + 1, function(e) {
               if (e == i.maxLine) return (l = !0), !0
             })),
             -1 < o.sel.contains(t.from, t.to) && Ie(e),
             oi(o, t, n, Ln(e)),
             e.options.lineWrapping ||
-              (o.iter(s, r.line + t.text.length, function(e) {
+              (o.iter(d, r.line + t.text.length, function(e) {
                 var t = Ee(e)
                 t > i.maxLineLength &&
                   ((i.maxLine = e),
@@ -5084,11 +5084,11 @@ object-assign
               l && (e.curOp.updateMaxLine = !0)),
             pt(o, r.line),
             Mo(e, 400)
-          var d = t.text.length - (a.line - r.line) - 1
+          var s = t.text.length - (a.line - r.line) - 1
           t.full
             ? So(e)
             : r.line != a.line || 1 != t.text.length || ni(e.doc, t)
-              ? So(e, r.line, a.line + 1, d)
+              ? So(e, r.line, a.line + 1, s)
               : Eo(e, r.line, 'text')
           var p = Re(e, 'changes'),
             u = Re(e, 'change')
@@ -5126,11 +5126,11 @@ object-assign
                 Ki(i.ranges[l].anchor, t, n, o), Ki(i.ranges[l].head, t, n, o)
               continue
             }
-            for (var s = 0, d; s < i.changes.length; ++s)
-              if (((d = i.changes[s]), n < d.from.line))
-                (d.from = z(d.from.line + o, d.from.ch)),
-                  (d.to = z(d.to.line + o, d.to.ch))
-              else if (t <= d.to.line) {
+            for (var d = 0, s; d < i.changes.length; ++d)
+              if (((s = i.changes[d]), n < s.from.line))
+                (s.from = z(s.from.line + o, s.from.ch)),
+                  (s.to = z(s.to.line + o, s.to.ch))
+              else if (t <= s.to.line) {
                 a = !1
                 break
               }
@@ -5205,7 +5205,7 @@ object-assign
           if (
             (a.replacedWith &&
               ((a.collapsed = !0),
-              (a.widgetNode = u('span', [a.replacedWith], 'CodeMirror-widget')),
+              (a.widgetNode = p('span', [a.replacedWith], 'CodeMirror-widget')),
               !o.handleMouseEvents &&
                 a.widgetNode.setAttribute('cm-ignore-events', 'true'),
               o.insertLeft && (a.widgetNode.insertLeft = !0)),
@@ -5222,26 +5222,26 @@ object-assign
           }
           a.addToHistory &&
             ci(e, { from: t, to: n, origin: 'markText' }, e.sel, NaN)
-          var s = t.line,
-            d = e.cm,
-            p
+          var d = t.line,
+            s = e.cm,
+            u
           if (
-            (e.iter(s, n.line + 1, function(e) {
-              d &&
+            (e.iter(d, n.line + 1, function(e) {
+              s &&
                 a.collapsed &&
-                !d.options.lineWrapping &&
-                be(e) == d.display.maxLine &&
-                (p = !0),
-                a.collapsed && s != t.line && R(e, 0),
+                !s.options.lineWrapping &&
+                be(e) == s.display.maxLine &&
+                (u = !0),
+                a.collapsed && d != t.line && R(e, 0),
                 ne(
                   e,
                   new J(
                     a,
-                    s == t.line ? t.ch : null,
-                    s == n.line ? n.ch : null,
+                    d == t.line ? t.ch : null,
+                    d == n.line ? n.ch : null,
                   ),
                 ),
-                ++s
+                ++d
             }),
             a.collapsed &&
               e.iter(t.line, n.line + 1, function(t) {
@@ -5256,10 +5256,10 @@ object-assign
               (e.history.done.length || e.history.undone.length) &&
                 e.clearHistory()),
             a.collapsed && ((a.id = ++Fl), (a.atomic = !0)),
-            d)
+            s)
           ) {
-            if ((p && (d.curOp.updateMaxLine = !0), a.collapsed))
-              So(d, t.line, n.line + 1)
+            if ((u && (s.curOp.updateMaxLine = !0), a.collapsed))
+              So(s, t.line, n.line + 1)
             else if (
               a.className ||
               a.title ||
@@ -5267,8 +5267,8 @@ object-assign
               a.endStyle ||
               a.css
             )
-              for (var c = t.line; c <= n.line; c++) Eo(d, c, 'text')
-            a.atomic && Mi(d.doc), Et(d, 'markerAdded', d, a)
+              for (var c = t.line; c <= n.line; c++) Eo(s, c, 'text')
+            a.atomic && Mi(s.doc), Et(s, 'markerAdded', s, a)
           }
           return a
         }
@@ -5276,13 +5276,13 @@ object-assign
           ;(o = g(o)), (o.shared = !1)
           var a = [Ji(e, t, n, o, r)],
             l = a[0],
-            s = o.widgetNode
+            d = o.widgetNode
           return (
             ii(e, function(e) {
-              s && (o.widgetNode = s.cloneNode(!0)),
+              d && (o.widgetNode = d.cloneNode(!0)),
                 a.push(Ji(e, q(e, t), q(e, n), o, r))
-              for (var d = 0; d < e.linked.length; ++d)
-                if (e.linked[d].isParent) return
+              for (var s = 0; s < e.linked.length; ++s)
+                if (e.linked[s].isParent) return
               l = x(a)
             }),
             new Vl(a, l)
@@ -5340,7 +5340,7 @@ object-assign
                   var a = r.length,
                     n = Array(a),
                     l = 0,
-                    s = function(t, r) {
+                    d = function(t, r) {
                       if (
                         !(
                           e.options.allowDropFileTypes &&
@@ -5356,7 +5356,7 @@ object-assign
                             ++l == a)
                           ) {
                             o = q(e.doc, o)
-                            var s = {
+                            var d = {
                               from: o,
                               to: o,
                               text: e.doc.splitLines(
@@ -5364,17 +5364,17 @@ object-assign
                               ),
                               origin: 'paste',
                             }
-                            Hi(e.doc, s), Oi(e.doc, qo(o, $o(s)))
+                            Hi(e.doc, d), Oi(e.doc, qo(o, $o(d)))
                           }
                         })),
                           i.readAsText(t)
                       }
                     },
-                    d = 0;
-                  d < a;
-                  ++d
+                    s = 0;
+                  s < a;
+                  ++s
                 )
-                  s(r[d], d)
+                  d(r[s], s)
               else {
                 if (e.state.draggingText && -1 < e.doc.sel.contains(o))
                   return (
@@ -5412,7 +5412,7 @@ object-assign
             (n.dataTransfer.effectAllowed = 'copyMove'),
             n.dataTransfer.setDragImage && !Ma)
           ) {
-            var e = p('img', null, null, 'position: fixed; left: 0; top: 0;')
+            var e = s('img', null, null, 'position: fixed; left: 0; top: 0;')
             ;(e.src =
               'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='),
               La &&
@@ -5429,7 +5429,7 @@ object-assign
             var o = document.createDocumentFragment()
             Rn(t, e, o),
               t.display.dragCursor ||
-                ((t.display.dragCursor = p(
+                ((t.display.dragCursor = s(
                   'div',
                   null,
                   'CodeMirror-cursors CodeMirror-dragcursors',
@@ -5438,7 +5438,7 @@ object-assign
                   t.display.dragCursor,
                   t.display.cursorDiv,
                 )),
-              s(t.display.dragCursor, o)
+              d(t.display.dragCursor, o)
           }
         }
         function lr(e) {
@@ -5446,7 +5446,7 @@ object-assign
             (e.display.lineSpace.removeChild(e.display.dragCursor),
             (e.display.dragCursor = null))
         }
-        function sr(e) {
+        function dr(e) {
           if (document.getElementsByClassName)
             for (
               var t = document.getElementsByClassName('CodeMirror'), n = 0, o;
@@ -5455,7 +5455,7 @@ object-assign
             )
               (o = t[n].CodeMirror), o && e(o)
         }
-        function dr() {
+        function sr() {
           Bl || (pr(), (Bl = !0))
         }
         function pr() {
@@ -5463,11 +5463,11 @@ object-assign
           al(window, 'resize', function() {
             null == e &&
               (e = setTimeout(function() {
-                ;(e = null), sr(ur)
+                ;(e = null), dr(ur)
               }, 100))
           }),
             al(window, 'blur', function() {
-              return sr(Bn)
+              return dr(Bn)
             })
         }
         function ur(e) {
@@ -5511,14 +5511,14 @@ object-assign
                 a == r.length - 1
                   ? ((l = r.join(' ')), (i = o))
                   : ((l = r.slice(0, a + 1).join(' ')), (i = '...'))
-                var s = t[l]
-                if (!s) t[l] = i
-                else if (s != i)
+                var d = t[l]
+                if (!d) t[l] = i
+                else if (d != i)
                   throw new Error('Inconsistent bindings for ' + l)
               }
               delete e[n]
             }
-          for (var d in t) e[d] = t[d]
+          for (var s in t) e[s] = t[s]
           return e
         }
         function hr(e, t, n, o) {
@@ -5591,22 +5591,22 @@ object-assign
             if (r) {
               var a = 0 > i ? x(r) : r[0],
                 l = 0 > i == (1 == a.level),
-                s = l ? 'after' : 'before',
-                d
+                d = l ? 'after' : 'before',
+                s
               if (0 < a.level || 'rtl' == t.doc.direction) {
                 var p = Jt(t, n)
-                d = 0 > i ? n.text.length - 1 : 0
-                var u = en(t, p, d).top
-                ;(d = M(
+                s = 0 > i ? n.text.length - 1 : 0
+                var u = en(t, p, s).top
+                ;(s = M(
                   function(e) {
                     return en(t, p, e).top == u
                   },
                   0 > i == (1 == a.level) ? a.from : a.to - 1,
-                  d,
+                  s,
                 )),
-                  'before' == s && (d = Cr(n, d, 1))
-              } else d = 0 > i ? a.to : a.from
-              return new z(o, d, s)
+                  'before' == d && (s = Cr(n, s, 1))
+              } else s = 0 > i ? a.to : a.from
+              return new z(o, s, d)
             }
           }
           return new z(o, 0 > i ? n.text.length : 0, 0 > i ? 'before' : 'after')
@@ -5628,19 +5628,19 @@ object-assign
           var l = function(e, n) {
               return Cr(t, e instanceof z ? e.ch : e, n)
             },
-            s = function(n) {
+            d = function(n) {
               return e.options.lineWrapping
                 ? ((p = p || Jt(e, t)), xn(e, t, p, n))
                 : { begin: 0, end: t.text.length }
             },
-            d = s('before' == n.sticky ? l(n, -1) : n.ch),
+            s = d('before' == n.sticky ? l(n, -1) : n.ch),
             p
           if ('rtl' == e.doc.direction || 1 == a.level) {
             var u = (1 == a.level) == 0 > o,
               c = l(n, u ? 1 : -1)
             if (
               null != c &&
-              (u ? c <= a.to && c <= d.end : c >= a.from && c >= d.begin)
+              (u ? c <= a.to && c <= s.end : c >= a.from && c >= s.begin)
             ) {
               var f = u ? 'before' : 'after'
               return new z(n.line, c, f)
@@ -5657,19 +5657,19 @@ object-assign
                 e += t
               ) {
                 var a = i[e],
-                  s = 0 < t == (1 != a.level),
-                  d = s ? o.begin : l(o.end, -1)
-                if (a.from <= d && d < a.to) return r(d, s)
-                if (((d = s ? a.from : l(a.to, -1)), o.begin <= d && d < o.end))
-                  return r(d, s)
+                  d = 0 < t == (1 != a.level),
+                  s = d ? o.begin : l(o.end, -1)
+                if (a.from <= s && s < a.to) return r(s, d)
+                if (((s = d ? a.from : l(a.to, -1)), o.begin <= s && s < o.end))
+                  return r(s, d)
               }
             },
-            m = h(r + o, o, d)
+            m = h(r + o, o, s)
           if (m) return m
-          var g = 0 < o ? d.end : l(d.begin, -1)
+          var g = 0 < o ? s.end : l(s.begin, -1)
           return null != g &&
             !(0 < o && g == t.text.length) &&
-            ((m = h(0 < o ? 0 : i.length - 1, o, s(g))), m)
+            ((m = h(0 < o ? 0 : i.length - 1, o, d(g))), m)
             ? m
             : null
         }
@@ -5775,7 +5775,7 @@ object-assign
               ((Ql = o ? n : null),
               !o &&
                 88 == n &&
-                !dl &&
+                !sl &&
                 (Fa ? t.metaKey : t.ctrlKey) &&
                 e.replaceSelection('', null, 'cut')),
               18 != n ||
@@ -5819,11 +5819,11 @@ object-assign
         }
         function Fr(e, t) {
           var n = +new Date()
-          return os && os.compare(n, e, t)
-            ? ((ns = os = null), 'triple')
-            : ns && ns.compare(n, e, t)
-              ? ((os = new Zl(n, e, t)), (ns = null), 'double')
-              : ((ns = new Zl(n, e, t)), (os = null), 'single')
+          return od && od.compare(n, e, t)
+            ? ((nd = od = null), 'triple')
+            : nd && nd.compare(n, e, t)
+              ? ((od = new Zl(n, e, t)), (nd = null), 'double')
+              : ((nd = new Zl(n, e, t)), (od = null), 'single')
         }
         function Hr(t) {
           var e = this,
@@ -5915,8 +5915,8 @@ object-assign
               Oa && (r.scroller.draggable = !1),
                 (n.state.draggingText = !1),
                 De(document, 'mouseup', l),
-                De(document, 'mousemove', s),
-                De(r.scroller, 'dragstart', d),
+                De(document, 'mousemove', d),
+                De(r.scroller, 'dragstart', s),
                 De(r.scroller, 'drop', l),
                 a ||
                   (He(t),
@@ -5927,10 +5927,10 @@ object-assign
                       }, 20)
                     : r.input.focus())
             }),
-            s = function(n) {
+            d = function(n) {
               a = a || 10 <= t(e.clientX - n.clientX) + t(e.clientY - n.clientY)
             },
-            d = function() {
+            s = function() {
               return (a = !0)
             }
           Oa && (r.scroller.draggable = !0),
@@ -5938,8 +5938,8 @@ object-assign
             (l.copy = !i.moveOnDrag),
             r.scroller.dragDrop && r.scroller.dragDrop(),
             al(document, 'mouseup', l),
-            al(document, 'mousemove', s),
-            al(r.scroller, 'dragstart', d),
+            al(document, 'mousemove', d),
+            al(r.scroller, 'dragstart', s),
             al(r.scroller, 'drop', l),
             zn(n),
             setTimeout(function() {
@@ -5961,10 +5961,10 @@ object-assign
                 for (
                   var r = [],
                     l = t.options.tabSize,
-                    s = y(_(p, n.line).text, n.ch, l),
-                    d = y(_(p, e.line).text, e.ch, l),
-                    c = o(s, d),
-                    f = a(s, d),
+                    d = y(_(p, n.line).text, n.ch, l),
+                    s = y(_(p, e.line).text, e.ch, l),
+                    c = o(d, s),
+                    f = a(d, s),
                     g = o(n.line, e.line),
                     C = o(t.lastLine(), a(n.line, e.line));
                   g <= C;
@@ -6000,7 +6000,7 @@ object-assign
             if (o)
               if (0 != U(o, b)) {
                 ;(t.curOp.focus = c()), r(o)
-                var a = Gn(d, p)
+                var a = Gn(s, p)
                 ;(o.line >= a.to || o.line < a.from) &&
                   setTimeout(
                     wo(t, function() {
@@ -6009,26 +6009,26 @@ object-assign
                     150,
                   )
               } else {
-                var s = n.clientY < C.top ? -20 : n.clientY > C.bottom ? 20 : 0
-                s &&
+                var d = n.clientY < C.top ? -20 : n.clientY > C.bottom ? 20 : 0
+                d &&
                   setTimeout(
                     wo(t, function() {
-                      x != e || ((d.scroller.scrollTop += s), l(n))
+                      x != e || ((s.scroller.scrollTop += d), l(n))
                     }),
                     50,
                   )
               }
           }
-          function s(n) {
+          function d(n) {
             ;(t.state.selectingText = !1),
               (x = Infinity),
               He(n),
-              d.input.focus(),
+              s.input.focus(),
               De(document, 'mousemove', w),
               De(document, 'mouseup', T),
               (p.history.lastSelOrigin = null)
           }
-          var d = t.display,
+          var s = t.display,
             p = t.doc
           He(e)
           var u = p.sel,
@@ -6059,12 +6059,12 @@ object-assign
                 : ki(p, m, h, Xa)
             : ((m = 0), Pi(p, new Al([h], 0), Xa), (u = p.sel))
           var b = n,
-            C = d.wrapper.getBoundingClientRect(),
+            C = s.wrapper.getBoundingClientRect(),
             x = 0,
             w = wo(t, function(t) {
-              Be(t) ? l(t) : s(t)
+              Be(t) ? l(t) : d(t)
             }),
-            T = wo(t, s)
+            T = wo(t, d)
           ;(t.state.selectingText = T),
             al(document, 'mousemove', w),
             al(document, 'mouseup', T)
@@ -6079,18 +6079,18 @@ object-assign
           var a = Ne(r, n.ch, n.sticky),
             l = r[a]
           if (l.from != n.ch && l.to != n.ch) return t
-          var s = a + ((l.from == n.ch) == (1 != l.level) ? 0 : 1)
-          if (0 == s || s == r.length) return t
-          var d
+          var d = a + ((l.from == n.ch) == (1 != l.level) ? 0 : 1)
+          if (0 == d || d == r.length) return t
+          var s
           if (o.line != n.line)
-            d = 0 < (o.line - n.line) * ('ltr' == e.doc.direction ? 1 : -1)
+            s = 0 < (o.line - n.line) * ('ltr' == e.doc.direction ? 1 : -1)
           else {
             var p = Ne(r, o.ch, o.sticky),
               u = p - a || (o.ch - n.ch) * (1 == l.level ? -1 : 1)
-            d = p == s - 1 || p == s ? 0 > u : 0 < u
+            s = p == d - 1 || p == d ? 0 > u : 0 < u
           }
-          var c = r[s + (d ? -1 : 0)],
-            f = d == (1 == c.level),
+          var c = r[d + (s ? -1 : 0)],
+            f = s == (1 == c.level),
             h = f ? c.from : c.to,
             m = f ? 'after' : 'before'
           return n.ch == h && n.sticky == m ? t : new Il(new z(n.line, h, m), o)
@@ -6106,13 +6106,13 @@ object-assign
             }
           if (a >= n(t.display.gutters.getBoundingClientRect().right)) return !1
           r && He(o)
-          var s = t.display,
-            d = s.lineDiv.getBoundingClientRect()
-          if (l > d.bottom || !Re(t, e)) return We(o)
-          l -= d.top - s.viewOffset
+          var d = t.display,
+            s = d.lineDiv.getBoundingClientRect()
+          if (l > s.bottom || !Re(t, e)) return We(o)
+          l -= s.top - d.viewOffset
           for (var p = 0, i; p < t.options.gutters.length; ++p)
             if (
-              ((i = s.gutters.childNodes[p]),
+              ((i = d.gutters.childNodes[p]),
               i && i.getBoundingClientRect().right >= a)
             ) {
               var u = H(t.doc, l),
@@ -6138,7 +6138,7 @@ object-assign
           ;(e.display.wrapper.className =
             e.display.wrapper.className.replace(/\s*cm-s-\S+/g, '') +
             e.options.theme.replace(/(^|\s)\s*/g, ' cm-s-')),
-            dn(e)
+            sn(e)
         }
         function Qr(e) {
           Uo(e), So(e), Yn(e)
@@ -6162,7 +6162,7 @@ object-assign
             : (Ba(e.display.wrapper, 'CodeMirror-wrap'), Oe(e)),
             Mn(e),
             So(e),
-            dn(e),
+            sn(e),
             setTimeout(function() {
               return po(e)
             }, 100)
@@ -6170,7 +6170,7 @@ object-assign
         function ea(e, t) {
           var n = this
           if (!(this instanceof ea)) return new ea(e, t)
-          ;(this.options = t = t ? g(t) : {}), g(es, t, !1), Bo(t)
+          ;(this.options = t = t ? g(t) : {}), g(ed, t, !1), Bo(t)
           var o = t.value
           'string' == typeof o &&
             (o = new zl(o, t.mode, null, t.lineSeparator, t.direction)),
@@ -6206,17 +6206,17 @@ object-assign
               return n.display.input.reset(!0)
             }, 20),
           ta(this),
-          dr(),
+          sr(),
           fo(this),
           (this.curOp.forceUpdate = !0),
           ri(this, o),
           (t.autofocus && !Ra) || this.hasFocus()
             ? setTimeout(m(Un, this), 20)
             : Bn(this),
-          ts))
-            ts.hasOwnProperty(l) && ts[l](n, t[l], Jl)
+          td))
+            td.hasOwnProperty(l) && td[l](n, t[l], Jl)
           qn(this), t.finishInit && t.finishInit(this)
-          for (var s = 0; s < is.length; ++s) is[s](n)
+          for (var d = 0; d < id.length; ++d) id[d](n)
           ho(this),
             Oa &&
               t.lineWrapping &&
@@ -6356,27 +6356,27 @@ object-assign
         }
         function na(e, t, o, r) {
           var l = e.doc,
-            s
+            d
           null == o && (o = 'add'),
             'smart' == o &&
-              (l.mode.indent ? (s = nt(e, t).state) : (o = 'prev'))
-          var d = e.options.tabSize,
+              (l.mode.indent ? (d = nt(e, t).state) : (o = 'prev'))
+          var s = e.options.tabSize,
             p = _(l, t),
-            u = y(p.text, null, d)
+            u = y(p.text, null, s)
           p.stateAfter && (p.stateAfter = null)
           var c = p.text.match(/^\s*/)[0],
             f
           if (!r && !/\S/.test(p.text)) (f = 0), (o = 'not')
           else if (
             'smart' == o &&
-            ((f = l.mode.indent(s, p.text.slice(c.length), p.text)),
+            ((f = l.mode.indent(d, p.text.slice(c.length), p.text)),
             f == qa || 150 < f)
           ) {
             if (!r) return
             o = 'prev'
           }
           'prev' == o
-            ? t > l.first ? (f = y(_(l, t - 1).text, null, d)) : (f = 0)
+            ? t > l.first ? (f = y(_(l, t - 1).text, null, s)) : (f = 0)
             : 'add' == o
               ? (f = u + e.options.indentUnit)
               : 'subtract' == o
@@ -6386,7 +6386,7 @@ object-assign
           var h = '',
             m = 0
           if (e.options.indentWithTabs)
-            for (var g = n(f / d); g; --g) (m += d), (h += '\t')
+            for (var g = n(f / s); g; --g) (m += s), (h += '\t')
           if ((m < f && (h += C(f - m)), h != c))
             return (
               ji(l, h, z(t, 0), z(t, c.length), '+input'),
@@ -6403,25 +6403,25 @@ object-assign
             }
         }
         function oa(e) {
-          rs = e
+          rd = e
         }
         function ia(e, t, n, r, a) {
           var l = e.doc
           ;(e.display.shift = !1), r || (r = l.sel)
-          var s = e.state.pasteIncoming || 'paste' == a,
-            d = ll(t),
+          var d = e.state.pasteIncoming || 'paste' == a,
+            s = ll(t),
             p = null
-          if (s && 1 < r.ranges.length)
-            if (!(rs && rs.text.join('\n') == t))
-              d.length == r.ranges.length &&
+          if (d && 1 < r.ranges.length)
+            if (!(rd && rd.text.join('\n') == t))
+              s.length == r.ranges.length &&
                 e.options.pasteLinesPerSelection &&
-                (p = w(d, function(e) {
+                (p = w(s, function(e) {
                   return [e]
                 }))
-            else if (0 == r.ranges.length % rs.text.length) {
+            else if (0 == r.ranges.length % rd.text.length) {
               p = []
-              for (var u = 0; u < rs.text.length; u++)
-                p.push(l.splitLines(rs.text[u]))
+              for (var u = 0; u < rd.text.length; u++)
+                p.push(l.splitLines(rd.text[u]))
             }
           for (var i = r.ranges.length - 1, c; 0 <= i; i--) {
             var f = r.ranges[i],
@@ -6430,26 +6430,26 @@ object-assign
             f.empty() &&
               (n && 0 < n
                 ? (h = z(h.line, h.ch - n))
-                : e.state.overwrite && !s
+                : e.state.overwrite && !d
                   ? (m = z(
                       m.line,
-                      o(_(l, m.line).text.length, m.ch + x(d).length),
+                      o(_(l, m.line).text.length, m.ch + x(s).length),
                     ))
-                  : rs &&
-                    rs.lineWise &&
-                    rs.text.join('\n') == t &&
+                  : rd &&
+                    rd.lineWise &&
+                    rd.text.join('\n') == t &&
                     (h = m = z(h.line, 0))),
               (c = e.curOp.updateInput)
             var g = {
               from: h,
               to: m,
-              text: p ? p[i % p.length] : d,
+              text: p ? p[i % p.length] : s,
               origin:
-                a || (s ? 'paste' : e.state.cutIncoming ? 'cut' : '+input'),
+                a || (d ? 'paste' : e.state.cutIncoming ? 'cut' : '+input'),
             }
             Hi(e.doc, g), Et(e, 'inputRead', e, g)
           }
-          t && !s && aa(e, t),
+          t && !d && aa(e, t),
             eo(e),
             (e.curOp.updateInput = c),
             (e.curOp.typing = !0),
@@ -6503,19 +6503,19 @@ object-assign
           }
           return { text: t, ranges: n }
         }
-        function sa(e, t) {
+        function da(e, t) {
           e.setAttribute('autocorrect', 'off'),
             e.setAttribute('autocapitalize', 'off'),
             e.setAttribute('spellcheck', !!t)
         }
-        function da() {
-          var e = p(
+        function sa() {
+          var e = s(
               'textarea',
               null,
               null,
               'position: absolute; bottom: -1em; padding: 0; width: 1px; height: 1em; outline: none',
             ),
-            t = p(
+            t = s(
               'div',
               [e],
               null,
@@ -6524,7 +6524,7 @@ object-assign
           return (
             Oa ? (e.style.width = '1000px') : e.setAttribute('wrap', 'off'),
             Aa && (e.style.border = '1px solid black'),
-            sa(e),
+            da(e),
             t
           )
         }
@@ -6533,18 +6533,18 @@ object-assign
             var o = t.line + n
             return o < e.first || o >= e.first + e.size
               ? !1
-              : ((t = new z(o, t.ch, t.sticky)), (d = _(e, o)))
+              : ((t = new z(o, t.ch, t.sticky)), (s = _(e, o)))
           }
           function a(o) {
             var a
-            if (((a = i ? Tr(e.cm, d, t, n) : xr(d, t, n)), null != a)) t = a
-            else if (!o && r()) t = wr(i, e.cm, d, t.line, n)
+            if (((a = i ? Tr(e.cm, s, t, n) : xr(s, t, n)), null != a)) t = a
+            else if (!o && r()) t = wr(i, e.cm, s, t.line, n)
             else return !1
             return !0
           }
           var l = t,
-            s = n,
-            d = _(e, t.line)
+            d = n,
+            s = _(e, t.line)
           if ('char' == o) a()
           else if ('column' == o) a(!0)
           else if ('word' == o || 'group' == o)
@@ -6557,7 +6557,7 @@ object-assign
               f = !1
             ) {
               if (0 > n && !a(!f)) break
-              var h = d.text.charAt(t.ch) || '\n',
+              var h = s.text.charAt(t.ch) || '\n',
                 m = O(h, c)
                   ? 'w'
                   : u && '\n' == h ? 'n' : !u || /\s/.test(h) ? null : 'p'
@@ -6567,28 +6567,28 @@ object-assign
               }
               if ((m && (p = m), 0 < n && !a(!f))) break
             }
-          var g = Ai(e, t, l, s, !0)
+          var g = Ai(e, t, l, d, !0)
           return B(l, g) && (g.hitSide = !0), g
         }
         function ua(e, t, n, i) {
           var r = e.doc,
             l = t.left,
-            s
+            d
           if ('page' == i) {
-            var d = o(
+            var s = o(
                 e.display.wrapper.clientHeight,
                 window.innerHeight || document.documentElement.clientHeight,
               ),
-              p = a(d - 0.5 * En(e.display), 3)
-            s = (0 < n ? t.bottom : t.top) + n * p
-          } else 'line' == i && (s = 0 < n ? t.bottom + 3 : t.top - 3)
+              p = a(s - 0.5 * En(e.display), 3)
+            d = (0 < n ? t.bottom : t.top) + n * p
+          } else 'line' == i && (d = 0 < n ? t.bottom + 3 : t.top - 3)
           for (var u; ; ) {
-            if (((u = vn(e, l, s)), !u.outside)) break
-            if (0 > n ? 0 >= s : s >= r.height) {
+            if (((u = vn(e, l, d)), !u.outside)) break
+            if (0 > n ? 0 >= d : d >= r.height) {
               u.hitSide = !0
               break
             }
-            s += 5 * n
+            d += 5 * n
           }
           return u
         }
@@ -6603,8 +6603,8 @@ object-assign
             var l = Ne(r, t.ch)
             a = l % 2 ? 'right' : 'left'
           }
-          var s = tn(i.map, t.ch, a)
-          return (s.offset = 'right' == s.collapse ? s.end : s.start), s
+          var d = tn(i.map, t.ch, a)
+          return (d.offset = 'right' == d.collapse ? d.end : d.start), d
         }
         function fa(e) {
           for (var t = e; t; t = t.parentNode)
@@ -6621,20 +6621,20 @@ object-assign
             }
           }
           function a() {
-            p && ((d += u), (p = !1))
+            p && ((s += u), (p = !1))
           }
           function l(e) {
-            e && (a(), (d += e))
+            e && (a(), (s += e))
           }
-          function s(t) {
+          function d(t) {
             if (1 == t.nodeType) {
               var n = t.getAttribute('cm-text')
               if (null != n)
                 return void l(n || t.textContent.replace(/\u200b/g, ''))
-              var d = t.getAttribute('cm-marker'),
+              var s = t.getAttribute('cm-marker'),
                 c
-              if (d) {
-                var f = e.findMarks(z(o, 0), z(i + 1, 0), r(+d))
+              if (s) {
+                var f = e.findMarks(z(o, 0), z(i + 1, 0), r(+s))
                 return void (
                   f.length &&
                   (c = f[0].find(0)) &&
@@ -6644,15 +6644,15 @@ object-assign
               if ('false' == t.getAttribute('contenteditable')) return
               var h = /^(pre|div|p)$/i.test(t.nodeName)
               h && a()
-              for (var m = 0; m < t.childNodes.length; m++) s(t.childNodes[m])
+              for (var m = 0; m < t.childNodes.length; m++) d(t.childNodes[m])
               h && (p = !0)
             } else 3 == t.nodeType && l(t.nodeValue)
           }
-          for (var d = '', p = !1, u = e.doc.lineSeparator(); ; ) {
-            if ((s(t), t == n)) break
+          for (var s = '', p = !1, u = e.doc.lineSeparator(); ; ) {
+            if ((d(t), t == n)) break
             t = t.nextSibling
           }
-          return d
+          return s
         }
         function ga(e, t, n) {
           var o
@@ -6670,40 +6670,40 @@ object-assign
         }
         function ya(e, t, n) {
           function o(t, n, o) {
-            for (var r = -1, i; r < (u ? u.length : 0); r++) {
-              i = 0 > r ? p.map : u[r]
+            for (var r = -1, i; r < (p ? p.length : 0); r++) {
+              i = 0 > r ? s.map : p[r]
               for (var a = 0, l; a < i.length; a += 3)
                 if (((l = i[a + 2]), l == t || l == n)) {
-                  var s = F(0 > r ? e.line : e.rest[r]),
-                    d = i[a] + o
-                  return (0 > o || l != t) && (d = i[a + (o ? 1 : 0)]), z(s, d)
+                  var d = F(0 > r ? e.line : e.rest[r]),
+                    u = i[a] + o
+                  return (0 > o || l != t) && (u = i[a + (o ? 1 : 0)]), z(d, u)
                 }
             }
           }
           var i = e.text.firstChild,
             r = !1
-          if (!t || !d(i, t)) return ha(z(F(e.line), 0), !0)
+          if (!t || !u(i, t)) return ha(z(F(e.line), 0), !0)
           if (t == i && ((r = !0), (t = i.childNodes[n]), (n = 0), !t)) {
             var a = e.rest ? x(e.rest) : e.line
             return ha(z(F(a), a.text.length), r)
           }
           var l = 3 == t.nodeType ? t : null,
-            s = t
+            d = t
           for (
             l ||
             1 != t.childNodes.length ||
             3 != t.firstChild.nodeType ||
             ((l = t.firstChild), n && (n = l.nodeValue.length));
-            s.parentNode != i;
+            d.parentNode != i;
 
           )
-            s = s.parentNode
-          var p = e.measure,
-            u = p.maps,
-            c = o(l, s, n)
+            d = d.parentNode
+          var s = e.measure,
+            p = s.maps,
+            c = o(l, d, n)
           if (c) return ha(c, r)
           for (
-            var f = s.nextSibling, h = l ? l.nodeValue.length - n : 0;
+            var f = d.nextSibling, h = l ? l.nodeValue.length - n : 0;
             f;
             f = f.nextSibling
           ) {
@@ -6711,7 +6711,7 @@ object-assign
               return ha(z(c.line, c.ch - h), r)
             h += f.textContent.length
           }
-          for (var m = s.previousSibling, g = n; m; m = m.previousSibling) {
+          for (var m = d.previousSibling, g = n; m; m = m.previousSibling) {
             if (((c = o(m, m.firstChild, -1)), c))
               return ha(z(c.line, c.ch + g), r)
             g += m.textContent.length
@@ -6831,15 +6831,15 @@ object-assign
               i = /[stwN]/,
               a = /[LRr]/,
               l = /[Lb1n]/,
-              s = /[1n]/
+              d = /[1n]/
             return function(n, o) {
-              var d = 'ltr' == o ? 'L' : 'R'
+              var s = 'ltr' == o ? 'L' : 'R'
               if (0 == n.length || ('ltr' == o && !r.test(n))) return !1
               for (var p = n.length, u = [], c = 0; c < p; ++c)
                 u.push(e(n.charCodeAt(c)))
-              for (var f = 0, h = d, g; f < p; ++f)
+              for (var f = 0, h = s, g; f < p; ++f)
                 (g = u[f]), 'm' == g ? (u[f] = h) : (h = g)
-              for (var y = 0, b = d, v; y < p; ++y)
+              for (var y = 0, b = s, v; y < p; ++y)
                 (v = u[y]),
                   '1' == v && 'r' == b
                     ? (u[y] = 'n')
@@ -6870,7 +6870,7 @@ object-assign
                     u[P] = O
                   k = E - 1
                 }
-              for (var N = 0, L = d, M; N < p; ++N)
+              for (var N = 0, L = s, M; N < p; ++N)
                 (M = u[N]),
                   'L' == L && '1' == M ? (u[N] = 'L') : a.test(M) && (L = M)
               for (var D = 0; D < p; ++D)
@@ -6878,9 +6878,9 @@ object-assign
                   var _ = void 0
                   for (_ = D + 1; _ < p && i.test(u[_]); ++_);
                   for (
-                    var A = 'L' == (D ? u[D - 1] : d),
-                      I = 'L' == (_ < p ? u[_] : d),
-                      R = A == I ? (A ? 'L' : 'R') : d,
+                    var A = 'L' == (D ? u[D - 1] : s),
+                      I = 'L' == (_ < p ? u[_] : s),
+                      R = A == I ? (A ? 'L' : 'R') : s,
                       F = D;
                     F < _;
                     ++F
@@ -6898,10 +6898,10 @@ object-assign
                     U = H.length
                   for (++V; V < p && 'L' != u[V]; ++V);
                   for (var B = z; B < V; )
-                    if (s.test(u[B])) {
+                    if (d.test(u[B])) {
                       z < B && H.splice(U, 0, new t(1, z, B))
                       var j = B
-                      for (++B; B < V && s.test(u[B]); ++B);
+                      for (++B; B < V && d.test(u[B]); ++B);
                       H.splice(U, 0, new t(2, j, B)), (z = B)
                     } else ++B
                   z < V && H.splice(U, 0, new t(1, z, V))
@@ -6931,7 +6931,7 @@ object-assign
           },
           on = (function() {
             if (Sa && 9 > Ea) return !1
-            var e = p('div')
+            var e = s('div')
             return 'draggable' in e || 'dragDrop' in e
           })(),
           ll =
@@ -6950,7 +6950,7 @@ object-assign
                   }
                   return n
                 },
-          sl = window.getSelection
+          dl = window.getSelection
             ? function(e) {
                 try {
                   return e.selectionStart != e.selectionEnd
@@ -6969,8 +6969,8 @@ object-assign
                   0 != t.compareEndPoints('StartToEnd', t)
                 )
               },
-          dl = (function() {
-            var t = p('div')
+          sl = (function() {
+            var t = s('div')
             return (
               !!('oncopy' in t) ||
               (t.setAttribute('oncopy', 'return;'),
@@ -7158,14 +7158,14 @@ object-assign
           Sl = { left: 0, right: 0, top: 0, bottom: 0 },
           El = function(e, t, n) {
             this.cm = n
-            var o = (this.vert = p(
+            var o = (this.vert = s(
                 'div',
-                [p('div', null, null, 'min-width: 1px')],
+                [s('div', null, null, 'min-width: 1px')],
                 'CodeMirror-vscrollbar',
               )),
-              i = (this.horiz = p(
+              i = (this.horiz = s(
                 'div',
-                [p('div', null, null, 'height: 100%; min-height: 1px')],
+                [s('div', null, null, 'height: 100%; min-height: 1px')],
                 'CodeMirror-hscrollbar',
               ))
             e(o),
@@ -7376,10 +7376,10 @@ object-assign
                   a = i.chunkSize()
                 if (e < a) {
                   var l = o(t, a - e),
-                    s = i.height
+                    d = i.height
                   if (
                     (i.removeInner(e, l),
-                    (n.height -= s - i.height),
+                    (n.height -= d - i.height),
                     a == l && (n.children.splice(r--, 1), (i.parent = null)),
                     0 == (t -= l))
                   )
@@ -7391,9 +7391,9 @@ object-assign
                 25 > this.size - t &&
                 (1 < this.children.length || !(this.children[0] instanceof $i))
               ) {
-                var d = []
-                this.collapse(d),
-                  (this.children = [new $i(d)]),
+                var s = []
+                this.collapse(s),
+                  (this.children = [new $i(s)]),
                   (this.children[0].parent = this)
               }
             },
@@ -7412,14 +7412,14 @@ object-assign
                     (i.insertInner(e, t, n), i.lines && 50 < i.lines.length)
                   ) {
                     for (
-                      var l = i.lines.length % 25 + 25, s = l, d;
-                      s < i.lines.length;
+                      var l = i.lines.length % 25 + 25, d = l, s;
+                      d < i.lines.length;
 
                     )
-                      (d = new $i(i.lines.slice(s, (s += 25)))),
-                        (i.height -= d.height),
-                        o.children.splice(++r, 0, d),
-                        (d.parent = o)
+                      (s = new $i(i.lines.slice(d, (d += 25)))),
+                        (i.height -= s.height),
+                        o.children.splice(++r, 0, s),
+                        (s.parent = o)
                     ;(i.lines = i.lines.slice(0, l)), o.maybeSpill()
                   }
                   break
@@ -7451,9 +7451,9 @@ object-assign
                 var i = r.children[a],
                   l = i.chunkSize()
                 if (e < l) {
-                  var s = o(t, l - e)
-                  if (i.iterN(e, s, n)) return !0
-                  if (0 == (t -= s)) break
+                  var d = o(t, l - e)
+                  if (i.iterN(e, d, n)) return !0
+                  if (0 == (t -= d)) break
                   e = 0
                 } else e -= l
               }
@@ -7517,21 +7517,21 @@ object-assign
             }
             for (var r = null, a = null, l = 0; l < this.lines.length; ++l) {
               var i = e.lines[l],
-                s = ee(i.markedSpans, e)
+                d = ee(i.markedSpans, e)
               t && !e.collapsed
                 ? Eo(t, F(i), 'text')
                 : t &&
-                  (null != s.to && (a = F(i)), null != s.from && (r = F(i))),
-                (i.markedSpans = te(i.markedSpans, s)),
-                null == s.from &&
+                  (null != d.to && (a = F(i)), null != d.from && (r = F(i))),
+                (i.markedSpans = te(i.markedSpans, d)),
+                null == d.from &&
                   e.collapsed &&
                   !Te(e.doc, i) &&
                   t &&
                   R(i, En(t.display))
             }
             if (t && this.collapsed && !t.options.lineWrapping)
-              for (var d = 0; d < this.lines.length; ++d) {
-                var p = be(e.lines[d]),
+              for (var s = 0; s < this.lines.length; ++s) {
+                var p = be(e.lines[s]),
                   u = Ee(p)
                 u > t.display.maxLineLength &&
                   ((t.display.maxLine = p),
@@ -7582,8 +7582,8 @@ object-assign
                 ) {
                   var l = n.height
                   n.height = null
-                  var s = Wt(n) - l
-                  s && R(i, i.height + s)
+                  var d = Wt(n) - l
+                  d && R(i, i.height + d)
                 }
                 Et(o, 'markerChanged', o, e)
               })
@@ -7637,7 +7637,7 @@ object-assign
               (this.modeFrontier = this.highlightFrontier = n)
             var r = z(n, 0)
             ;(this.sel = qo(r)),
-              (this.history = new si(null)),
+              (this.history = new di(null)),
               (this.id = ++Wl),
               (this.modeOption = t),
               (this.lineSep = o),
@@ -7801,12 +7801,12 @@ object-assign
                   origin: n,
                 })
             for (
-              var s = t && 'end' != t && Jo(this, r, t), d = r.length - 1;
-              0 <= d;
-              d--
+              var d = t && 'end' != t && Jo(this, r, t), s = r.length - 1;
+              0 <= s;
+              s--
             )
-              Hi(o, r[d])
-            s ? Oi(this, s) : this.cm && eo(this.cm)
+              Hi(o, r[s])
+            d ? Oi(this, d) : this.cm && eo(this.cm)
           }),
           undo: ko(function() {
             Wi(this, 'undo')
@@ -7837,7 +7837,7 @@ object-assign
             return { undo: t, redo: n }
           },
           clearHistory: function() {
-            this.history = new si(this.history.maxGeneration)
+            this.history = new di(this.history.maxGeneration)
           },
           markClean: function() {
             this.cleanGeneration = this.changeGeneration(!0)
@@ -7859,7 +7859,7 @@ object-assign
             }
           },
           setHistory: function(e) {
-            var t = (this.history = new si(this.history.maxGeneration))
+            var t = (this.history = new di(this.history.maxGeneration))
             ;(t.done = Ci(e.done.slice(0), null, !0)),
               (t.undone = Ci(e.undone.slice(0), null, !0))
           },
@@ -7978,8 +7978,8 @@ object-assign
               this.iter(e.line, t.line + 1, function(a) {
                 var l = a.markedSpans
                 if (l)
-                  for (var s = 0, i; s < l.length; s++)
-                    (i = l[s]),
+                  for (var d = 0, i; d < l.length; d++)
+                    (i = l[d]),
                       (null != i.to && r == e.line && e.ch >= i.to) ||
                         (null == i.from && r != e.line) ||
                         (null != i.from && r == t.line && i.from >= t.ch) ||
@@ -8088,7 +8088,7 @@ object-assign
                 },
                 !0,
               ),
-                (e.history = new si(null)),
+                (e.history = new di(null)),
                 (e.history.done = Ci(this.history.done, i)),
                 (e.history.undone = Ci(this.history.undone, i))
             }
@@ -8564,17 +8564,17 @@ object-assign
               return 'CodeMirror.Init'
             },
           },
-          es = {},
-          ts = {},
-          ns,
-          os
-        ;(ea.defaults = es), (ea.optionHandlers = ts)
-        var is = []
+          ed = {},
+          td = {},
+          nd,
+          od
+        ;(ea.defaults = ed), (ea.optionHandlers = td)
+        var id = []
         ea.defineInitHook = function(e) {
-          return is.push(e)
+          return id.push(e)
         }
-        var rs = null,
-          as = function(e) {
+        var rd = null,
+          ad = function(e) {
             ;(this.cm = e),
               (this.lastAnchorNode = this.lastAnchorOffset = this.lastFocusNode = this.lastFocusOffset = null),
               (this.polling = new Ga()),
@@ -8582,7 +8582,7 @@ object-assign
               (this.gracePeriod = !1),
               (this.readDOMTimeout = null)
           }
-        ;(as.prototype.init = function(e) {
+        ;(ad.prototype.init = function(e) {
           function t(t) {
             if (!Ae(i, t)) {
               if (i.somethingSelected())
@@ -8600,26 +8600,26 @@ object-assign
               }
               if (t.clipboardData) {
                 t.clipboardData.clearData()
-                var n = rs.text.join('\n')
+                var n = rd.text.join('\n')
                 if (
                   (t.clipboardData.setData('Text', n),
                   t.clipboardData.getData('Text') == n)
                 )
                   return void t.preventDefault()
               }
-              var a = da(),
+              var a = sa(),
                 l = a.firstChild
               i.display.lineSpace.insertBefore(
                 a,
                 i.display.lineSpace.firstChild,
               ),
-                (l.value = rs.text.join('\n'))
-              var s = document.activeElement
+                (l.value = rd.text.join('\n'))
+              var d = document.activeElement
               Ka(l),
                 setTimeout(function() {
                   i.display.lineSpace.removeChild(a),
-                    s.focus(),
-                    s == r && o.showPrimarySelection()
+                    d.focus(),
+                    d == r && o.showPrimarySelection()
                 }, 50)
             }
           }
@@ -8627,7 +8627,7 @@ object-assign
             o = this,
             i = o.cm,
             r = (o.div = e.lineDiv)
-          sa(r, i.options.spellcheck),
+          da(r, i.options.spellcheck),
             al(r, 'paste', function(t) {
               Ae(i, t) ||
                 ra(t, i) ||
@@ -8659,17 +8659,17 @@ object-assign
             al(r, 'copy', t),
             al(r, 'cut', t)
         }),
-          (as.prototype.prepareSelection = function() {
+          (ad.prototype.prepareSelection = function() {
             var e = In(this.cm, !1)
             return (e.focus = this.cm.state.focused), e
           }),
-          (as.prototype.showSelection = function(e, t) {
+          (ad.prototype.showSelection = function(e, t) {
             e &&
               this.cm.display.view.length &&
               ((e.focus || t) && this.showPrimarySelection(),
               this.showMultipleSelections(e))
           }),
-          (as.prototype.showPrimarySelection = function() {
+          (ad.prototype.showPrimarySelection = function() {
             var e = window.getSelection(),
               t = this.cm,
               n = t.doc.sel.primary(),
@@ -8692,28 +8692,28 @@ object-assign
               0 != U(K(r, a), i)
             ) {
               var l = t.display.view,
-                s = (o.line >= t.display.viewFrom && ca(t, o)) || {
+                d = (o.line >= t.display.viewFrom && ca(t, o)) || {
                   node: l[0].measure.map[2],
                   offset: 0,
                 },
-                d = i.line < t.display.viewTo && ca(t, i)
-              if (!d) {
+                s = i.line < t.display.viewTo && ca(t, i)
+              if (!s) {
                 var p = l[l.length - 1].measure,
                   u = p.maps ? p.maps[p.maps.length - 1] : p.map
-                d = {
+                s = {
                   node: u[u.length - 1],
                   offset: u[u.length - 2] - u[u.length - 3],
                 }
               }
-              if (!s || !d) return void e.removeAllRanges()
+              if (!d || !s) return void e.removeAllRanges()
               var c = e.rangeCount && e.getRangeAt(0),
                 f
               try {
-                f = ja(s.node, s.offset, d.offset, d.node)
+                f = ja(d.node, d.offset, s.offset, s.node)
               } catch (t) {}
               f &&
                 (!xa && t.state.focused
-                  ? (e.collapse(s.node, s.offset),
+                  ? (e.collapse(d.node, d.offset),
                     !f.collapsed && (e.removeAllRanges(), e.addRange(f)))
                   : (e.removeAllRanges(), e.addRange(f)),
                 c && null == e.anchorNode
@@ -8722,7 +8722,7 @@ object-assign
                 this.rememberSelection()
             }
           }),
-          (as.prototype.startGracePeriod = function() {
+          (ad.prototype.startGracePeriod = function() {
             var e = this
             clearTimeout(this.gracePeriod),
               (this.gracePeriod = setTimeout(function() {
@@ -8733,39 +8733,39 @@ object-assign
                     })
               }, 20))
           }),
-          (as.prototype.showMultipleSelections = function(e) {
-            s(this.cm.display.cursorDiv, e.cursors),
-              s(this.cm.display.selectionDiv, e.selection)
+          (ad.prototype.showMultipleSelections = function(e) {
+            d(this.cm.display.cursorDiv, e.cursors),
+              d(this.cm.display.selectionDiv, e.selection)
           }),
-          (as.prototype.rememberSelection = function() {
+          (ad.prototype.rememberSelection = function() {
             var e = window.getSelection()
             ;(this.lastAnchorNode = e.anchorNode),
               (this.lastAnchorOffset = e.anchorOffset),
               (this.lastFocusNode = e.focusNode),
               (this.lastFocusOffset = e.focusOffset)
           }),
-          (as.prototype.selectionInEditor = function() {
+          (ad.prototype.selectionInEditor = function() {
             var e = window.getSelection()
             if (!e.rangeCount) return !1
             var t = e.getRangeAt(0).commonAncestorContainer
-            return d(this.div, t)
+            return u(this.div, t)
           }),
-          (as.prototype.focus = function() {
+          (ad.prototype.focus = function() {
             'nocursor' != this.cm.options.readOnly &&
               (!this.selectionInEditor() &&
                 this.showSelection(this.prepareSelection(), !0),
               this.div.focus())
           }),
-          (as.prototype.blur = function() {
+          (ad.prototype.blur = function() {
             this.div.blur()
           }),
-          (as.prototype.getField = function() {
+          (ad.prototype.getField = function() {
             return this.div
           }),
-          (as.prototype.supportsTouch = function() {
+          (ad.prototype.supportsTouch = function() {
             return !0
           }),
-          (as.prototype.receivedFocus = function() {
+          (ad.prototype.receivedFocus = function() {
             function e() {
               t.cm.state.focused &&
                 (t.pollSelection(), t.polling.set(t.cm.options.pollInterval, e))
@@ -8778,7 +8778,7 @@ object-assign
                 }),
               this.polling.set(this.cm.options.pollInterval, e)
           }),
-          (as.prototype.selectionChanged = function() {
+          (ad.prototype.selectionChanged = function() {
             var e = window.getSelection()
             return (
               e.anchorNode != this.lastAnchorNode ||
@@ -8787,7 +8787,7 @@ object-assign
               e.focusOffset != this.lastFocusOffset
             )
           }),
-          (as.prototype.pollSelection = function() {
+          (ad.prototype.pollSelection = function() {
             if (
               null == this.readDOMTimeout &&
               !this.gracePeriod &&
@@ -8823,7 +8823,7 @@ object-assign
               }
             }
           }),
-          (as.prototype.pollContent = function() {
+          (ad.prototype.pollContent = function() {
             null != this.readDOMTimeout &&
               (clearTimeout(this.readDOMTimeout), (this.readDOMTimeout = null))
             var e = this.cm,
@@ -8841,23 +8841,23 @@ object-assign
               i.line < t.viewFrom || r.line > t.viewTo - 1)
             )
               return !1
-            var a, l, s
+            var a, l, d
             i.line == t.viewFrom || 0 == (a = _n(e, i.line))
-              ? ((l = F(t.view[0].line)), (s = t.view[0].node))
-              : ((l = F(t.view[a].line)), (s = t.view[a - 1].node.nextSibling))
-            var d = _n(e, r.line),
+              ? ((l = F(t.view[0].line)), (d = t.view[0].node))
+              : ((l = F(t.view[a].line)), (d = t.view[a - 1].node.nextSibling))
+            var s = _n(e, r.line),
               p,
               u
             if (
-              (d == t.view.length - 1
+              (s == t.view.length - 1
                 ? ((p = t.viewTo - 1), (u = t.lineDiv.lastChild))
-                : ((p = F(t.view[d + 1].line) - 1),
-                  (u = t.view[d + 1].node.previousSibling)),
-              !s)
+                : ((p = F(t.view[s + 1].line) - 1),
+                  (u = t.view[s + 1].node.previousSibling)),
+              !d)
             )
               return !1
             for (
-              var c = e.doc.splitLines(ma(e, s, u, l, p)),
+              var c = e.doc.splitLines(ma(e, d, u, l, p)),
                 f = A(e.doc, z(l, 0), z(p, _(e.doc, p).text.length));
               1 < c.length && 1 < f.length;
 
@@ -8902,13 +8902,13 @@ object-assign
             if (1 < c.length || c[0] || U(T, k))
               return ji(e.doc, c, T, k, '+input'), !0
           }),
-          (as.prototype.ensurePolled = function() {
+          (ad.prototype.ensurePolled = function() {
             this.forceCompositionEnd()
           }),
-          (as.prototype.reset = function() {
+          (ad.prototype.reset = function() {
             this.forceCompositionEnd()
           }),
-          (as.prototype.forceCompositionEnd = function() {
+          (ad.prototype.forceCompositionEnd = function() {
             this.composing &&
               (clearTimeout(this.readDOMTimeout),
               (this.composing = null),
@@ -8916,7 +8916,7 @@ object-assign
               this.div.blur(),
               this.div.focus())
           }),
-          (as.prototype.readFromDOMSoon = function() {
+          (ad.prototype.readFromDOMSoon = function() {
             var e = this
             null != this.readDOMTimeout ||
               (this.readDOMTimeout = setTimeout(function() {
@@ -8926,17 +8926,17 @@ object-assign
                 e.updateFromDOM()
               }, 80))
           }),
-          (as.prototype.updateFromDOM = function() {
+          (ad.prototype.updateFromDOM = function() {
             var e = this
             ;(this.cm.isReadOnly() || !this.pollContent()) &&
               xo(this.cm, function() {
                 return So(e.cm)
               })
           }),
-          (as.prototype.setUneditable = function(e) {
+          (ad.prototype.setUneditable = function(e) {
             e.contentEditable = 'false'
           }),
-          (as.prototype.onKeyPress = function(t) {
+          (ad.prototype.onKeyPress = function(t) {
             0 == t.charCode ||
               (t.preventDefault(),
               !this.cm.isReadOnly() &&
@@ -8946,13 +8946,13 @@ object-assign
                   0,
                 ))
           }),
-          (as.prototype.readOnlyChanged = function(e) {
+          (ad.prototype.readOnlyChanged = function(e) {
             this.div.contentEditable = ('nocursor' != e) + ''
           }),
-          (as.prototype.onContextMenu = function() {}),
-          (as.prototype.resetPosition = function() {}),
-          (as.prototype.needsContentAttribute = !0)
-        var ls = function(e) {
+          (ad.prototype.onContextMenu = function() {}),
+          (ad.prototype.resetPosition = function() {}),
+          (ad.prototype.needsContentAttribute = !0)
+        var ld = function(e) {
           ;(this.cm = e),
             (this.prevInput = ''),
             (this.pollingFast = !1),
@@ -8960,7 +8960,7 @@ object-assign
             (this.hasSelection = !1),
             (this.composing = null)
         }
-        ;(ls.prototype.init = function(t) {
+        ;(ld.prototype.init = function(t) {
           function e(t) {
             if (!Ae(i, t)) {
               if (i.somethingSelected())
@@ -8979,7 +8979,7 @@ object-assign
           var n = this,
             o = this,
             i = this.cm,
-            r = (this.wrapper = da()),
+            r = (this.wrapper = sa()),
             a = (this.textarea = r.firstChild)
           t.wrapper.insertBefore(r, t.wrapper.firstChild),
             Aa && (a.style.width = '0px'),
@@ -9015,7 +9015,7 @@ object-assign
                 (o.poll(), o.composing.range.clear(), (o.composing = null))
             })
         }),
-          (ls.prototype.prepareSelection = function() {
+          (ld.prototype.prepareSelection = function() {
             var e = this.cm,
               t = e.display,
               n = e.doc,
@@ -9023,28 +9023,28 @@ object-assign
             if (e.options.moveInputWithCursor) {
               var r = gn(e, n.sel.primary().head, 'div'),
                 l = t.wrapper.getBoundingClientRect(),
-                s = t.lineDiv.getBoundingClientRect()
+                d = t.lineDiv.getBoundingClientRect()
               ;(i.teTop = a(
                 0,
-                o(t.wrapper.clientHeight - 10, r.top + s.top - l.top),
+                o(t.wrapper.clientHeight - 10, r.top + d.top - l.top),
               )),
                 (i.teLeft = a(
                   0,
-                  o(t.wrapper.clientWidth - 10, r.left + s.left - l.left),
+                  o(t.wrapper.clientWidth - 10, r.left + d.left - l.left),
                 ))
             }
             return i
           }),
-          (ls.prototype.showSelection = function(e) {
+          (ld.prototype.showSelection = function(e) {
             var t = this.cm,
               n = t.display
-            s(n.cursorDiv, e.cursors),
-              s(n.selectionDiv, e.selection),
+            d(n.cursorDiv, e.cursors),
+              d(n.selectionDiv, e.selection),
               null != e.teTop &&
                 ((this.wrapper.style.top = e.teTop + 'px'),
                 (this.wrapper.style.left = e.teLeft + 'px'))
           }),
-          (ls.prototype.reset = function(e) {
+          (ld.prototype.reset = function(e) {
             if (!(this.contextMenuPending || this.composing)) {
               var t = this.cm
               if (t.somethingSelected()) {
@@ -9059,13 +9059,13 @@ object-assign
                   Sa && 9 <= Ea && (this.hasSelection = null))
             }
           }),
-          (ls.prototype.getField = function() {
+          (ld.prototype.getField = function() {
             return this.textarea
           }),
-          (ls.prototype.supportsTouch = function() {
+          (ld.prototype.supportsTouch = function() {
             return !1
           }),
-          (ls.prototype.focus = function() {
+          (ld.prototype.focus = function() {
             if (
               'nocursor' != this.cm.options.readOnly &&
               (!Ra || c() != this.textarea)
@@ -9074,23 +9074,23 @@ object-assign
                 this.textarea.focus()
               } catch (t) {}
           }),
-          (ls.prototype.blur = function() {
+          (ld.prototype.blur = function() {
             this.textarea.blur()
           }),
-          (ls.prototype.resetPosition = function() {
+          (ld.prototype.resetPosition = function() {
             this.wrapper.style.top = this.wrapper.style.left = 0
           }),
-          (ls.prototype.receivedFocus = function() {
+          (ld.prototype.receivedFocus = function() {
             this.slowPoll()
           }),
-          (ls.prototype.slowPoll = function() {
+          (ld.prototype.slowPoll = function() {
             var e = this
             this.pollingFast ||
               this.polling.set(this.cm.options.pollInterval, function() {
                 e.poll(), e.cm.state.focused && e.slowPoll()
               })
           }),
-          (ls.prototype.fastPoll = function() {
+          (ld.prototype.fastPoll = function() {
             function e() {
               var o = n.poll()
               o || t
@@ -9101,7 +9101,7 @@ object-assign
               n = this
             ;(n.pollingFast = !0), n.polling.set(20, e)
           }),
-          (ls.prototype.poll = function() {
+          (ld.prototype.poll = function() {
             var e = this,
               t = this.cm,
               n = this.textarea,
@@ -9109,7 +9109,7 @@ object-assign
             if (
               this.contextMenuPending ||
               !t.state.focused ||
-              (sl(n) && !i && !this.composing) ||
+              (dl(n) && !i && !this.composing) ||
               t.isReadOnly() ||
               t.options.disableInput ||
               t.state.keySeq
@@ -9128,17 +9128,17 @@ object-assign
                 return this.reset(), this.cm.execCommand('undo')
             }
             for (
-              var s = 0, d = o(i.length, r.length);
-              s < d && i.charCodeAt(s) == r.charCodeAt(s);
+              var d = 0, s = o(i.length, r.length);
+              d < s && i.charCodeAt(d) == r.charCodeAt(d);
 
             )
-              ++s
+              ++d
             return (
               xo(t, function() {
                 ia(
                   t,
-                  r.slice(s),
-                  i.length - s,
+                  r.slice(d),
+                  i.length - d,
                   null,
                   e.composing ? '*compose' : null,
                 ),
@@ -9156,13 +9156,13 @@ object-assign
               !0
             )
           }),
-          (ls.prototype.ensurePolled = function() {
+          (ld.prototype.ensurePolled = function() {
             this.pollingFast && this.poll() && (this.pollingFast = !1)
           }),
-          (ls.prototype.onKeyPress = function() {
+          (ld.prototype.onKeyPress = function() {
             Sa && 9 <= Ea && (this.hasSelection = null), this.fastPoll()
           }),
-          (ls.prototype.onContextMenu = function(t) {
+          (ld.prototype.onContextMenu = function(t) {
             function e() {
               if (null != l.selectionStart) {
                 var e = r.somethingSelected(),
@@ -9182,7 +9182,7 @@ object-assign
                 (l.style.cssText = p),
                 Sa &&
                   9 > Ea &&
-                  a.scrollbars.setScrollTop((a.scroller.scrollTop = s)),
+                  a.scrollbars.setScrollTop((a.scroller.scrollTop = d)),
                 null != l.selectionStart)
               ) {
                 ;(!Sa || (Sa && 9 > Ea)) && e()
@@ -9205,10 +9205,10 @@ object-assign
               a = r.display,
               l = o.textarea,
               i = Dn(r, t),
-              s = a.scroller.scrollTop
+              d = a.scroller.scrollTop
             if (i && !La) {
-              var d = r.options.resetSelectionOnContextMenu
-              d && -1 == r.doc.sel.contains(i) && wo(r, Pi)(r.doc, qo(i), $a)
+              var s = r.options.resetSelectionOnContextMenu
+              s && -1 == r.doc.sel.contains(i) && wo(r, Pi)(r.doc, qo(i), $a)
               var p = l.style.cssText,
                 u = o.wrapper.style.cssText
               o.wrapper.style.cssText = 'position: absolute'
@@ -9242,11 +9242,11 @@ object-assign
               } else setTimeout(n, 50)
             }
           }),
-          (ls.prototype.readOnlyChanged = function(e) {
+          (ld.prototype.readOnlyChanged = function(e) {
             e || this.reset(), (this.textarea.disabled = 'nocursor' == e)
           }),
-          (ls.prototype.setUneditable = function() {}),
-          (ls.prototype.needsContentAttribute = !1),
+          (ld.prototype.setUneditable = function() {}),
+          (ld.prototype.needsContentAttribute = !1),
           (function(e) {
             function t(t, o, i, r) {
               ;(e.defaults[t] = o),
@@ -9283,7 +9283,7 @@ object-assign
                 'tabSize',
                 4,
                 function(e) {
-                  ti(e), dn(e), So(e)
+                  ti(e), sn(e), So(e)
                 },
                 !0,
               ),
@@ -9545,16 +9545,16 @@ object-assign
                   l++
                 )
                   if (((i = n[l]), !i.empty())) {
-                    var s = i.from(),
-                      d = i.to(),
-                      p = a(r, s.line)
-                    r = o(t.lastLine(), d.line - (d.ch ? 0 : 1)) + 1
+                    var d = i.from(),
+                      s = i.to(),
+                      p = a(r, d.line)
+                    r = o(t.lastLine(), s.line - (s.ch ? 0 : 1)) + 1
                     for (var u = p; u < r; ++u) na(t, u, e)
                     var c = t.doc.sel.ranges
-                    0 == s.ch &&
+                    0 == d.ch &&
                       n.length == c.length &&
                       0 < c[l].from().ch &&
-                      ki(t.doc, l, new Il(s, c[l].to()), $a)
+                      ki(t.doc, l, new Il(d, c[l].to()), $a)
                   } else
                     i.head.line > r &&
                       (na(t, i.head.line, e, !0),
@@ -9605,14 +9605,14 @@ object-assign
                   l = this.getModeAt(e)
                 if ('string' == typeof l[t]) a[l[t]] && o.push(a[l[t]])
                 else if (l[t])
-                  for (var s = 0, i; s < l[t].length; s++)
-                    (i = a[l[t][s]]), i && o.push(i)
+                  for (var d = 0, i; d < l[t].length; d++)
+                    (i = a[l[t][d]]), i && o.push(i)
                 else
                   l.helperType && a[l.helperType]
                     ? o.push(a[l.helperType])
                     : a[l.name] && o.push(a[l.name])
-                for (var d = 0, p; d < a._global.length; d++)
-                  (p = a._global[d]),
+                for (var s = 0, p; s < a._global.length; s++)
+                  (p = a._global[s]),
                     p.pred(l, n) && -1 == b(o, p.val) && o.push(p.val)
                 return o
               },
@@ -9676,7 +9676,7 @@ object-assign
                 var r = this.display
                 e = gn(this, q(this.doc, e))
                 var l = e.bottom,
-                  s = e.left
+                  d = e.left
                 if (
                   ((t.style.position = 'absolute'),
                   t.setAttribute('cm-ignore-events', 'true'),
@@ -9686,29 +9686,29 @@ object-assign
                 )
                   l = e.top
                 else if ('above' == o || 'near' == o) {
-                  var d = a(r.wrapper.clientHeight, this.doc.height),
+                  var s = a(r.wrapper.clientHeight, this.doc.height),
                     p = a(r.sizer.clientWidth, r.lineSpace.clientWidth)
-                  ;('above' == o || e.bottom + t.offsetHeight > d) &&
+                  ;('above' == o || e.bottom + t.offsetHeight > s) &&
                   e.top > t.offsetHeight
                     ? (l = e.top - t.offsetHeight)
-                    : e.bottom + t.offsetHeight <= d && (l = e.bottom),
-                    s + t.offsetWidth > p && (s = p - t.offsetWidth)
+                    : e.bottom + t.offsetHeight <= s && (l = e.bottom),
+                    d + t.offsetWidth > p && (d = p - t.offsetWidth)
                 }
                 ;(t.style.top = l + 'px'),
                   (t.style.left = t.style.right = ''),
                   'right' == i
-                    ? ((s = r.sizer.clientWidth - t.offsetWidth),
+                    ? ((d = r.sizer.clientWidth - t.offsetWidth),
                       (t.style.right = '0px'))
                     : ('left' == i
-                        ? (s = 0)
+                        ? (d = 0)
                         : 'middle' == i &&
-                          (s = (r.sizer.clientWidth - t.offsetWidth) / 2),
-                      (t.style.left = s + 'px')),
+                          (d = (r.sizer.clientWidth - t.offsetWidth) / 2),
+                      (t.style.left = d + 'px')),
                   n &&
                     Qn(this, {
-                      left: s,
+                      left: d,
                       top: l,
-                      right: s + t.offsetWidth,
+                      right: d + t.offsetWidth,
                       bottom: l + t.offsetHeight,
                     })
               },
@@ -9727,9 +9727,9 @@ object-assign
                   a = 1
                 0 > t && ((a = -1), (t = -t))
                 for (
-                  var l = q(this.doc, e), s = 0;
-                  s < t && ((l = pa(r.doc, l, a, n, o)), !l.hitSide);
-                  ++s
+                  var l = q(this.doc, e), d = 0;
+                  d < t && ((l = pa(r.doc, l, a, n, o)), !l.hitSide);
+                  ++d
                 );
                 return l
               },
@@ -9759,15 +9759,15 @@ object-assign
                   l = o
                 0 > t && ((a = -1), (t = -t))
                 for (
-                  var s = q(this.doc, e), d = 0, i;
-                  d < t &&
-                  ((i = gn(r, s, 'div')),
+                  var d = q(this.doc, e), s = 0, i;
+                  s < t &&
+                  ((i = gn(r, d, 'div')),
                   null == l ? (l = i.left) : (i.left = l),
-                  (s = ua(r, i, a, n)),
-                  !s.hitSide);
-                  ++d
+                  (d = ua(r, i, a, n)),
+                  !d.hitSide);
+                  ++s
                 );
-                return s
+                return d
               },
               moveV: To(function(e, t) {
                 var n = this,
@@ -9783,12 +9783,12 @@ object-assign
                     var l = gn(n, i.head, 'div')
                     null != i.goalColumn && (l.left = i.goalColumn),
                       r.push(l.left)
-                    var s = ua(n, l, e, t)
+                    var d = ua(n, l, e, t)
                     return (
                       'page' == t &&
                         i == o.sel.primary() &&
-                        Jn(n, mn(n, s, 'div').top - l.top),
-                      s
+                        Jn(n, mn(n, d, 'div').top - l.top),
+                      d
                     )
                   }, Qa),
                   r.length)
@@ -9874,7 +9874,7 @@ object-assign
                   }
                 null != e && (this.display.wrapper.style.width = o(e)),
                   null != t && (this.display.wrapper.style.height = o(t)),
-                  this.options.lineWrapping && sn(this)
+                  this.options.lineWrapping && dn(this)
                 var r = this.display.viewFrom
                 this.doc.iter(r, this.display.viewTo, function(e) {
                   if (e.widgets)
@@ -9901,7 +9901,7 @@ object-assign
                 var e = this.display.cachedTextHeight
                 So(this),
                   (this.curOp.forceUpdate = !0),
-                  dn(this),
+                  sn(this),
                   no(this, this.doc.scrollLeft, this.doc.scrollTop),
                   Wo(this),
                   (null == e || 0.5 < t(e - En(this.display))) && Mn(this),
@@ -9912,7 +9912,7 @@ object-assign
                 return (
                   (t.cm = null),
                   ri(this, e),
-                  dn(this),
+                  sn(this),
                   this.display.input.reset(),
                   no(this, e.scrollLeft, e.scrollTop),
                   (this.curOp.forceScroll = !0),
@@ -9943,7 +9943,7 @@ object-assign
                   r[t]._global.push({ pred: o, val: i })
               })
           })(ea)
-        var ss = [
+        var dd = [
           'iter',
           'insert',
           'remove',
@@ -9951,17 +9951,17 @@ object-assign
           'getEditor',
           'constructor',
         ]
-        for (var ds in zl.prototype)
-          zl.prototype.hasOwnProperty(ds) &&
-            0 > b(ss, ds) &&
-            (ea.prototype[ds] = (function(e) {
+        for (var sd in zl.prototype)
+          zl.prototype.hasOwnProperty(sd) &&
+            0 > b(dd, sd) &&
+            (ea.prototype[sd] = (function(e) {
               return function() {
                 return e.apply(this.doc, arguments)
               }
-            })(zl.prototype[ds]))
+            })(zl.prototype[sd]))
         return (
           Fe(zl),
-          (ea.inputStyles = { textarea: ls, contenteditable: as }),
+          (ea.inputStyles = { textarea: ld, contenteditable: ad }),
           (ea.defineMode = function(e) {
             ea.defaults.mode || 'null' == e || (ea.defaults.mode = e),
               Ye.apply(this, arguments)
@@ -10074,7 +10074,7 @@ object-assign
               (e.e_stopPropagation = Ve),
               (e.e_stop = ze),
               (e.addClass = f),
-              (e.contains = d),
+              (e.contains = u),
               (e.rmClass = Ba),
               (e.keyNames = jl)
           })(ea),
@@ -10087,24 +10087,24 @@ object-assign
       'use strict'
       var t = function() {}
       !1,
-        (e.exports = function(n, o, i, r, a, l, s, e) {
+        (e.exports = function(n, o, i, r, a, l, d, e) {
           if ((t(o), !n)) {
-            var d
+            var s
             if (void 0 === o)
-              d = new Error(
+              s = new Error(
                 'Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.',
               )
             else {
-              var p = [i, r, a, l, s, e],
+              var p = [i, r, a, l, d, e],
                 u = 0
-              ;(d = new Error(
+              ;(s = new Error(
                 o.replace(/%s/g, function() {
                   return p[u++]
                 }),
               )),
-                (d.name = 'Invariant Violation')
+                (s.name = 'Invariant Violation')
             }
-            throw ((d.framesToPop = 1), d)
+            throw ((s.framesToPop = 1), s)
           }
         })
     },
@@ -10253,11 +10253,11 @@ object-assign
       e.exports = function(e, t) {
         var n = r(e),
           l = 0,
-          s = [],
-          d
-        for (d in n) d != i && o(n, d) && s.push(d)
-        for (; t.length > l; ) o(n, (d = t[l++])) && (~a(s, d) || s.push(d))
-        return s
+          d = [],
+          s
+        for (s in n) s != i && o(n, s) && d.push(s)
+        for (; t.length > l; ) o(n, (s = t[l++])) && (~a(d, s) || d.push(s))
+        return d
       }
     },
     function(e, t, n) {
@@ -10298,8 +10298,8 @@ object-assign
         r = n(55),
         a = n(14),
         l = n(11),
-        s = n(37),
-        d = n(105),
+        d = n(37),
+        s = n(105),
         p = n(39),
         u = n(108),
         c = n(17)('iterator'),
@@ -10310,7 +10310,7 @@ object-assign
           return this
         }
       e.exports = function(e, t, n, y, b, v, C) {
-        d(n, t, y)
+        s(n, t, y)
         var x = function(e) {
             return !f && e in S
               ? S[e]
@@ -10351,8 +10351,8 @@ object-assign
               return E.call(this)
             })),
           (!o || C) && (f || k || !S[c]) && a(S, c, O),
-          (s[t] = O),
-          (s[w] = g),
+          (d[t] = O),
+          (d[w] = g),
           b)
         )
           if (
@@ -10381,14 +10381,14 @@ object-assign
         r = n(16),
         a = n(29),
         l = n(11),
-        s = n(47),
-        d = Object.getOwnPropertyDescriptor
+        d = n(47),
+        s = Object.getOwnPropertyDescriptor
       t.f = n(10)
-        ? d
+        ? s
         : function(e, t) {
-            if (((e = r(e)), (t = a(t, !0)), s))
+            if (((e = r(e)), (t = a(t, !0)), d))
               try {
-                return d(e, t)
+                return s(e, t)
               } catch (t) {}
             return l(e, t) ? i(!o.f.call(e, t), e[t]) : void 0
           }
@@ -10464,16 +10464,16 @@ object-assign
         r = n(5),
         a = n.n(r),
         l = n(6),
-        s = n.n(l),
-        d = n(7),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(7),
+        p = n.n(s),
         u = n(0),
         c = n.n(u),
         f = n(1),
         h = n.n(f),
         m = (function(e) {
           function t() {
-            return a()(this, t), s()(this, e.apply(this, arguments))
+            return a()(this, t), d()(this, e.apply(this, arguments))
           }
           return (
             p()(t, e),
@@ -10531,8 +10531,8 @@ object-assign
         r = n(2),
         a = n.n(r),
         l = n(81),
-        s = n(85),
-        d = n.n(s),
+        d = n(85),
+        s = n.n(d),
         p = n(87),
         u = n(170),
         c =
@@ -10613,7 +10613,7 @@ object-assign
                 o.createElement(
                   'div',
                   { className: 'banner' },
-                  o.createElement('h1', null, 'React Forms'),
+                  o.createElement('h1', null, 'Formland'),
                   o.createElement(
                     'p',
                     null,
@@ -10668,7 +10668,7 @@ object-assign
                       'div',
                       { className: 'section config' },
                       o.createElement('h4', null, 'Config'),
-                      o.createElement(s.UnControlled, {
+                      o.createElement(d.UnControlled, {
                         value: JSON.stringify(u.a, null, 4),
                         options: { theme: 'zenburn' },
                       }),
@@ -10677,7 +10677,7 @@ object-assign
                       'div',
                       { className: 'section store' },
                       o.createElement('h4', null, 'Store'),
-                      o.createElement(s.UnControlled, {
+                      o.createElement(d.UnControlled, {
                         onChange: function() {},
                         value: JSON.stringify(this.state.input, null, 4),
                         options: { theme: 'zenburn', readOnly: !0 },
@@ -10687,7 +10687,7 @@ object-assign
                       'div',
                       { className: 'section store' },
                       o.createElement('h4', null, 'Errors'),
-                      o.createElement(s.UnControlled, {
+                      o.createElement(d.UnControlled, {
                         onChange: function() {},
                         value: JSON.stringify(this.state.errors, null, 4),
                         options: { theme: 'zenburn', readOnly: !0 },
@@ -10743,13 +10743,13 @@ object-assign
           (this.refs = _),
           (this.updater = o || x)
       }
-      function s(t, n, o) {
+      function d(t, n, o) {
         ;(this.props = t),
           (this.context = n),
           (this.refs = _),
           (this.updater = o || x)
       }
-      function d() {}
+      function s() {}
       function c(t, n, o) {
         ;(this.props = t),
           (this.context = n),
@@ -10820,13 +10820,13 @@ object-assign
       function O(n, o, i, e) {
         var r = typeof n
         ;('undefined' == r || 'boolean' == r) && (n = null)
-        var s = !1
-        if (null === n) s = !0
+        var d = !1
+        if (null === n) d = !0
         else
           switch (r) {
             case 'string':
             case 'number':
-              s = !0
+              d = !0
               break
             case 'object':
               switch (n.$$typeof) {
@@ -10834,15 +10834,15 @@ object-assign
                 case b:
                 case t:
                 case u:
-                  s = !0
+                  d = !0
               }
           }
-        if (s) return i(e, n, '' === o ? '.' + P(n, 0) : o), 1
-        if (((s = 0), (o = '' === o ? '.' : o + ':'), Array.isArray(n)))
-          for (var d = 0; d < n.length; d++) {
-            r = n[d]
-            var p = o + P(r, d)
-            s += O(r, p, i, e)
+        if (d) return i(e, n, '' === o ? '.' + P(n, 0) : o), 1
+        if (((d = 0), (o = '' === o ? '.' : o + ':'), Array.isArray(n)))
+          for (var s = 0; s < n.length; s++) {
+            r = n[s]
+            var p = o + P(r, s)
+            d += O(r, p, i, e)
           }
         else if (
           (null === n || 'undefined' == typeof n
@@ -10851,8 +10851,8 @@ object-assign
               (p = 'function' == typeof p ? p : null)),
           'function' == typeof p)
         )
-          for (n = p.call(n), d = 0; !(r = n.next()).done; )
-            (r = r.value), (p = o + P(r, d++)), (s += O(r, p, i, e))
+          for (n = p.call(n), s = 0; !(r = n.next()).done; )
+            (r = r.value), (p = o + P(r, s++)), (d += O(r, p, i, e))
         else
           'object' === r &&
             ((i = '' + n),
@@ -10863,7 +10863,7 @@ object-assign
                 : i,
               '',
             ))
-        return s
+        return d
       }
       function P(e, t) {
         return 'object' == typeof e && null !== e && null != e.key
@@ -10932,10 +10932,10 @@ object-assign
         (a.prototype.forceUpdate = function(e) {
           this.updater.enqueueForceUpdate(this, e, 'forceUpdate')
         }),
-        (d.prototype = a.prototype)
-      var z = (s.prototype = new d())
-      ;(z.constructor = s), T(z, a.prototype), (z.isPureReactComponent = !0)
-      var D = (c.prototype = new d())
+        (s.prototype = a.prototype)
+      var z = (d.prototype = new s())
+      ;(z.constructor = d), T(z, a.prototype), (z.isPureReactComponent = !0)
+      var D = (c.prototype = new s())
       ;(D.constructor = c),
         T(D, a.prototype),
         (D.unstable_isAsyncReactComponent = !0),
@@ -10973,7 +10973,7 @@ object-assign
             },
           },
           Component: a,
-          PureComponent: s,
+          PureComponent: d,
           unstable_AsyncComponent: c,
           Fragment: v,
           createElement: f,
@@ -11124,15 +11124,15 @@ object-assign
                 var a = void 0,
                   e = i[r],
                   l = n,
-                  s = r
-                xo.hasOwnProperty(s) ? o('99', s) : void 0, (xo[s] = e)
-                var d = e.phasedRegistrationNames
-                if (d) {
-                  for (a in d) d.hasOwnProperty(a) && m(d[a], l, s)
+                  d = r
+                xo.hasOwnProperty(d) ? o('99', d) : void 0, (xo[d] = e)
+                var s = e.phasedRegistrationNames
+                if (s) {
+                  for (a in s) s.hasOwnProperty(a) && m(s[a], l, d)
                   a = !0
                 } else
                   e.registrationName
-                    ? (m(e.registrationName, l, s), (a = !0))
+                    ? (m(e.registrationName, l, d), (a = !0))
                     : (a = !1)
                 a ? void 0 : o('98', r, t)
               }
@@ -11300,7 +11300,7 @@ object-assign
           a: {
             for (var r = o, e = i, a = 0, l = r; l; l = A(l)) a++
             l = 0
-            for (var s = e; s; s = A(s)) l++
+            for (var d = e; d; d = A(d)) l++
             for (; 0 < a - l; ) (r = A(r)), a--
             for (; 0 < l - a; ) (e = A(e)), l--
             for (; a--; ) {
@@ -11468,7 +11468,7 @@ object-assign
       function lt(e, t) {
         return e(t)
       }
-      function st(e, t) {
+      function dt(e, t) {
         if (ei) return lt(e, t)
         ei = !0
         try {
@@ -11477,7 +11477,7 @@ object-assign
           ;(ei = !1), at()
         }
       }
-      function dt(e) {
+      function st(e) {
         var t = e && e.nodeName && e.nodeName.toLowerCase()
         return 'input' === t ? !!ti[e.type] : !('textarea' !== t)
       }
@@ -11585,7 +11585,7 @@ object-assign
       function xt(e) {
         'value' === e.propertyName &&
           bt(ri) &&
-          ((e = gt(ri, e, pt(e))), st(yt, e))
+          ((e = gt(ri, e, pt(e))), dt(yt, e))
       }
       function wt(e, t, n) {
         'topFocus' === e
@@ -11613,7 +11613,7 @@ object-assign
         var t = this.nativeEvent
         return t.getModifierState
           ? t.getModifierState(e)
-          : !!(e = si[e]) && !!t[e]
+          : !!(e = di[e]) && !!t[e]
       }
       function Pt() {
         return Ot
@@ -11654,40 +11654,40 @@ object-assign
             l = a ? a.alternate : null
           if (!a || !l) break
           if (a.child === l.child) {
-            for (var s = a.child; s; ) {
-              if (s === i) return _t(a), t
-              if (s === r) return _t(a), n
-              s = s.sibling
+            for (var d = a.child; d; ) {
+              if (d === i) return _t(a), t
+              if (d === r) return _t(a), n
+              d = d.sibling
             }
             o('188')
           }
           if (i['return'] !== r['return']) (i = a), (r = l)
           else {
-            s = !1
-            for (var d = a.child; d; ) {
-              if (d === i) {
-                ;(s = !0), (i = a), (r = l)
+            d = !1
+            for (var s = a.child; s; ) {
+              if (s === i) {
+                ;(d = !0), (i = a), (r = l)
                 break
               }
-              if (d === r) {
-                ;(s = !0), (r = a), (i = l)
+              if (s === r) {
+                ;(d = !0), (r = a), (i = l)
                 break
               }
-              d = d.sibling
+              s = s.sibling
             }
-            if (!s) {
-              for (d = l.child; d; ) {
-                if (d === i) {
-                  ;(s = !0), (i = l), (r = a)
+            if (!d) {
+              for (s = l.child; s; ) {
+                if (s === i) {
+                  ;(d = !0), (i = l), (r = a)
                   break
                 }
-                if (d === r) {
-                  ;(s = !0), (r = l), (i = a)
+                if (s === r) {
+                  ;(d = !0), (r = l), (i = a)
                   break
                 }
-                d = d.sibling
+                s = s.sibling
               }
-              s ? void 0 : o('189')
+              d ? void 0 : o('189')
             }
           }
           i.alternate === r ? void 0 : o('190')
@@ -11774,7 +11774,7 @@ object-assign
               ancestors: [],
             }
           try {
-            st(Ft, e)
+            dt(Ft, e)
           } finally {
             ;(e.topLevelType = null),
               (e.nativeEvent = null),
@@ -12152,29 +12152,29 @@ object-assign
           o.isInitialized
             ? (t = o.baseState)
             : ((t = o.baseState = n.memoizedState), (o.isInitialized = !0))
-        for (var a = !0, s = o.first, d = !1, p; null !== s; ) {
-          if (((p = s.expirationTime), p > e)) {
+        for (var a = !0, d = o.first, s = !1, p; null !== d; ) {
+          if (((p = d.expirationTime), p > e)) {
             var u = o.expirationTime
             ;(0 === u || u > p) && (o.expirationTime = p),
-              d || ((d = !0), (o.baseState = t))
+              s || ((s = !0), (o.baseState = t))
           } else
-            d || ((o.first = s.next), null === o.first && (o.last = null)),
-              s.isReplace
-                ? ((t = He(s, i, t, r)), (a = !0))
-                : (p = He(s, i, t, r)) &&
+            s || ((o.first = d.next), null === o.first && (o.last = null)),
+              d.isReplace
+                ? ((t = He(d, i, t, r)), (a = !0))
+                : (p = He(d, i, t, r)) &&
                   ((t = a ? l({}, t, p) : l(t, p)), (a = !1)),
-              s.isForced && (o.hasForceUpdate = !0),
-              null !== s.callback &&
+              d.isForced && (o.hasForceUpdate = !0),
+              null !== d.callback &&
                 ((p = o.callbackList),
                 null === p && (p = o.callbackList = []),
-                p.push(s))
-          s = s.next
+                p.push(d))
+          d = d.next
         }
         return (
           null === o.callbackList
             ? null !== o.first || o.hasForceUpdate || (n.updateQueue = null)
             : (n.effectTag |= 32),
-          d || (o.baseState = t),
+          s || (o.baseState = t),
           t
         )
       }
@@ -12641,28 +12641,28 @@ object-assign
             m
           )
         }
-        return function(t, a, s, d) {
-          'object' == typeof s &&
-            null !== s &&
-            s.type === Ai &&
-            null === s.key &&
-            (s = s.props.children)
-          var p = 'object' == typeof s && null !== s
+        return function(t, a, d, s) {
+          'object' == typeof d &&
+            null !== d &&
+            d.type === Ai &&
+            null === d.key &&
+            (d = d.props.children)
+          var p = 'object' == typeof d && null !== d
           if (p)
-            switch (s.$$typeof) {
+            switch (d.$$typeof) {
               case Qe:
                 a: {
-                  var u = s.key
+                  var u = d.key
                   for (p = a; null !== p; ) {
                     if (p.key !== u) i(t, p)
-                    else if (10 === p.tag ? s.type === Ai : p.type === s.type) {
+                    else if (10 === p.tag ? d.type === Ai : p.type === d.type) {
                       l(t, p.sibling),
                         (a = n(
                           p,
-                          s.type === Ai ? s.props.children : s.props,
-                          d,
+                          d.type === Ai ? d.props.children : d.props,
+                          s,
                         )),
-                        (a.ref = Xe(p, s)),
+                        (a.ref = Xe(p, d)),
                         (a['return'] = t),
                         (t = a)
                       break a
@@ -12672,28 +12672,28 @@ object-assign
                     }
                     p = p.sibling
                   }
-                  s.type === Ai
+                  d.type === Ai
                     ? ((a = te(
-                        s.props.children,
+                        d.props.children,
                         t.internalContextTag,
-                        d,
-                        s.key,
+                        s,
+                        d.key,
                       )),
                       (a['return'] = t),
                       (t = a))
-                    : ((d = se(s, t.internalContextTag, d)),
-                      (d.ref = Xe(a, s)),
-                      (d['return'] = t),
-                      (t = d))
+                    : ((s = se(d, t.internalContextTag, s)),
+                      (s.ref = Xe(a, d)),
+                      (s['return'] = t),
+                      (t = s))
                 }
                 return e(t)
               case Re:
                 a: {
-                  for (p = s.key; null !== a; ) {
+                  for (p = d.key; null !== a; ) {
                     if (a.key !== p) i(t, a)
                     else if (7 === a.tag) {
                       l(t, a.sibling),
-                        (a = n(a, s, d)),
+                        (a = n(a, d, s)),
                         (a['return'] = t),
                         (t = a)
                       break a
@@ -12703,7 +12703,7 @@ object-assign
                     }
                     a = a.sibling
                   }
-                  ;(a = ve(s, t.internalContextTag, d)),
+                  ;(a = ve(d, t.internalContextTag, s)),
                     (a['return'] = t),
                     (t = a)
                 }
@@ -12713,29 +12713,29 @@ object-assign
                   if (null !== a)
                     if (9 === a.tag) {
                       l(t, a.sibling),
-                        (a = n(a, null, d)),
-                        (a.type = s.value),
+                        (a = n(a, null, s)),
+                        (a.type = d.value),
                         (a['return'] = t),
                         (t = a)
                       break a
                     } else l(t, a)
-                  ;(a = we(s, t.internalContextTag, d)),
-                    (a.type = s.value),
+                  ;(a = we(d, t.internalContextTag, s)),
+                    (a.type = d.value),
                     (a['return'] = t),
                     (t = a)
                 }
                 return e(t)
               case Te:
                 a: {
-                  for (p = s.key; null !== a; ) {
+                  for (p = d.key; null !== a; ) {
                     if (a.key !== p) i(t, a)
                     else if (
                       4 === a.tag &&
-                      a.stateNode.containerInfo === s.containerInfo &&
-                      a.stateNode.implementation === s.implementation
+                      a.stateNode.containerInfo === d.containerInfo &&
+                      a.stateNode.implementation === d.implementation
                     ) {
                       l(t, a.sibling),
-                        (a = n(a, s.children || [], d)),
+                        (a = n(a, d.children || [], s)),
                         (a['return'] = t),
                         (t = a)
                       break a
@@ -12745,29 +12745,29 @@ object-assign
                     }
                     a = a.sibling
                   }
-                  ;(a = xe(s, t.internalContextTag, d)),
+                  ;(a = xe(d, t.internalContextTag, s)),
                     (a['return'] = t),
                     (t = a)
                 }
                 return e(t)
             }
-          if ('string' == typeof s || 'number' == typeof s)
+          if ('string' == typeof d || 'number' == typeof d)
             return (
-              (s = '' + s),
+              (d = '' + d),
               null !== a && 6 === a.tag
-                ? (l(t, a.sibling), (a = n(a, s, d)))
-                : (l(t, a), (a = ue(s, t.internalContextTag, d))),
+                ? (l(t, a.sibling), (a = n(a, d, s)))
+                : (l(t, a), (a = ue(d, t.internalContextTag, s))),
               (a['return'] = t),
               (t = a),
               e(t)
             )
-          if (We(s)) return b(t, a, s, d)
-          if (Le(s)) return v(t, a, s, d)
-          if ((p && Ze(t, s), 'undefined' == typeof s))
+          if (We(d)) return b(t, a, d, s)
+          if (Le(d)) return v(t, a, d, s)
+          if ((p && Ze(t, d), 'undefined' == typeof d))
             switch (t.tag) {
               case 2:
               case 1:
-                ;(d = t.type), o('152', d.displayName || d.name || 'Component')
+                ;(s = t.type), o('152', s.displayName || s.name || 'Component')
             }
           return l(t, a)
         }
@@ -13048,8 +13048,8 @@ object-assign
         }
         var l = t.createInstance,
           e = t.createTextInstance,
-          s = t.appendInitialChild,
-          d = t.finalizeInitialChildren,
+          d = t.appendInitialChild,
+          s = t.finalizeInitialChildren,
           f = t.prepareUpdate,
           a = t.persistence,
           h = n.getRootHostContainer,
@@ -13115,7 +13115,7 @@ object-assign
                     else {
                       t = l(c, a, i, t, n)
                       a: for (b = n.child; null !== b; ) {
-                        if (5 === b.tag || 6 === b.tag) s(t, b.stateNode)
+                        if (5 === b.tag || 6 === b.tag) d(t, b.stateNode)
                         else if (4 !== b.tag && null !== b.child) {
                           ;(b.child['return'] = b), (b = b.child)
                           continue
@@ -13127,7 +13127,7 @@ object-assign
                         }
                         ;(b.sibling['return'] = b['return']), (b = b.sibling)
                       }
-                      d(t, c, a, i) && r(n), (n.stateNode = t)
+                      s(t, c, a, i) && r(n), (n.stateNode = t)
                     }
                     null !== n.ref && (n.effectTag |= 128)
                   }
@@ -13440,7 +13440,7 @@ object-assign
           },
         }
       }
-      function sn(t) {
+      function dn(t) {
         function n(e) {
           return e === Ri ? o('174') : void 0, e
         }
@@ -13475,7 +13475,7 @@ object-assign
           },
         }
       }
-      function dn(t) {
+      function sn(t) {
         function n(e, t) {
           var n = new re(5, null, 0)
           ;(n.type = 'DELETED'),
@@ -13495,7 +13495,7 @@ object-assign
               )
             case 6:
               return (
-                (n = s(n, t.pendingProps)),
+                (n = d(n, t.pendingProps)),
                 null !== n && ((t.stateNode = n), !0)
               )
             default:
@@ -13526,17 +13526,17 @@ object-assign
             },
           }
         var e = t.canHydrateInstance,
-          s = t.canHydrateTextInstance,
-          p = t.getNextHydratableSibling,
-          c = t.getFirstHydratableChild,
-          d = t.hydrateInstance,
-          f = t.hydrateTextInstance,
+          d = t.canHydrateTextInstance,
+          s = t.getNextHydratableSibling,
+          p = t.getFirstHydratableChild,
+          f = t.hydrateInstance,
+          c = t.hydrateTextInstance,
           h = null,
           m = null,
           u = !1
         return {
           enterHydrationState: function(e) {
-            return (m = c(e.stateNode.containerInfo)), (h = e), (u = !0)
+            return (m = p(e.stateNode.containerInfo)), (h = e), (u = !0)
           },
           resetHydrationState: function() {
             ;(m = h = null), (u = !1)
@@ -13546,23 +13546,23 @@ object-assign
               var t = m
               if (t) {
                 if (!i(e, t)) {
-                  if (((t = p(t)), !t || !i(e, t)))
+                  if (((t = s(t)), !t || !i(e, t)))
                     return (e.effectTag |= 2), (u = !1), void (h = e)
                   n(h, m)
                 }
-                ;(h = e), (m = c(t))
+                ;(h = e), (m = p(t))
               } else (e.effectTag |= 2), (u = !1), (h = e)
             }
           },
           prepareToHydrateHostInstance: function(e, t, n) {
             return (
-              (t = d(e.stateNode, e.type, e.memoizedProps, t, n, e)),
+              (t = f(e.stateNode, e.type, e.memoizedProps, t, n, e)),
               (e.updateQueue = t),
               null !== t
             )
           },
           prepareToHydrateHostTextInstance: function(e) {
-            return f(e.stateNode, e.memoizedProps, e)
+            return c(e.stateNode, e.memoizedProps, e)
           },
           popHydrationState: function(e) {
             if (e !== h) return !1
@@ -13572,14 +13572,14 @@ object-assign
               5 !== e.tag ||
               ('head' !== t && 'body' !== t && !l(t, e.memoizedProps))
             )
-              for (t = m; t; ) n(e, t), (t = p(t))
-            return r(e), (m = h ? p(e.stateNode) : null), !0
+              for (t = m; t; ) n(e, t), (t = s(t))
+            return r(e), (m = h ? s(e.stateNode) : null), !0
           },
         }
       }
       function pn(i) {
         function l(n) {
-          me = se = !0
+          me = de = !0
           var i = n.stateNode
           if (
             (i.current === n ? o('177') : void 0,
@@ -13599,8 +13599,8 @@ object-assign
               for (; null !== H; ) {
                 var e = H.effectTag
                 if ((16 & e && z(H), 128 & e)) {
-                  var s = H.alternate
-                  null !== s && q(s)
+                  var d = H.alternate
+                  null !== d && q(d)
                 }
                 switch (-242 & e) {
                   case 2:
@@ -13629,8 +13629,8 @@ object-assign
             ;(r = !1), (a = void 0)
             try {
               for (; null !== H; ) {
-                var d = H.effectTag
-                if ((36 & d && K(H.alternate, H), 128 & d && G(H), 64 & d))
+                var s = H.effectTag
+                if ((36 & s && K(H.alternate, H), 128 & s && G(H), 64 & s))
                   switch (((l = H),
                   (e = void 0),
                   null !== t &&
@@ -13664,7 +13664,7 @@ object-assign
               null !== H && (H = H.nextEffect))
           }
           return (
-            (se = me = !1),
+            (de = me = !1),
             'function' == typeof Ce && Ce(n.stateNode),
             ue && (ue.forEach(E), (ue = null)),
             null !== ce && ((n = ce), (ce = null), D(n)),
@@ -13724,18 +13724,18 @@ object-assign
         function e(e) {
           if (null != t) {
             if (!(0 === pe || pe > e))
-              if (pe <= re) for (; null !== de; ) de = d(de) ? C(de) : a(de)
-              else for (; null !== de && !m(); ) de = d(de) ? C(de) : a(de)
+              if (pe <= re) for (; null !== se; ) se = d(se) ? C(se) : a(se)
+              else for (; null !== se && !m(); ) se = d(se) ? C(se) : a(se)
           } else if (!(0 === pe || pe > e))
-            if (pe <= re) for (; null !== de; ) de = a(de)
-            else for (; null !== de && !m(); ) de = a(de)
+            if (pe <= re) for (; null !== se; ) se = a(se)
+            else for (; null !== se && !m(); ) se = a(se)
         }
         function f(t, i) {
           if (
-            (se ? o('243') : void 0,
-            (se = !0),
+            (de ? o('243') : void 0,
+            (de = !0),
             (t.isReadyForCommit = !1),
-            t !== F || i !== pe || null === de)
+            t !== F || i !== pe || null === se)
           ) {
             for (; -1 < ge; ) (ee[ge] = null), ge--
             ;(X = oo),
@@ -13744,7 +13744,7 @@ object-assign
               A(),
               (F = t),
               (pe = i),
-              (de = Y(F.current, null, i))
+              (se = Y(F.current, null, i))
           }
           var r = !1,
             a = null
@@ -13758,13 +13758,13 @@ object-assign
               ce = a
               break
             }
-            var l = de
+            var l = se
             if (null === l) fe = !0
             else {
-              var s = T(l, a)
-              if ((null === s ? o('183') : void 0, !fe)) {
+              var d = T(l, a)
+              if ((null === d ? o('183') : void 0, !fe)) {
                 try {
-                  for (r = s, a = i, s = r; null != l; ) {
+                  for (r = d, a = i, d = r; null != l; ) {
                     switch (l.tag) {
                       case 2:
                         le(l)
@@ -13778,10 +13778,10 @@ object-assign
                       case 4:
                         n(l)
                     }
-                    if (l === s || l.alternate === s) break
+                    if (l === d || l.alternate === d) break
                     l = l['return']
                   }
-                  ;(de = C(r)), e(a)
+                  ;(se = C(r)), e(a)
                 } catch (e) {
                   ;(r = !0), (a = e)
                   continue
@@ -13792,7 +13792,7 @@ object-assign
           }
           return (
             (i = ce),
-            (fe = se = !1),
+            (fe = de = !1),
             (ce = null),
             null !== i && D(i),
             t.isReadyForCommit ? t.current.alternate : null
@@ -13896,7 +13896,7 @@ object-assign
         }
         function h(e) {
           return 0 === ae
-            ? se ? (me ? 1 : pe) : !J || 1 & e.internalContextTag ? c() : 1
+            ? de ? (me ? 1 : pe) : !J || 1 & e.internalContextTag ? c() : 1
             : ae
         }
         function g(e, t) {
@@ -13915,7 +13915,7 @@ object-assign
             )
               if (3 === t.tag) {
                 var i = t.stateNode
-                !se && i === F && n < pe && ((de = F = null), (pe = 0))
+                !de && i === F && n < pe && ((se = F = null), (pe = 0))
                 var r = i,
                   a = n
                 if ((_e > Me && o('185'), null === r.nextScheduledRoot))
@@ -13932,7 +13932,7 @@ object-assign
                   (Ne
                     ? Le && ((Te = r), (ke = 1), w(Te, ke))
                     : 1 === a ? M(1, null) : P(a)),
-                  !se && i === F && n < pe && ((de = F = null), (pe = 0))
+                  !de && i === F && n < pe && ((se = F = null), (pe = 0))
               } else break
             t = t['return']
           }
@@ -14030,8 +14030,8 @@ object-assign
             (Te.remainingExpirationTime = 0),
             Ee || ((Ee = !0), (Oe = e))
         }
-        var _ = sn(i),
-          r = dn(i),
+        var _ = dn(i),
+          r = sn(i),
           n = _.popHostContainer,
           p = _.popHostContext,
           A = _.resetHostContainer,
@@ -14056,8 +14056,8 @@ object-assign
           oe = $(),
           re = 2,
           ae = 0,
-          se = !1,
-          de = null,
+          de = !1,
+          se = null,
           F = null,
           pe = 0,
           H = null,
@@ -14146,7 +14146,7 @@ object-assign
         var i = t.getPublicInstance
         t = pn(t)
         var r = t.computeAsyncExpiration,
-          s = t.computeExpirationForFiber,
+          d = t.computeExpirationForFiber,
           e = t.scheduleWork
         return {
           createContainer: function(e, t) {
@@ -14168,7 +14168,7 @@ object-assign
             )
           },
           updateContainer: function(t, n, i, l) {
-            var d = n.current
+            var s = n.current
             if (i) {
               i = i._reactInternalFiber
               var p
@@ -14197,8 +14197,8 @@ object-assign
                 null != t.type.prototype &&
                 !0 === t.type.prototype.unstable_isAsyncReactComponent
                   ? r()
-                  : s(d)),
-              Ge(d, {
+                  : d(s)),
+              Ge(s, {
                 expirationTime: l,
                 partialState: { element: t },
                 callback: n,
@@ -14207,7 +14207,7 @@ object-assign
                 nextCallback: null,
                 next: null,
               }),
-              e(d, l)
+              e(s, l)
           },
           batchedUpdates: t.batchedUpdates,
           unbatchedUpdates: t.unbatchedUpdates,
@@ -14481,7 +14481,7 @@ object-assign
       }
       function An(e, t, n) {
         t &&
-          (sr[e] &&
+          (dr[e] &&
             (null != t.children || null != t.dangerouslySetInnerHTML
               ? o('137', e, n())
               : void 0),
@@ -14532,8 +14532,8 @@ object-assign
       function Fn(e, t, n, o) {
         return (
           (n = 9 === n.nodeType ? n : n.ownerDocument),
-          o === dr && (o = Ln(e)),
-          o === dr
+          o === sr && (o = Ln(e)),
+          o === sr
             ? 'script' === e
               ? ((e = n.createElement('div')),
                 (e.innerHTML = '<script></script>'),
@@ -14601,24 +14601,24 @@ object-assign
         }
         An(n, e, pr)
         var a = e,
-          s
-        for (s in a)
-          if (a.hasOwnProperty(s)) {
-            var d = a[s]
-            'style' === s
-              ? _n(t, d, pr)
-              : 'dangerouslySetInnerHTML' === s
-                ? ((d = d ? d.__html : void 0), null != d && ir(t, d))
-                : 'children' === s
-                  ? 'string' == typeof d
-                    ? ('textarea' !== n || '' != d) && Dn(t, d)
-                    : 'number' == typeof d && Dn(t, '' + d)
-                  : 'suppressContentEditableWarning' != s &&
-                    'suppressHydrationWarning' != s &&
-                    'autoFocus' != s &&
-                    (wo.hasOwnProperty(s)
-                      ? null != d && Rn(i, s)
-                      : r ? mn(t, s, d) : null != d && hn(t, s, d))
+          d
+        for (d in a)
+          if (a.hasOwnProperty(d)) {
+            var s = a[d]
+            'style' === d
+              ? _n(t, s, pr)
+              : 'dangerouslySetInnerHTML' === d
+                ? ((s = s ? s.__html : void 0), null != s && ir(t, s))
+                : 'children' === d
+                  ? 'string' == typeof s
+                    ? ('textarea' !== n || '' != s) && Dn(t, s)
+                    : 'number' == typeof s && Dn(t, '' + s)
+                  : 'suppressContentEditableWarning' != d &&
+                    'suppressHydrationWarning' != d &&
+                    'autoFocus' != d &&
+                    (wo.hasOwnProperty(d)
+                      ? null != s && Rn(i, d)
+                      : r ? mn(t, d, s) : null != s && hn(t, d, s))
           }
         'input' === n
           ? (ht(t), xn(t, o))
@@ -14651,12 +14651,12 @@ object-assign
                   'function' == typeof i.onClick &&
                   (t.onclick = B),
           An(n, i, pr)
-        var a, s
+        var a, d
         for (a in ((t = null), o))
           if (!i.hasOwnProperty(a) && o.hasOwnProperty(a) && null != o[a])
             if ('style' === a)
-              for (s in ((n = o[a]), n))
-                n.hasOwnProperty(s) && (t || (t = {}), (t[s] = ''))
+              for (d in ((n = o[a]), n))
+                n.hasOwnProperty(d) && (t || (t = {}), (t[d] = ''))
             else
               'dangerouslySetInnerHTML' != a &&
                 'children' != a &&
@@ -14667,35 +14667,35 @@ object-assign
                   ? e || (e = [])
                   : (e = e || []).push(a, null))
         for (a in i) {
-          var d = i[a]
+          var s = i[a]
           if (
             ((n = null == o ? void 0 : o[a]),
-            i.hasOwnProperty(a) && d !== n && (null != d || null != n))
+            i.hasOwnProperty(a) && s !== n && (null != s || null != n))
           )
             if ('style' !== a)
               'dangerouslySetInnerHTML' === a
-                ? ((d = d ? d.__html : void 0),
+                ? ((s = s ? s.__html : void 0),
                   (n = n ? n.__html : void 0),
-                  null != d && n !== d && (e = e || []).push(a, '' + d))
+                  null != s && n !== s && (e = e || []).push(a, '' + s))
                 : 'children' === a
-                  ? n === d ||
-                    ('string' != typeof d && 'number' != typeof d) ||
-                    (e = e || []).push(a, '' + d)
+                  ? n === s ||
+                    ('string' != typeof s && 'number' != typeof s) ||
+                    (e = e || []).push(a, '' + s)
                   : 'suppressContentEditableWarning' != a &&
                     'suppressHydrationWarning' != a &&
                     (wo.hasOwnProperty(a)
-                      ? (null != d && Rn(r, a), e || n === d || (e = []))
-                      : (e = e || []).push(a, d))
+                      ? (null != s && Rn(r, a), e || n === s || (e = []))
+                      : (e = e || []).push(a, s))
             else if (n) {
-              for (s in n)
-                !n.hasOwnProperty(s) ||
-                  (d && d.hasOwnProperty(s)) ||
-                  (t || (t = {}), (t[s] = ''))
-              for (s in d)
-                d.hasOwnProperty(s) &&
-                  n[s] !== d[s] &&
-                  (t || (t = {}), (t[s] = d[s]))
-            } else t || (e || (e = []), e.push(a, t)), (t = d)
+              for (d in n)
+                !n.hasOwnProperty(d) ||
+                  (s && s.hasOwnProperty(d)) ||
+                  (t || (t = {}), (t[d] = ''))
+              for (d in s)
+                s.hasOwnProperty(d) &&
+                  n[d] !== s[d] &&
+                  (t || (t = {}), (t[d] = s[d]))
+            } else t || (e || (e = []), e.push(a, t)), (t = s)
         }
         return t && (e = e || []).push('style', t), e
       }
@@ -14871,30 +14871,30 @@ object-assign
               l = t.DOMAttributeNames || {}
             for (var e in ((t = t.DOMMutationMethods || {}), r)) {
               ao.hasOwnProperty(e) ? o('48', e) : void 0
-              var s = e.toLowerCase(),
-                d = r[e]
-              ;(s = {
-                attributeName: s,
+              var d = e.toLowerCase(),
+                s = r[e]
+              ;(d = {
+                attributeName: d,
                 attributeNamespace: null,
                 propertyName: e,
                 mutationMethod: null,
-                mustUseProperty: i(d, n.MUST_USE_PROPERTY),
-                hasBooleanValue: i(d, n.HAS_BOOLEAN_VALUE),
-                hasNumericValue: i(d, n.HAS_NUMERIC_VALUE),
-                hasPositiveNumericValue: i(d, n.HAS_POSITIVE_NUMERIC_VALUE),
-                hasOverloadedBooleanValue: i(d, n.HAS_OVERLOADED_BOOLEAN_VALUE),
-                hasStringBooleanValue: i(d, n.HAS_STRING_BOOLEAN_VALUE),
+                mustUseProperty: i(s, n.MUST_USE_PROPERTY),
+                hasBooleanValue: i(s, n.HAS_BOOLEAN_VALUE),
+                hasNumericValue: i(s, n.HAS_NUMERIC_VALUE),
+                hasPositiveNumericValue: i(s, n.HAS_POSITIVE_NUMERIC_VALUE),
+                hasOverloadedBooleanValue: i(s, n.HAS_OVERLOADED_BOOLEAN_VALUE),
+                hasStringBooleanValue: i(s, n.HAS_STRING_BOOLEAN_VALUE),
               }),
                 1 >=
-                s.hasBooleanValue +
-                  s.hasNumericValue +
-                  s.hasOverloadedBooleanValue
+                d.hasBooleanValue +
+                  d.hasNumericValue +
+                  d.hasOverloadedBooleanValue
                   ? void 0
                   : o('50', e),
-                l.hasOwnProperty(e) && (s.attributeName = l[e]),
-                a.hasOwnProperty(e) && (s.attributeNamespace = a[e]),
-                t.hasOwnProperty(e) && (s.mutationMethod = t[e]),
-                (ao[e] = s)
+                l.hasOwnProperty(e) && (d.attributeName = l[e]),
+                a.hasOwnProperty(e) && (d.attributeNamespace = a[e]),
+                t.hasOwnProperty(e) && (d.mutationMethod = t[e]),
+                (ao[e] = d)
             }
           },
         },
@@ -15393,7 +15393,7 @@ object-assign
           var r = n ? L(n) : window,
             e = r.nodeName && r.nodeName.toLowerCase()
           if ('select' === e || ('input' === e && 'file' === r.type)) var a = vt
-          else if (!dt(r))
+          else if (!st(r))
             (e = r.nodeName),
               e &&
                 'input' === e.toLowerCase() &&
@@ -15417,7 +15417,7 @@ object-assign
         },
       }
       Oe.augmentClass(Et, { view: null, detail: null })
-      var si = {
+      var di = {
         Alt: 'altKey',
         Control: 'ctrlKey',
         Meta: 'metaKey',
@@ -15444,7 +15444,7 @@ object-assign
           )
         },
       })
-      var di = {
+      var si = {
           mouseEnter: {
             registrationName: 'onMouseEnter',
             dependencies: ['topMouseOut', 'topMouseOver'],
@@ -15884,7 +15884,7 @@ object-assign
             },
           },
           EnterLeaveEventPlugin: {
-            eventTypes: di,
+            eventTypes: si,
             extractEvents: function(t, n, o, i) {
               if (
                 ('topMouseOver' === t && (o.relatedTarget || o.fromElement)) ||
@@ -15907,12 +15907,12 @@ object-assign
                 return null
               var e = null == t ? r : L(t)
               r = null == n ? r : L(n)
-              var a = Nt.getPooled(di.mouseLeave, t, o, i)
+              var a = Nt.getPooled(si.mouseLeave, t, o, i)
               return (
                 (a.type = 'mouseleave'),
                 (a.target = e),
                 (a.relatedTarget = r),
-                (o = Nt.getPooled(di.mouseEnter, n, o, i)),
+                (o = Nt.getPooled(si.mouseEnter, n, o, i)),
                 (o.type = 'mouseenter'),
                 (o.target = r),
                 (o.relatedTarget = e),
@@ -15933,8 +15933,8 @@ object-assign
               if (!(a = !r)) {
                 a: {
                   ;(r = jt(r)), (a = To.onSelect)
-                  for (var l = 0, s; l < a.length; l++)
-                    if (((s = a[l]), !r.hasOwnProperty(s) || !r[s])) {
+                  for (var l = 0, d; l < a.length; l++)
+                    if (((d = a[l]), !r.hasOwnProperty(d) || !r[d])) {
                       r = !1
                       break a
                     }
@@ -15945,7 +15945,7 @@ object-assign
               if (a) return null
               switch (((r = n ? L(n) : window), t)) {
                 case 'topFocus':
-                  ;(dt(r) || 'true' === r.contentEditable) &&
+                  ;(st(r) || 'true' === r.contentEditable) &&
                     ((ki = r), (Si = n), (Ei = null))
                   break
                 case 'topBlur':
@@ -16208,7 +16208,7 @@ object-assign
           ;(t = t + e.charAt(0).toUpperCase() + e.substring(1)), (rr[t] = rr[e])
         })
       })
-      var sr = l(
+      var dr = l(
           { menuitem: !0 },
           {
             area: !0,
@@ -16228,7 +16228,7 @@ object-assign
             wbr: !0,
           },
         ),
-        dr = or.html,
+        sr = or.html,
         pr = B.thatReturns(''),
         ur = {
           topAbort: 'abort',
@@ -16343,8 +16343,8 @@ object-assign
                     }
                     var e = 0,
                       l = -1,
-                      s = -1,
-                      d = 0,
+                      d = -1,
+                      s = 0,
                       p = 0,
                       c = t,
                       f = null
@@ -16356,7 +16356,7 @@ object-assign
                             (l = e + i),
                           c !== r ||
                             (0 !== o && 3 !== c.nodeType) ||
-                            (s = e + o),
+                            (d = e + o),
                           3 === c.nodeType && (e += c.nodeValue.length),
                           null === (m = c.firstChild))
                         )
@@ -16366,8 +16366,8 @@ object-assign
                       for (;;) {
                         if (c === t) break b
                         if (
-                          (f === n && ++d === i && (l = e),
-                          f === r && ++p === o && (s = e),
+                          (f === n && ++s === i && (l = e),
+                          f === r && ++p === o && (d = e),
                           null !== (m = c.nextSibling))
                         )
                           break
@@ -16375,7 +16375,7 @@ object-assign
                       }
                       c = m
                     }
-                    n = -1 === l || -1 === s ? null : { start: l, end: s }
+                    n = -1 === l || -1 === d ? null : { start: l, end: d }
                   } else n = null
                 }
               n = n || { start: 0, end: 0 }
@@ -16596,7 +16596,7 @@ object-assign
           )
         },
         unstable_createPortal: Yn,
-        unstable_batchedUpdates: st,
+        unstable_batchedUpdates: dt,
         unstable_deferredUpdates: mr.deferredUpdates,
         flushSync: mr.flushSync,
         __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {
@@ -16815,8 +16815,8 @@ object-assign
           i = e.labelKey,
           a = e.onFocus,
           l = e.onOptionRef,
-          s = e.onSelect,
-          d = e.optionClassName,
+          d = e.onSelect,
+          s = e.optionClassName,
           p = e.optionComponent,
           u = e.optionRenderer,
           c = e.options,
@@ -16831,7 +16831,7 @@ object-assign
                 return t[y] == e[y]
               }),
             v = e === t,
-            C = T()(d, {
+            C = T()(s, {
               'Select-option': !0,
               'is-selected': b,
               'is-focused': v,
@@ -16849,7 +16849,7 @@ object-assign
               isSelected: b,
               key: 'option-' + c + '-' + e[y],
               onFocus: a,
-              onSelect: s,
+              onSelect: d,
               option: e,
               optionIndex: c,
               ref: function(e) {
@@ -16862,10 +16862,10 @@ object-assign
           )
         })
       }
-      function s(e) {
+      function d(e) {
         return m.a.createElement(W, e)
       }
-      function d(e) {
+      function s(e) {
         var t = e.option,
           n = e.options,
           o = e.labelKey,
@@ -17663,14 +17663,14 @@ object-assign
                     this.menu
                   ) {
                     this._scrollToFocusedOptionOnUpdate = !1
-                    var s = Object(b.findDOMNode)(this.focused),
-                      d = Object(b.findDOMNode)(this.menu),
-                      p = s.getBoundingClientRect(),
-                      u = d.getBoundingClientRect()
+                    var d = Object(b.findDOMNode)(this.focused),
+                      s = Object(b.findDOMNode)(this.menu),
+                      p = d.getBoundingClientRect(),
+                      u = s.getBoundingClientRect()
                     p.bottom > u.bottom
-                      ? (d.scrollTop =
-                          s.offsetTop + s.clientHeight - d.offsetHeight)
-                      : p.top < u.top && (d.scrollTop = s.offsetTop)
+                      ? (s.scrollTop =
+                          d.offsetTop + d.clientHeight - s.offsetHeight)
+                      : p.top < u.top && (s.scrollTop = d.offsetTop)
                   }
                   if (this.props.scrollMenuIntoView && this.menuContainer) {
                     var c = this.menuContainer.getBoundingClientRect()
@@ -18390,9 +18390,9 @@ object-assign
                   if (this.props.inputRenderer)
                     return this.props.inputRenderer(a)
                   if (this.props.disabled || !this.props.searchable) {
-                    var s = this.props.inputProps,
-                      d = s.inputClassName,
-                      p = D(s, ['inputClassName']),
+                    var d = this.props.inputProps,
+                      s = d.inputClassName,
+                      p = D(d, ['inputClassName']),
                       u = T()(N({}, this._instancePrefix + '-list', i))
                     return m.a.createElement(
                       'div',
@@ -18967,12 +18967,12 @@ object-assign
                         ('undefined' == typeof l ? 'undefined' : S(l)) &&
                       (a = '' + l)
                   }
-                  var s = a
+                  var d = a
                   return (
-                    n && (s = i(s)),
-                    o && (s = s.toLowerCase()),
+                    n && (d = i(d)),
+                    o && (d = d.toLowerCase()),
                     this.setState({ inputValue: a }),
-                    this.loadOptions(s),
+                    this.loadOptions(d),
                     a
                   )
                 },
@@ -19007,19 +19007,19 @@ object-assign
                     r = t.onChange,
                     a = t.placeholder,
                     l = this.state,
-                    s = l.isLoading,
-                    d = l.options,
+                    d = l.isLoading,
+                    s = l.options,
                     p = {
                       noResultsText: this.noResultsText(),
-                      placeholder: s ? o : a,
-                      options: s && o ? [] : d,
+                      placeholder: d ? o : a,
+                      options: d && o ? [] : s,
                       ref: function(t) {
                         return (e.select = t)
                       },
                     }
                   return n(
                     L({}, this.props, p, {
-                      isLoading: s,
+                      isLoading: d,
                       onInputChange: this.onInputChange,
                     }),
                   )
@@ -19097,11 +19097,11 @@ object-assign
                       labelKey: this.labelKey,
                       valueKey: this.valueKey,
                     }),
-                    s = this.isOptionUnique({ option: l, options: i.concat(r) })
-                  if (s) {
-                    var d = o(this.inputValue)
+                    d = this.isOptionUnique({ option: l, options: i.concat(r) })
+                  if (d) {
+                    var s = o(this.inputValue)
                     ;(this._createPlaceholderOption = a({
-                      label: d,
+                      label: s,
                       labelKey: this.labelKey,
                       valueKey: this.valueKey,
                     })),
@@ -19193,7 +19193,7 @@ object-assign
                     'ref',
                   ]),
                   a = this.props.children
-                a || (a = s)
+                a || (a = d)
                 var l = L({}, r, {
                   allowCreate: !0,
                   filterOptions: this.filterOptions,
@@ -19215,14 +19215,14 @@ object-assign
           t
         )
       })(m.a.Component)
-      ;(j.isOptionUnique = d),
+      ;(j.isOptionUnique = s),
         (j.isValidNewOption = p),
         (j.newOptionCreator = u),
         (j.promptTextCreator = c),
         (j.shouldKeyDownEventCreateNewOption = f),
         (j.defaultProps = {
           filterOptions: a,
-          isOptionUnique: d,
+          isOptionUnique: s,
           isValidNewOption: p,
           menuRenderer: l,
           newOptionCreator: u,
@@ -19389,7 +19389,7 @@ object-assign
               : (e.__proto__ = t))
       }
       Object.defineProperty(t, '__esModule', { value: !0 })
-      var s =
+      var d =
           Object.assign ||
           function(e) {
             for (var t = 1, n; t < arguments.length; t++)
@@ -19397,7 +19397,7 @@ object-assign
                 Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o])
             return e
           },
-        d = (function() {
+        s = (function() {
           function e(e, t) {
             for (var n = 0, o; n < t.length; n++)
               (o = t[n]),
@@ -19483,7 +19483,7 @@ object-assign
           }
           return (
             l(t, e),
-            d(t, [
+            s(t, [
               {
                 key: 'componentDidMount',
                 value: function() {
@@ -19600,9 +19600,9 @@ object-assign
                     ].reduce(function(e, t) {
                       return null !== e && void 0 !== e ? e : t
                     }),
-                    t = s({}, this.props.style)
+                    t = d({}, this.props.style)
                   t.display || (t.display = 'inline-block')
-                  var n = s(
+                  var n = d(
                       {
                         boxSizing: 'content-box',
                         width: this.state.inputWidth + 'px',
@@ -19621,7 +19621,7 @@ object-assign
                       this.renderStyles(),
                       u.default.createElement(
                         'input',
-                        s({}, o, { ref: this.inputRef }),
+                        d({}, o, { ref: this.inputRef }),
                       ),
                       u.default.createElement(
                         'div',
@@ -19712,7 +19712,7 @@ object-assign
               e
             )
           })(),
-          s = (function() {
+          d = (function() {
             function e(e, t) {
               ;(this.editor = e), (this.props = t)
             }
@@ -19861,7 +19861,7 @@ object-assign
               e
             )
           })(),
-          d = (function(e) {
+          s = (function(e) {
             function t(t) {
               var n = e.call(this, t) || this
               return r
@@ -19964,7 +19964,7 @@ object-assign
                       this.props.defineMode.fn,
                     ),
                   (this.editor = a(this.ref)),
-                  (this.shared = new s(this.editor, this.props)),
+                  (this.shared = new d(this.editor, this.props)),
                   (this.mirror = a(function() {})),
                   this.editor.on('electricInput', function() {
                     e.mirror.setHistory(e.editor.getHistory())
@@ -20047,7 +20047,7 @@ object-assign
               t
             )
           })(i.Component)
-        t.Controlled = d
+        t.Controlled = s
         var p = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this
@@ -20111,7 +20111,7 @@ object-assign
                     this.props.defineMode.fn,
                   ),
                 (this.editor = a(this.ref)),
-                (this.shared = new s(this.editor, this.props)),
+                (this.shared = new d(this.editor, this.props)),
                 this.editor.on('beforeChange', function(t, n) {
                   e.props.onBeforeChange &&
                     e.props.onBeforeChange(
@@ -20212,8 +20212,8 @@ object-assign
         r = n(88),
         a = n(89),
         l = n(162),
-        s = n(163),
-        d = n(164),
+        d = n(163),
+        s = n(164),
         p = n(165),
         u = n(166),
         c = n(167),
@@ -20334,9 +20334,9 @@ object-assign
                 case 'time':
                 case 'url':
                 case 'week':
-                  return s.a
-                case 'toggle':
                   return d.a
+                case 'toggle':
+                  return s.a
                 case 'radio':
                   return p.a
                 case 'dropdown':
@@ -20384,17 +20384,17 @@ object-assign
               var l = this
               return (
                 void 0 === r && (r = 'default'),
-                e.map(function(e, s) {
+                e.map(function(e, d) {
                   if ('group' === e.type) return l.getFormGroup(e, t, n)
                   if (e.isHidden && e.isHidden(n)) return !1
                   if (!e.resultPath)
                     return new Error(
-                      'Provide a resultPath in config[' + s + ']',
+                      'Provide a resultPath in config[' + d + ']',
                     )
                   var i = v.get(n, e.resultPath, void 0),
-                    d = l.validateField(i, e)
+                    s = l.validateField(i, e)
                   ;(l.errors[r] = l.errors[r] || []),
-                    (l.errors[r][s] = { id: e.id, error: d })
+                    (l.errors[r][d] = { id: e.id, error: s })
                   var p = {
                       config: e,
                       value: i,
@@ -20404,7 +20404,7 @@ object-assign
                   return o.createElement(
                     a.a,
                     {
-                      error: (l.state.validate || e.instantValidation) && d,
+                      error: (l.state.validate || e.instantValidation) && s,
                       config: e,
                       store: n,
                       key: e.id,
@@ -20422,8 +20422,8 @@ object-assign
                 r = e.onFocus,
                 a = e.store,
                 l = e.primaryButton,
-                s = e.secondaryButton,
-                d = e.onSecondaryButtonClick,
+                d = e.secondaryButton,
+                s = e.onSecondaryButtonClick,
                 p = this.getFormElements(
                   t,
                   { onChange: i, onBlur: n, onFocus: r },
@@ -20431,7 +20431,7 @@ object-assign
                 )
               return o.createElement(
                 'form',
-                { className: 'react-forms', onSubmit: this.onSubmit },
+                { className: 'formland', onSubmit: this.onSubmit },
                 o.createElement('div', { className: 'form-elements' }, p),
                 o.createElement(
                   'div',
@@ -20440,11 +20440,11 @@ object-assign
                     o.createElement(
                       'div',
                       { className: 'form-buttons' },
-                      s &&
+                      d &&
                         o.createElement(
                           'button',
-                          { className: 'cancel', onClick: d, type: 'button' },
-                          s,
+                          { className: 'cancel', onClick: s, type: 'button' },
+                          d,
                         ),
                       l &&
                         o.createElement(
@@ -20507,11 +20507,11 @@ object-assign
         a = n(45),
         i = function(e, t, n) {
           var i = function() {
-            for (var e = [], s = 0; s < arguments.length; s++)
-              e[s] = arguments[s]
-            var d = o(e, 2),
-              p = d[0],
-              u = d[1]
+            for (var e = [], d = 0; d < arguments.length; d++)
+              e[d] = arguments[d]
+            var s = o(e, 2),
+              p = s[0],
+              u = s[1]
             switch (p.type) {
               case 'color':
               case 'date':
@@ -20571,11 +20571,11 @@ object-assign
             for (var o = [], r = 1; r < arguments.length; r++)
               o[r - 1] = arguments[r]
             var l = i.apply(null, [n].concat(o)),
-              s = a.set(t, n.resultPath, l),
-              d = n.modifyStoreBeforeChange
-                ? n.modifyStoreBeforeChange(n, l, s) || s
-                : s
-            return e(d)
+              d = a.set(t, n.resultPath, l),
+              s = n.modifyStoreBeforeChange
+                ? n.modifyStoreBeforeChange(n, l, d) || d
+                : d
+            return e(s)
           }
         }
     },
@@ -20617,8 +20617,8 @@ object-assign
             return e
           }
       n(90)
-      var s = n(3),
-        d = (function(e) {
+      var d = n(3),
+        s = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this
           }
@@ -20627,14 +20627,14 @@ object-assign
             (t.prototype.getTopComponent = function(e, t) {
               return o.createElement(
                 'div',
-                { className: 'react-forms-top-component' },
+                { className: 'formland-top-component' },
                 e.topComponent(t),
               )
             }),
             (t.prototype.getBottomComponent = function(e, t) {
               return o.createElement(
                 'div',
-                { className: 'react-forms-bottom-component' },
+                { className: 'formland-bottom-component' },
                 e.bottomComponent(t),
               )
             }),
@@ -20644,7 +20644,7 @@ object-assign
                 n = e.store,
                 i = e.error,
                 a = e.children,
-                d =
+                s =
                   t.helpText &&
                   o.createElement(
                     r.a,
@@ -20667,14 +20667,14 @@ object-assign
                   )
               return o.createElement(
                 'div',
-                { className: 'react-forms-template' },
+                { className: 'formland-template' },
                 'function' == typeof t.topComponent &&
                   this.getTopComponent(t, n),
                 o.createElement(
                   'div',
-                  { className: 'react-forms-label' },
+                  { className: 'formland-label' },
                   o.createElement('span', null, t.displayName),
-                  o.createElement('span', null, d),
+                  o.createElement('span', null, s),
                   t.optional &&
                     o.createElement(
                       'span',
@@ -20684,7 +20684,7 @@ object-assign
                 ),
                 o.createElement(
                   'div',
-                  { className: 'react-forms-field' },
+                  { className: 'formland-field' },
                   o.createElement(
                     'div',
                     { className: 'form-element-wrapper' },
@@ -20692,7 +20692,7 @@ object-assign
                   ),
                   o.createElement(
                     'div',
-                    { className: s('error', { 'is-error': i }) },
+                    { className: d('error', { 'is-error': i }) },
                     i || ' ',
                   ),
                 ),
@@ -20703,7 +20703,7 @@ object-assign
             t
           )
         })(o.Component)
-      t.a = d
+      t.a = s
     },
     function() {},
     function(e, t, n) {
@@ -20718,9 +20718,9 @@ object-assign
         r = n(53),
         a = n.n(r),
         l = n(5),
-        s = n.n(l),
-        d = n(6),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(6),
+        p = n.n(s),
         u = n(7),
         c = n.n(u),
         f = n(0),
@@ -20732,7 +20732,7 @@ object-assign
         v = (function(e) {
           function t() {
             var n, o, i
-            s()(this, t)
+            d()(this, t)
             for (var r = arguments.length, a = Array(r), l = 0; l < r; l++)
               a[l] = arguments[l]
             return (
@@ -20776,8 +20776,8 @@ object-assign
                 o = e.mouseEnterDelay,
                 r = e.mouseLeaveDelay,
                 l = e.overlayStyle,
-                s = e.prefixCls,
-                d = e.children,
+                d = e.prefixCls,
+                s = e.children,
                 p = e.onVisibleChange,
                 u = e.afterVisibleChange,
                 c = e.transitionName,
@@ -20815,7 +20815,7 @@ object-assign
                     {
                       popupClassName: t,
                       ref: this.saveTrigger,
-                      prefixCls: s,
+                      prefixCls: d,
                       popup: this.getPopupElement,
                       action: n,
                       builtinPlacements: b.a,
@@ -20834,7 +20834,7 @@ object-assign
                     },
                     T,
                   ),
-                  d,
+                  s,
                 )
               )
             }),
@@ -20898,9 +20898,9 @@ object-assign
         r = n(26),
         a = n(52),
         l = n(50),
-        s = Object.assign
+        d = Object.assign
       e.exports =
-        !s ||
+        !d ||
         n(20)(function() {
           var e = {},
             t = {},
@@ -20911,18 +20911,18 @@ object-assign
             o.split('').forEach(function(e) {
               t[e] = e
             }),
-            7 != s({}, e)[n] || Object.keys(s({}, t)).join('') != o
+            7 != d({}, e)[n] || Object.keys(d({}, t)).join('') != o
           )
         })
           ? function(e) {
               for (
-                var t = a(e), n = arguments.length, s = 1, d = i.f, p = r.f;
-                n > s;
+                var t = a(e), n = arguments.length, d = 1, s = i.f, p = r.f;
+                n > d;
 
               )
                 for (
-                  var u = l(arguments[s++]),
-                    c = d ? o(u).concat(d(u)) : o(u),
+                  var u = l(arguments[d++]),
+                    c = s ? o(u).concat(s(u)) : o(u),
                     f = c.length,
                     h = 0,
                     m;
@@ -20932,7 +20932,7 @@ object-assign
                   p.call(u, (m = c[h++])) && (t[m] = u[m])
               return t
             }
-          : s
+          : d
     },
     function(e, t, n) {
       var o = n(16),
@@ -20941,14 +20941,14 @@ object-assign
       e.exports = function(e) {
         return function(t, n, a) {
           var l = o(t),
-            s = i(l.length),
-            d = r(a, s),
+            d = i(l.length),
+            s = r(a, d),
             p
           if (e && n != n) {
-            for (; s > d; ) if (((p = l[d++]), p != p)) return !0
+            for (; d > s; ) if (((p = l[s++]), p != p)) return !0
           } else
-            for (; s > d; d++)
-              if ((e || d in l) && l[d] === n) return e || d || 0
+            for (; d > s; s++)
+              if ((e || s in l) && l[s] === n) return e || s || 0
           return !e && -1
         }
       }
@@ -21039,8 +21039,8 @@ object-assign
         ? Object.defineProperties
         : function(e, t) {
             r(e)
-            for (var n = a(t), l = n.length, s = 0, i; l > s; )
-              o.f(e, (i = n[s++]), t[i])
+            for (var n = a(t), l = n.length, d = 0, i; l > d; )
+              o.f(e, (i = n[d++]), t[i])
             return e
           }
     },
@@ -21073,14 +21073,14 @@ object-assign
           r = n(14),
           a = n(37),
           l = n(17)('toStringTag'),
-          s = 'CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,TextTrackList,TouchList'.split(
+          d = 'CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,TextTrackList,TouchList'.split(
             ',',
           ),
-          d = 0;
-        d < s.length;
-        d++
+          s = 0;
+        s < d.length;
+        s++
       ) {
-        var i = s[d],
+        var i = d[s],
           p = o[i],
           u = p && p.prototype
         u && !u[l] && r(u, l, i), (a[i] = a.Array)
@@ -21136,8 +21136,8 @@ object-assign
         i = n(10),
         a = n(13),
         l = n(55),
-        s = n(116).KEY,
-        d = n(20),
+        d = n(116).KEY,
+        s = n(20),
         p = n(33),
         u = n(39),
         c = n(25),
@@ -21175,7 +21175,7 @@ object-assign
         G = !K || !K[I] || !K[I].findChild,
         Y =
           i &&
-          d(function() {
+          s(function() {
             return (
               7 !=
               T(
@@ -21243,7 +21243,7 @@ object-assign
         },
         ee = function(e) {
           for (var t = M(C(e)), n = [], o = 0, i; t.length > o; )
-            r(W, (i = t[o++])) || i == R || i == s || n.push(i)
+            r(W, (i = t[o++])) || i == R || i == d || n.push(i)
           return n
         },
         te = function(e) {
@@ -21329,7 +21329,7 @@ object-assign
             a.S +
               a.F *
                 (!B ||
-                  d(function() {
+                  s(function() {
                     var e = D()
                     return (
                       '[null]' != A([e]) ||
@@ -21369,13 +21369,13 @@ object-assign
         r = n(11),
         a = n(9).f,
         l = 0,
-        s =
+        d =
           Object.isExtensible ||
           function() {
             return !0
           },
-        d = !n(20)(function() {
-          return s(Object.preventExtensions({}))
+        s = !n(20)(function() {
+          return d(Object.preventExtensions({}))
         }),
         p = function(e) {
           a(e, o, { value: { i: 'O' + ++l, w: {} } })
@@ -21389,7 +21389,7 @@ object-assign
                 ? e
                 : ('string' == typeof e ? 'S' : 'P') + e
             if (!r(e, o)) {
-              if (!s(e)) return 'F'
+              if (!d(e)) return 'F'
               if (!t) return 'E'
               p(e)
             }
@@ -21397,14 +21397,14 @@ object-assign
           },
           getWeak: function(e, t) {
             if (!r(e, o)) {
-              if (!s(e)) return !0
+              if (!d(e)) return !0
               if (!t) return !1
               p(e)
             }
             return e[o].w
           },
           onFreeze: function(e) {
-            return d && u.NEED && s(e) && !r(e, o) && p(e), e
+            return s && u.NEED && d(e) && !r(e, o) && p(e), e
           },
         })
     },
@@ -21416,8 +21416,8 @@ object-assign
         var t = o(e),
           n = r.f
         if (n)
-          for (var l = n(e), s = a.f, d = 0, i; l.length > d; )
-            s.call(e, (i = l[d++])) && t.push(i)
+          for (var l = n(e), d = a.f, s = 0, i; l.length > s; )
+            d.call(e, (i = l[s++])) && t.push(i)
         return t
       }
     },
@@ -21521,8 +21521,8 @@ object-assign
       }
       var a = n(12),
         l = n.n(a),
-        s = n(0),
-        d = n.n(s),
+        d = n(0),
+        s = n.n(d),
         p = n(1),
         u = n.n(p),
         c = n(2),
@@ -21814,7 +21814,7 @@ object-assign
               (n.onMouseEnter = this.onPopupMouseEnter),
             this.isMouseLeaveToHide() &&
               (n.onMouseLeave = this.onPopupMouseLeave),
-            d.a.createElement(
+            s.a.createElement(
               b.a,
               l()(
                 {
@@ -21962,7 +21962,7 @@ object-assign
           var e = this.state.popupVisible,
             t = this.props,
             n = t.children,
-            o = d.a.Children.only(n),
+            o = s.a.Children.only(n),
             i = { key: 'trigger' }
           ;(i.onContextMenu = this.isContextMenuToShow()
             ? this.onContextMenu
@@ -21984,12 +21984,12 @@ object-assign
               ? ((i.onFocus = this.onFocus), (i.onBlur = this.onBlur))
               : ((i.onFocus = this.createTwoChains('onFocus')),
                 (i.onBlur = this.createTwoChains('onBlur')))
-          var r = d.a.cloneElement(o, i)
+          var r = s.a.cloneElement(o, i)
           if (!T) return r
           var a
           return (
             (e || this._component || t.forceRender) &&
-              (a = d.a.createElement(
+              (a = s.a.createElement(
                 x.a,
                 {
                   key: 'portal',
@@ -22024,10 +22024,10 @@ object-assign
         r = n(28),
         a = n(44)
       var l = 'mixins',
-        s
-      ;(s = {}),
+        d
+      ;(d = {}),
         (e.exports = function(e, t, n) {
-          function s(e, t) {
+          function d(e, t) {
             var n = y.hasOwnProperty(t) ? y[t] : null
             x.hasOwnProperty(t) &&
               a(
@@ -22042,7 +22042,7 @@ object-assign
                   t,
                 )
           }
-          function d(e, n) {
+          function s(e, n) {
             if (!n) {
               return
             }
@@ -22058,13 +22058,13 @@ object-assign
               i = o.__reactAutoBindPairs
             for (var r in (n.hasOwnProperty(l) && b.mixins(e, n.mixins), n))
               if (n.hasOwnProperty(r) && r != l) {
-                var d = n[r],
+                var s = n[r],
                   p = o.hasOwnProperty(r)
-                if ((s(p, r), b.hasOwnProperty(r))) b[r](e, d)
+                if ((d(p, r), b.hasOwnProperty(r))) b[r](e, s)
                 else {
                   var u = y.hasOwnProperty(r),
-                    h = 'function' == typeof d && !u && !p && !1 !== n.autobind
-                  if (h) i.push(r, d), (o[r] = d)
+                    h = 'function' == typeof s && !u && !p && !1 !== n.autobind
+                  if (h) i.push(r, s), (o[r] = s)
                   else if (p) {
                     var m = y[r]
                     a(
@@ -22074,9 +22074,9 @@ object-assign
                       r,
                     ),
                       'DEFINE_MANY_MERGED' === m
-                        ? (o[r] = c(o[r], d))
-                        : 'DEFINE_MANY' === m && (o[r] = f(o[r], d))
-                  } else (o[r] = d), !1
+                        ? (o[r] = c(o[r], s))
+                        : 'DEFINE_MANY' === m && (o[r] = f(o[r], s))
+                  } else (o[r] = s), !1
                 }
               }
           }
@@ -22165,7 +22165,7 @@ object-assign
                 e.displayName = t
               },
               mixins: function(e, t) {
-                if (t) for (var n = 0; n < t.length; n++) d(e, t[n])
+                if (t) for (var n = 0; n < t.length; n++) s(e, t[n])
               },
               childContextTypes: function(e, t) {
                 !1, (e.childContextTypes = i({}, e.childContextTypes, t))
@@ -22228,10 +22228,10 @@ object-assign
               for (var i in ((t.prototype = new w()),
               (t.prototype.constructor = t),
               (t.prototype.__reactAutoBindPairs = []),
-              g.forEach(d.bind(null, t)),
-              d(t, v),
-              d(t, e),
-              d(t, C),
+              g.forEach(s.bind(null, t)),
+              s(t, v),
+              s(t, e),
+              s(t, C),
               t.getDefaultProps && (t.defaultProps = t.getDefaultProps()),
               !1,
               a(
@@ -22305,7 +22305,7 @@ object-assign
           n =
             'function' == typeof e.stopPropagation ||
             'boolean' == typeof e.cancelBubble
-        d['default'].call(this), (this.nativeEvent = e)
+        s['default'].call(this), (this.nativeEvent = e)
         var o = a
         'defaultPrevented' in e
           ? (o = e.defaultPrevented ? r : a)
@@ -22314,19 +22314,19 @@ object-assign
             : 'returnValue' in e && (o = e.returnValue === f ? r : a),
           (this.isDefaultPrevented = o)
         var i = [],
-          s = h.concat(),
+          d = h.concat(),
           p,
           u,
           l
         for (
           m.forEach(function(e) {
-            t.match(e.reg) && ((s = s.concat(e.props)), e.fix && i.push(e.fix))
+            t.match(e.reg) && ((d = d.concat(e.props)), e.fix && i.push(e.fix))
           }),
-            u = s.length;
+            u = d.length;
           u;
 
         )
-          (l = s[--u]), (this[l] = e[l])
+          (l = d[--u]), (this[l] = e[l])
         for (
           !this.target && n && (this.target = e.srcElement || document),
             this.target &&
@@ -22340,8 +22340,8 @@ object-assign
         this.timeStamp = e.timeStamp || Date.now()
       }
       Object.defineProperty(t, '__esModule', { value: !0 })
-      var s = n(136),
-        d = o(s),
+      var d = n(136),
+        s = o(d),
         p = n(21),
         u = o(p),
         c = !0,
@@ -22385,20 +22385,20 @@ object-assign
                 r = t.wheelDeltaX,
                 a = t.detail,
                 l,
-                s,
-                d
-              n && (d = n / 120),
-                a && (d = 0 - (0 == a % 3 ? a / 3 : a)),
+                d,
+                s
+              n && (s = n / 120),
+                a && (s = 0 - (0 == a % 3 ? a / 3 : a)),
                 o !== void 0 &&
                   (o === e.HORIZONTAL_AXIS
-                    ? ((s = 0), (l = 0 - d))
-                    : o === e.VERTICAL_AXIS && ((l = 0), (s = d))),
-                i !== void 0 && (s = i / 120),
+                    ? ((d = 0), (l = 0 - s))
+                    : o === e.VERTICAL_AXIS && ((l = 0), (d = s))),
+                i !== void 0 && (d = i / 120),
                 r !== void 0 && (l = -1 * r / 120),
-                l || s || (s = d),
+                l || d || (d = s),
                 l !== void 0 && (e.deltaX = l),
-                s !== void 0 && (e.deltaY = s),
-                d !== void 0 && (e.delta = d)
+                d !== void 0 && (e.deltaY = d),
+                s !== void 0 && (e.delta = s)
             },
           },
           {
@@ -22456,7 +22456,7 @@ object-assign
             },
           },
         ],
-        g = d['default'].prototype
+        g = s['default'].prototype
       ;(0, u['default'])(l.prototype, g, {
         constructor: l,
         preventDefault: function() {
@@ -22517,9 +22517,9 @@ object-assign
         r = n(5),
         a = n.n(r),
         l = n(6),
-        s = n.n(l),
-        d = n(7),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(7),
+        p = n.n(s),
         u = n(0),
         c = n.n(u),
         f = n(1),
@@ -22534,7 +22534,7 @@ object-assign
         w = (function(e) {
           function t(n) {
             a()(this, t)
-            var o = s()(this, e.call(this, n))
+            var o = d()(this, e.call(this, n))
             return (
               T.call(o),
               (o.savePopupRef = x.c.bind(o, 'popupInstance')),
@@ -22574,18 +22574,18 @@ object-assign
                 r = t.visible,
                 a = t.prefixCls,
                 l = t.destroyPopupOnHide,
-                s = this.getClassName(
+                d = this.getClassName(
                   this.currentAlignClassName || t.getClassNameFromAlign(n),
                 )
               r || (this.currentAlignClassName = null)
-              var d = i()({}, o, this.getZIndexStyle()),
+              var s = i()({}, o, this.getZIndexStyle()),
                 p = {
-                  className: s,
+                  className: d,
                   prefixCls: a,
                   ref: e,
                   onMouseEnter: t.onMouseEnter,
                   onMouseLeave: t.onMouseLeave,
-                  style: d,
+                  style: s,
                 }
               return l
                 ? c.a.createElement(
@@ -22737,8 +22737,8 @@ object-assign
         r = n.n(i),
         a = n(6),
         l = n.n(a),
-        s = n(7),
-        d = n.n(s),
+        d = n(7),
+        s = n.n(d),
         p = n(0),
         u = n.n(p),
         c = n(1),
@@ -22752,10 +22752,10 @@ object-assign
           function t() {
             var n, o, i
             r()(this, t)
-            for (var a = arguments.length, s = Array(a), d = 0; d < a; d++)
-              s[d] = arguments[d]
+            for (var a = arguments.length, d = Array(a), s = 0; s < a; s++)
+              d[s] = arguments[s]
             return (
-              (i = ((n = ((o = l()(this, e.call.apply(e, [this].concat(s)))),
+              (i = ((n = ((o = l()(this, e.call.apply(e, [this].concat(d)))),
               o)),
               (o.forceAlign = function() {
                 var e = o.props
@@ -22769,7 +22769,7 @@ object-assign
             )
           }
           return (
-            d()(t, e),
+            s()(t, e),
             (t.prototype.componentDidMount = function() {
               var e = this.props
               this.forceAlign(),
@@ -22877,7 +22877,7 @@ object-assign
           n.top >= t.bottom
         )
       }
-      function s(e, t, n) {
+      function d(e, t, n) {
         var o = []
         return (
           f.a.each(e, function(e) {
@@ -22890,7 +22890,7 @@ object-assign
           o
         )
       }
-      function d(e, t) {
+      function s(e, t) {
         return (e[t] = -e[t]), e
       }
       function p(e, t) {
@@ -22924,16 +22924,16 @@ object-assign
           N = !l(C)
         if (k && (v.adjustX || v.adjustY) && N) {
           if (v.adjustX && o(O, S, k)) {
-            var L = s(p, /[lr]/gi, { l: 'r', r: 'l' }),
-              M = d(c, 0),
-              D = d(h, 0),
+            var L = d(p, /[lr]/gi, { l: 'r', r: 'l' }),
+              M = s(c, 0),
+              D = s(h, 0),
               _ = Object(b.a)(S, E, L, M, D)
             r(_, S, k) || ((T = 1), (p = L), (c = M), (h = D))
           }
           if (v.adjustY && i(O, S, k)) {
-            var A = s(p, /[tb]/gi, { t: 'b', b: 't' }),
-              I = d(c, 1),
-              R = d(h, 1),
+            var A = d(p, /[tb]/gi, { t: 'b', b: 't' }),
+              I = s(c, 1),
+              R = s(h, 1),
               F = Object(b.a)(S, E, A, I, R)
             a(F, S, k) || ((T = 1), (p = A), (c = I), (h = R))
           }
@@ -23020,7 +23020,7 @@ object-assign
           var n = window.getComputedStyle(e, null),
             o = n.getPropertyValue('transform') || n.getPropertyValue(i())
           if (o && 'none' !== o) {
-            var a = o.match(s),
+            var a = o.match(d),
               l
             if (a)
               (a = a[1]),
@@ -23031,7 +23031,7 @@ object-assign
                 (l[5] = t.y),
                 r(e, 'matrix(' + l.join(',') + ')')
             else {
-              var p = o.match(d)[1]
+              var p = o.match(s)[1]
               ;(l = p.split(',').map(function(e) {
                 return parseFloat(e, 10)
               })),
@@ -23051,8 +23051,8 @@ object-assign
         })
       var a = void 0,
         l = { Webkit: '-webkit-', Moz: '-moz-', ms: '-ms-', O: '-o-' },
-        s = /matrix\((.*)\)/,
-        d = /matrix3d\((.*)\)/
+        d = /matrix\((.*)\)/,
+        s = /matrix3d\((.*)\)/
     },
     function(e, t, n) {
       'use strict'
@@ -23065,10 +23065,10 @@ object-assign
         for (
           var t = { left: 0, right: Infinity, top: 0, bottom: Infinity },
             n = Object(a.a)(e),
-            s = r.a.getDocument(e),
-            d = s.defaultView || s.parentWindow,
-            p = s.body,
-            u = s.documentElement;
+            d = r.a.getDocument(e),
+            s = d.defaultView || d.parentWindow,
+            p = d.body,
+            u = d.documentElement;
           n;
 
         ) {
@@ -23095,10 +23095,10 @@ object-assign
           var h = r.a.css(e, 'position')
           'absolute' === h && (e.style.position = 'fixed')
         }
-        var m = r.a.getWindowScrollLeft(d),
-          g = r.a.getWindowScrollTop(d),
-          y = r.a.viewportWidth(d),
-          b = r.a.viewportHeight(d),
+        var m = r.a.getWindowScrollLeft(s),
+          g = r.a.getWindowScrollTop(s),
+          y = r.a.viewportWidth(s),
+          b = r.a.viewportHeight(s),
           v = u.scrollWidth,
           C = u.scrollHeight
         if ((e.style && (e.style.position = f), Object(l.a)(e)))
@@ -23185,10 +23185,10 @@ object-assign
       t.a = function(e, t, n, i, r) {
         var a = Object(o.a)(t, n[1]),
           l = Object(o.a)(e, n[0]),
-          s = [l.left - a.left, l.top - a.top]
+          d = [l.left - a.left, l.top - a.top]
         return {
-          left: e.left - s[0] + i[0] - r[0],
-          top: e.top - s[1] + i[1] - r[1],
+          left: e.left - d[0] + i[0] - r[0],
+          top: e.top - d[1] + i[1] - r[1],
         }
       }
     },
@@ -23226,9 +23226,9 @@ object-assign
       var r = n(12),
         a = n.n(r),
         l = n(150),
-        s = n.n(l),
-        d = n(5),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(5),
+        p = n.n(s),
         u = n(42),
         c = n.n(u),
         f = n(6),
@@ -23294,7 +23294,7 @@ object-assign
                   var r = i.showProp,
                     a = this.currentlyAnimatingKeys,
                     l = i.exclusive ? Object(x.e)(o(i)) : this.state.children,
-                    d = []
+                    s = []
                   r
                     ? (l.forEach(function(e) {
                         var t = e && Object(x.a)(n, e.key),
@@ -23302,14 +23302,14 @@ object-assign
                         ;(o =
                           (t && t.props[r]) || !e.props[r]
                             ? t
-                            : b.a.cloneElement(t || e, s()({}, r, !0))),
-                          o && d.push(o)
+                            : b.a.cloneElement(t || e, d()({}, r, !0))),
+                          o && s.push(o)
                       }),
                       n.forEach(function(e) {
-                        ;(e && Object(x.a)(l, e.key)) || d.push(e)
+                        ;(e && Object(x.a)(l, e.key)) || s.push(e)
                       }))
-                    : (d = Object(x.d)(l, n)),
-                    this.setState({ children: d }),
+                    : (s = Object(x.d)(l, n)),
+                    this.setState({ children: s }),
                     n.forEach(function(e) {
                       var n = e && e.key
                       if (!(e && a[n])) {
@@ -23317,8 +23317,8 @@ object-assign
                         if (r) {
                           var i = e.props[r]
                           if (o) {
-                            var s = Object(x.b)(l, n, r)
-                            !s && i && t.keysToEnter.push(n)
+                            var d = Object(x.b)(l, n, r)
+                            !d && i && t.keysToEnter.push(n)
                           } else i && t.keysToEnter.push(n)
                         } else o || t.keysToEnter.push(n)
                       }
@@ -23330,8 +23330,8 @@ object-assign
                         if (r) {
                           var l = e.props[r]
                           if (i) {
-                            var s = Object(x.b)(n, o, r)
-                            !s && l && t.keysToLeave.push(o)
+                            var d = Object(x.b)(n, o, r)
+                            !d && l && t.keysToLeave.push(o)
                           } else l && t.keysToLeave.push(o)
                         } else i || t.keysToLeave.push(o)
                       }
@@ -23614,9 +23614,9 @@ object-assign
         r = n(5),
         a = n.n(r),
         l = n(42),
-        s = n.n(l),
-        d = n(6),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(6),
+        p = n.n(s),
         u = n(7),
         c = n.n(u),
         f = n(0),
@@ -23647,7 +23647,7 @@ object-assign
           }
           return (
             c()(t, e),
-            s()(t, [
+            d()(t, [
               {
                 key: 'componentWillUnmount',
                 value: function() {
@@ -23689,15 +23689,15 @@ object-assign
                       'object' ===
                       ('undefined' == typeof a ? 'undefined' : i()(a))
                   this.stop()
-                  var s = function() {
+                  var d = function() {
                     ;(n.stopper = null), t()
                   }
                   if ((v.b || !r.animation[e]) && a && r[x[e]]) {
-                    var d = l ? a[e] : a + '-' + e,
-                      p = d + '-active'
+                    var s = l ? a[e] : a + '-' + e,
+                      p = s + '-active'
                     l && a[e + 'Active'] && (p = a[e + 'Active']),
-                      (this.stopper = Object(v.a)(o, { name: d, active: p }, s))
-                  } else this.stopper = r.animation[e](o, s)
+                      (this.stopper = Object(v.a)(o, { name: s, active: p }, d))
+                  } else this.stopper = r.animation[e](o, d)
                 },
               },
               {
@@ -23750,16 +23750,16 @@ object-assign
       })
       var a = n(27),
         l = n.n(a),
-        s = n(156),
-        d = n(157),
-        p = n.n(d),
-        u = 0 !== s.a.endEvents.length,
+        d = n(156),
+        s = n(157),
+        p = n.n(s),
+        u = 0 !== d.a.endEvents.length,
         c = ['Webkit', 'Moz', 'O', 'ms'],
         f = ['-webkit-', '-moz-', '-o-', 'ms-', ''],
         h = function(t, e, n) {
           var o = 'object' === ('undefined' == typeof e ? 'undefined' : l()(e)),
             a = o ? e.name : e,
-            d = o ? e.active : e + '-active',
+            s = o ? e.active : e + '-active',
             u = n,
             c = p()(t),
             f,
@@ -23775,16 +23775,16 @@ object-assign
                   (clearTimeout(t.rcAnimTimeout), (t.rcAnimTimeout = null)),
                 r(t),
                 c.remove(a),
-                c.remove(d),
-                s.a.removeEndEventListener(t, t.rcEndListener),
+                c.remove(s),
+                d.a.removeEndEventListener(t, t.rcEndListener),
                 (t.rcEndListener = null),
                 u && u())
             }),
-            s.a.addEndEventListener(t, t.rcEndListener),
+            d.a.addEndEventListener(t, t.rcEndListener),
             f && f(),
             c.add(a),
             (t.rcAnimTimeout = setTimeout(function() {
-              ;(t.rcAnimTimeout = null), c.add(d), h && setTimeout(h, 0), i(t)
+              ;(t.rcAnimTimeout = null), c.add(s), h && setTimeout(h, 0), i(t)
             }, 30)),
             {
               stop: function() {
@@ -23800,11 +23800,11 @@ object-assign
               (t.rcAnimTimeout &&
                 (clearTimeout(t.rcAnimTimeout), (t.rcAnimTimeout = null)),
               r(t),
-              s.a.removeEndEventListener(t, t.rcEndListener),
+              d.a.removeEndEventListener(t, t.rcEndListener),
               (t.rcEndListener = null),
               n && n())
           }),
-          s.a.addEndEventListener(t, t.rcEndListener),
+          d.a.addEndEventListener(t, t.rcEndListener),
           (t.rcAnimTimeout = setTimeout(function() {
             for (var n in e) e.hasOwnProperty(n) && (t.style[n] = e[n])
             ;(t.rcAnimTimeout = null), i(t)
@@ -23944,9 +23944,9 @@ object-assign
         r = n(6),
         a = n.n(r),
         l = n(7),
-        s = n.n(l),
-        d = n(0),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(0),
+        p = n.n(s),
         u = n(1),
         c = n.n(u),
         f = n(63),
@@ -23955,7 +23955,7 @@ object-assign
             return i()(this, t), a()(this, e.apply(this, arguments))
           }
           return (
-            s()(t, e),
+            d()(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.className
@@ -23979,7 +23979,7 @@ object-assign
             }),
             t
           )
-        })(d.Component)
+        })(s.Component)
       ;(h.propTypes = {
         hiddenClassName: c.a.string,
         className: c.a.string,
@@ -24022,8 +24022,8 @@ object-assign
         }
         var i = e.autoMount,
           a = void 0 === i || i,
-          s = e.autoDestroy,
-          d = void 0 === s || s,
+          d = e.autoDestroy,
+          s = void 0 === d || d,
           p = e.isVisible,
           u = e.isForceRender,
           c = e.getComponent,
@@ -24040,13 +24040,13 @@ object-assign
                 t(this)
               },
             })),
-          (a && d) ||
+          (a && s) ||
             (m = r()({}, m, {
               renderComponent: function(e, n) {
                 t(this, e, n)
               },
             })),
-          (m = d
+          (m = s
             ? r()({}, m, {
                 componentWillUnmount: function() {
                   n(this)
@@ -24072,9 +24072,9 @@ object-assign
         r = n(42),
         a = n.n(r),
         l = n(6),
-        s = n.n(l),
-        d = n(7),
-        p = n.n(d),
+        d = n.n(l),
+        s = n(7),
+        p = n.n(s),
         u = n(0),
         c = n.n(u),
         f = n(2),
@@ -24085,7 +24085,7 @@ object-assign
           function t() {
             return (
               i()(this, t),
-              s()(
+              d()(
                 this,
                 (t.__proto__ || Object.getPrototypeOf(t)).apply(
                   this,
@@ -24268,7 +24268,7 @@ object-assign
               var e = this.props.config
               return o.createElement(
                 'div',
-                { className: 'react-forms-group' },
+                { className: 'formland-group' },
                 o.createElement(
                   'div',
                   { className: 'group-title' },
@@ -24281,7 +24281,7 @@ object-assign
                 ),
                 o.createElement(
                   'div',
-                  { className: 'react-forms-group-elements' },
+                  { className: 'formland-group-elements' },
                   this.props.children,
                 ),
               )
@@ -24310,13 +24310,13 @@ object-assign
           n = void 0 === t ? '' : t,
           i = e.config,
           l = e.callbacks,
-          s = void 0 === l ? {} : l
+          d = void 0 === l ? {} : l
         return o.createElement(
           'div',
           { className: a('form-Element', 'input-text', i.className) },
           o.createElement(
             'input',
-            r({}, s, i.componentProps, {
+            r({}, d, i.componentProps, {
               type: i.type,
               value: n,
               placeholder: i.placeholder,
@@ -24346,8 +24346,8 @@ object-assign
           n = void 0 !== t && t,
           i = e.config,
           l = e.callbacks,
-          s = void 0 === l ? {} : l,
-          d = Math.random()
+          d = void 0 === l ? {} : l,
+          s = Math.random()
             .toString(36)
             .slice(-5),
           p = i.componentProps || {}
@@ -24359,14 +24359,14 @@ object-assign
             { className: 'input-toggle-wrapper' },
             o.createElement(
               'input',
-              r({}, s, p, {
+              r({}, d, p, {
                 checked: n,
                 value: (!n).toString(),
-                id: i.id + '_' + d,
+                id: i.id + '_' + s,
                 type: 'checkbox',
               }),
             ),
-            o.createElement('label', { htmlFor: i.id + '_' + d }),
+            o.createElement('label', { htmlFor: i.id + '_' + s }),
           ),
           o.createElement('span', { className: 'info-text' }, p.infoText),
         )
@@ -24391,8 +24391,8 @@ object-assign
           n = void 0 === t ? '' : t,
           i = e.config,
           l = e.callbacks,
-          s = void 0 === l ? {} : l,
-          d = (i.options || []).map(function(e) {
+          d = void 0 === l ? {} : l,
+          s = (i.options || []).map(function(e) {
             var t = Math.random()
               .toString(36)
               .slice(-5)
@@ -24401,7 +24401,7 @@ object-assign
               { className: 'radio-button', key: i.id + '_' + e.value },
               o.createElement(
                 'input',
-                r({}, s, i.componentProps, {
+                r({}, d, i.componentProps, {
                   checked: n === e.value,
                   className: i.className,
                   type: 'radio',
@@ -24420,7 +24420,7 @@ object-assign
         return o.createElement(
           'div',
           { className: a('form-element', 'input-radio', i.className) },
-          d,
+          s,
         )
       }
     },
@@ -24443,14 +24443,14 @@ object-assign
           n = e.config,
           i = e.callbacks,
           l = void 0 === i ? {} : i,
-          s =
+          d =
             (t &&
             n.componentProps &&
             n.componentProps.multiple &&
             n.simpleValues
               ? t.split(n.separator || ',')
               : t) || (n.componentProps && n.componentProps.multiple ? [] : ''),
-          d = (n.options || []).map(function(e, t) {
+          s = (n.options || []).map(function(e, t) {
             return o.createElement(
               'option',
               {
@@ -24473,8 +24473,8 @@ object-assign
             },
             o.createElement(
               'select',
-              r({}, l, n.componentProps, { value: s, name: n.id, id: n.id }),
-              d,
+              r({}, l, n.componentProps, { value: d, name: n.id, id: n.id }),
+              s,
             ),
           ),
         )
@@ -24499,9 +24499,9 @@ object-assign
           n = void 0 === t ? '' : t,
           i = e.config,
           l = e.callbacks,
-          s = void 0 === l ? {} : l,
-          d = i.separator,
-          p = void 0 === d ? ',' : d,
+          d = void 0 === l ? {} : l,
+          s = i.separator,
+          p = void 0 === s ? ',' : s,
           u = i.simpleValues ? n.split(p) : n,
           c = (i.options || []).map(function(e) {
             var t = Math.random()
@@ -24512,7 +24512,7 @@ object-assign
               { className: 'checkbox-wrapper', key: i.id + '_' + t },
               o.createElement(
                 'input',
-                r({}, s, i.componentProps, {
+                r({}, d, i.componentProps, {
                   checked: -1 < u.indexOf(e.value),
                   value: e.value.toString(),
                   id: i.id + '_' + t,
@@ -24548,27 +24548,27 @@ object-assign
           n = e.config,
           i = e.callbacks,
           l = void 0 === i ? {} : i,
-          s = n.componentProps || {}
+          d = n.componentProps || {}
         return o.createElement(
           'div',
           { className: a('form-element', 'input-range', n.className) },
-          !1 !== s.showValue &&
-            o.createElement('div', { className: 'value' }, t || s.min),
+          !1 !== d.showValue &&
+            o.createElement('div', { className: 'value' }, t || d.min),
           o.createElement(
             'input',
-            r({}, l, s, {
+            r({}, l, d, {
               type: 'range',
-              value: t || s.min,
+              value: t || d.min,
               name: n.id,
               id: n.id,
             }),
           ),
-          !1 !== s.showRange &&
+          !1 !== d.showRange &&
             o.createElement(
               'div',
               { className: 'range' },
-              o.createElement('span', { className: 'min' }, s.min),
-              o.createElement('span', { className: 'max' }, s.max),
+              o.createElement('span', { className: 'min' }, d.min),
+              o.createElement('span', { className: 'max' }, d.max),
             ),
         )
       }
@@ -24592,7 +24592,7 @@ object-assign
           n = void 0 === t ? {} : t,
           i = e.config,
           l = e.value,
-          s = void 0 === l ? '' : l
+          d = void 0 === l ? '' : l
         return o.createElement(
           'div',
           { className: a('form-element', 'input-textarea', i.className) },
@@ -24603,7 +24603,7 @@ object-assign
               className: i.className,
               name: i.id,
               id: i.id,
-              value: s,
+              value: d,
             }),
           ),
         )

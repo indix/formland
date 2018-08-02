@@ -904,41 +904,41 @@ span.CodeMirror-selectedtext {
 .cm-s-zenburn .CodeMirror-focused div.CodeMirror-selected {
   background: #4f4f4f;
 }
-.react-forms {
+.formland {
   font-size: 14px;
 }
-.react-forms .react-forms-template {
+.formland .formland-template {
   margin-bottom: 30px;
 }
-.react-forms .react-forms-template.dir-horizontal {
+.formland .formland-template.dir-horizontal {
   display: inline-block;
   margin-right: 30px;
 }
-.react-forms .react-forms-template:last-child {
+.formland .formland-template:last-child {
   margin-bottom: 0;
 }
-.react-forms .react-forms-template .react-forms-label {
+.formland .formland-template .formland-label {
   margin-bottom: 10px;
 }
-.react-forms .react-forms-template .react-forms-label .optional {
+.formland .formland-template .formland-label .optional {
   display: inline-block;
   margin-left: 5px;
   opacity: 0.5;
   font-size: 12px;
 }
-.react-forms .react-forms-template .help-text-trigger {
+.formland .formland-template .help-text-trigger {
   display: inline-block;
   margin-left: 7px;
   opacity: 0.5;
   cursor: help;
 }
-.react-forms .react-forms-template .help-text-trigger img {
+.formland .formland-template .help-text-trigger img {
   width: 15px;
 }
-.react-forms .react-forms-template .react-forms-field {
+.formland .formland-template .formland-field {
   position: relative;
 }
-.react-forms .react-forms-template .react-forms-field .error {
+.formland .formland-template .formland-field .error {
   position: absolute;
   font-size: 12px;
   padding: 3px 10px;
@@ -949,11 +949,11 @@ span.CodeMirror-selectedtext {
   opacity: 0;
   pointer-events: none;
 }
-.react-forms .react-forms-template .react-forms-field .error.is-error {
+.formland .formland-template .formland-field .error.is-error {
   opacity: 1;
   pointer-events: all;
 }
-.react-forms .react-forms-template .react-forms-field .error:before {
+.formland .formland-template .formland-field .error:before {
   position: absolute;
   bottom: 100%;
   left: 10px;
@@ -965,31 +965,31 @@ span.CodeMirror-selectedtext {
   border: solid transparent;
   border-bottom-color: #ff3a3a;
 }
-.react-forms .react-forms-group {
+.formland .formland-group {
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #e0e0e0;
 }
-.react-forms .react-forms-group:last-child {
+.formland .formland-group:last-child {
   border-bottom: none;
 }
-.react-forms .react-forms-group .group-title {
+.formland .formland-group .group-title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.react-forms .react-forms-group .group-description {
+.formland .formland-group .group-description {
   margin-bottom: 30px;
 }
-.react-forms .input-text input[type='date'],
-.react-forms .input-text input[type='email'],
-.react-forms .input-text input[type='month'],
-.react-forms .input-text input[type='number'],
-.react-forms .input-text input[type='tel'],
-.react-forms .input-text input[type='text'],
-.react-forms .input-text input[type='time'],
-.react-forms .input-text input[type='url'],
-.react-forms .input-text input[type='week'] {
+.formland .input-text input[type='date'],
+.formland .input-text input[type='email'],
+.formland .input-text input[type='month'],
+.formland .input-text input[type='number'],
+.formland .input-text input[type='tel'],
+.formland .input-text input[type='text'],
+.formland .input-text input[type='time'],
+.formland .input-text input[type='url'],
+.formland .input-text input[type='week'] {
   width: 100%;
   padding: 10px;
   border: 2px solid #e0e0e0;
@@ -999,31 +999,31 @@ span.CodeMirror-selectedtext {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.react-forms .input-text input[type='date']:focus,
-.react-forms .input-text input[type='email']:focus,
-.react-forms .input-text input[type='month']:focus,
-.react-forms .input-text input[type='number']:focus,
-.react-forms .input-text input[type='tel']:focus,
-.react-forms .input-text input[type='text']:focus,
-.react-forms .input-text input[type='time']:focus,
-.react-forms .input-text input[type='url']:focus,
-.react-forms .input-text input[type='week']:focus {
+.formland .input-text input[type='date']:focus,
+.formland .input-text input[type='email']:focus,
+.formland .input-text input[type='month']:focus,
+.formland .input-text input[type='number']:focus,
+.formland .input-text input[type='tel']:focus,
+.formland .input-text input[type='text']:focus,
+.formland .input-text input[type='time']:focus,
+.formland .input-text input[type='url']:focus,
+.formland .input-text input[type='week']:focus {
   border-color: #c6cbfc;
 }
-.react-forms .input-text input[type='color'] {
+.formland .input-text input[type='color'] {
   -webkit-appearance: none;
   border: none;
   width: 100%;
   height: 41px;
 }
-.react-forms .input-text input[type='color']::-webkit-color-swatch-wrapper {
+.formland .input-text input[type='color']::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-.react-forms .input-text input[type='color']::-webkit-color-swatch {
+.formland .input-text input[type='color']::-webkit-color-swatch {
   border: none;
   border-radius: 4px;
 }
-.react-forms .input-textarea textarea {
+.formland .input-textarea textarea {
   width: 100%;
   min-height: 100px;
   padding: 10px;
@@ -1034,26 +1034,26 @@ span.CodeMirror-selectedtext {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.react-forms .input-textarea textarea:focus {
+.formland .input-textarea textarea:focus {
   border-color: #c6cbfc;
 }
-.react-forms .input-dropdown .dropdown-wrapper {
+.formland .input-dropdown .dropdown-wrapper {
   position: relative;
 }
-.react-forms .input-dropdown .dropdown-wrapper.multi:after {
+.formland .input-dropdown .dropdown-wrapper.multi:after {
   content: none;
 }
-.react-forms .input-dropdown .dropdown-wrapper.multi select {
+.formland .input-dropdown .dropdown-wrapper.multi select {
   padding: 10px;
 }
-.react-forms .input-dropdown .dropdown-wrapper.multi select option {
+.formland .input-dropdown .dropdown-wrapper.multi select option {
   padding: 10px;
   cursor: pointer;
 }
-.react-forms .input-dropdown .dropdown-wrapper.multi select option:checked {
+.formland .input-dropdown .dropdown-wrapper.multi select option:checked {
   background-color: #4c5af7;
 }
-.react-forms .input-dropdown .dropdown-wrapper:after {
+.formland .input-dropdown .dropdown-wrapper:after {
   content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAp0lEQVRIS+2SUQrDIAyG/6AH2E3WI1i8dmDuBt1NegDFIrgRhC22UNYHffIh/l/yGcLJh07OxwCohoeiiyvy3i9ElGOMcwhhle06527W2geAlZnnb6P8/OQKuANYJESETwCezOwOAUqQMSYQ0QdSgmrnU875lVJy7XQSpq5pC6mPu8JLrQooRQ0EPZ2/p+gCSEi5a1p2KVIXXSnonuAoaABUc0PR/xVtJW9OGV1k1e8AAAAASUVORK5CYII=');
   position: absolute;
   right: 5px;
@@ -1061,7 +1061,7 @@ span.CodeMirror-selectedtext {
   color: #e0e0e0;
   pointer-events: none;
 }
-.react-forms .input-dropdown .dropdown-wrapper select {
+.formland .input-dropdown .dropdown-wrapper select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1074,10 +1074,10 @@ span.CodeMirror-selectedtext {
   transition: all 0.2s ease;
   padding-right: 30px;
 }
-.react-forms .input-dropdown .dropdown-wrapper select:focus {
+.formland .input-dropdown .dropdown-wrapper select:focus {
   border-color: #c6cbfc;
 }
-.react-forms .input-radio .radio-button {
+.formland .input-radio .radio-button {
   display: inline-block;
   margin-right: 20px;
   display: -webkit-inline-box;
@@ -1087,13 +1087,13 @@ span.CodeMirror-selectedtext {
   -ms-flex-align: center;
   align-items: center;
 }
-.react-forms .input-radio .radio-button * {
+.formland .input-radio .radio-button * {
   cursor: pointer;
 }
-.react-forms .input-radio .radio-button label {
+.formland .input-radio .radio-button label {
   margin: 0;
 }
-.react-forms .input-radio .radio-button input[type='radio'] {
+.formland .input-radio .radio-button input[type='radio'] {
   margin-right: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1104,20 +1104,16 @@ span.CodeMirror-selectedtext {
   border: 2px solid #e0e0e0;
   outline: none;
 }
-.react-forms .input-radio .radio-button input[type='radio']:focus {
+.formland .input-radio .radio-button input[type='radio']:focus {
   border-color: #c6cbfc;
 }
-.react-forms .input-radio .radio-button input[type='radio']:checked {
+.formland .input-radio .radio-button input[type='radio']:checked {
   border-color: #4c5af7;
 }
-.react-forms .input-radio .radio-button input[type='radio']:checked + label {
+.formland .input-radio .radio-button input[type='radio']:checked + label {
   position: relative;
 }
-.react-forms
-  .input-radio
-  .radio-button
-  input[type='radio']:checked
-  + label:after {
+.formland .input-radio .radio-button input[type='radio']:checked + label:after {
   content: ' ';
   position: absolute;
   left: -20px;
@@ -1127,7 +1123,7 @@ span.CodeMirror-selectedtext {
   border-radius: 50%;
   background-color: #4c5af7;
 }
-.react-forms .input-checkbox .checkbox-wrapper {
+.formland .input-checkbox .checkbox-wrapper {
   display: inline-block;
   margin-right: 20px;
   display: -webkit-inline-box;
@@ -1137,13 +1133,13 @@ span.CodeMirror-selectedtext {
   -ms-flex-align: center;
   align-items: center;
 }
-.react-forms .input-checkbox .checkbox-wrapper * {
+.formland .input-checkbox .checkbox-wrapper * {
   cursor: pointer;
 }
-.react-forms .input-checkbox .checkbox-wrapper label {
+.formland .input-checkbox .checkbox-wrapper label {
   margin: 0;
 }
-.react-forms .input-checkbox .checkbox-wrapper input[type='checkbox'] {
+.formland .input-checkbox .checkbox-wrapper input[type='checkbox'] {
   margin-right: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1154,21 +1150,21 @@ span.CodeMirror-selectedtext {
   border-radius: 4px;
   outline: none;
 }
-.react-forms .input-checkbox .checkbox-wrapper input[type='checkbox']:focus {
+.formland .input-checkbox .checkbox-wrapper input[type='checkbox']:focus {
   border-color: #c6cbfc;
 }
-.react-forms .input-checkbox .checkbox-wrapper input[type='checkbox']:checked {
+.formland .input-checkbox .checkbox-wrapper input[type='checkbox']:checked {
   background-color: #4c5af7;
   border-color: #4c5af7;
 }
-.react-forms
+.formland
   .input-checkbox
   .checkbox-wrapper
   input[type='checkbox']:checked
   + label {
   position: relative;
 }
-.react-forms
+.formland
   .input-checkbox
   .checkbox-wrapper
   input[type='checkbox']:checked
@@ -1181,16 +1177,16 @@ span.CodeMirror-selectedtext {
   left: -27px;
   top: -1px;
 }
-.react-forms .__dummy,
-.react-forms .input-toggle input[type='checkbox'] + label:after,
-.react-forms .input-toggle input[type='checkbox'] + label:before {
+.formland .__dummy,
+.formland .input-toggle input[type='checkbox'] + label:after,
+.formland .input-toggle input[type='checkbox'] + label:before {
   content: '';
   display: block;
   position: absolute;
   top: 3px;
   left: 3px;
 }
-.react-forms .input-toggle {
+.formland .input-toggle {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1198,16 +1194,16 @@ span.CodeMirror-selectedtext {
   -ms-flex-align: center;
   align-items: center;
 }
-.react-forms .input-toggle .info-text {
+.formland .input-toggle .info-text {
   display: inline-block;
   margin-left: 15px;
   margin-top: -5px;
 }
-.react-forms .input-toggle input[type='checkbox'] {
+.formland .input-toggle input[type='checkbox'] {
   position: absolute;
   visibility: hidden;
 }
-.react-forms .input-toggle input[type='checkbox'] + label {
+.formland .input-toggle input[type='checkbox'] + label {
   position: relative;
   cursor: pointer;
   outline: none;
@@ -1224,12 +1220,12 @@ span.CodeMirror-selectedtext {
   -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
-.react-forms .input-toggle input[type='checkbox'] + label:before {
+.formland .input-toggle input[type='checkbox'] + label:before {
   right: 1px;
   background-color: #fff;
   border-radius: 4px;
 }
-.react-forms .input-toggle input[type='checkbox'] + label:after {
+.formland .input-toggle input[type='checkbox'] + label:after {
   width: 20px;
   height: 24px;
   background-color: #fff;
@@ -1237,19 +1233,19 @@ span.CodeMirror-selectedtext {
   -webkit-transition: margin 0.2s ease;
   transition: margin 0.2s ease;
 }
-.react-forms .input-toggle input[type='checkbox']:checked + label {
+.formland .input-toggle input[type='checkbox']:checked + label {
   background-color: #4c5af7;
 }
-.react-forms .input-toggle input[type='checkbox']:checked + label:after {
+.formland .input-toggle input[type='checkbox']:checked + label:after {
   margin-left: 24px;
 }
-.react-forms .input-range .value {
+.formland .input-range .value {
   font-size: 18px;
   margin: 10px 0;
   font-weight: 800;
   color: #4c5af7;
 }
-.react-forms .input-range .range {
+.formland .input-range .range {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1259,15 +1255,15 @@ span.CodeMirror-selectedtext {
   justify-content: space-between;
   opacity: 0.5;
 }
-.react-forms .input-range input[type='range'] {
+.formland .input-range input[type='range'] {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
 }
-.react-forms .input-range input[type='range']:focus {
+.formland .input-range input[type='range']:focus {
   outline: none;
 }
-.react-forms .input-range input[type='range']::-webkit-slider-thumb {
+.formland .input-range input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   height: 20px;
@@ -1283,11 +1279,11 @@ span.CodeMirror-selectedtext {
   transition: transform 0.2s ease;
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
-.react-forms .input-range input[type='range']:focus::-webkit-slider-thumb {
+.formland .input-range input[type='range']:focus::-webkit-slider-thumb {
   -webkit-transform: scale3d(1.2, 1.2, 1.2);
   transform: scale3d(1.2, 1.2, 1.2);
 }
-.react-forms .input-range input[type='range']::-moz-range-thumb {
+.formland .input-range input[type='range']::-moz-range-thumb {
   -moz-appearance: none;
   appearance: none;
   height: 20px;
@@ -1296,7 +1292,7 @@ span.CodeMirror-selectedtext {
   background: #4c5af7;
   cursor: pointer;
 }
-.react-forms .input-range input[type='range']::-webkit-slider-runnable-track {
+.formland .input-range input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
@@ -1305,19 +1301,19 @@ span.CodeMirror-selectedtext {
   -webkit-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
-.react-forms
+.formland
   .input-range
   input[type='range']:focus::-webkit-slider-runnable-track {
   background: #c6cbfc;
 }
-.react-forms .input-range input[type='range']::-moz-range-track {
+.formland .input-range input[type='range']::-moz-range-track {
   width: 100%;
   height: 5px;
   cursor: pointer;
   background: #e0e0e0;
   border-radius: 4px;
 }
-.react-forms .form-buttons-container {
+.formland .form-buttons-container {
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1326,7 +1322,7 @@ span.CodeMirror-selectedtext {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.react-forms .form-buttons-container button {
+.formland .form-buttons-container button {
   padding: 10px 15px;
   min-width: 100px;
   border-radius: 4px;
@@ -1346,7 +1342,7 @@ span.CodeMirror-selectedtext {
   justify-content: center;
   cursor: pointer;
 }
-.react-forms .form-buttons-container button.cancel {
+.formland .form-buttons-container button.cancel {
   background-color: #fff;
   color: #4c5af7;
 }
