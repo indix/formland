@@ -20,7 +20,7 @@
     "url": "https://github.com/indix/formland/issues"
   },
   "license": "MIT",
-  "contributors": ["Pranesh Ravi"],
+  "contributors": ["Pranesh Ravi <praneshpranesh@gmail.com>"],
   "main": "lib/index",
   "repository": "https://github.com/indix/formland.git",
   "scripts": {
@@ -86,5 +86,6 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
-  }
+  },
+  "maintainers": ["Pranesh Ravi <praneshpranesh@gmail.com>"]
 }

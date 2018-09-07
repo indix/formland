@@ -56,7 +56,7 @@ class Example extends Component {
 }
 ```
 
-### Props
+## Props
 
 | Property                 | Type                         | Default   | Description                                                         |
 | ------------------------ | ---------------------------- | --------- | ------------------------------------------------------------------- |
@@ -72,7 +72,7 @@ class Example extends Component {
 | secondaryButton          | string \| false \| undefined | 'Cancel'  | Title for the secondary button. `false` to remove button            |
 | onSecondaryButtonClick   | function                     | `()=> {}` | onClick event handler for secondary button                          |
 
-### Configuration File Options
+## Configuration File Properties
 
 | Property                | Type     | Default   | Description                                                                                                                                                                                                                                                                     |
 | ----------------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,7 +112,7 @@ class Example extends Component {
 | showRange | boolean | true    | Shows the `min` and `max` value of the slider |
 | showValue | boolean | true    | Shows the current range value explicitly      |
 
-### Form Groups
+## Form Groups
 
 It is possible to group form elements. Take a look at the following example.
 
@@ -185,7 +185,7 @@ class Example extends Component {
 }
 ```
 
-### Validation
+## Validation
 
 Validations are done per form element. Add a `validation()` method in the form element config. Validations can be done in two ways.
 
@@ -238,7 +238,7 @@ class Example extends Component {
 }
 ```
 
-### Modify store value directly from config
+## Modify store value directly from config
 
 You can access the store and change any store value directly from the config using `modifyStoreBeforeChange` method. This method will be called before `onChange` event. You can return a modified state and it will be passed to the `onChange` handler. The primary use case for this will be, to change a form value based on another form value.
 
@@ -287,7 +287,7 @@ class Example extends Component {
 }
 ```
 
-### Custom Buttons
+## Custom Buttons
 
 It is possible to add custom buttons. Just wrap your buttons with `<Form>`.
 
@@ -302,7 +302,7 @@ It is possible to add custom buttons. Just wrap your buttons with `<Form>`.
 </Form>
 ```
 
-### Custom Form Elements
+## Custom Form Elements
 
 Custom form elements can be added to any instance of formland via `customComponentResolvers` and `customValueResolvers` props.
 
@@ -388,6 +388,10 @@ class Example extends Component {
   }
 }
 ```
+
+## Custom Form Element Packages
+
+* [formland-react-select](https://github.com/praneshr/formland-react-select) - `react-select` components for formland
 
 ## Development
 
