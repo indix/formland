@@ -1,6 +1,6 @@
 {
   "name": "formland",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "A simple, super-flexible, extensible config based form generator for React.",
   "keywords": [
