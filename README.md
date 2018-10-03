@@ -1,4 +1,4 @@
-# Formland
+![Logo](https://image.ibb.co/iF9Doe/formland.png)
 
 [![Build Status](https://travis-ci.org/indix/formland.svg?branch=master)](https://travis-ci.org/indix/formland)
 [![npm version](https://badge.fury.io/js/formland.svg)](https://badge.fury.io/js/formland)
